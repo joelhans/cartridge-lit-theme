@@ -1,0 +1,228 @@
+/* Theme Name: Cartridge Lit
+ * Theme URI: http://underscores.me/
+ * Author: Joel Hans
+ * Author URI: http://underscores.me/
+ * Description: A theme for Cartridge Lit.
+ * Version: 1.0
+ * License: GNU General Public License
+ * License URI: license.txt
+ * Text Domain: cartridge-lit
+ * Domain Path: /languages/ */
+/* line 5, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/***************************************************
+*   MIXIN / FONTSIZE
+***************************************************/
+/***************************************************
+*   MIXIN / MARGIN-BOTTOM
+***************************************************/
+/***************************************************
+*   MIXIN / REM-TO-PIXEL CONVERSION
+*
+*   https://gist.github.com/4153104/a5f13471af86e9835f18beda817ed772fcd9973a
+***************************************************/
+/**************************************
+** CLEARFIX
+**************************************/
+/* line 7, ../source/sass/_typography.sass */
+html, body {
+  font-size: 100%;
+}
+
+/* line 31, ../source/sass/_typography.sass */
+p, ol, ul, span, blockquote {
+  color: #1c1c1c;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* line 35, ../source/sass/_typography.sass */
+h1, h2, h3, h4, h5, h6 {
+  color: #1c1c1c;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  font-size: 22.4px;
+  line-height: 33.6px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+/* line 39, ../source/sass/_typography.sass */
+a {
+  color: #514472;
+  text-decoration: none;
+  -moz-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+/* line 43, ../source/sass/_typography.sass */
+a:hover {
+  color: #cb3831;
+}
+
+/* line 21, ../source/sass/style.sass */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* line 26, ../source/sass/style.sass */
+html, body {
+  background: #f0ece6;
+}
+
+/* line 29, ../source/sass/style.sass */
+#page {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#page::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* HEADER
+ */
+/* line 36, ../source/sass/style.sass */
+header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+/* line 40, ../source/sass/style.sass */
+header h1.site-title {
+  font-family: "Fanwood Text", serif;
+  font-weight: 400;
+  font-size: 70.4px;
+  line-height: 105.6px;
+  font-size: 4.4rem;
+  line-height: 6.6rem;
+  font-style: italic;
+  text-align: center;
+}
+/* line 44, ../source/sass/style.sass */
+header h2.site-description {
+  font-family: "Ubuntu Mono", sans-serif;
+  font-weight: 400;
+  font-size: 19.2px;
+  line-height: 28.8px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+/* line 48, ../source/sass/style.sass */
+.nav {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+/* line 51, ../source/sass/style.sass */
+nav {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+/* line 54, ../source/sass/style.sass */
+nav .nav-left, nav .nav-right {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 57, ../source/sass/style.sass */
+nav .nav-left {
+  float: left;
+}
+/* line 60, ../source/sass/style.sass */
+nav .nav-right {
+  float: right;
+}

@@ -1,0 +1,99 @@
+/***************************************************
+*   MIXIN / FONTSIZE
+***************************************************/
+
+@mixin font-size($size: 1, $line: $size * 1.5){
+  font-size     : ($size * 16) + px;
+  line-height   : ($line * 16) + px;
+  font-size     : $size + rem;
+  line-height   : $line + rem;
+}
+
+/***************************************************
+*   MIXIN / MARGIN-BOTTOM
+***************************************************/
+
+@mixin margin-bottom($margin: 1.6) {
+  margin-bottom: ($margin * 16) + px;
+  margin-bottom: $margin + rem;
+}
+
+/***************************************************
+*   MIXIN / REM-TO-PIXEL CONVERSION
+*
+*   https://gist.github.com/4153104/a5f13471af86e9835f18beda817ed772fcd9973a
+***************************************************/
+
+$unit-default-px: 16px;
+@function fix8_unit_to_px($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val * $unit-default-px};
+    } @else { @return $val};
+  }
+}
+ 
+@function fix8_unit_to_rem($val) {
+  @if $val == auto {
+    @return $val;
+  }
+  @else {
+    @if unitless($val) {
+      @if $val == 0 { @return $val }
+      @else { @return $val+rem};
+    } @else { @return $val};
+  }
+}
+ 
+@mixin px-rem($prop, $val...) {
+  $n: length($val);
+  $i: 1;
+ 
+  $px-list: ();
+  $rem-list: ();
+ 
+  @while $i <= $n {
+    $px-list: append($px-list, fix8_unit_to_px(nth($val, $i)));
+    $rem-list: append($rem-list, fix8_unit_to_rem(nth($val, $i)));
+    $i: $i + 1;
+  }
+ 
+  #{$prop}: $px-list;
+  #{$prop}: $rem-list;
+}
+
+/**************************************
+** CLEARFIX
+**************************************/
+
+%cf {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin button($bg, $bg2) {
+  display: inline-block;
+  @include background($bg);
+  font-family: 'Merriweather Sans', sans-serif;
+  @include font-size(); 
+  color: $white; 
+  padding: 10px;
+  border-bottom: 0;
+  border-radius: 4px;
+  @include transition(background 0.5s);
+  &:hover {
+    color: $white;
+    border-bottom: 0;
+    background: $bg2;
+  }
+}

@@ -1,0 +1,61 @@
+/*
+ * Theme Name: Cartridge Lit
+ * Theme URI: http://underscores.me/
+ * Author: Joel Hans
+ * Author URI: http://underscores.me/
+ * Description: A theme for Cartridge Lit.
+ * Version: 1.0
+ * License: GNU General Public License
+ * License URI: license.txt
+ * Text Domain: cartridge-lit
+ * Domain Path: /languages/ */
+
+@import "compass/reset"
+@import "compass"
+@import "susy"
+@import "mixins"
+@import "typography"
+
+$susy: ( columns: 12, gutters: .25, gutter-position: inside )
+
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+html, body
+  background: $white
+
+#page
+  @include container(80em)
+
+/*
+ * HEADER
+ */
+
+header
+  @include span(100%)
+  @include px-rem(margin-top, 2)
+  
+  h1.site-title
+    @include fanwood(4.4, 400, italic)
+    text-align: center
+
+  h2.site-description
+    @include ubuntu(1.2)
+    text-align: center
+
+.nav
+  @include span(100%) 
+
+nav
+  @include span(100%) 
+
+  .nav-left, .nav-right
+    @include inline-block
+
+  .nav-left
+    float: left
+
+  .nav-right
+    float: right
