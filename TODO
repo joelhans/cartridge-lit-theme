@@ -1,0 +1,19 @@
+
+#############################
+# TODO
+#############################
+
+A true archive page.
+Fix up the 404 page.
+
+Previous/next buttons, or other recent content after a story.
+Better breakpoints.
+
+#############################
+# BUGS
+#############################
+
+Fix the background image.
+  On "#header," add background-position: 50% 50%
+
+Center the "From the Airship" text.
