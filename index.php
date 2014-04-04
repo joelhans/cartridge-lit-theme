@@ -13,34 +13,64 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <!-- STORIES -->
+    <section class="featured-work">
 
-		<?php if ( have_posts() ) : ?>
+      <?php query_posts($query_string . '&cat=-2&posts_per_page=3'); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <?php the_excerpt(); ?> 
+      </article>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+      <?php endwhile; ?>
+      <?php endif; ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+      <section class="featured-read-more">
+        Read more:&nbsp;
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+      </section>
 
-			<?php endwhile; ?>
+    </section>
+    <!-- STORIES -->
 
-			<?php cartridge_lit_paging_nav(); ?>
+    <!-- FROM THE AIRSHIP -->
+    <section class="from-the-airship">
 
-		<?php else : ?>
+      <aside class="airship-banner">
+        <h1>From the Airship:</h1>
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/airship.png" />
+      </aside>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+      <section class="announcement"> 
+        <?php query_posts($query_string . '&cat=2&posts_per_page=1'); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<?php endif; ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <?php the_content(); ?> 
+        </article>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        <?php endwhile; ?>
+        <?php endif; ?>
+   
+        <section class="featured-read-more">
+          Read more:&nbsp;
+          <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Announcements' ) ) ) ?>">Announcements</a>
+        </section>
 
-<?php get_sidebar(); ?>
+     </section>
+
+    </section>
+    <!-- ANNOUNCEMENTS -->
+
+    <!-- ARCHIVES -->
+    
+
+<?php wp_reset_query(); ?>
 <?php get_footer(); ?>

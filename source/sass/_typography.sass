@@ -1,44 +1,33 @@
-$white  : #F0ECE6
-$gray   : #1c1c1c
-$red    : #cb3831
-$purple : #514472
-$tan    : #d9b577
-
 html, body
   font-size: 100%
 
-@mixin ubuntu($size: 1, $weight: 400)
-  font-family: 'Ubuntu Mono', sans-serif
-  font-weight: 400
-  @include font-size($size)
-
-@mixin fanwood($size: 1.4, $weight: 400, $style: normal)
-  font-family: 'Fanwood Text', serif
+@mixin ubuntu($size: 1, $weight: 500)
+  font-family: 'Ubuntu', sans-serif
   font-weight: $weight
   @include font-size($size)
-  font-style: $style
 
 @mixin vollkorn($size: 1.4, $weight: 400)
   font-family: 'Vollkorn', serif
   font-weight: $weight
   @include font-size($size)
 
-@mixin gabriela($size: 1, $weight: 400)
-  font-family: 'Gabriela', serif
+@mixin roboto($size: 1, $weight: 400)
+  font-family: 'Roboto Slab', serif
   font-weight: $weight
   @include font-size($size)
 
 p,ol,ul,span,blockquote
-  color: $gray
+  color: $dgray
   @include vollkorn(1, 400)
+  @include margin-bottom(1.2)
 
 h1,h2,h3,h4,h5,h6
-  color: $gray
-  @include vollkorn(1.4, 700)
+  color: $dgray
+  @include vollkorn(2, 400)
 
 a 
-  color: $purple
+  color: $red
   text-decoration: none
   @include transition(color 0.5s ease-in-out)
   &:hover
-    color: $red
+    color: $purple

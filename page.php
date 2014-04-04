@@ -12,24 +12,53 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <section class="pages">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+      <h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+      <?php if ( is_page( 'masthead' ) ): ?>
 
-			<?php endwhile; // end of the loop. ?>
+      <div class="masthead-editor">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        <div class="masthead-images">
 
-<?php get_sidebar(); ?>
+          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd.jpg" />
+          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd_pixel.png" />
+
+        </div>
+
+        <p><?php echo get_post_meta( $post->ID, 'justin-bio', true); ?></p>
+
+      </div>
+
+      <div class="masthead-editor">
+
+        <div class="masthead-images">
+
+          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh.jpg" />
+          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh_pixel.png" />
+
+        </div>
+
+        <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
+
+      </div>
+
+      <?php else : ?>
+
+      <?php the_content(); ?> 
+
+      <?php endif; ?>
+
+    </article>
+
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+  </section>
+
 <?php get_footer(); ?>
