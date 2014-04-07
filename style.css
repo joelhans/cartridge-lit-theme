@@ -306,6 +306,33 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 /* INDEX
  */
 /* line 112, ../source/sass/style.sass */
+.launch-header {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  color: #c02942;
+}
+
+/* line 118, ../source/sass/style.sass */
+.launch-pp {
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-size: 19.2px;
+  line-height: 28.8px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 124, ../source/sass/style.sass */
 .featured-work {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -315,7 +342,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 116, ../source/sass/style.sass */
+/* line 128, ../source/sass/style.sass */
 .featured-work article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -325,7 +352,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 119, ../source/sass/style.sass */
+/* line 131, ../source/sass/style.sass */
 .featured-work article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -334,7 +361,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 122, ../source/sass/style.sass */
+/* line 134, ../source/sass/style.sass */
 .featured-work article h2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -346,7 +373,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 1rem;
   color: #53777a;
 }
-/* line 127, ../source/sass/style.sass */
+/* line 139, ../source/sass/style.sass */
 .featured-work .featured-read-more {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -365,13 +392,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 133, ../source/sass/style.sass */
+/* line 145, ../source/sass/style.sass */
 .featured-work .featured-read-more a {
   margin-left: 16px;
   margin-left: 1rem;
 }
 
-/* line 136, ../source/sass/style.sass */
+/* line 148, ../source/sass/style.sass */
 .from-the-airship {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -383,7 +410,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 96px;
   margin-top: 6rem;
 }
-/* line 140, ../source/sass/style.sass */
+/* line 152, ../source/sass/style.sass */
 .from-the-airship .airship-banner {
   position: relative;
   text-align: center;
@@ -395,7 +422,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   background-size: 100% 8px;
   background-position: 0 50px;
 }
-/* line 150, ../source/sass/style.sass */
+/* line 162, ../source/sass/style.sass */
 .from-the-airship .airship-banner h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -404,14 +431,14 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 153, ../source/sass/style.sass */
+/* line 165, ../source/sass/style.sass */
 .from-the-airship .airship-banner img {
   width: 80px;
   position: absolute;
   top: 36px;
   left: -77px;
 }
-/* line 159, ../source/sass/style.sass */
+/* line 171, ../source/sass/style.sass */
 .from-the-airship .announcement {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -421,7 +448,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 163, ../source/sass/style.sass */
+/* line 175, ../source/sass/style.sass */
 .from-the-airship .announcement article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -430,7 +457,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 166, ../source/sass/style.sass */
+/* line 178, ../source/sass/style.sass */
 .from-the-airship .announcement article time {
   display: block;
   font-family: "Ubuntu", sans-serif;
@@ -443,7 +470,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 1rem;
   color: #53777a;
 }
-/* line 172, ../source/sass/style.sass */
+/* line 184, ../source/sass/style.sass */
 .from-the-airship .announcement .featured-read-more {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -462,7 +489,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 178, ../source/sass/style.sass */
+/* line 190, ../source/sass/style.sass */
 .from-the-airship .blog-list {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -476,16 +503,16 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding: 32px inherit;
   padding: 2rem inherit;
 }
-/* line 184, ../source/sass/style.sass */
+/* line 196, ../source/sass/style.sass */
 .from-the-airship .blog-list article {
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
-/* line 186, ../source/sass/style.sass */
+/* line 198, ../source/sass/style.sass */
 .from-the-airship .blog-list article:last-of-type {
   margin-bottom: 0;
 }
-/* line 189, ../source/sass/style.sass */
+/* line 201, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -496,15 +523,15 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
-/* line 193, ../source/sass/style.sass */
+/* line 205, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 a {
   color: white;
 }
-/* line 195, ../source/sass/style.sass */
+/* line 207, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 a:hover {
   color: #ecd078;
 }
-/* line 198, ../source/sass/style.sass */
+/* line 210, ../source/sass/style.sass */
 .from-the-airship .blog-list article time {
   display: inline-block;
   vertical-align: middle;
@@ -519,7 +546,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   line-height: 1.35rem;
   color: #ecd078;
 }
-/* line 203, ../source/sass/style.sass */
+/* line 215, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside {
   display: inline-block;
   vertical-align: middle;
@@ -536,18 +563,18 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-left: 1rem;
   color: #d95b43;
 }
-/* line 209, ../source/sass/style.sass */
+/* line 221, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside a {
   color: #542437;
 }
-/* line 211, ../source/sass/style.sass */
+/* line 223, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside a:hover {
   color: #ecd078;
 }
 
 /* WORK
  */
-/* line 217, ../source/sass/style.sass */
+/* line 229, ../source/sass/style.sass */
 .work {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -557,7 +584,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 221, ../source/sass/style.sass */
+/* line 233, ../source/sass/style.sass */
 .work article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -568,7 +595,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-right: 0.83333%;
   margin-left: 16.66667%;
 }
-/* line 225, ../source/sass/style.sass */
+/* line 237, ../source/sass/style.sass */
 .work article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -577,7 +604,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 2rem;
   line-height: 3rem;
 }
-/* line 228, ../source/sass/style.sass */
+/* line 240, ../source/sass/style.sass */
 .work article h2 {
   display: inline-block;
   vertical-align: middle;
@@ -596,7 +623,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-right: 2rem;
   color: #53777a;
 }
-/* line 235, ../source/sass/style.sass */
+/* line 247, ../source/sass/style.sass */
 .work article time {
   display: inline-block;
   vertical-align: middle;
@@ -613,7 +640,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 4rem;
   color: #53777a;
 }
-/* line 241, ../source/sass/style.sass */
+/* line 253, ../source/sass/style.sass */
 .work article aside {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -637,7 +664,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* PAGE
  */
-/* line 253, ../source/sass/style.sass */
+/* line 265, ../source/sass/style.sass */
 .pages {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -647,13 +674,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 257, ../source/sass/style.sass */
+/* line 269, ../source/sass/style.sass */
 .pages section > h1 {
   margin-bottom: 64px;
   margin-bottom: 4rem;
   text-align: center;
 }
-/* line 261, ../source/sass/style.sass */
+/* line 273, ../source/sass/style.sass */
 .pages article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -664,7 +691,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-right: 0.83333%;
   margin-left: 16.66667%;
 }
-/* line 265, ../source/sass/style.sass */
+/* line 277, ../source/sass/style.sass */
 .pages article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -679,7 +706,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* ARCHIVES
  */
-/* line 274, ../source/sass/style.sass */
+/* line 286, ../source/sass/style.sass */
 .archives {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -689,13 +716,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 278, ../source/sass/style.sass */
+/* line 290, ../source/sass/style.sass */
 .archives section > h1 {
   margin-bottom: 64px;
   margin-bottom: 4rem;
   text-align: center;
 }
-/* line 282, ../source/sass/style.sass */
+/* line 294, ../source/sass/style.sass */
 .archives article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -708,7 +735,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 2rem;
   min-height: 300px;
 }
-/* line 287, ../source/sass/style.sass */
+/* line 299, ../source/sass/style.sass */
 .archives article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -717,7 +744,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 290, ../source/sass/style.sass */
+/* line 302, ../source/sass/style.sass */
 .archives article h2 {
   display: inline-block;
   vertical-align: middle;
@@ -736,7 +763,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-right: 2rem;
   color: #53777a;
 }
-/* line 297, ../source/sass/style.sass */
+/* line 309, ../source/sass/style.sass */
 .archives article time {
   display: inline-block;
   vertical-align: middle;
@@ -756,7 +783,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* MASTHEAD
  */
-/* line 307, ../source/sass/style.sass */
+/* line 319, ../source/sass/style.sass */
 .masthead-editor {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -766,7 +793,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 310, ../source/sass/style.sass */
+/* line 322, ../source/sass/style.sass */
 .masthead-editor .masthead-images {
   max-width: 300px;
   height: 300px;
@@ -776,7 +803,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 64px;
   margin-bottom: 4rem;
 }
-/* line 318, ../source/sass/style.sass */
+/* line 330, ../source/sass/style.sass */
 .masthead-editor .masthead-images img {
   max-width: 100%;
   position: absolute;
@@ -793,23 +820,23 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 325, ../source/sass/style.sass */
+/* line 337, ../source/sass/style.sass */
 .masthead-editor .masthead-images img:first-of-type {
   opacity: 0;
   z-index: 10;
 }
-/* line 329, ../source/sass/style.sass */
+/* line 341, ../source/sass/style.sass */
 .masthead-editor .masthead-images img:last-of-type {
   opacity: 1;
 }
-/* line 333, ../source/sass/style.sass */
+/* line 345, ../source/sass/style.sass */
 .masthead-editor .masthead-images:hover img:first-of-type {
   opacity: 1;
 }
 
 /* FOOTER
  */
-/* line 340, ../source/sass/style.sass */
+/* line 352, ../source/sass/style.sass */
 #colophon {
   position: relative;
   width: 100%;
@@ -821,11 +848,11 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding: 64px;
   padding: 4rem;
 }
-/* line 349, ../source/sass/style.sass */
+/* line 361, ../source/sass/style.sass */
 #colophon p {
   color: white;
 }
-/* line 352, ../source/sass/style.sass */
+/* line 364, ../source/sass/style.sass */
 #colophon a {
   display: block;
   font-family: "Ubuntu", sans-serif;
@@ -836,11 +863,11 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   line-height: 1.35rem;
   color: #d95b43;
 }
-/* line 356, ../source/sass/style.sass */
+/* line 368, ../source/sass/style.sass */
 #colophon a:hover {
   color: #ecd078;
 }
-/* line 359, ../source/sass/style.sass */
+/* line 371, ../source/sass/style.sass */
 #colophon .footer-wrap {
   max-width: 70em;
   margin-left: auto;
@@ -852,7 +879,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   display: block;
   clear: both;
 }
-/* line 362, ../source/sass/style.sass */
+/* line 374, ../source/sass/style.sass */
 #colophon .footer-nav {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -862,7 +889,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 364, ../source/sass/style.sass */
+/* line 376, ../source/sass/style.sass */
 #colophon .footer-nav a:first-of-type {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -871,7 +898,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
-/* line 367, ../source/sass/style.sass */
+/* line 379, ../source/sass/style.sass */
 #colophon .footer-genres {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -883,7 +910,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 27.2px;
   margin-top: 1.7rem;
 }
-/* line 371, ../source/sass/style.sass */
+/* line 383, ../source/sass/style.sass */
 #colophon .footer-social {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -895,7 +922,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 27.2px;
   margin-top: 1.7rem;
 }
-/* line 375, ../source/sass/style.sass */
+/* line 387, ../source/sass/style.sass */
 #colophon .footer-rights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -908,7 +935,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 1.7rem;
   position: relative;
 }
-/* line 379, ../source/sass/style.sass */
+/* line 391, ../source/sass/style.sass */
 #colophon .footer-rights p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -917,7 +944,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 382, ../source/sass/style.sass */
+/* line 394, ../source/sass/style.sass */
 #colophon .phoenix-down {
   position: absolute;
   width: 80px;
@@ -927,7 +954,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* ALL CONTENT PAGES
  */
-/* line 392, ../source/sass/style.sass */
+/* line 404, ../source/sass/style.sass */
 iframe {
   max-width: 100%;
 }
