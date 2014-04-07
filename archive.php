@@ -25,9 +25,9 @@ get_header(); ?>
 
         <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
         <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
-        <?php elseif ( has_category( 'announcements' ) ): ?>
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
         <?php endif; ?>
+
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
         <?php the_excerpt(); ?> 
 
@@ -36,6 +36,30 @@ get_header(); ?>
 
     </section>
   <!-- CATEGORY ARCHIVES -->
+
+  <!-- TAG ARCHIVES --> 
+  <?php elseif ( is_tag() ): ?>
+    <section class="archive-tag">
+      <h1><?php single_cat_title(); ?></h1>
+
+      <?php while ( have_posts() ) : the_post(); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+
+        <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
+        <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
+        <?php endif; ?>
+
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+        <?php the_excerpt(); ?> 
+
+      </article>
+      <?php endwhile; ?>
+
+    </section>
+  <!-- TAG ARCHIVES -->
 
   <!-- YEARLY ARCHIVES -->
   <?php elseif ( is_year() ): ?>
@@ -49,9 +73,9 @@ get_header(); ?>
 
         <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
         <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
-        <?php elseif ( has_category( 'announcements' ) ): ?>
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
         <?php endif; ?>
+        
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
         <?php the_excerpt(); ?> 
 
@@ -73,9 +97,9 @@ get_header(); ?>
 
         <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
         <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
-        <?php elseif ( has_category( 'announcements' ) ): ?>
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
         <?php endif; ?>
+
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
         <?php the_excerpt(); ?> 
 
@@ -86,7 +110,7 @@ get_header(); ?>
   <!-- MONTHLY ARCHIVES -->
 
   <?php else: ?>
-    <?php get_template_part( 'content', 'none' ); ?>
+    <h1>Sorry, nothing found!</h1>
 
   <?php endif; ?>
   <?php endif; ?>

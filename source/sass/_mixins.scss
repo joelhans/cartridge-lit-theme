@@ -29,6 +29,9 @@ $unit-default-px: 16px;
   @if $val == auto {
     @return $val;
   }
+  @else if $val == inherit {
+    @return $val;
+  }
   @else {
     @if unitless($val) {
       @if $val == 0 { @return $val }
@@ -39,6 +42,9 @@ $unit-default-px: 16px;
  
 @function fix8_unit_to_rem($val) {
   @if $val == auto {
+    @return $val;
+  }
+  @else if $val == inherit {
     @return $val;
   }
   @else {

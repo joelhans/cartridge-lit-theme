@@ -44,18 +44,11 @@
 <div class="nav">
 <nav role="navigation">
 
-  <div class="nav-left">
+  <div class="nav-right">
+    <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
+    <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
+    <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
   </div>
-
-  <?php 
-    $menuParameters = array(
-      'container'  => 'div',
-      'echo'       => false,
-      'items_wrap' => '%3$s',
-      'menu_class' => 'nav-right',
-      'depth'      => 0,
-    );
-    echo strip_tags( wp_nav_menu ( $menuParameters ), '<div><a>' ); ?>
 
 </nav>
 </div>

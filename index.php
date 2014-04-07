@@ -16,17 +16,27 @@ get_header(); ?>
     <!-- STORIES -->
     <section class="featured-work">
 
-      <?php query_posts($query_string . '&cat=-2&posts_per_page=3'); ?>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      
+      <?php
+        $args = array ( 
+          'numberposts' => 5,
+          'category_name' => 'fiction,poetry,non-fiction'
+        );
+        $theposts = get_posts( $args );
+
+        foreach( $theposts as $post) :
+        setup_postdata($post);
+      ?>
+
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
         <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php the_excerpt(); ?> 
       </article>
 
-      <?php endwhile; ?>
-      <?php endif; ?>
+      <?php
+        endforeach;
+        wp_reset_postdata();
+      ?>
 
       <section class="featured-read-more">
         Read more:&nbsp;
@@ -46,9 +56,19 @@ get_header(); ?>
         <img src="<?php bloginfo( 'template_directory' ); ?>/img/airship.png" />
       </aside>
 
-      <section class="announcement"> 
-        <?php query_posts($query_string . '&cat=2&posts_per_page=1'); ?>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <!-- ANNOUNCEMENTS -->
+     <section class="announcement"> 
+
+        <?php
+          $args = array ( 
+            'numberposts' => 1,
+            'category_name' => 'featured'
+          );
+          $theposts = get_posts( $args );
+
+          foreach( $theposts as $post) :
+          setup_postdata($post);
+        ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -56,18 +76,47 @@ get_header(); ?>
           <?php the_content(); ?> 
         </article>
 
-        <?php endwhile; ?>
-        <?php endif; ?>
-   
+        <?php
+          endforeach;
+          wp_reset_postdata();
+        ?>
+
         <section class="featured-read-more">
-          Read more:&nbsp;
-          <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Announcements' ) ) ) ?>">Announcements</a>
+          <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Airship' ) ) ) ?>">Read more from the Airship.</a>
         </section>
 
-     </section>
+      </section>
+      <!-- ANNOUNCEMENTS -->
+
+      <!-- OTHER BLOGS -->
+      <section class="blog-list">
+        
+        <?php
+          $args = array ( 
+            'numberposts' => 5,
+            'category_name' => 'blog,uncategorized'
+          );
+          $theposts = get_posts( $args );
+
+          foreach( $theposts as $post) :
+          setup_postdata($post);
+        ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <aside><?php echo get_the_tag_list(); ?></aside>
+        </article>
+       
+        <?php
+          endforeach;
+          wp_reset_postdata();
+        ?>
+
+      </section>
 
     </section>
-    <!-- ANNOUNCEMENTS -->
+    <!-- FROM THE AIRSHIP -->
 
     <!-- ARCHIVES -->
     

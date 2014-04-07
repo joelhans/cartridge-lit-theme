@@ -5,6 +5,11 @@
  * @package Cartridge Lit
  */
 
+function custom_excerpt_length( $length ) {
+  return 100;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
 function add_body_class( $classes )
 {
   global $post;
