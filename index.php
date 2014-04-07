@@ -22,7 +22,15 @@ get_header(); ?>
           'category_name' => 'fiction,poetry,non-fiction'
         );
         $theposts = get_posts( $args );
+?>
 
+      <?php if( !$theposts ): ?>
+
+        <h1 class="launch-header">null. null. literature pending.</h1>
+        <p class="launch-pp"><em>Cartridge Lit</em> is launching May 5. We are allocating bytes and converting pixels into games literature to feed them directly into your brains. Get ready.</p>
+
+      <?php else: ?>
+      <?php
         foreach( $theposts as $post) :
         setup_postdata($post);
       ?>
@@ -37,13 +45,15 @@ get_header(); ?>
         endforeach;
         wp_reset_postdata();
       ?>
-
+      
       <section class="featured-read-more">
         Read more:&nbsp;
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
       </section>
+
+      <?php endif; ?>
 
     </section>
     <!-- STORIES -->
