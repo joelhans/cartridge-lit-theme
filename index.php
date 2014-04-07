@@ -22,12 +22,13 @@ get_header(); ?>
           'category_name' => 'fiction,poetry,non-fiction'
         );
         $theposts = get_posts( $args );
-?>
+      ?>
 
       <?php if( !$theposts ): ?>
 
         <h1 class="launch-header">null. null. literature pending.</h1>
-        <p class="launch-pp"><em>Cartridge Lit</em> is launching May 5. We are allocating bytes and converting pixels into games literature to feed them directly into your brains. Get ready.</p>
+        <p class="launch-pp"><em>Cartridge Lit</em> is launching May 5. We are allocating bytes and converting pixels into games literature that will be fed directly into your brains. Get ready.</p>
+        <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
 
       <?php else: ?>
       <?php
