@@ -94,7 +94,7 @@ get_header(); ?>
         <?php
           $args = array ( 
             'numberposts' => 5,
-            'category_name' => 'blog,uncategorized'
+            'category_name' => 'airship,blog,uncategorized'
           );
           $theposts = get_posts( $args );
 
