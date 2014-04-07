@@ -19,9 +19,7 @@ get_header(); ?>
       <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
       <?php endif; ?>
 
-      <?php if ( has_category( array( 'announcements', 'blog' ) ) ): ?>
       <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
-      <?php endif; ?>
 
       <?php the_content(); ?> 
 
