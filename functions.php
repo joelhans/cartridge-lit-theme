@@ -5,6 +5,32 @@
  * @package Cartridge Lit
  */
 
+function custom_excerpt_length( $length ) {
+  return 100;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
+function add_body_class( $classes )
+{
+  global $post;
+    if ( isset( $post ) ) {
+      $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+  return $classes;
+}
+add_filter( 'body_class', 'add_body_class' );
+
+
+function add_post_class( $classes )
+{
+  global $post;
+    if ( isset( $post ) ) {
+      $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+  return $classes;
+}
+add_filter( 'post_class', 'add_post_class' );
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */

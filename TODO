@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 #############################
 # TODO
 #############################
@@ -17,3 +18,9 @@ Fix the background image.
   On "#header," add background-position: 50% 50%
 
 Center the "From the Airship" text.
+=======
+# TODO
+
+Make that left side of the blog more for featured content rather than announcements?
+  - 
+>>>>>>> e94822319e734898255ea0976a2fa9a7ea7af8a9

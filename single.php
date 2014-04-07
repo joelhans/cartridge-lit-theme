@@ -7,26 +7,35 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <section class="work">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+      
+      <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
+      <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
+      <?php endif; ?>
 
-			<?php cartridge_lit_post_nav(); ?>
+      <?php if ( has_category( array( 'announcements', 'blog' ) ) ): ?>
+      <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+      <?php endif; ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+      <?php the_content(); ?> 
 
-		<?php endwhile; // end of the loop. ?>
+      <?php if ( get_post_meta( $post->ID, 'bio', 'true' ) ): ?>
+      <aside class="work-bio">
+        <?php echo get_post_meta( $post->ID, 'bio', true); ?>
+      </aside>
+      <?php endif; ?>      
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </article>
 
-<?php get_sidebar(); ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+  </section>
+
 <?php get_footer(); ?>

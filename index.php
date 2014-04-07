@@ -13,34 +13,113 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <!-- STORIES -->
+    <section class="featured-work">
 
-		<?php if ( have_posts() ) : ?>
+      <?php
+        $args = array ( 
+          'numberposts' => 5,
+          'category_name' => 'fiction,poetry,non-fiction'
+        );
+        $theposts = get_posts( $args );
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+        foreach( $theposts as $post) :
+        setup_postdata($post);
+      ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <?php the_excerpt(); ?> 
+      </article>
 
-			<?php endwhile; ?>
+      <?php
+        endforeach;
+        wp_reset_postdata();
+      ?>
 
-			<?php cartridge_lit_paging_nav(); ?>
+      <section class="featured-read-more">
+        Read more:&nbsp;
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+      </section>
 
-		<?php else : ?>
+    </section>
+    <!-- STORIES -->
 
-			<?php get_template_part( 'content', 'none' ); ?>
+    <!-- FROM THE AIRSHIP -->
+    <section class="from-the-airship">
 
-		<?php endif; ?>
+      <aside class="airship-banner">
+        <h1>From the Airship:</h1>
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/airship.png" />
+      </aside>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      <!-- ANNOUNCEMENTS -->
+     <section class="announcement"> 
 
-<?php get_sidebar(); ?>
+        <?php
+          $args = array ( 
+            'numberposts' => 1,
+            'category_name' => 'featured'
+          );
+          $theposts = get_posts( $args );
+
+          foreach( $theposts as $post) :
+          setup_postdata($post);
+        ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <?php the_content(); ?> 
+        </article>
+
+        <?php
+          endforeach;
+          wp_reset_postdata();
+        ?>
+
+        <section class="featured-read-more">
+          <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Airship' ) ) ) ?>">Read more from the Airship.</a>
+        </section>
+
+      </section>
+      <!-- ANNOUNCEMENTS -->
+
+      <!-- OTHER BLOGS -->
+      <section class="blog-list">
+        
+        <?php
+          $args = array ( 
+            'numberposts' => 5,
+            'category_name' => 'blog,uncategorized'
+          );
+          $theposts = get_posts( $args );
+
+          foreach( $theposts as $post) :
+          setup_postdata($post);
+        ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <aside><?php echo get_the_tag_list(); ?></aside>
+        </article>
+       
+        <?php
+          endforeach;
+          wp_reset_postdata();
+        ?>
+
+      </section>
+
+    </section>
+    <!-- FROM THE AIRSHIP -->
+
+    <!-- ARCHIVES -->
+    
+
+<?php wp_reset_query(); ?>
 <?php get_footer(); ?>

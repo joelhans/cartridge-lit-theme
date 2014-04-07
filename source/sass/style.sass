@@ -10,6 +10,14 @@
  * Text Domain: cartridge-lit
  * Domain Path: /languages/ */
 
+$yellow  : #ECD078
+$orange  : #D95B43
+$red     : #C02942
+$purple  : #542437
+$blue    : #53777A
+$lgray   : #999
+$dgray   : #303030
+
 @import "compass/reset"
 @import "compass"
 @import "susy"
@@ -23,39 +31,363 @@ $susy: ( columns: 12, gutters: .25, gutter-position: inside )
 *:before
   box-sizing: border-box
 
-html, body
-  background: $white
-
-#page
-  @include container(80em)
+body
+  background-color: white
+  overflow-x: hidden
 
 /*
  * HEADER
  */
 
-header
-  @include span(100%)
-  @include px-rem(margin-top, 2)
+#header
+  width: 100%
+  height: 400px
+  background: url('img/header_chrono.png')
+  background-size: cover
+  background-position: 50% 50%
   
-  h1.site-title
-    @include fanwood(4.4, 400, italic)
-    text-align: center
+  .container
+    @include container(70em)
+
+  .title
+    @include span(6 of 12)
+    @include px-rem(margin-top, 8)
+
+    img
+      width: 80px 
+
+    h1.site-title
+      @include roboto(4)
+      @include inline-block
+      position: relative
+      top: -22px
+      left: 30px
 
   h2.site-description
-    @include ubuntu(1.2)
+    @include ubuntu(0.9)
     text-align: center
 
 .nav
-  @include span(100%) 
+  width: 100%
+  background: $dgray
 
 nav
-  @include span(100%) 
+  @include container(70em)
 
-  .nav-left, .nav-right
+  .nav-left, .nav-right, .menu-menu-1-container
     @include inline-block
+    @include ubuntu(1)
+    padding-top: 10px
+    padding-bottom: 6px
 
   .nav-left
-    float: left
+    @include span(6)
+    @include roboto(1.4)
+    img
+      width: 24px
+      margin-right: 8px
 
-  .nav-right
-    float: right
+  .nav-right, .menu-menu-1-container
+    @include span(6)
+    @include push(6)
+    text-align: right
+    padding-top: 8px
+    a
+      @include px-rem(margin-left, 2)
+      color: $orange
+      &:hover
+        color: $yellow
+  
+/*
+ * CONTENT
+ */
+
+#page
+  @include container(70em)
+
+/*
+ * INDEX
+ */
+
+.featured-work
+  @include span(12 nest)
+  @include px-rem(margin-top, 8)
+  
+  article
+    @include span(4 of 12)
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      color: $blue
+
+  .featured-read-more
+    @include span(12 of 12)
+    @include px-rem(margin-top, 4)
+    text-align: right
+    @include ubuntu(0.9)
+    
+    a
+      @include px-rem(margin-left, 1)
+
+.from-the-airship
+  @include span(12)
+  @include px-rem(margin-top, 6)
+
+  .airship-banner
+    position: relative
+    text-align: center
+    @include px-rem(margin-bottom, 4)
+    padding-bottom: 18px
+    background-image: url('img/border_sunset.png')
+    background-repeat: no-repeat no-repeat
+    background-size: 100% 8px
+    background-position: 0 50px
+
+    h1
+      @include vollkorn(1.7)
+
+    img
+      width: 80px
+      position: absolute
+      top: 36px
+      left: -77px
+
+  .announcement
+    @include span(6 of 12)
+
+    article
+      h1
+        @include vollkorn(1.7)
+
+      time
+        display: block
+        @include ubuntu(0.9)
+        @include px-rem(margin-bottom, 1)
+        color: $blue
+
+    .featured-read-more
+      @include span(12 of 12)
+      @include px-rem(margin-top, 4)
+      text-align: right
+      @include ubuntu(0.9)
+
+  .blog-list
+    @include span(4 of 12) 
+    @include push(1)
+    background-color: $blue
+    @include px-rem(padding, 2, inherit)
+
+    article
+      @include px-rem(margin-bottom, 2)
+      &:last-of-type
+        margin-bottom: 0
+
+      h1
+        @include ubuntu(1.3)
+        @include px-rem(margin-bottom, 0.5)
+
+        a 
+          color: white
+          &:hover
+            color: $yellow
+
+      time
+        @include inline-block
+        @include ubuntu(0.9)
+        color: $yellow
+
+      aside
+        @include inline-block
+        @include ubuntu(0.9)
+        @include px-rem(margin-left, 1)
+        color: $orange
+
+        a 
+          color: $purple
+          &:hover
+            color: $yellow
+/*
+ * WORK
+ */
+
+.work
+  @include span(12 nest)
+  @include px-rem(margin-top, 8)
+  
+  article
+    @include span(8 of 12)
+    @include push(2 of 12)
+
+    h1
+      @include vollkorn(2)
+
+    h2
+      @include inline-block
+      @include ubuntu(1.2)
+      @include px-rem(margin-bottom, 4)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    time
+      @include inline-block
+      @include ubuntu(1.2)
+      @include px-rem(margin-bottom, 4)
+      color: $blue
+
+    aside
+      @include span(6 of 8)
+      @include push(1 of 8)
+      @include px-rem(margin-top, 4)
+      @include ubuntu(0.9)
+      text-align: center
+      color: $blue
+
+/*
+ * PAGE
+ */
+
+.pages
+  @include span(12 nest)
+  @include px-rem(margin-top, 8)
+
+  section > h1
+    @include px-rem(margin-bottom, 4)
+    text-align: center
+  
+  article
+    @include span(8 of 12)
+    @include push(2 of 12)
+
+    h1
+      @include vollkorn(2)
+      @include px-rem(margin-bottom, 4)
+      text-align: center
+
+/*
+ * ARCHIVES
+ */
+
+.archives
+  @include span(12 nest)
+  @include px-rem(margin-top, 8)
+
+  section > h1
+    @include px-rem(margin-bottom, 4)
+    text-align: center
+  
+  article
+    @include span(4 of 12)
+    @include px-rem(margin-bottom, 2)
+    min-height: 300px
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    time
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      color: $blue
+
+/*
+ * MASTHEAD
+ */
+
+.masthead-editor
+  @include span(6 of 12)
+
+  .masthead-images
+    max-width: 300px
+    height: 300px
+    display: block
+    position: relative
+    margin: 0 auto
+    @include px-rem(margin-bottom, 4)
+
+    img
+      max-width: 100%
+      position: absolute
+      @include transition-duration(0.5s)
+      @include transition-property(opacity)
+      @include transition-timing-function(ease-in-out)
+
+    img:first-of-type
+      opacity: 0
+      z-index: 10
+
+    img:last-of-type
+      opacity: 1
+
+    &:hover
+      img:first-of-type
+        opacity: 1
+
+/*
+ * FOOTER
+ */
+
+#colophon
+  position: relative
+  width: 100%
+  height: 800px
+  background: url('img/ffiv_sunset.png')
+  background-size: cover
+  @include px-rem(margin-top, 8)
+  @include px-rem(padding, 4)
+
+  p
+    color: white
+
+  a
+    display: block
+    @include ubuntu(0.9)
+    color: $orange
+    &:hover
+      color: $yellow
+
+  .footer-wrap
+    @include container(70em)
+
+  .footer-nav
+    @include span(3 of 12)
+    a:first-of-type
+      @include ubuntu(1.2)
+
+  .footer-genres
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+
+  .footer-social
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+
+  .footer-rights
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+    position: relative
+    p
+      @include ubuntu(0.9)
+
+  .phoenix-down
+    position: absolute
+    width: 80px
+    top: -35px
+    right: -100px
+
+/*
+ * ALL CONTENT PAGES
+ */ 
+
+iframe
+  max-width: 100%
