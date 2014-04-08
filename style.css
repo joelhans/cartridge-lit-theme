@@ -139,7 +139,7 @@ a:hover {
 
 /* line 34, ../source/sass/style.sass */
 body {
-  background: url("/images/clouds.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("img/bg_static.jpg");
   overflow-x: hidden;
 }
 
