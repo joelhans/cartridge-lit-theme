@@ -139,7 +139,7 @@ a:hover {
 
 /* line 34, ../source/sass/style.sass */
 body {
-  background-color: white;
+  background: url("/images/clouds.png");
   overflow-x: hidden;
 }
 
@@ -228,7 +228,17 @@ nav::after {
   clear: both;
 }
 /* line 77, ../source/sass/style.sass */
-nav .nav-left, nav .nav-right, nav .menu-menu-1-container {
+nav .nav-left {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+/* line 80, ../source/sass/style.sass */
+nav a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -240,57 +250,20 @@ nav .nav-left, nav .nav-right, nav .menu-menu-1-container {
   line-height: 24px;
   font-size: 1rem;
   line-height: 1.5rem;
+  margin-right: 32px;
+  margin-right: 2rem;
   padding-top: 10px;
   padding-bottom: 6px;
-}
-/* line 83, ../source/sass/style.sass */
-nav .nav-left {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  font-size: 22.4px;
-  line-height: 33.6px;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-}
-/* line 86, ../source/sass/style.sass */
-nav .nav-left img {
-  width: 24px;
-  margin-right: 8px;
-}
-/* line 90, ../source/sass/style.sass */
-nav .nav-right, nav .menu-menu-1-container {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  margin-left: 50%;
-  text-align: right;
-  padding-top: 8px;
-}
-/* line 95, ../source/sass/style.sass */
-nav .nav-right a, nav .menu-menu-1-container a {
-  margin-left: 32px;
-  margin-left: 2rem;
   color: #d95b43;
 }
-/* line 98, ../source/sass/style.sass */
-nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
+/* line 87, ../source/sass/style.sass */
+nav a:hover {
   color: #ecd078;
 }
 
 /* CONTENT
  */
-/* line 105, ../source/sass/style.sass */
+/* line 94, ../source/sass/style.sass */
 #page {
   max-width: 70em;
   margin-left: auto;
@@ -305,7 +278,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* INDEX
  */
-/* line 112, ../source/sass/style.sass */
+/* line 101, ../source/sass/style.sass */
 .launch-header {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -319,7 +292,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   color: #c02942;
 }
 
-/* line 118, ../source/sass/style.sass */
+/* line 107, ../source/sass/style.sass */
 .launch-pp {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -332,7 +305,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   text-align: center;
 }
 
-/* line 124, ../source/sass/style.sass */
+/* line 113, ../source/sass/style.sass */
 .featured-work {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -342,7 +315,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 128, ../source/sass/style.sass */
+/* line 117, ../source/sass/style.sass */
 .featured-work article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -352,7 +325,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 131, ../source/sass/style.sass */
+/* line 120, ../source/sass/style.sass */
 .featured-work article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -361,7 +334,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 134, ../source/sass/style.sass */
+/* line 123, ../source/sass/style.sass */
 .featured-work article h2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -373,7 +346,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 1rem;
   color: #53777a;
 }
-/* line 139, ../source/sass/style.sass */
+/* line 128, ../source/sass/style.sass */
 .featured-work .featured-read-more {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -392,13 +365,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 145, ../source/sass/style.sass */
+/* line 134, ../source/sass/style.sass */
 .featured-work .featured-read-more a {
   margin-left: 16px;
   margin-left: 1rem;
 }
 
-/* line 148, ../source/sass/style.sass */
+/* line 137, ../source/sass/style.sass */
 .from-the-airship {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -410,7 +383,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 96px;
   margin-top: 6rem;
 }
-/* line 152, ../source/sass/style.sass */
+/* line 141, ../source/sass/style.sass */
 .from-the-airship .airship-banner {
   position: relative;
   text-align: center;
@@ -422,7 +395,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   background-size: 100% 8px;
   background-position: 0 50px;
 }
-/* line 162, ../source/sass/style.sass */
+/* line 151, ../source/sass/style.sass */
 .from-the-airship .airship-banner h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -431,14 +404,14 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 165, ../source/sass/style.sass */
+/* line 154, ../source/sass/style.sass */
 .from-the-airship .airship-banner img {
   width: 80px;
   position: absolute;
   top: 36px;
-  left: -77px;
+  left: -11px;
 }
-/* line 171, ../source/sass/style.sass */
+/* line 160, ../source/sass/style.sass */
 .from-the-airship .announcement {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -448,7 +421,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 175, ../source/sass/style.sass */
+/* line 164, ../source/sass/style.sass */
 .from-the-airship .announcement article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -457,7 +430,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 178, ../source/sass/style.sass */
+/* line 167, ../source/sass/style.sass */
 .from-the-airship .announcement article time {
   display: block;
   font-family: "Ubuntu", sans-serif;
@@ -470,7 +443,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 1rem;
   color: #53777a;
 }
-/* line 184, ../source/sass/style.sass */
+/* line 173, ../source/sass/style.sass */
 .from-the-airship .announcement .featured-read-more {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -489,7 +462,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 190, ../source/sass/style.sass */
+/* line 179, ../source/sass/style.sass */
 .from-the-airship .blog-list {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -503,16 +476,16 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding: 32px inherit;
   padding: 2rem inherit;
 }
-/* line 196, ../source/sass/style.sass */
+/* line 185, ../source/sass/style.sass */
 .from-the-airship .blog-list article {
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
-/* line 198, ../source/sass/style.sass */
+/* line 187, ../source/sass/style.sass */
 .from-the-airship .blog-list article:last-of-type {
   margin-bottom: 0;
 }
-/* line 201, ../source/sass/style.sass */
+/* line 190, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -523,15 +496,15 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
-/* line 205, ../source/sass/style.sass */
+/* line 194, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 a {
   color: white;
 }
-/* line 207, ../source/sass/style.sass */
+/* line 196, ../source/sass/style.sass */
 .from-the-airship .blog-list article h1 a:hover {
   color: #ecd078;
 }
-/* line 210, ../source/sass/style.sass */
+/* line 199, ../source/sass/style.sass */
 .from-the-airship .blog-list article time {
   display: inline-block;
   vertical-align: middle;
@@ -546,7 +519,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   line-height: 1.35rem;
   color: #ecd078;
 }
-/* line 215, ../source/sass/style.sass */
+/* line 204, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside {
   display: inline-block;
   vertical-align: middle;
@@ -563,18 +536,18 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-left: 1rem;
   color: #d95b43;
 }
-/* line 221, ../source/sass/style.sass */
+/* line 210, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside a {
   color: #542437;
 }
-/* line 223, ../source/sass/style.sass */
+/* line 212, ../source/sass/style.sass */
 .from-the-airship .blog-list article aside a:hover {
   color: #ecd078;
 }
 
 /* WORK
  */
-/* line 229, ../source/sass/style.sass */
+/* line 218, ../source/sass/style.sass */
 .work {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -584,7 +557,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 233, ../source/sass/style.sass */
+/* line 222, ../source/sass/style.sass */
 .work article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -595,7 +568,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-right: 0.83333%;
   margin-left: 16.66667%;
 }
-/* line 237, ../source/sass/style.sass */
+/* line 226, ../source/sass/style.sass */
 .work article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -604,7 +577,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 2rem;
   line-height: 3rem;
 }
-/* line 240, ../source/sass/style.sass */
+/* line 229, ../source/sass/style.sass */
 .work article h2 {
   display: inline-block;
   vertical-align: middle;
@@ -623,7 +596,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-right: 2rem;
   color: #53777a;
 }
-/* line 247, ../source/sass/style.sass */
+/* line 236, ../source/sass/style.sass */
 .work article time {
   display: inline-block;
   vertical-align: middle;
@@ -640,7 +613,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 4rem;
   color: #53777a;
 }
-/* line 253, ../source/sass/style.sass */
+/* line 242, ../source/sass/style.sass */
 .work article aside {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -664,7 +637,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* PAGE
  */
-/* line 265, ../source/sass/style.sass */
+/* line 254, ../source/sass/style.sass */
 .pages {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -674,13 +647,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 269, ../source/sass/style.sass */
+/* line 258, ../source/sass/style.sass */
 .pages section > h1 {
   margin-bottom: 64px;
   margin-bottom: 4rem;
   text-align: center;
 }
-/* line 273, ../source/sass/style.sass */
+/* line 262, ../source/sass/style.sass */
 .pages article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -691,7 +664,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-right: 0.83333%;
   margin-left: 16.66667%;
 }
-/* line 277, ../source/sass/style.sass */
+/* line 266, ../source/sass/style.sass */
 .pages article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -706,7 +679,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* ARCHIVES
  */
-/* line 286, ../source/sass/style.sass */
+/* line 275, ../source/sass/style.sass */
 .archives {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -716,13 +689,13 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 290, ../source/sass/style.sass */
+/* line 279, ../source/sass/style.sass */
 .archives section > h1 {
   margin-bottom: 64px;
   margin-bottom: 4rem;
   text-align: center;
 }
-/* line 294, ../source/sass/style.sass */
+/* line 283, ../source/sass/style.sass */
 .archives article {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -735,7 +708,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 2rem;
   min-height: 300px;
 }
-/* line 299, ../source/sass/style.sass */
+/* line 288, ../source/sass/style.sass */
 .archives article h1 {
   font-family: "Vollkorn", serif;
   font-weight: 400;
@@ -744,7 +717,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.7rem;
   line-height: 2.55rem;
 }
-/* line 302, ../source/sass/style.sass */
+/* line 291, ../source/sass/style.sass */
 .archives article h2 {
   display: inline-block;
   vertical-align: middle;
@@ -763,7 +736,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-right: 2rem;
   color: #53777a;
 }
-/* line 309, ../source/sass/style.sass */
+/* line 298, ../source/sass/style.sass */
 .archives article time {
   display: inline-block;
   vertical-align: middle;
@@ -783,7 +756,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* MASTHEAD
  */
-/* line 319, ../source/sass/style.sass */
+/* line 308, ../source/sass/style.sass */
 .masthead-editor {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -793,7 +766,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 322, ../source/sass/style.sass */
+/* line 311, ../source/sass/style.sass */
 .masthead-editor .masthead-images {
   max-width: 300px;
   height: 300px;
@@ -803,7 +776,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-bottom: 64px;
   margin-bottom: 4rem;
 }
-/* line 330, ../source/sass/style.sass */
+/* line 319, ../source/sass/style.sass */
 .masthead-editor .masthead-images img {
   max-width: 100%;
   position: absolute;
@@ -820,23 +793,23 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 337, ../source/sass/style.sass */
+/* line 326, ../source/sass/style.sass */
 .masthead-editor .masthead-images img:first-of-type {
   opacity: 0;
   z-index: 10;
 }
-/* line 341, ../source/sass/style.sass */
+/* line 330, ../source/sass/style.sass */
 .masthead-editor .masthead-images img:last-of-type {
   opacity: 1;
 }
-/* line 345, ../source/sass/style.sass */
+/* line 334, ../source/sass/style.sass */
 .masthead-editor .masthead-images:hover img:first-of-type {
   opacity: 1;
 }
 
 /* FOOTER
  */
-/* line 352, ../source/sass/style.sass */
+/* line 341, ../source/sass/style.sass */
 #colophon {
   position: relative;
   width: 100%;
@@ -848,11 +821,11 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding: 64px;
   padding: 4rem;
 }
-/* line 361, ../source/sass/style.sass */
+/* line 350, ../source/sass/style.sass */
 #colophon p {
   color: white;
 }
-/* line 364, ../source/sass/style.sass */
+/* line 353, ../source/sass/style.sass */
 #colophon a {
   display: block;
   font-family: "Ubuntu", sans-serif;
@@ -863,11 +836,11 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   line-height: 1.35rem;
   color: #d95b43;
 }
-/* line 368, ../source/sass/style.sass */
+/* line 357, ../source/sass/style.sass */
 #colophon a:hover {
   color: #ecd078;
 }
-/* line 371, ../source/sass/style.sass */
+/* line 360, ../source/sass/style.sass */
 #colophon .footer-wrap {
   max-width: 70em;
   margin-left: auto;
@@ -879,7 +852,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   display: block;
   clear: both;
 }
-/* line 374, ../source/sass/style.sass */
+/* line 363, ../source/sass/style.sass */
 #colophon .footer-nav {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -889,7 +862,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-/* line 376, ../source/sass/style.sass */
+/* line 365, ../source/sass/style.sass */
 #colophon .footer-nav a:first-of-type {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -898,7 +871,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
-/* line 379, ../source/sass/style.sass */
+/* line 368, ../source/sass/style.sass */
 #colophon .footer-genres {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -910,7 +883,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 27.2px;
   margin-top: 1.7rem;
 }
-/* line 383, ../source/sass/style.sass */
+/* line 372, ../source/sass/style.sass */
 #colophon .footer-social {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -922,7 +895,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 27.2px;
   margin-top: 1.7rem;
 }
-/* line 387, ../source/sass/style.sass */
+/* line 376, ../source/sass/style.sass */
 #colophon .footer-rights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -935,7 +908,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   margin-top: 1.7rem;
   position: relative;
 }
-/* line 391, ../source/sass/style.sass */
+/* line 380, ../source/sass/style.sass */
 #colophon .footer-rights p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -944,7 +917,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
   font-size: 0.9rem;
   line-height: 1.35rem;
 }
-/* line 394, ../source/sass/style.sass */
+/* line 383, ../source/sass/style.sass */
 #colophon .phoenix-down {
   position: absolute;
   width: 80px;
@@ -954,7 +927,7 @@ nav .nav-right a:hover, nav .menu-menu-1-container a:hover {
 
 /* ALL CONTENT PAGES
  */
-/* line 404, ../source/sass/style.sass */
+/* line 393, ../source/sass/style.sass */
 iframe {
   max-width: 100%;
 }

@@ -32,7 +32,7 @@ $susy: ( columns: 12, gutters: .25, gutter-position: inside )
   box-sizing: border-box
 
 body
-  background-color: white
+  background: url('/images/clouds.png')
   overflow-x: hidden
 
 /*
@@ -74,30 +74,19 @@ body
 nav
   @include container(70em)
 
-  .nav-left, .nav-right, .menu-menu-1-container
+  .nav-left
+    @include span(12)
+
+  a
     @include inline-block
     @include ubuntu(1)
+    @include px-rem(margin-right, 2)
     padding-top: 10px
     padding-bottom: 6px
+    color: $orange
+    &:hover
+      color: $yellow
 
-  .nav-left
-    @include span(6)
-    @include roboto(1.4)
-    img
-      width: 24px
-      margin-right: 8px
-
-  .nav-right, .menu-menu-1-container
-    @include span(6)
-    @include push(6)
-    text-align: right
-    padding-top: 8px
-    a
-      @include px-rem(margin-left, 2)
-      color: $orange
-      &:hover
-        color: $yellow
-  
 /*
  * CONTENT
  */
@@ -166,7 +155,7 @@ nav
       width: 80px
       position: absolute
       top: 36px
-      left: -77px
+      left: -11px
 
   .announcement
     @include span(6 of 12)

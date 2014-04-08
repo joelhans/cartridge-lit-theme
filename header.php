@@ -42,15 +42,13 @@
 </header>
 
 <div class="nav">
-<nav role="navigation">
-
-  <div class="nav-right">
-    <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
-    <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
-    <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
-  </div>
-
-</nav>
+  <nav role="navigation">
+    <div class="nav-left"> 
+      <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
+      <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
+      <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
+    </div>
+  </nav>
 </div>
 
 <div id="page" class="hfeed site">
