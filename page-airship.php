@@ -5,9 +5,9 @@
 
 get_header(); ?>
 
-  <section class="airships">
+  <section class="airship">
 
-    <h1>The Airship</h1>
+    <h1 class="airship-title">The Airship</h1>
     <p class="airship-desc">(The <em>Cartridge Lit</em> blog.)</p>
 
     <section class="airship-content">
@@ -34,7 +34,9 @@ get_header(); ?>
       ?>
     </section>
 
-    <?php wp_get_archives(); ?>
+    <section class="airship-sidebar">
+      <?php wp_get_archives(); ?>
+    </section>
 
   </section>
 
