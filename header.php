@@ -46,6 +46,7 @@
     <div class="nav-left"> 
       <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
       <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
+      <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
       <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
     </div>
   </nav>
