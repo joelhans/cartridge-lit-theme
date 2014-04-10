@@ -13,9 +13,27 @@ get_header(); ?>
       
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <div class="entry-header" style="background-image: url(<?php bloginfo( 'template_directory' ); ?>/img/posts/<?php echo basename( get_permalink() ); ?>.png);"> 
+      <?php
+        $dir = get_bloginfo( 'template_directory' );
+        $imgdir = '/img/posts/';
+        $file = basename( get_permalink() );
+        $extpng = '.png';
+        $extjpg = '.jpg';
+
+        $full_path_png = $dir . $imgdir . $file . $extpng; 
+        $full_path_jpg = $dir . $imgdir . $file . $extjpg;
+      ?>
+
+      <?php if ( @getimagesize($full_path_png) ): ?>
+      <div class="entry-header" style="background-image: url(<? echo $full_path_png; ?>);">
+      <?php elseif ( @getimagesize($full_path_jpg) ): ?>
+      <div class="entry-header" style="background-image: url(<? echo $full_path_jpg; ?>);">
+      <?php else : ?>
+      <div class="entry-header">
+      <?php endif; ?>
         
-        <div>
+        <div class="entry-bg">
+
           <h1 class="entry-title"><?php the_title(); ?></h1>
       
           <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
@@ -23,6 +41,11 @@ get_header(); ?>
           <?php endif; ?>
 
           <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+          <div class="entry-cats">
+            <?php echo get_the_category_list('&nbsp;'); ?>
+          </div>
+
         </div>
 
       </div>

@@ -36,9 +36,24 @@ get_header(); ?>
         setup_postdata($post);
       ?>
 
+      <?php
+        $dir = get_bloginfo( 'template_directory' );
+        $imgdir = '/img/posts/';
+        $file = basename( get_permalink() );
+        $extpng = '.png';
+        $extjpg = '.jpg';
+
+        $full_path_png = $dir . $imgdir . $file . $extpng; 
+        $full_path_jpg = $dir . $imgdir . $file . $extjpg;
+      ?>
+
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a class="image" href="<?php the_permalink(); ?>">
-          <img class="entry-image" src="<?php bloginfo( 'template_directory' ); ?>/img/posts/<?php echo basename( get_permalink() ); ?>.png" />
+          <?php if ( @getimagesize($full_path_png) ): ?>
+          <img class="entry-image" src="<?php echo $full_path_png; ?>" />
+          <?php elseif ( @getimagesize($full_path_jpg) ): ?>
+          <img class="entry-image" src="<?php echo $full_path_jpg; ?>" />
+          <?php endif; ?>
         </a>
 
         <div class="meta">
@@ -47,6 +62,10 @@ get_header(); ?>
           <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
 
           <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+          <div class="entry-cats">
+            <?php echo get_the_category_list('&nbsp;'); ?>
+          </div>
 
           <?php the_excerpt(); ?> 
 
