@@ -30,16 +30,27 @@ get_header(); ?>
         <p class="launch-pp"><em>Cartridge Lit</em> is launching May 5. We are allocating bytes and converting pixels into games literature that will be fed directly into your brains. Get ready.</p>
         <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
 
-      <?php else: ?>
-      <?php
+      <?php 
+        else:
         foreach( $theposts as $post) :
         setup_postdata($post);
       ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
-        <?php the_excerpt(); ?> 
+        <a class="image" href="<?php the_permalink(); ?>">
+          <img class="entry-image" src="<?php bloginfo( 'template_directory' ); ?>/img/posts/<?php echo basename( get_permalink() ); ?>.png" />
+        </a>
+
+        <div class="meta">
+
+          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+          <?php the_excerpt(); ?> 
+
+        </div>
       </article>
 
       <?php

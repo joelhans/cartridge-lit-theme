@@ -13,13 +13,19 @@ get_header(); ?>
       
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+      <div class="entry-header" style="background-image: url(<?php bloginfo( 'template_directory' ); ?>/img/posts/<?php echo basename( get_permalink() ); ?>.png);"> 
+        
+        <div>
+          <h1 class="entry-title"><?php the_title(); ?></h1>
       
-      <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
-      <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
-      <?php endif; ?>
+          <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
+          <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
+          <?php endif; ?>
 
-      <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+        </div>
+
+      </div>
 
       <?php the_content(); ?> 
 
