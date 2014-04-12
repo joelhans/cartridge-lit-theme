@@ -1,0 +1,143 @@
+/*
+ * LOOP
+ *
+ * 6-span/6-span
+ */
+
+.six-by-six
+  section
+    @include span(12 nest)
+    @include px-rem(margin-bottom, 4)
+
+    &:last-of-type
+      margin-bottom: 0
+
+    &:nth-of-type(even)
+      .image
+        float: right
+
+    .image
+      @include span(6 of 12) 
+      margin-top: 8px
+
+    .meta
+      @include span(6 of 12)
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    img
+      max-width: 100%
+
+    time
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    .entry-cats
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      a
+        color: $red
+        &:hover
+          color: $purple
+
+/*
+ * LOOP
+ *
+ * nine-stack
+ */
+
+.nine-stack
+  @include span(9 of 9)
+  @include px-rem(margin-bottom, 2)
+
+  a.image
+    @include span(3 of 9)
+    overflow: hidden
+    margin-top: 8px
+
+  img
+    position: relative
+    width: 150%
+    left: -25% 
+
+  .meta
+    @include span(6 of 9)
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    img
+      max-width: 100%
+
+    time
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    .entry-cats
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      a
+        color: $red
+        @include px-rem(margin-right, 2)
+        &:hover
+          color: $purple
+
+    .entry-tags
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      a
+        color: $purple
+        @include px-rem(margin-right, 1)
+        &:hover
+          color: $yellow
+/*
+ * LOOP
+ *
+ * 3-span/3-span/3-span
+ */
+
+.three-three-three
+  section
+    @include span(4 of 12)
+    @include px-rem(margin-bottom, 2)
+    min-height: 300px
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    time
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      color: $blue

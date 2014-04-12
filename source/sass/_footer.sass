@@ -1,0 +1,48 @@
+
+#colophon
+  position: relative
+  width: 100%
+  height: 800px
+  background: url('img/ffiv_sunset.png')
+  background-size: cover
+  @include px-rem(margin-top, 8)
+  @include px-rem(padding, 4)
+
+  p
+    color: white
+
+  a
+    display: block
+    @include ubuntu(0.9)
+    color: $orange
+    &:hover
+      color: $yellow
+
+  .footer-wrap
+    @include container(70em)
+
+  .footer-nav
+    @include span(3 of 12)
+    a:first-of-type
+      @include ubuntu(1.2)
+
+  .footer-genres
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+
+  .footer-social
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+
+  .footer-rights
+    @include span(3 of 12)
+    @include px-rem(margin-top, 1.7)
+    position: relative
+    p
+      @include ubuntu(0.9)
+
+  .phoenix-down
+    position: absolute
+    width: 80px
+    top: -35px
+    right: -100px

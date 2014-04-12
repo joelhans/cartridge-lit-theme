@@ -12,53 +12,49 @@
 
 get_header(); ?>
 
-  <section class="pages">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
 
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+    <?php if ( is_page( 'masthead' ) ): ?>
 
-      <?php if ( is_page( 'masthead' ) ): ?>
+    <div class="masthead-editor">
 
-      <div class="masthead-editor">
+      <div class="masthead-images">
 
-        <div class="masthead-images">
-
-          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd.jpg" />
-          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd_pixel.png" />
-
-        </div>
-
-        <p><?php echo get_post_meta( $post->ID, 'justin-bio', true); ?></p>
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd_pixel.png" />
 
       </div>
 
-      <div class="masthead-editor">
+      <p><?php echo get_post_meta( $post->ID, 'justin-bio', true); ?></p>
 
-        <div class="masthead-images">
+    </div>
 
-          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh.jpg" />
-          <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh_pixel.png" />
+    <div class="masthead-editor">
 
-        </div>
+      <div class="masthead-images">
 
-        <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh_pixel.png" />
 
       </div>
 
-      <?php else : ?>
+      <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
 
-      <?php the_content(); ?> 
+    </div>
 
-      <?php endif; ?>
+    <?php else : ?>
 
-    </article>
+    <?php the_content(); ?> 
 
-    <?php endwhile; ?>
     <?php endif; ?>
 
-  </section>
+  </article>
+
+  <?php endwhile; ?>
+  <?php endif; ?>
 
 <?php get_footer(); ?>

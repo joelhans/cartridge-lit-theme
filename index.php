@@ -14,7 +14,7 @@
 get_header(); ?>
 
     <!-- STORIES -->
-    <section class="featured-work">
+    <section class="featured-work six-by-six">
 
       <?php
         $args = array ( 
@@ -27,8 +27,8 @@ get_header(); ?>
       <?php if( !$theposts ): ?>
 
         <h1 class="launch-header">null. null. literature pending.</h1>
-        <p class="launch-pp"><em>Cartridge Lit</em> is launching May 5. We are allocating bytes and converting pixels into games literature that will be fed directly into your brains. Get ready.</p>
-        <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
+        <p class="launch-pp"><em>Cartridge Lit</em> is launching with video game literature May 5. We are allocating bytes and converting pixels into words that will be fed directly into your brains. Get ready.</p>
+        <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, read <a href="#airship">our blog</a>,and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
 
       <?php 
         else:
@@ -36,24 +36,12 @@ get_header(); ?>
         setup_postdata($post);
       ?>
 
-      <?php
-        $dir = get_bloginfo( 'template_directory' );
-        $imgdir = '/img/posts/';
-        $file = basename( get_permalink() );
-        $extpng = '.png';
-        $extjpg = '.jpg';
-
-        $full_path_png = $dir . $imgdir . $file . $extpng; 
-        $full_path_jpg = $dir . $imgdir . $file . $extjpg;
-      ?>
-
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        
         <a class="image" href="<?php the_permalink(); ?>">
-          <?php if ( @getimagesize($full_path_png) ): ?>
-          <img class="entry-image" src="<?php echo $full_path_png; ?>" />
-          <?php elseif ( @getimagesize($full_path_jpg) ): ?>
-          <img class="entry-image" src="<?php echo $full_path_jpg; ?>" />
-          <?php endif; ?>
+          <?php if ( has_post_thumbnail() ): ?>
+            <?php the_post_thumbnail(); ?>
+          <?php endif; ?> 
         </a>
 
         <div class="meta">
@@ -70,7 +58,7 @@ get_header(); ?>
           <?php the_excerpt(); ?> 
 
         </div>
-      </article>
+      </section>
 
       <?php
         endforeach;
@@ -90,31 +78,60 @@ get_header(); ?>
     <!-- STORIES -->
 
     <!-- FROM THE AIRSHIP -->
-    <section class="from-the-airship">
+    <section id="airship" class="from-the-airship">
 
       <aside class="airship-banner">
         <h1>From the Airship:</h1>
         <img src="<?php bloginfo( 'template_directory' ); ?>/img/airship.png" />
       </aside>
 
-      <!-- ANNOUNCEMENTS -->
-     <section class="announcement"> 
+      <!-- PRIMARY LOOP -->
 
+      <section class="airship-loop">
         <?php
           $args = array ( 
-            'numberposts' => 1,
-            'category_name' => 'featured'
+            'numberposts' => 10,
+            'category_name' => 'airship,uncategorized'
           );
           $theposts = get_posts( $args );
-
-          foreach( $theposts as $post) :
+          foreach( $theposts as $post):
           setup_postdata($post);
+
+          $dir = get_bloginfo( 'template_directory' );
+          $imgdir = '/img/posts/';
+          $date = get_the_date( 'Y-m-d' );
+          $file = basename( get_permalink() );
+          $extpng = '.png';
+          $extjpg = '.jpg';
+
+          $full_path_png = $dir . $imgdir . $date . '-' . $file . $extpng; 
+          $full_path_jpg = $dir . $imgdir . $date . '-' . $file . $extjpg;
         ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
-          <?php the_content(); ?> 
+        <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
+          <a class="image" href="<?php the_permalink(); ?>">
+            <?php if ( has_post_thumbnail() ): ?>
+              <?php the_post_thumbnail(); ?>
+            <?php endif; ?> 
+          </a>
+
+          <div class="meta">
+
+            <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+
+            <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
+            <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+            <?php endif; ?>
+
+            <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+            <div class="entry-tags">
+              <?php echo get_the_tag_list(); ?>
+            </div>
+
+            <?php the_excerpt(); ?> 
+
+          </div>
         </article>
 
         <?php
@@ -122,45 +139,14 @@ get_header(); ?>
           wp_reset_postdata();
         ?>
 
-        <section class="featured-read-more">
-          <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Airship' ) ) ) ?>">Read more from the Airship.</a>
-        </section>
+        <a class="airship-read-more" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Airship' ) ) ) ?>">Read more from the Airship.</a>
 
       </section>
-      <!-- ANNOUNCEMENTS -->
 
-      <!-- OTHER BLOGS -->
-      <section class="blog-list">
-        
-        <?php
-          $args = array ( 
-            'numberposts' => 5,
-            'category_name' => 'airship,blog,uncategorized'
-          );
-          $theposts = get_posts( $args );
-
-          foreach( $theposts as $post) :
-          setup_postdata($post);
-        ?>
-
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
-          <aside><?php echo get_the_tag_list(); ?></aside>
-        </article>
-       
-        <?php
-          endforeach;
-          wp_reset_postdata();
-        ?>
-
-      </section>
+      <?php get_sidebar(); ?>
 
     </section>
     <!-- FROM THE AIRSHIP -->
-
-    <!-- ARCHIVES -->
-    
 
 <?php wp_reset_query(); ?>
 <?php get_footer(); ?>

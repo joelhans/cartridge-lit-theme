@@ -1,0 +1,29 @@
+
+.masthead-editor
+  @include span(6 of 12)
+
+  .masthead-images
+    max-width: 300px
+    height: 300px
+    display: block
+    position: relative
+    margin: 0 auto
+    @include px-rem(margin-bottom, 4)
+
+    img
+      max-width: 100%
+      position: absolute
+      @include transition-duration(0.5s)
+      @include transition-property(opacity)
+      @include transition-timing-function(ease-in-out)
+
+    img:first-of-type
+      opacity: 0
+      z-index: 10
+
+    img:last-of-type
+      opacity: 1
+
+    &:hover
+      img:first-of-type
+        opacity: 1

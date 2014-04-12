@@ -5,10 +5,27 @@
  * @package Cartridge Lit
  */
 
-function custom_excerpt_length( $length ) {
-  return 100;
+add_theme_support( 'post-thumbnails' );
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+  $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+  return $html;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
+
+function cartridge_loop( $num, $categories ) {
+  echo $num;
+  echo $categories;
+
+  $theposts = get_posts( $args );
+
+  foreach( $theposts as $post) :
+    setup_postdata($post);
+
+  endforeach;
+  wp_reset_postdata();
+}
 
 function add_body_class( $classes )
 {
