@@ -24,25 +24,11 @@ get_header(); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php
-      $dir = get_bloginfo( 'template_directory' );
-      $imgdir = '/img/posts/';
-      $date = get_the_date( 'Y-m-d' );
-      $file = basename( get_permalink() );
-      $extpng = '.png';
-      $extjpg = '.jpg';
-
-      $full_path_png = $dir . $imgdir . $date . '-' . $file . $extpng; 
-      $full_path_jpg = $dir . $imgdir . $date . '-' . $file . $extjpg;
-    ?>
-
     <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
       <a class="image" href="<?php the_permalink(); ?>">
-        <?php if ( @getimagesize($full_path_png) ): ?>
-        <img class="entry-image" src="<?php echo $full_path_png; ?>" />
-        <?php elseif ( @getimagesize($full_path_jpg) ): ?>
-        <img class="entry-image" src="<?php echo $full_path_jpg; ?>" />
-        <?php endif; ?>
+        <?php if ( has_post_thumbnail() ): ?>
+          <?php the_post_thumbnail(); ?>
+        <?php endif; ?> 
       </a>
 
       <div class="meta">
