@@ -96,16 +96,6 @@ get_header(); ?>
           $theposts = get_posts( $args );
           foreach( $theposts as $post):
           setup_postdata($post);
-
-          $dir = get_bloginfo( 'template_directory' );
-          $imgdir = '/img/posts/';
-          $date = get_the_date( 'Y-m-d' );
-          $file = basename( get_permalink() );
-          $extpng = '.png';
-          $extjpg = '.jpg';
-
-          $full_path_png = $dir . $imgdir . $date . '-' . $file . $extpng; 
-          $full_path_jpg = $dir . $imgdir . $date . '-' . $file . $extjpg;
         ?>
 
         <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">

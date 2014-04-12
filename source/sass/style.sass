@@ -139,6 +139,14 @@ body
       @include vollkorn(0.9)
       margin-bottom: 0
 
+  .sidebar-search
+    input.search-submit
+      position: absolute
+      right: 0px
+
+  .sidebar-about p a
+    @include ubuntu(0.8)
+
   .sidebar-social, .sidebar-cats, .sidebar-tags
     a
       @include inline-block
@@ -148,6 +156,7 @@ body
   .sidebar-archive
     ul
       list-style-type: none
+      margin-bottom: 0
     li
       @include ubuntu(0.9)
 
@@ -221,3 +230,49 @@ article.page
 
 iframe
   max-width: 100%
+
+/*
+ * 404
+ */
+
+.error-404
+  @include span(9 of 12)
+
+  h1
+    @include px-rem(margin-bottom, 1)
+
+  .search-form 
+    @include px-rem(margin-bottom, 2)
+
+  h2
+    @include ubuntu(1.5)
+    @include px-rem(margin-bottom, 1)
+
+/*
+ * ETC STANDARDS
+ */ 
+
+/* search form */
+form.search-form
+  position: relative
+
+  span
+    display: none
+
+  input.search-field
+    @include ubuntu(0.9)
+    padding: 8px
+    color: $purple
+
+  input.search-submit
+    position: relative
+    right: 10px
+    @include ubuntu(0.9)
+    padding: 7px 6px 6px 6px
+    color: $red
+    border: 1px solid $purple
+    background: white
+    &:hover
+      color: $purple
+      cursor: pointer
+

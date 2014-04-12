@@ -7,50 +7,59 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <section class="error-404">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cartridge-lit' ); ?></h1>
-				</header><!-- .page-header -->
+    <h1>You seem to have taken the wrong turn.</h1> 
+    <p>That seems to happen in dungeons, sometimes, doesn't it?</p>
+    <p>Let's try to get you back on the right path.</p>
+    <p>Try some of the navigation options to the right, the search form just below this, or one of the recent posts below that.</p>
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cartridge-lit' ); ?></p>
+    <?php get_search_form(); ?>
 
-					<?php get_search_form(); ?>
+    <h2>Recent posts:</h2>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+    <?php
+      $args = array ( 
+        'numberposts' => 5
+      );
+      $theposts = get_posts( $args );
+      foreach( $theposts as $post):
+      setup_postdata($post);
+    ?>
 
-					<?php if ( cartridge_lit_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'cartridge-lit' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+    <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
+      <a class="image" href="<?php the_permalink(); ?>">
+        <?php if ( has_post_thumbnail() ): ?>
+          <?php the_post_thumbnail(); ?>
+        <?php endif; ?> 
+      </a>
 
-					<?php
-					/* translators: %1$s: smiley */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'cartridge-lit' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+      <div class="meta">
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+        <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
+        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+
+        <div class="entry-tags">
+          <?php echo get_the_tag_list(); ?>
+        </div>
+
+        <?php the_excerpt(); ?> 
+
+      </div>
+    </article>
+
+    <?php
+      endforeach;
+      wp_reset_postdata();
+    ?>
+
+  </section>
+
+  <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

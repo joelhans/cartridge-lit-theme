@@ -420,8 +420,6 @@ nav a:hover {
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.85185%;
-  padding-right: 1.85185%;
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
@@ -791,6 +789,20 @@ nav a:hover {
   margin-bottom: 0;
 }
 /* line 143, ../source/sass/style.sass */
+.sidebar .sidebar-search input.search-submit {
+  position: absolute;
+  right: 0px;
+}
+/* line 147, ../source/sass/style.sass */
+.sidebar .sidebar-about p a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 12.8px;
+  line-height: 19.2px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+/* line 151, ../source/sass/style.sass */
 .sidebar .sidebar-social a, .sidebar .sidebar-cats a, .sidebar .sidebar-tags a {
   display: inline-block;
   vertical-align: middle;
@@ -806,11 +818,12 @@ nav a:hover {
   margin-right: 16px;
   margin-right: 1rem;
 }
-/* line 149, ../source/sass/style.sass */
+/* line 157, ../source/sass/style.sass */
 .sidebar .sidebar-archive ul {
   list-style-type: none;
+  margin-bottom: 0;
 }
-/* line 151, ../source/sass/style.sass */
+/* line 160, ../source/sass/style.sass */
 .sidebar .sidebar-archive li {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -946,7 +959,7 @@ article.post-full .entry-header aside {
 
 /* CONTENT / SINGLE PAGE
  */
-/* line 164, ../source/sass/style.sass */
+/* line 173, ../source/sass/style.sass */
 article.page {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -957,7 +970,7 @@ article.page {
   padding-right: 1.38889%;
   margin-left: 16.66667%;
 }
-/* line 168, ../source/sass/style.sass */
+/* line 177, ../source/sass/style.sass */
 article.page h1.entry-title {
   text-align: center;
   margin-bottom: 4rem;
@@ -965,7 +978,7 @@ article.page h1.entry-title {
 
 /* AIRSHIP
  */
-/* line 176, ../source/sass/style.sass */
+/* line 185, ../source/sass/style.sass */
 .airship {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -975,11 +988,11 @@ article.page h1.entry-title {
   margin-top: 128px;
   margin-top: 8rem;
 }
-/* line 180, ../source/sass/style.sass */
+/* line 189, ../source/sass/style.sass */
 .airship .airship-title {
   text-align: center;
 }
-/* line 183, ../source/sass/style.sass */
+/* line 192, ../source/sass/style.sass */
 .airship .airship-desc {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -992,7 +1005,7 @@ article.page h1.entry-title {
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
-/* line 189, ../source/sass/style.sass */
+/* line 198, ../source/sass/style.sass */
 .airship .airship-content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1002,7 +1015,7 @@ article.page h1.entry-title {
   padding-left: 1.38889%;
   padding-right: 1.38889%;
 }
-/* line 192, ../source/sass/style.sass */
+/* line 201, ../source/sass/style.sass */
 .airship .airship-sidebar {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1015,7 +1028,7 @@ article.page h1.entry-title {
 
 /* ARCHIVES
  */
-/* line 199, ../source/sass/style.sass */
+/* line 208, ../source/sass/style.sass */
 .archives {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1023,7 +1036,7 @@ article.page h1.entry-title {
   width: 75%;
   float: left;
 }
-/* line 202, ../source/sass/style.sass */
+/* line 211, ../source/sass/style.sass */
 .archives > h1 {
   text-align: center;
   margin-bottom: 64px;
@@ -1203,7 +1216,84 @@ article.page h1.entry-title {
 
 /* ALL CONTENT PAGES
  */
-/* line 222, ../source/sass/style.sass */
+/* line 231, ../source/sass/style.sass */
 iframe {
   max-width: 100%;
+}
+
+/* 404
+ */
+/* line 238, ../source/sass/style.sass */
+.error-404 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+}
+/* line 241, ../source/sass/style.sass */
+.error-404 h1 {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+/* line 244, ../source/sass/style.sass */
+.error-404 .search-form {
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+/* line 247, ../source/sass/style.sass */
+.error-404 h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+/* ETC STANDARDS
+ */
+/* search form */
+/* line 256, ../source/sass/style.sass */
+form.search-form {
+  position: relative;
+}
+/* line 259, ../source/sass/style.sass */
+form.search-form span {
+  display: none;
+}
+/* line 262, ../source/sass/style.sass */
+form.search-form input.search-field {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14.4px;
+  line-height: 21.6px;
+  font-size: 0.9rem;
+  line-height: 1.35rem;
+  padding: 8px;
+  color: #542437;
+}
+/* line 267, ../source/sass/style.sass */
+form.search-form input.search-submit {
+  position: relative;
+  right: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14.4px;
+  line-height: 21.6px;
+  font-size: 0.9rem;
+  line-height: 1.35rem;
+  padding: 7px 6px 6px 6px;
+  color: #c02942;
+  border: 1px solid #542437;
+  background: white;
+}
+/* line 275, ../source/sass/style.sass */
+form.search-form input.search-submit:hover {
+  color: #542437;
+  cursor: pointer;
 }

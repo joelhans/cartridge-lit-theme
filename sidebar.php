@@ -1,5 +1,9 @@
 <section class="sidebar">
 
+  <section class="sidebar-search">
+    <?php get_search_form(); ?>
+  </section>
+
   <section class="sidebar-about">
     <h1>About Cartridge Lit</h1>
     <p>We think video games are literature, and so why shouldn't there be literature about video games? That's the question we're hoping to answer here. <a href="about/">Read more.</a></p>
@@ -32,6 +36,5 @@
     <a class="twitter-timeline" href="https://twitter.com/CartridgeLit" data-widget-id="454964976508076032">Tweets by @CartridgeLit</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </section>
-
 
 </section>
