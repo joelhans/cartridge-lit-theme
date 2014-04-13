@@ -47,7 +47,7 @@ body
 
 #page
   @include container(70em)
-  @include px-rem(margin-top, 8)
+  @include px-rem(margin-top, 6)
 
 /*
  * LOOPS
@@ -183,23 +183,16 @@ article.page
  */
 
 .airship
-  @include span(12 nest)
-  @include px-rem(margin-top, 8)
+  @include span(9)
 
-  .airship-title
-    text-align: center
+  .airship-header
+    background: url('img/airship_flying.png')
 
   .airship-desc
     @include ubuntu(0.9)
     color: $red
-    text-align: center
     @include px-rem(margin-bottom, 2)
 
-  .airship-content
-    @include span(8 of 12)
-
-  .airship-sidebar
-    @include span(4 of 12)
 
 /*
  * ARCHIVES
@@ -246,6 +239,16 @@ iframe
 
   h2
     @include ubuntu(1.5)
+    @include px-rem(margin-bottom, 1)
+
+/*
+ * SEARCH RESULTS
+ */ 
+
+.search-page
+  @include span(9 of 12)
+
+  > h1
     @include px-rem(margin-bottom, 1)
 
 /*

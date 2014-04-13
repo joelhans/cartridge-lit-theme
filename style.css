@@ -278,8 +278,8 @@ nav a:hover {
   max-width: 70em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 128px;
-  margin-top: 8rem;
+  margin-top: 96px;
+  margin-top: 6rem;
 }
 /* line 12, ../../../../../../../home/joel/.gem/ruby/2.1.0/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
 #page::after {
@@ -957,6 +957,43 @@ article.post-full .entry-header aside {
   color: #53777a;
 }
 
+/* line 53, ../source/sass/_content-single.sass */
+article.page-full, section.page-full {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+  margin-left: 0%;
+}
+/* line 57, ../source/sass/_content-single.sass */
+article.page-full .page-header, section.page-full .page-header {
+  height: 200px;
+  margin-bottom: 64px;
+  margin-bottom: 4rem;
+}
+/* line 61, ../source/sass/_content-single.sass */
+article.page-full .page-header .entry-bg, section.page-full .page-header .entry-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 48, 48, 0.8);
+  padding: 80px 0 0 64px;
+  padding: 5rem 0 0 4rem;
+}
+/* line 67, ../source/sass/_content-single.sass */
+article.page-full .page-header h1, section.page-full .page-header h1 {
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  line-height: 3rem;
+  color: white;
+}
+
 /* CONTENT / SINGLE PAGE
  */
 /* line 173, ../source/sass/style.sass */
@@ -983,16 +1020,16 @@ article.page h1.entry-title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
+  width: 75%;
   float: left;
-  margin-top: 128px;
-  margin-top: 8rem;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
 }
-/* line 189, ../source/sass/style.sass */
-.airship .airship-title {
-  text-align: center;
+/* line 188, ../source/sass/style.sass */
+.airship .airship-header {
+  background: url("img/airship_flying.png");
 }
-/* line 192, ../source/sass/style.sass */
+/* line 191, ../source/sass/style.sass */
 .airship .airship-desc {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -1001,34 +1038,13 @@ article.page h1.entry-title {
   font-size: 0.9rem;
   line-height: 1.35rem;
   color: #c02942;
-  text-align: center;
   margin-bottom: 32px;
   margin-bottom: 2rem;
-}
-/* line 198, ../source/sass/style.sass */
-.airship .airship-content {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 66.66667%;
-  float: left;
-  padding-left: 1.38889%;
-  padding-right: 1.38889%;
-}
-/* line 201, ../source/sass/style.sass */
-.airship .airship-sidebar {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
-  padding-left: 1.38889%;
-  padding-right: 1.38889%;
 }
 
 /* ARCHIVES
  */
-/* line 208, ../source/sass/style.sass */
+/* line 201, ../source/sass/style.sass */
 .archives {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1036,7 +1052,7 @@ article.page h1.entry-title {
   width: 75%;
   float: left;
 }
-/* line 211, ../source/sass/style.sass */
+/* line 204, ../source/sass/style.sass */
 .archives > h1 {
   text-align: center;
   margin-bottom: 64px;
@@ -1105,8 +1121,8 @@ article.page h1.entry-title {
   height: 800px;
   background: url("img/ffiv_sunset.png");
   background-size: cover;
-  margin-top: 128px;
-  margin-top: 8rem;
+  margin-top: 96px;
+  margin-top: 6rem;
   padding: 64px;
   padding: 4rem;
 }
@@ -1216,14 +1232,14 @@ article.page h1.entry-title {
 
 /* ALL CONTENT PAGES
  */
-/* line 231, ../source/sass/style.sass */
+/* line 224, ../source/sass/style.sass */
 iframe {
   max-width: 100%;
 }
 
 /* 404
  */
-/* line 238, ../source/sass/style.sass */
+/* line 231, ../source/sass/style.sass */
 .error-404 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1233,17 +1249,17 @@ iframe {
   padding-left: 1.38889%;
   padding-right: 1.38889%;
 }
-/* line 241, ../source/sass/style.sass */
+/* line 234, ../source/sass/style.sass */
 .error-404 h1 {
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
-/* line 244, ../source/sass/style.sass */
+/* line 237, ../source/sass/style.sass */
 .error-404 .search-form {
   margin-bottom: 32px;
   margin-bottom: 2rem;
 }
-/* line 247, ../source/sass/style.sass */
+/* line 240, ../source/sass/style.sass */
 .error-404 h2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -1255,18 +1271,36 @@ iframe {
   margin-bottom: 1rem;
 }
 
+/* SEARCH RESULTS
+ */
+/* line 248, ../source/sass/style.sass */
+.search-page {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 75%;
+  float: left;
+  padding-left: 1.38889%;
+  padding-right: 1.38889%;
+}
+/* line 251, ../source/sass/style.sass */
+.search-page > h1 {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
 /* ETC STANDARDS
  */
 /* search form */
-/* line 256, ../source/sass/style.sass */
+/* line 259, ../source/sass/style.sass */
 form.search-form {
   position: relative;
 }
-/* line 259, ../source/sass/style.sass */
+/* line 262, ../source/sass/style.sass */
 form.search-form span {
   display: none;
 }
-/* line 262, ../source/sass/style.sass */
+/* line 265, ../source/sass/style.sass */
 form.search-form input.search-field {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -1277,7 +1311,7 @@ form.search-form input.search-field {
   padding: 8px;
   color: #542437;
 }
-/* line 267, ../source/sass/style.sass */
+/* line 270, ../source/sass/style.sass */
 form.search-form input.search-submit {
   position: relative;
   right: 10px;
@@ -1292,7 +1326,7 @@ form.search-form input.search-submit {
   border: 1px solid #542437;
   background: white;
 }
-/* line 275, ../source/sass/style.sass */
+/* line 278, ../source/sass/style.sass */
 form.search-form input.search-submit:hover {
   color: #542437;
   cursor: pointer;

@@ -7,32 +7,55 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <?php if ( have_posts() ) : ?>
+  
+  <section class="search-page">
 
-		<?php if ( have_posts() ) : ?>
+    <h1>Search results for: <?php echo get_search_query(); ?></h1>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'cartridge-lit' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+    <?php /* Start the Loop */ ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+    <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
+      <a class="image" href="<?php the_permalink(); ?>">
+        <?php if ( has_post_thumbnail() ): ?>
+          <?php the_post_thumbnail(); ?>
+        <?php endif; ?> 
+      </a>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+      <div class="meta">
 
-			<?php endwhile; ?>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-			<?php cartridge_lit_paging_nav(); ?>
+        <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
+        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <?php endif; ?>
 
-		<?php else : ?>
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-			<?php get_template_part( 'content', 'none' ); ?>
+        <div class="entry-cats">
+          <?php echo get_the_category_list('&nbsp;'); ?>
+        </div>
 
-		<?php endif; ?>
+        <div class="entry-tags">
+          <?php echo get_the_tag_list(); ?>
+        </div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+        <?php the_excerpt(); ?> 
 
-<?php get_sidebar(); ?>
+      </div>
+    </article>
+
+    <?php endwhile; ?>
+
+  <?php else : ?>
+
+    <h1>Sorry, there's nothing here... yet. We're working on it.</h1>
+
+  <?php endif; ?>
+
+  </section>
+  
+  <?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
