@@ -936,7 +936,7 @@ article.post-full .entry-header .entry-cats a:hover, article.post-full .entry-he
   color: #d95b43;
 }
 /* line 45, ../source/sass/_content-single.sass */
-article.post-full .entry-header aside {
+article.post-full aside {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -945,8 +945,8 @@ article.post-full .entry-header aside {
   padding-left: 2.08333%;
   padding-right: 2.08333%;
   margin-left: 12.5%;
-  margin-top: 64px;
-  margin-top: 4rem;
+  margin-top: 32px;
+  margin-top: 2rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 14.4px;
