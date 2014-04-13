@@ -35,6 +35,7 @@
   <div class="footer-social">
     <a href="http://twitter.com/cartridgelit">Twitter</a>
     <a href="https://www.facebook.com/CartridgeLit">Facebook</a>
+    <a href="feed/">RSS</a>
   </div>
 
   <div class="footer-rights">

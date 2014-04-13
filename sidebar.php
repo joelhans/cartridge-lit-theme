@@ -13,6 +13,7 @@
     <h1>Follow us</h1> 
     <a href="http://twitter.com/cartridgelit">Twitter</a>
     <a href="https://www.facebook.com/CartridgeLit">Facebook</a>
+    <a href="feed/">RSS</a>
   </section>
 
   <section class="sidebar-cats">
