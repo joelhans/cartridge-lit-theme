@@ -8,8 +8,12 @@
 get_header(); ?>
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    
+
+  <?php if ( has_category( 'airship' ) ): ?> 
+  <article id="post-<?php the_ID(); ?>" class="post-full airship-full">
+  <?php else: ?>
   <article id="post-<?php the_ID(); ?>" class="post-full">
+  <?php endif; ?>
 
     <?php if ( has_post_thumbnail() ): ?>
     <div class="entry-header" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
@@ -48,6 +52,8 @@ get_header(); ?>
     <?php endif; ?>      
 
   </article>
+
+  <?php if ( has_category( 'airship' ) ): get_sidebar(); endif; ?>
 
   <?php endwhile; ?>
   <?php endif; ?>

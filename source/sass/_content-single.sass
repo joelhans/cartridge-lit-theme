@@ -50,11 +50,12 @@ article.post-full
     text-align: center
     color: $blue
 
-article.page-full, section.page-full
+article.page-full, section.page-full, article.airship-full
   @include span(9 of 12)
   @include push(0 of 12)
   
-  .page-header
+  .page-header,
+  .entry-header
     height: 200px
     @include px-rem(margin-bottom, 4)
     
