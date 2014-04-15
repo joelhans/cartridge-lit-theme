@@ -8,6 +8,12 @@
 # TODO
 #############################
 
+[x][ ] - Shrink down the header image some.
+
+[ ][ ] - Make airship/page images bigger, same size as story ones.
+
+[ ][ ] - Kill the 6-by-6 format, go with two big images 50%/50%, overlayed 
+
 [ ][ ] - Top navigation bar that floats.
   - Fiction/poetry/nonfiction links as well.
   - On hover, there's a dropdown like Terrain.org. Images and titles.
@@ -18,12 +24,12 @@
   - Maybe just have a sidebar on the stories, too?
   - I don't know. :(
 
+[ ][ ] - Make a little magnifying glass that reveals more info on the image.
+
 [ ][ ] - Better breakpoints.
 
 #############################
 # BUGS
 #############################
-
-[x][ ] - Fix the RSS feed links for when people are on post pages.
 
 [ ][ ] - On all pages, make it so the images are actual images, not background images. That should help with SEO/grabbing from feeds.
