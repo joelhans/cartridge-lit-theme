@@ -2,22 +2,22 @@
 # TODO
 #############################
 
-Top navigation bar that floats.
+[ ][ ] - Top navigation bar that floats.
   - Fiction/poetry/nonfiction links as well.
   - On hover, there's a dropdown like Terrain.org. Images and titles.
 
-Come up with some way to vertically align titles/meta?
+[ ][ ] - Come up with some way to vertically align titles/meta?
 
-Previous/next buttons, or other recent content after a story.
+[ ][ ] - Previous/next buttons, or other recent content after a story.
   - Maybe just have a sidebar on the stories, too?
   - I don't know. :(
 
-Better breakpoints.
+[ ][ ] - Better breakpoints.
 
 #############################
 # BUGS
 #############################
 
-Fix the RSS feed links for when people are on post pages.
+[ ][ ] - Fix the RSS feed links for when people are on post pages.
 
-On all pages, make it so the images are actual images, not background images. That should help with SEO/grabbing from feeds.
+[ ][ ] - On all pages, make it so the images are actual images, not background images. That should help with SEO/grabbing from feeds.
