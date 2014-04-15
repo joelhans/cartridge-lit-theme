@@ -1,4 +1,10 @@
 #############################
+# KEY
+# [ ][ ]
+# [FIXED][DEPLOYED]
+#############################
+
+#############################
 # TODO
 #############################
 
@@ -18,6 +24,6 @@
 # BUGS
 #############################
 
-[ ][ ] - Fix the RSS feed links for when people are on post pages.
+[x][ ] - Fix the RSS feed links for when people are on post pages.
 
 [ ][ ] - On all pages, make it so the images are actual images, not background images. That should help with SEO/grabbing from feeds.
