@@ -24,6 +24,13 @@ get_header(); ?>
       
       <div class="entry-bg">
         <h1 class="entry-title"><?php the_title(); ?></h1>
+        <?php if ( is_page( 'About' ) ): ?>
+        <p class="airship-desc">(Video games literature? What's that?)</p>
+        <?php elseif ( is_page( 'Submissions' ) ): ?>
+        <p class="airship-desc">(The kind of pixels that we want.)</p>
+        <?php elseif ( is_page( 'Masthead' ) ): ?>
+        <p class="airship-desc">(The people who are trying to make this crazy thing real.)</p>
+        <?php endif; ?>
       </div>
 
     </div>
