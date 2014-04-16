@@ -28,7 +28,7 @@ get_header(); ?>
 
         <h1 class="launch-header">null. null. literature pending.</h1>
         <p class="launch-pp"><em>Cartridge Lit</em> is launching with video game literature May 5. We are allocating bytes and converting pixels into words that will be fed directly into your brains. Get ready.</p>
-        <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, read <a href="#airship">our blog</a>,and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
+        <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, read <a href="#airship">our blog</a>, and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
 
       <?php 
         else:
