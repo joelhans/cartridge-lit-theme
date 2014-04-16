@@ -55,17 +55,3 @@ article.post-full
 article.page-full, section.page-full, article.airship-full
   @include span(9 of 12)
   @include push(0 of 12)
-  
-  .page-header,
-  .entry-header
-    
-    .entry-bg
-      width: 100%
-      height: 100%
-      background: transparentize($dgray, 0.2)
-      @include px-rem(padding, 5, 4, 0, 4)
-
-    h1
-      @include vollkorn(3)
-      line-height: 3rem
-      color: white
