@@ -14,7 +14,7 @@
 get_header(); ?>
 
     <!-- STORIES -->
-    <section class="featured-work six-by-six">
+    <section class="featured-work">
 
       <?php
         $args = array ( 
@@ -36,14 +36,9 @@ get_header(); ?>
         setup_postdata($post);
       ?>
 
-      <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        
-        <a class="image" href="<?php the_permalink(); ?>">
-          <?php if ( has_post_thumbnail() ): ?>
-            <?php the_post_thumbnail(); ?>
-          <?php endif; ?> 
-        </a>
+      <section id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
 
+        <div class="entry-bg">
         <div class="meta">
 
           <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -58,6 +53,8 @@ get_header(); ?>
           <?php the_excerpt(); ?> 
 
         </div>
+        </div>
+
       </section>
 
       <?php

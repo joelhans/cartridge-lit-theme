@@ -4,6 +4,48 @@
  * 6-span/6-span
  */
 
+.featured-work
+
+  section:first-of-type
+    @include span(12 nest)
+    position: relative
+    
+    background-size: cover
+    background-position: 50% 50%
+
+    .meta
+      @include span(6 of 12)
+      height: 300px
+
+    h1
+      @include vollkorn(1.7)
+
+    h2
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    img
+      max-width: 100%
+
+    time
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      @include px-rem(margin-right, 2)
+      color: $blue
+
+    .entry-cats
+      @include inline-block
+      @include ubuntu(0.9)
+      @include px-rem(margin-bottom, 1)
+      a
+        color: $red
+        &:hover
+          color: $purple
+
 .six-by-six
   section
     @include span(12 nest)
