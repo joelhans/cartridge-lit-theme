@@ -23,19 +23,17 @@ get_header(); ?>
       
       <div class="entry-bg">
 
-        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <h1 class="entry-title entry-title-large"><?php the_title(); ?></h1>
     
-        <?php if ( get_post_meta( $post->ID, 'writer', 'true' ) ): ?>
-        <h2><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
-        <?php endif; ?>
+        <h2 class="entry-author entry-author-large"><?php echo get_post_meta( $post->ID, 'writer', true); ?></h2>
 
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+        <time class="entry-time entry-time-large" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-        <div class="entry-cats">
+        <div class="entry-cats entry-cats-large">
           <?php echo get_the_category_list('&nbsp;'); ?>
         </div>
 
-        <div class="entry-tags">
+        <div class="entry-tags entry-cats-large">
           <?php echo get_the_tag_list(); ?>
         </div>
 
@@ -43,7 +41,9 @@ get_header(); ?>
 
     </div>
 
-    <?php the_content(); ?> 
+    <div class="entry-content">
+      <?php the_content(); ?> 
+    </div>
 
     <?php if ( get_post_meta( $post->ID, 'bio', 'true' ) ): ?>
     <aside class="work-bio">

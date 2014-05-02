@@ -37,21 +37,22 @@ get_header(); ?>
       ?>
 
       <section id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
+        
+        <a href="<?php the_permalink(); ?>" class="featured-full-link"></a>
 
         <div class="entry-bg">
         <div class="meta">
 
-          <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-          <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+          <h1 class="entry-title entry-title-large"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+          <h2 class="entry-author entry-author-large"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+          <time class="entry-time entry-time-large" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-          <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
-
-          <div class="entry-cats">
+          <div class="entry-cats entry-cats-large">
             <?php echo get_the_category_list('&nbsp;'); ?>
           </div>
-
+        </div>
+        <div class="excerpt">
           <?php the_excerpt(); ?> 
-
         </div>
         </div>
 
@@ -104,15 +105,13 @@ get_header(); ?>
 
           <div class="meta">
 
-            <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+            <h1 class="entry-title entry-title-small"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
             <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
-            <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+            <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
             <?php endif; ?>
+            <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-            <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
-
-            <div class="entry-tags">
+            <div class="entry-tags entry-tags-small">
               <?php echo get_the_tag_list(); ?>
             </div>
 

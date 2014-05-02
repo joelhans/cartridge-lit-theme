@@ -1,8 +1,7 @@
 
 article.post-full, section.page-full
-  @include span(8 of 12)
-  @include push(2 of 12)
-  
+  @include span(12 of 12)
+
   .entry-header,
   .page-header
     height: 300px
@@ -10,40 +9,9 @@ article.post-full, section.page-full
     background-size: cover
     background-position: 50% 50%
 
-    .entry-bg
-      width: 100%
-      height: 100%
-      background: transparentize($dgray, 0.2)
-      @include px-rem(padding, 6, 4, 0, 4)
-
-    h1
-      @include vollkorn(3)
-      line-height: 3rem
-      color: white
-
-    h2
-      @include inline-block
-      @include ubuntu(1.2)
-      @include px-rem(margin-right, 2)
-      color: $orange
-
-    time
-      @include inline-block
-      @include ubuntu(1.2)
-      @include px-rem(margin-right, 2)
-      color: $orange
-
-    .entry-cats, .entry-tags
-      @include inline-block
-      @include ubuntu(1.2)
-      @include px-rem(margin-right, 2)
-      a
-        color: $yellow
-        @include px-rem(margin-right, 1)
-        &:last-of-type
-          margin-right: 0          
-        &:hover
-          color: $orange
+  .entry-content
+    @include span(8 of 12)
+    @include push(2)
 
   aside
     @include span(6 of 8)

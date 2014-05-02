@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-  <?php if ( have_posts() ) : ?>
-  
   <section class="search-page">
+
+  <?php if ( have_posts() ) : ?>
 
     <h1>Search results for: <?php echo get_search_query(); ?></h1>
 
@@ -25,19 +25,19 @@ get_header(); ?>
 
       <div class="meta">
 
-        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h1 class="entry-title entry-title-small"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
         <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
-        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php endif; ?>
 
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-        <div class="entry-cats">
+        <div class="entry-cats entry-cats-small">
           <?php echo get_the_category_list('&nbsp;'); ?>
         </div>
 
-        <div class="entry-tags">
+        <div class="entry-tags entry-tags-small">
           <?php echo get_the_tag_list(); ?>
         </div>
 
@@ -50,7 +50,8 @@ get_header(); ?>
 
   <?php else : ?>
 
-    <h1>Sorry, there's nothing here... yet. We're working on it.</h1>
+    <h1>Search results for: <?php echo get_search_query(); ?></h1>
+    <p>Sorry, we couldn't find anything. :(</h1>
 
   <?php endif; ?>
 

@@ -1,0 +1,80 @@
+
+.entry-bg
+  width: 100%
+  height: 100%
+  background: transparentize($dgray, 0.1)
+  @include px-rem(padding, 6, 4, 0, 4)
+
+.entry-title
+  color: white
+
+  &-small
+    @include vollkorn(1.7)
+    
+    a 
+      color: $red
+      &:hover
+        color: $purple
+
+  &-large
+    @include vollkorn(3)
+    line-height: 3rem
+
+    a
+      color: white
+      &:hover
+        color: $red
+
+.entry-author
+  
+  &-small
+    @include inline-block
+    @include ubuntu(0.9)
+    @include px-rem(margin-bottom, 1)
+    @include px-rem(margin-right, 2)
+    color: $blue
+
+  &-large
+    @include inline-block
+    @include ubuntu(1.2)
+    @include px-rem(margin-right, 2)
+    color: $orange
+
+.entry-time
+  @include inline-block
+  @include px-rem(margin-right, 2)
+
+  &-small
+    @include ubuntu(0.9)
+    @include px-rem(margin-bottom, 1)
+    color: $blue
+
+  &-large
+    @include ubuntu(1.2)
+    color: $orange
+
+.entry-cats,
+.entry-tags
+  @include inline-block
+
+  &-small
+    @include ubuntu(0.9)
+    @include px-rem(margin-bottom, 1)
+    a
+      color: $red
+      @include px-rem(margin-right, 1)
+      &:last-of-type
+        margin-right: 0          
+      &:hover
+        color: $purple
+
+  &-large
+    @include ubuntu(1.2)
+    @include px-rem(margin-right, 2)
+    a
+      color: $yellow
+      @include px-rem(margin-right, 1)
+      &:last-of-type
+        margin-right: 0          
+      &:hover
+        color: $orange
