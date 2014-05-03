@@ -1,18 +1,44 @@
 
-article.post-full, section.page-full
+.work-full
   @include span(12 of 12)
 
-  .entry-header,
-  .page-header
-    height: 300px
-    @include px-rem(margin-bottom, 4)
-    background-size: cover
-    background-position: 50% 50%
+.airship-full, 
+.page-full
+  @include span(9 of 12)
 
-  .entry-content
-    @include span(8 of 12)
-    @include push(2)
+.entry-header,
+.page-header
+  height: 300px
+  position: relative
+  @include px-rem(margin-bottom, 4)
+  background-size: cover
+  background-position: 50% 50%
 
+.work-full .meta
+  @include span(8 of 12)
+  @include push(2)
+  position: relative
+  @include px-rem(padding-top, 6)
+  z-index: 11
+
+.airship-full .meta,
+.page-full .page-header .meta
+  position: relative
+  @include px-rem(padding, 6, 4, 0, 4)
+  z-index: 11
+
+.work-full .entry-content
+  @include span(8 of 12)
+  @include push(2)
+
+.airship-full .entry-content, 
+.page-full .entry-content
+  @include span(9 of 9)
+  @include push(0)
+
+.work-full,
+.airship-full, 
+.page-full
   aside
     @include span(6 of 8)
     @include push(1 of 8)
@@ -20,7 +46,3 @@ article.post-full, section.page-full
     @include ubuntu(0.9)
     text-align: center
     color: $blue
-
-article.page-full, section.page-full, article.airship-full
-  @include span(9 of 12)
-  @include push(0 of 12)

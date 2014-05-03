@@ -40,7 +40,8 @@ get_header(); ?>
         
         <a href="<?php the_permalink(); ?>" class="featured-full-link"></a>
 
-        <div class="entry-bg">
+        <div class="entry-bg"></div>
+
         <div class="meta">
 
           <h1 class="entry-title entry-title-large"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -51,9 +52,9 @@ get_header(); ?>
             <?php echo get_the_category_list('&nbsp;'); ?>
           </div>
         </div>
+
         <div class="excerpt">
           <?php the_excerpt(); ?> 
-        </div>
         </div>
 
       </section>

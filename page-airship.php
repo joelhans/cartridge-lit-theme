@@ -8,10 +8,14 @@ get_header(); ?>
   <section class="airship page-full">
 
     <div class="page-header airship-header">
-      <div class="entry-bg">
-        <h1 class="airship-title">The Airship</h1>
+
+      <div class="entry-bg"></div>
+
+      <div class="meta">
+        <h1 class="airship-title entry-title entry-title-large">The Airship</h1>
         <p class="airship-desc">(The <em>Cartridge Lit</em> blog.)</p>
       </div>
+
     </div>
 
     <?php
@@ -33,15 +37,15 @@ get_header(); ?>
 
       <div class="meta">
 
-        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h1 class="entry-title-small"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
         <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
-        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php endif; ?>
 
-        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
 
-        <div class="entry-tags">
+        <div class="entry-tags entry-tags-small" class="entry-tags">
           <?php echo get_the_tag_list(); ?>
         </div>
 
