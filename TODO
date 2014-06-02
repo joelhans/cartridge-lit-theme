@@ -8,8 +8,6 @@
 # TODO
 #############################
 
-[ ][ ] - Kill the 6-by-6 format, go with two big images 50%/50%, overlayed 
-
 [ ][ ] - Top navigation bar that floats.
   - Fiction/poetry/nonfiction links as well.
   - On hover, there's a dropdown like Terrain.org. Images and titles.
@@ -27,5 +25,3 @@
 #############################
 # BUGS
 #############################
-
-[ ][ ] - On all pages, make it so the images are actual images, not background images. That should help with SEO/grabbing from feeds.

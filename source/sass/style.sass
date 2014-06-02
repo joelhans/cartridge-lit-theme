@@ -53,32 +53,19 @@ body
 
 /*
  * LOOPS
- */ 
+ */
 
 @import "loops"
 
 /*
  * STORIES
- */ 
+ */
 
 @import "stories"
 
 /*
  * FEATURED CONTENT
  */
-
-.launch-header
-  @include ubuntu(2)
-  text-align: center
-  @include px-rem(margin-bottom, 2)
-  color: $red
-
-.launch-pp
-  @include vollkorn(1.2)
-  max-width: 600px
-  margin: 0 auto
-  @include px-rem(margin-bottom, 2)
-  text-align: center
 
 .featured-work
   @include span(12 of 12)
@@ -182,7 +169,7 @@ body
 
 /*
  * CONTENT / SINGLE PAGE
- */ 
+ */
 
 article.page
   @include span(8 of 12)
@@ -233,7 +220,7 @@ article.page
 
 /*
  * ALL CONTENT PAGES
- */ 
+ */
 
 iframe
   max-width: 100%
@@ -248,7 +235,7 @@ iframe
   h1
     @include px-rem(margin-bottom, 1)
 
-  .search-form 
+  .search-form
     @include px-rem(margin-bottom, 2)
 
   h2
@@ -257,7 +244,7 @@ iframe
 
 /*
  * SEARCH RESULTS
- */ 
+ */
 
 .search-page
   @include span(9 of 12)
@@ -267,7 +254,7 @@ iframe
 
 /*
  * ETC STANDARDS
- */ 
+ */
 
 /* search form */
 form.search-form
@@ -292,4 +279,3 @@ form.search-form
     &:hover
       color: $purple
       cursor: pointer
-
