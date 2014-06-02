@@ -6,7 +6,7 @@
 
   <section class="sidebar-about">
     <h1>About Cartridge Lit</h1>
-    <p>We think video games are literature, and so why shouldn't there be literature about video games? That's the question we're hoping to answer here. <a href="about/">Read more.</a></p>
+    <p>We think video games are literature, and so why shouldn't there be literature about video games? That's the question we're hoping to answer here. <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Read more.</a></p>
   </section>
 
   <section class="sidebar-social">
