@@ -16,20 +16,17 @@
 
   <div class="footer-nav">
     <a class="nav-left" href="<?php echo esc_url( home_url( '/' ) ); ?>">Cartridge Lit</a>
-    <?php 
-      $menuParameters = array(
-        'container'  => false,
-        'echo'       => false,
-        'items_wrap' => '%3$s',
-        'depth'      => 0,
-      );
-      echo strip_tags( wp_nav_menu ( $menuParameters ), '<a>' ); ?>
+    <a class="nav-left" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a>
+    <a class="nav-left" href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>">Submissions</a>
+    <a class="nav-left" href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>">Contributors</a>
+    <a class="nav-left" href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
   </div>
 
   <div class="footer-genres">
     <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
     <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
     <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+    <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
   </div>
 
   <div class="footer-social">

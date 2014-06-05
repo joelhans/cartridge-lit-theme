@@ -44,14 +44,23 @@ nav
   @include container(70em)
 
   .nav-left
-    @include span(12)
+    @include span(6 of 12)
+
+  .nav-right
+    @include span(6 of 12)
+    text-align: right
 
   a
     @include inline-block
     @include ubuntu(0.9)
-    @include px-rem(margin-right, 2)
     padding-top: 10px
     padding-bottom: 6px
     color: $orange
     &:hover
       color: $yellow
+
+  .nav-left a 
+    @include px-rem(margin-right, 2)
+  
+  .nav-right a 
+    @include px-rem(margin-left, 2)

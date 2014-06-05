@@ -43,10 +43,16 @@
 
 <div class="nav">
   <nav role="navigation">
-    <div class="nav-left"> 
+    <div class="nav-left">
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
+      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+      <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
+    </div>
+    <div class="nav-right"> 
       <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
       <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
-      <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
+      <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
       <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
     </div>
   </nav>
