@@ -17,7 +17,7 @@ get_header(); ?>
     <section class="featured-work">
 
       <?php
-        $args = array ( 
+        $args = array (
           'numberposts' => 5,
           'category_name' => 'fiction,poetry,non-fiction'
         );
@@ -30,14 +30,14 @@ get_header(); ?>
         <p class="launch-pp"><em>Cartridge Lit</em> is launching with video game literature May 5. We are allocating bytes and converting pixels into words that will be fed directly into your brains. Get ready.</p>
         <p class="launch-pp">Until then, check out what we&rsquo;re <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >all about</a>, read <a href="#airship">our blog</a>, and then <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">submit</a>.
 
-      <?php 
+      <?php
         else:
         foreach( $theposts as $post) :
         setup_postdata($post);
       ?>
 
       <section id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
-        
+
         <a href="<?php the_permalink(); ?>" class="featured-full-link"></a>
 
         <div class="entry-bg"></div>
@@ -46,7 +46,7 @@ get_header(); ?>
 
           <h1 class="entry-title entry-title-large"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
           <h2 class="entry-author entry-author-large"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
-          <time class="entry-time entry-time-large" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+          <time class="entry-time entry-time-large" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 
           <div class="entry-cats entry-cats-large">
             <?php echo get_the_category_list('&nbsp;'); ?>
@@ -54,7 +54,7 @@ get_header(); ?>
         </div>
 
         <div class="excerpt">
-          <?php the_excerpt(); ?> 
+          <?php the_excerpt(); ?>
         </div>
 
       </section>
@@ -63,7 +63,7 @@ get_header(); ?>
         endforeach;
         wp_reset_postdata();
       ?>
-      
+
       <section class="featured-read-more">
         Read more:&nbsp;
         <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
@@ -88,7 +88,7 @@ get_header(); ?>
 
       <section class="airship-loop">
         <?php
-          $args = array ( 
+          $args = array (
             'numberposts' => 10,
             'category_name' => 'airship,uncategorized'
           );
@@ -98,11 +98,8 @@ get_header(); ?>
         ?>
 
         <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
-          <a class="image" href="<?php the_permalink(); ?>">
-            <?php if ( has_post_thumbnail() ): ?>
-              <?php the_post_thumbnail(); ?>
-            <?php endif; ?> 
-          </a>
+
+          <a class="image" href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);"></a>
 
           <div class="meta">
 
@@ -110,13 +107,13 @@ get_header(); ?>
             <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
             <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
             <?php endif; ?>
-            <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+            <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 
             <div class="entry-tags entry-tags-small">
               <?php echo get_the_tag_list(); ?>
             </div>
 
-            <?php the_excerpt(); ?> 
+            <?php the_excerpt(); ?>
 
           </div>
         </article>
