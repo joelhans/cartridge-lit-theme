@@ -1,0 +1,266 @@
+@media only screen and (min-width : 320px) and (max-width : 900px)
+
+  /* typography */
+
+  p,ol,ul,span,blockquote
+    @include vollkorn(1*0.8, 400)
+    @include margin-bottom(1.2*0.8)
+
+  h1,h2,h3,h4,h5,h6
+    @include vollkorn(2*0.667, 400)
+
+  /* header */
+  #header
+    height: 140px
+    background-size: 700px auto
+    background-position: 45% 50%
+
+    .title
+      @include px-rem(margin-top, 3.2)
+
+      img
+        width: 40px
+
+      h1.site-title
+        @include roboto(2)
+        top: -9px
+        left: 20px
+
+  /* navigation */
+  nav a
+    display: block
+    @include ubuntu(0.9*0.667)
+
+  /* featured work */
+  .featured-work section.post
+
+    .meta
+      width: 100%
+      display: block
+      @include px-rem(padding, 3, 1, 1, 1)
+
+    .excerpt
+      width: 100%
+      display: block
+      @include px-rem(padding, 1)
+
+      p
+        @include vollkorn(1.4*0.667)
+
+  .featured-read-more
+    @include px-rem(margin-top, 2*0.667)
+    @include ubuntu(0.9*0.667)
+    a
+      @include px-rem(margin-left, 1*0.667)
+
+  /* from-the-airship */
+
+  .from-the-airship
+    .airship-banner
+      background-position: 0 37px
+
+      h1
+        @include vollkorn(1.7*0.667)
+
+      img
+        top: 22px
+        left: 2px
+
+  .airship-loop
+    @include span(12 of 12)
+
+  .airship-read-more
+    @include ubuntu(0.9*0.667)
+
+  /* content-single */
+
+  .entry-header,
+  .page-header
+    height: 200px
+
+  .work-full .meta
+    @include span(8 of 12)
+    @include px-rem(padding-top, 3.6)
+
+  .airship-full .meta,
+  .page-full .page-header .meta
+    @include px-rem(padding, 3.6, 2, 0, 2)
+
+  .work-full .entry-content
+    @include span(12 of 12)
+    @include push(0)
+
+  .airship-full .entry-content,
+  .page-full .entry-content
+    @include span(9 of 9)
+    @include push(0)
+
+  .work-full,
+  .airship-full,
+  .page-full
+    @include span(8 of 8)
+    @include push(0 of 8)
+    aside
+      @include ubuntu(0.9*0.667)
+
+  .airship-desc
+    @include ubuntu(1*0.667)
+
+  /* stories */
+  .entry-title
+
+    &-small
+      @include vollkorn(1.7*0.667)
+
+    &-large
+      @include vollkorn(3*0.667)
+      line-height: 2rem
+
+  .entry-author
+
+    &-small
+      @include ubuntu(0.9*0.667)
+      @include px-rem(margin-bottom, 1*0.667)
+      @include px-rem(margin-right, 2*0.667)
+
+    &-large
+      @include ubuntu(1.2*0.667)
+      @include px-rem(margin-right, 2*0.667)
+
+  .entry-time
+    @include px-rem(margin-right, 2*0.667)
+
+    &-small
+      @include ubuntu(0.9*0.667)
+      @include px-rem(margin-bottom, 1*0.667)
+
+    &-large
+      @include ubuntu(1.2*0.667)
+
+  .entry-cats,
+  .entry-tags
+
+    &-small
+      @include ubuntu(0.9*0.667)
+      @include px-rem(margin-bottom, 1*0.667)
+      a
+        @include px-rem(margin-right, 1*0.667)
+
+    &-large
+      @include ubuntu(1.2*0.667)
+      @include px-rem(margin-right, 2*0.667)
+      a
+        @include px-rem(margin-right, 1*0.667)
+
+  /* loops */
+
+  .nine-stack
+
+    a.image
+      @include span(9 of 9)
+
+    .meta
+      @include span(9 of 9)
+      @include px-rem(margin-top, 1)
+
+  /* masthead */
+
+  .masthead-editor
+    @include span(12 of 12)
+    @include px-rem(margin-bottom, 2)
+
+    .masthead-images
+      @include px-rem(margin-bottom, 2)
+
+  /* sidebar */
+
+  .sidebar
+    @include span(12 of 12)
+    @include px-rem(margin-top, 4)
+
+    [class^="sidebar"]
+
+      &:first-of-type
+        border-top: 1px solid transparentize($lgray, 0.8)
+        padding-top: 0.8rem
+
+      h1
+        @include ubuntu(1.2*0.667)
+        @include px-rem(margin-bottom, 0.8*0.667)
+      p
+        @include vollkorn(0.9*0.667)
+
+    .sidebar-about p a
+      @include ubuntu(0.8*0.667)
+
+    .sidebar-social, .sidebar-cats, .sidebar-tags
+      a
+        @include ubuntu(0.9*0.667)
+        @include px-rem(margin-right, 1*0.667)
+
+    .sidebar-archive
+      li
+        @include inline-block
+        @include ubuntu(0.9*0.667)
+        @include px-rem(margin-right, 1*0.667)
+
+  /* archives */
+
+  .archives
+    @include span(12 nest)
+
+    > h1
+      @include px-rem(margin-bottom, 4*0.667)
+
+  /* 404 */
+
+  .error-404
+    @include span(12 of 12)
+
+    h1
+      @include px-rem(margin-bottom, 1*0.667)
+
+    .search-form
+      @include px-rem(margin-bottom, 2*0.667)
+
+    .error-404-recent
+      @include ubuntu(1.5*0.667)
+      @include px-rem(margin-bottom, 1*0.667)
+
+  /* search results */
+
+  .search-page
+    @include span(12 of 12)
+
+    > h1
+      @include px-rem(margin-bottom, 1*0.667)
+
+  /* footer */
+  #colophon
+    width: 100%
+    height: 800*0.667px
+    @include px-rem(margin-top, 6)
+    @include px-rem(padding, 1)
+    @include px-rem(padding-top, 2)
+    a
+      @include ubuntu(0.9*0.667)
+
+    .footer-nav
+      a:first-of-type
+        @include ubuntu(1.2*0.667)
+
+    .footer-genres
+      @include px-rem(margin-top, 1.7*0.667)
+
+    .footer-social
+      @include px-rem(margin-top, 1.7*0.667)
+
+    .footer-rights
+      @include px-rem(margin-top, 1.7*0.667)
+      p
+        @include ubuntu(0.9*0.667)
+
+    .phoenix-down
+      width: 30px
+      top: 410px
+      right: 0px
