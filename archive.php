@@ -25,11 +25,8 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
-      <a class="image" href="<?php the_permalink(); ?>">
-        <?php if ( has_post_thumbnail() ): ?>
-          <?php the_post_thumbnail(); ?>
-        <?php endif; ?> 
-      </a>
+
+      <a class="image" href="<?php the_permalink(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);"></a>
 
       <div class="meta">
 
@@ -39,7 +36,7 @@ get_header(); ?>
         <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php endif; ?>
 
-        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time> 
+        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 
         <div class="entry-cats entry-cats-small">
           <?php echo get_the_category_list('&nbsp;'); ?>
@@ -49,7 +46,7 @@ get_header(); ?>
           <?php echo get_the_tag_list(); ?>
         </div>
 
-        <?php the_excerpt(); ?> 
+        <?php the_excerpt(); ?>
 
       </div>
     </article>
