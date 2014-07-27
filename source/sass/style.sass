@@ -222,8 +222,46 @@ article.page
  * ALL CONTENT PAGES
  */
 
+.entry-content img
+  max-width: 100%
+  height: auto
+
+.entry-content img.aligncenter
+  display: block
+  margin: 0 auto
+
 iframe
   max-width: 100%
+
+hr
+  position: relative
+  height: 20px
+  border: 0
+  background: url('img/cartridge_lit_logo.png')
+  background-size: 20px 20px
+  background-repeat: no-repeat
+  background-position: 50%
+  @include margin-bottom(1.2)
+
+  &:before
+    content: ''
+    position: absolute
+    left: 42%
+    display: block
+    width: 20px
+    height: 20px
+    background: url('img/cartridge_lit_logo.png')
+    background-size: 20px 20px
+
+  &:after
+    content: ''
+    position: absolute
+    right: 42%
+    display: block
+    width: 20px
+    height: 20px
+    background: url('img/cartridge_lit_logo.png')
+    background-size: 20px 20px
 
 /*
  * 404
