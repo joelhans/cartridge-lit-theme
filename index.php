@@ -88,14 +88,16 @@ get_header(); ?>
 
       <section class="airship-loop">
         <?php
-          $args = array (
-            'numberposts' => 10,
-            'category_name' => 'airship,uncategorized'
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array('
+          posts_per_page' => 5,
+          'paged' => $paged,
+          'category_name' => 'airship'
           );
-          $theposts = get_posts( $args );
-          foreach( $theposts as $post):
-          setup_postdata($post);
+        query_posts($args);
         ?>
+
+        <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
 
@@ -118,12 +120,13 @@ get_header(); ?>
           </div>
         </article>
 
-        <?php
-          endforeach;
-          wp_reset_postdata();
-        ?>
-
-        <a class="airship-read-more" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Airship' ) ) ) ?>">Read more from the Airship.</a>
+        <?php endwhile; ?>
+        <!-- pagination -->
+        <div class="nav-older"><a href="the-airship/page/2/">Older entries »</a></div>
+        <?php wp_reset_postdata(); ?>
+        <?php else : ?>
+        <!-- No posts found -->
+        <?php endif; ?>
 
       </section>
 

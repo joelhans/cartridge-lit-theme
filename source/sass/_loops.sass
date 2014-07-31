@@ -57,7 +57,7 @@
   @include px-rem(margin-bottom, 2)
 
   a.image
-    @include span(3 of 9)
+    @include span(3 of 9 no-gutters)
     overflow: hidden
     height: 200px
     margin-top: 8px
@@ -75,3 +75,17 @@
 
     img
       max-width: 100%
+
+/*
+ * PAGINATION
+ */
+
+.nav-newer
+  display: block
+  float: left
+  @include ubuntu(0.9)
+
+.nav-older
+  display: block
+  float: right
+  @include ubuntu(0.9)

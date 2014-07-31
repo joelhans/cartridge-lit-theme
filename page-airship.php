@@ -19,14 +19,16 @@ get_header(); ?>
     </div>
 
     <?php
-      $args = array (
-        'category_name' => 'airship,blog,uncategorized'
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $args = array('
+      posts_per_page' => 5,
+      'paged' => $paged,
+      'category_name' => 'airship'
       );
-      $theposts = get_posts( $args );
-
-      foreach( $theposts as $post) :
-      setup_postdata($post);
+    query_posts($args);
     ?>
+
+    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" class="nine-stack post-airship">
 
@@ -51,10 +53,18 @@ get_header(); ?>
       </div>
     </article>
 
-    <?php
-      endforeach;
-      wp_reset_postdata();
-    ?>
+    <?php endwhile; ?>
+    <!-- pagination -->
+    <div class="nav-newer">
+      <?php echo get_previous_posts_link( '« Newer entries' ); ?>
+    </div>
+    <div class="nav-older">
+      <?php echo get_next_posts_link( 'Older entries »' ); ?>
+    </div>
+    <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+    <!-- No posts found -->
+    <?php endif; ?>
   </section>
 
   <?php get_sidebar(); ?>

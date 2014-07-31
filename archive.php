@@ -53,6 +53,13 @@ get_header(); ?>
 
     <?php endwhile; ?>
 
+    <div class="nav-newer">
+      <?php echo get_previous_posts_link( '« Newer entries' ); ?>
+    </div>
+    <div class="nav-older">
+      <?php echo get_next_posts_link( 'Older entries »' ); ?>
+    </div>
+    
   </section>
 
   <?php get_sidebar(); ?>
