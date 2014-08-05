@@ -81,7 +81,7 @@ get_header(); ?>
 
       <aside class="airship-banner">
         <h1>From the Airship:</h1>
-        <img src="<?php bloginfo( 'template_directory' ); ?>/img/airship.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/airship.png" />
       </aside>
 
       <!-- PRIMARY LOOP -->

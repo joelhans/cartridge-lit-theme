@@ -37,8 +37,8 @@
 
   <div class="footer-rights">
     <p>&copy; Cartridge Lit, 2014-.</p>
-    <p>This airship is being co-piloted by Justin L. Daugherty and Joel Hans.</p> 
-    <img class="phoenix-down" src="<?php bloginfo( 'template_directory' ); ?>/img/phoenix_down_vert.png" />
+    <p>This airship is being co-piloted by Justin L. Daugherty and Joel Hans.</p>
+    <img class="phoenix-down" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/phoenix_down_vert.png" />
   </div>
 
 

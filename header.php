@@ -15,11 +15,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon-32x32.png" sizes="32x32">
 
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:500,500italic,400italic|Vollkorn:400italic,400|Roboto+Slab' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/style.css" type="text/css" media="all">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:500,500italic,400italic|Vollkorn:400italic,400|Roboto+Slab" rel="stylesheet" type="text/css">
+
 <?php wp_head(); ?>
 
 </head>
@@ -29,13 +31,13 @@
 <header id="header" class="site-header" role="banner">
   <div class="container">
 
-    <div class="title">    
+    <div class="title">
 
-      <img class="header-logo" src="<?php bloginfo( 'template_directory' ); ?>/img/cartridge_lit_logo.png" />
+      <img class="header-logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/cartridge_lit_logo.png" />
       <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
     </div>
-    
+
     <!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
 
   </div>
@@ -49,7 +51,7 @@
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
       <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
     </div>
-    <div class="nav-right"> 
+    <div class="nav-right">
       <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
       <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
       <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
