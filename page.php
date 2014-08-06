@@ -51,8 +51,8 @@ get_header(); ?>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/img/jh.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/img/jh_pixel.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jh.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jh_pixel.png" />
       </div>
       <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
     </div>
