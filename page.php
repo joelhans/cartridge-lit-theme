@@ -13,7 +13,7 @@
 get_header(); ?>
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    
+
   <article id="post-<?php the_ID(); ?>" class="page-full">
 
     <?php if ( has_post_thumbnail() ): ?>
@@ -21,7 +21,7 @@ get_header(); ?>
     <?php else : ?>
     <div class="page-header">
     <?php endif; ?>
-      
+
       <div class="entry-bg"></div>
 
       <div class="meta">
@@ -43,23 +43,23 @@ get_header(); ?>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jd_pixel.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd_pixel.png" />
       </div>
       <p><?php echo get_post_meta( $post->ID, 'justin-bio', true); ?></p>
     </div>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/img/jh_pixel.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/img/jh.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/img/jh_pixel.png" />
       </div>
       <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
     </div>
 
     <?php else: ?>
 
-    <?php the_content(); ?> 
+    <?php the_content(); ?>
 
     <?php endif; ?>
 
@@ -67,7 +67,7 @@ get_header(); ?>
     <aside class="work-bio">
       <?php echo get_post_meta( $post->ID, 'bio', true); ?>
     </aside>
-    <?php endif; ?>      
+    <?php endif; ?>
 
   </article>
 
