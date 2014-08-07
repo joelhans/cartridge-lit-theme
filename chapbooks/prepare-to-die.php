@@ -38,8 +38,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <h1>Table of Contents:</h1>
 
       <?php
-        $args = array('
-          posts_per_page' => 100,
+        $args = array(
+          'posts_per_page' => -1,
           'category_name' => 'prepare-to-die',
           'orderby' => 'date',
           'order' => 'ASC'
@@ -73,8 +73,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <!-- LOOP -->
 
   <?php
-    $args = array('
-      posts_per_page' => 100,
+    $args = array(
+      'posts_per_page' => -1,
       'category_name' => 'prepare-to-die',
       'orderby' => 'date',
       'order' => 'ASC'

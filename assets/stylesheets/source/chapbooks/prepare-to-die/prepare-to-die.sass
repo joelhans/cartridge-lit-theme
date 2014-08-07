@@ -10,11 +10,11 @@ $blackt  : rgba(4,0,1,0)
 
 $path : '../../../../images/chapbooks/prepare-to-die/'
 
-@import "../../../vendor/reset"
-@import "../../../vendor/bourbon/bourbon"
-@import 'susy'
-@import 'mixins'
-@import 'typography'
+@import "../vendor/reset"
+@import "../vendor/bourbon/bourbon"
+@import "susy"
+@import "mixins"
+@import "typography"
 
 $susy: ( columns: 12, gutters: .5, gutter-position: inside )
 
@@ -284,13 +284,11 @@ body.page-prepare-to-die
   @extend .prepare-squared
 
 /*
- * TITLE
+ * NOW A NOTE ON TEH WORLD ECONOMY
  */
 
-// #the-thing
+// #now-a-note-on-the-world-economy
 
-// .the-thing
-
-/*
- * TITLE
- */
+.now-a-note-on-the-world-economy
+  @extend .pot-paragraphs
+  // margin-top: 68rem
