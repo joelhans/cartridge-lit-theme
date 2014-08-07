@@ -1,0 +1,296 @@
+$yellow  : #ECD078
+$orange  : #D95B43
+$red     : #C02942
+$purple  : #542437
+$blue    : #53777A
+$lgray   : #999
+$dgray   : #303030
+$black   : rgba(4,0,1,1)
+$blackt  : rgba(4,0,1,0)
+
+$path : '../../../../images/chapbooks/prepare-to-die/'
+
+@import "../../../vendor/reset"
+@import "../../../vendor/bourbon/bourbon"
+@import 'susy'
+@import 'mixins'
+@import 'typography'
+
+$susy: ( columns: 12, gutters: .5, gutter-position: inside )
+
+@import url(http://fonts.googleapis.com/css?family=Oswald)
+@import url(http://fonts.googleapis.com/css?family=Merriweather)
+
+@mixin oswald($size: 1, $weight: 400)
+  font-family: 'Oswald', sans-serif
+  font-weight: $weight
+  @include font-size($size)
+  text-transform: uppercase
+  color: white
+
+@mixin merri($size: 1, $weight: 400)
+  font-family: 'Merriweather', serif
+  font-weight: $weight
+  @include font-size($size)
+  color: white
+
+body.page-prepare-to-die
+  margin: 0
+  background: rgba(4,0,1,1)
+
+.container
+  @include container(70em)
+
+.twelve
+  @include span(12 of 12)
+
+.six
+  @include span(6 of 12)
+
+/*
+ * TITLE
+ */
+
+.prepare-header
+  height: 1000px
+  background: linear-gradient(rgba(4,0,1,0.5),rgba(4,0,1,1)), url($path+'title-background.jpg')
+  background-size: cover
+
+  h1
+    height: 55px
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden
+    @include px-rem(margin-top, 16)
+    background: url($path+'prepare-to-die.png') no-repeat
+    background-size: auto 100%
+
+  h2
+    @include oswald(1.4)
+    margin-top: 4rem
+
+  h3
+    @include oswald
+    margin-top: 6rem
+
+    a
+      font-size: 1.2rem
+      vertical-align: -2px
+
+/*
+ * TOC
+ */
+
+.prepare-toc
+  @include px-rem(padding-top, 16)
+  @include px-rem(padding-bottom, 10)
+  background: rgba(4,0,1,1)
+
+  h1
+    @include oswald
+
+  a
+    display: block
+    @include vollkorn(1)
+    margin-top: 1rem
+
+  .respawn-campfire
+    display: block
+    width: 500px
+    margin: 0 auto
+
+
+/*
+ * CONTENT
+ */
+
+@mixin setbg($url: '')
+  background: linear-gradient(to right,$black,$blackt 20%,$blackt 80%,$black),linear-gradient($black,$blackt 20%,$blackt 80%,$black),url($path+$url)
+  background-size: 1500px 1500px
+  background-position: 50%
+  background-repeat: no-repeat
+
+.prepare-content
+  height: 1500px
+  background: rgba(4,0,1,1)
+
+  &:focus
+    outline: 0
+
+  p
+    @include merri(0.9)
+    line-height: 1.5rem
+
+.prepare-squared
+  @include span(8 of 12)
+  width: 300px
+
+  p
+    text-align: justify
+    margin-bottom: 0
+    margin-bottom: -1.5rem
+
+  p:nth-child(n+2):after
+    content: ""
+    display: inline-block
+    width: 100%
+
+  p:nth-of-type(1)
+    float: left
+    @include oswald(5)
+    line-height: 3rem
+    position: relative
+    float: left
+    top: 4px
+    margin-right: 4px
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 38px
+
+  p:last-of-type
+    text-align: left
+
+.pot-paragraphs
+  float: left
+
+  p:nth-of-type(1)
+    @include oswald
+
+/*
+ * EACH OF THESE WALLS IS GRANDER
+ */
+
+#each-of-these-walls-is-grander
+  @include setbg('each-of-these-walls-is-grander.jpg')
+
+.each-of-these-walls-is-grander
+  @extend .prepare-squared
+  @include push(7)
+  margin-top: 29rem
+
+/*
+ * UNDER HYPNOSIS EYES SPINNING
+ */
+
+#under-hypnosis-eyes-spinning
+  @include setbg('under-hypnosis-eyes-spinning.jpg')
+
+.under-hypnosis-eyes-spinning
+  @extend .prepare-squared
+  @include push(2)
+  margin-top: 29rem
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 52px
+
+/*
+ * MY SHOULDERS CURVE LIKE ELBOWS IN A NUTSHELL ENCASEMENT
+ */
+
+// #my-shoulders-curve-like-elbows-in-a-nutshell-encasement
+
+.my-shoulders-curve-like-elbows-in-a-nutshell-encasement
+  @extend .pot-paragraphs
+
+/*
+ * I AM THE CALLOW PARTNER
+ */
+
+// #i-am-the-callow-partner
+
+.i-am-the-callow-partner
+  @extend .prepare-squared
+
+/*
+ * MY BROTHERS ARE NPCS
+ */
+
+// #my-brothers-are-npcs
+
+.my-brothers-are-npcs
+  @extend .prepare-squared
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 65px
+
+/*
+ * FLEETS OF LABOR MADE THIS MARKED INFRASTRUCTURE
+ */
+
+// #fleets-of-labor-made-this-marked-infrastructure
+
+.fleets-of-labor-made-this-marked-infrastructure
+  @extend .pot-paragraphs
+
+/*
+ * SHARPEN YOUR WEAPON SWING TWO HANDS
+ */
+
+// #sharpen-your-weapon-swing-two-hands
+
+.sharpen-your-weapon-swing-two-hands
+  @extend .prepare-squared
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 55px
+
+/*
+ * HUNCH GIRL AND THE CROW WILL CARRY YOU OUT
+ */
+
+#hunch-girl-and-the-crow-will-carry-you-out
+  @include setbg('hunch-girl-and-the-crow-will-carry-you-out.jpg')
+
+.hunch-girl-and-the-crow-will-carry-you-out
+  @extend .prepare-squared
+  @include push(5)
+  margin-top: 40rem
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 55px
+
+/*
+ * WHY WAS THE MAGELLAN THAT CARTOGRAPHED THIS PLACE
+ */
+
+#who-was-the-magellan-that-cartographed-this-place
+  @include setbg('who-was-the-magellan-that-cartographed-this-place.jpg')
+  margin-top: 6rem
+
+.who-was-the-magellan-that-cartographed-this-place
+  @extend .pot-paragraphs
+  margin-top: 68rem
+  padding: 1.2rem 1.2rem 0 1.2rem
+  background: rgba(0,0,0,0.6)
+  box-shadow: 0px 0px 70px 30px rgba(0,0,0,0.6)
+
+/*
+ * YOU-MUST-ALSO-HAVE-A-MINERAL-NATURE
+ */
+
+.you-must-also-have-a-mineral-nature
+  @extend .prepare-squared
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 46px
+
+/*
+ * THE CAT LIVES BEHIND
+ */
+
+// #the-cat-lives-behind
+
+.the-cat-lives-behind
+  @extend .prepare-squared
+
+/*
+ * TITLE
+ */
+
+// #the-thing
+
+// .the-thing
+
+/*
+ * TITLE
+ */

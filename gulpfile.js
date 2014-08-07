@@ -7,7 +7,7 @@ var gulp       = require('gulp'),
 
 var paths = {
   styles: {
-    src:  'assets/stylesheets/source/*.sass',
+    src:  'assets/stylesheets/source/**/*.sass',
     dest: 'assets/stylesheets/build/'
   }
 };
