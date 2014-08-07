@@ -18,8 +18,8 @@ $blue    : #53777A
 $lgray   : #999
 $dgray   : #303030
 
-@import "compass/reset"
-@import "compass"
+@import "../vendor/reset"
+@import "../vendor/bourbon/bourbon"
 @import "susy"
 @import "mixins"
 @import "typography"
@@ -150,7 +150,7 @@ body
 
   .sidebar-social, .sidebar-cats, .sidebar-tags
     a
-      @include inline-block
+      display: inline-block
       @include ubuntu(0.9)
       @include px-rem(margin-right, 1)
 
