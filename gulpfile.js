@@ -1,14 +1,26 @@
-var gulp       = require('gulp'),
-  sass         = require('gulp-ruby-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  minifycss    = require('gulp-minify-css'),
-  rename       = require('gulp-rename'),
-  watch        = require('gulp-watch');
+require('coffee-script/register');
+require('./gulpfile.coffee');
+
+var gulp         = require('gulp'),
+    gutil        = require('gulp-util'),
+    sass         = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss    = require('gulp-minify-css'),
+    rename       = require('gulp-rename'),
+    watch        = require('gulp-watch'),
+    coffee       = require('gulp-coffee'),
+    concat       = require("gulp-concat"),
+    uglify       = require("gulp-uglify");
 
 var paths = {
   styles: {
     src:  'assets/stylesheets/source/**/*.sass',
     dest: 'assets/stylesheets/build/'
+  },
+  scripts: {
+    src: 'assets/javascripts/source/**/*.coffee',
+    vendor: 'assets/javascripts/vendor/**/*',
+    dest: 'assets/javascripts/build/'
   }
 };
 
