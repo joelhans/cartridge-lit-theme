@@ -24,33 +24,26 @@ gulp.task 'rimraf', ->
   return gulp.src(paths.scripts.dest+'*.js', { read: false })
     .pipe(rimraf())
 
-gulp.task 'coffee', ->
+gulp.task 'coffee', ['rimraf'], ->
   return gulp.src(paths.scripts.src)
     .pipe(coffee().on('error', gutil.log))
     .pipe(gulp.dest(paths.scripts.dest))
 
-gulp.task 'concat', ->
+gulp.task 'concat', ['coffee'], ->
   return gulp.src([paths.scripts.vendor+'*.js', paths.scripts.dest+'*.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest(paths.scripts.dest))
 
-gulp.task 'uglify', ->
+gulp.task 'uglify', ['concat'], ->
   return gulp.src(paths.scripts.dest+'script.js')
     .pipe(uglify())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest(paths.scripts.dest))
 
-gulp.task 'cleanup', ->
+gulp.task 'cleanup', ['uglify'], ->
   return gulp.src(paths.scripts.dest+'*.js', { read: false })
     .pipe(ignore.exclude('**/*.min.js'))
     .pipe(rimraf())
-
-gulp.task 'script', ->
-  gulp.run 'rimraf', ->
-    gulp.run 'coffee', ->
-      gulp.run 'concat', ->
-        gulp.run 'uglify', ->
-          gulp.run 'cleanup', ->
 
 gulp.task 'sass', ->
   return gulp.src(paths.styles.src)
@@ -63,4 +56,3 @@ gulp.task 'sass', ->
 gulp.task 'watch', ->
   gulp.watch(paths.scripts.src, ['rimraf', 'coffee', 'concat', 'uglify', 'cleanup'])
   gulp.watch(paths.styles.src, ['sass'])
-});

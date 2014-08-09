@@ -23,6 +23,9 @@
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/chapbooks/<?php global $post; echo $post->post_name; ?>/<?php global $post; echo $post->post_name; ?>.min.css">
 
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/chapbooks/<?php global $post; echo $post->post_name; ?>/<?php global $post; echo $post->post_name; ?>.js"></script>
+
 <?php wp_head(); ?>
 
 </head>
