@@ -51,3 +51,16 @@ gulp.task 'script', ->
       gulp.run 'concat', ->
         gulp.run 'uglify', ->
           gulp.run 'cleanup', ->
+
+gulp.task 'sass', ->
+  return gulp.src(paths.styles.src)
+    .pipe(sass({ style: 'compressed', require: 'susy' }))
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest(paths.styles.dest))
+
+gulp.task 'watch', ->
+  gulp.watch(paths.scripts.src, ['rimraf', 'coffee', 'concat', 'uglify', 'cleanup'])
+  gulp.watch(paths.styles.src, ['sass'])
+});
