@@ -84,7 +84,6 @@ body.page-prepare-to-die
 .prepare-toc
   @include px-rem(padding-top, 16)
   @include px-rem(padding-bottom, 10)
-  background: rgba(4,0,1,1)
 
   h1
     @include oswald
@@ -114,6 +113,9 @@ body.page-prepare-to-die
   height: 1500px
   background: rgba(4,0,1,1)
   position: relative
+  overflow: visible
+  border-top: 10px solid white
+  border-bottom: 10px solid white
 
   &:focus
     outline: 0
@@ -122,7 +124,7 @@ body.page-prepare-to-die
     @include merri(0.9)
     line-height: 1.5rem
 
-.prepare-squared
+.ptd-squared
   @include span(8 of 12)
   width: 300px
   position: relative
@@ -152,12 +154,16 @@ body.page-prepare-to-die
   p:last-of-type
     text-align: left
 
-.pot-paragraphs
+.ptd-paragraphs
   float: left
   position: relative
 
   p:nth-of-type(1)
     @include oswald
+
+  .ptd-paragraphs-fix
+    @include merri(0.9)
+    text-transform: none
 
 /*
  * EACH OF THESE WALLS IS GRANDER
@@ -167,7 +173,7 @@ body.page-prepare-to-die
   @include setbg('each-of-these-walls-is-grander.jpg')
 
 .each-of-these-walls-is-grander
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(7)
   margin-top: 29rem
 
@@ -177,9 +183,10 @@ body.page-prepare-to-die
 
 #under-hypnosis-eyes-spinning
   @include setbg('under-hypnosis-eyes-spinning.jpg')
+  margin-top: 6rem
 
 .under-hypnosis-eyes-spinning
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(2)
   margin-top: 29rem
 
@@ -190,11 +197,8 @@ body.page-prepare-to-die
  * MY SHOULDERS CURVE LIKE ELBOWS IN A NUTSHELL ENCASEMENT
  */
 
-// #my-shoulders-curve-like-elbows-in-a-nutshell-encasement
-
-
 .my-shoulders-curve-like-elbows-in-a-nutshell-encasement
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
   @include push(4)
   margin-top: 29rem
 
@@ -203,7 +207,6 @@ body.page-prepare-to-die
     top: -600px
     left: -340px
 
-
 /*
  * I AM THE CALLOW PARTNER
  */
@@ -211,7 +214,7 @@ body.page-prepare-to-die
 // #i-am-the-callow-partner
 
 .i-am-the-callow-partner
-  @extend .prepare-squared
+  @extend .ptd-squared
 
 /*
  * MY BROTHERS ARE NPCS
@@ -220,7 +223,7 @@ body.page-prepare-to-die
 // #my-brothers-are-npcs
 
 .my-brothers-are-npcs
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 65px
@@ -229,10 +232,19 @@ body.page-prepare-to-die
  * FLEETS OF LABOR MADE THIS MARKED INFRASTRUCTURE
  */
 
-// #fleets-of-labor-made-this-marked-infrastructure
+#fleets-of-labor-made-this-marked-infrastructure
+  height: 1000px
 
 .fleets-of-labor-made-this-marked-infrastructure
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
+  margin-top: 25rem
+
+  p
+    opacity: 0
+    transition: opacity 1s
+
+  .fleets-show
+    opacity: 1
 
 /*
  * SHARPEN YOUR WEAPON SWING TWO HANDS
@@ -241,7 +253,7 @@ body.page-prepare-to-die
 // #sharpen-your-weapon-swing-two-hands
 
 .sharpen-your-weapon-swing-two-hands
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
@@ -254,7 +266,7 @@ body.page-prepare-to-die
   @include setbg('hunch-girl-and-the-crow-will-carry-you-out.jpg')
 
 .hunch-girl-and-the-crow-will-carry-you-out
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(5)
   margin-top: 40rem
 
@@ -270,7 +282,7 @@ body.page-prepare-to-die
   margin-top: 6rem
 
 .who-was-the-magellan-that-cartographed-this-place
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
   margin-top: 68rem
   padding: 1.2rem 1.2rem 0 1.2rem
   background: rgba(0,0,0,0.6)
@@ -281,7 +293,7 @@ body.page-prepare-to-die
  */
 
 .you-must-also-have-a-mineral-nature
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 46px
@@ -293,7 +305,7 @@ body.page-prepare-to-die
 // #the-cat-lives-behind
 
 .the-cat-lives-behind
-  @extend .prepare-squared
+  @extend .ptd-squared
 
 /*
  * NOW A NOTE ON THE WORLD ECONOMY
@@ -375,7 +387,7 @@ body.page-prepare-to-die
   left: 500px
 
 .now-a-note-on-the-world-economy
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
   margin-top: 40rem
 
 /*
@@ -385,8 +397,44 @@ body.page-prepare-to-die
 // #he-is-willing-and-fervent-he-teases
 
 .he-is-willing-and-fervent-he-teases
-  @extend .prepare-squared
+  @extend .ptd-squared
   margin-top: 40rem
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
+
+/*
+ * DEMON IS A STUPID WORD
+ */
+
+#demon-is-a-stupid-word
+  background: linear-gradient(to right,#040001,rgba(4,0,1,0) 20%,rgba(4,0,1,0) 80%,#040001) 50%/1500px 1500px no-repeat,linear-gradient(#040001,rgba(4,0,1,0.7) 20%,rgba(4,0,1,0) 50%, rgba(4,0,1,0) 80%,#040001) 50%/1500px 1500px no-repeat,url(../../../../images/chapbooks/prepare-to-die/demon-is-a-stupid-word.jpg) 50%/1500px 1500px no-repeat
+
+.demon-is-a-stupid-word
+  @extend .ptd-squared
+  @include push(7)
+  margin-top: 10rem
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 49px
+
+/*
+ * GHOSTS ARE WHERE TEH BODIES BLED OUT
+ */
+
+.ghosts-are-where-the-bodies-bled-out
+  @extend .ptd-paragraphs
+
+/*
+ * HERE, THE FRAME RATE CHUGS PROCESSING A DEEP BLACK
+ */
+
+.here-the-frame-rate-chugs-processing-a-deep-black
+  @extend .ptd-squared
+
+/*
+ * Evil does not work like a network
+ */
+
+.evil-does-not-work-like-a-network
+  @extend .ptd-paragraphs
