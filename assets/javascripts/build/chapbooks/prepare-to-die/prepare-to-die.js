@@ -9,9 +9,13 @@
       hideDistantElements: false
     });
     $('.prepare-toc').waypoint(function() {
-      return $('.respawn-campfire').fadeOut(5000);
+      if ($('.ptd-announce').length) {
+        return $('.respawn-campfire').fadeOut(5000);
+      } else {
+
+      }
     }, {
-      offset: 0,
+      offset: 100,
       triggerOnce: true
     });
     $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {

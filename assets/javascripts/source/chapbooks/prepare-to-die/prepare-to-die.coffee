@@ -8,12 +8,14 @@ jQuery ($) ->
 
   $('.prepare-toc')
   .waypoint () ->
-    $('.respawn-campfire').fadeOut(5000)
+    if $('.ptd-announce').length
+      $('.respawn-campfire').fadeOut(5000)
+    else
+      return
   , {
-    offset: 0
+    offset: 100
     triggerOnce: true
   }
-
 
   $('#fleets-of-labor-made-this-marked-infrastructure')
   .waypoint () ->
