@@ -58,7 +58,6 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <?php wp_reset_postdata(); ?>
       <?php else : ?>
 
-      <h1 class="ptd-announce">Get ready to die</h1>
       <h1 class="ptd-announce">09.16.2014</h1>
 
       <?php endif; ?>
