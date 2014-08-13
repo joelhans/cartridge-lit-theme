@@ -1,3 +1,5 @@
+webm_height = null
+
 jQuery ($) ->
 
   $(window).stellar
@@ -41,3 +43,20 @@ jQuery ($) ->
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(6)').toggleClass('fleets-show')
   , offset: -500
+
+  console.log 'This is Prepare to Die.'
+
+$(window).load () ->
+
+  webm_height = $('.evil-does-not-webm').height()
+  console.log webm_height
+  $('.webm-gradients').css('height', webm_height)
+
+  $('#evil-does-not-work-like-a-network')
+  .waypoint () ->
+    console.log this
+    $('.evil-does-not-webm').get(0).play()
+  , {
+    offset: 100
+    triggerOnce: true
+  }

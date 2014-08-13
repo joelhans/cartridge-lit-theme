@@ -1,10 +1,14 @@
 (function() {
+  var webm_height;
+
+  webm_height = null;
+
   jQuery(function($) {
     $(window).stellar({
       horizontalScrolling: false,
       hideDistantElements: false
     });
-    return $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {
+    $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(1)').toggleClass('fleets-show');
     }, {
       offset: 100
@@ -52,6 +56,20 @@
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(6)').toggleClass('fleets-show');
     }, {
       offset: -500
+    });
+    return console.log('This is Prepare to Die.');
+  });
+
+  $(window).load(function() {
+    webm_height = $('.evil-does-not-webm').height();
+    console.log(webm_height);
+    $('.webm-gradients').css('height', webm_height);
+    return $('#evil-does-not-work-like-a-network').waypoint(function() {
+      console.log(this);
+      return $('.evil-does-not-webm').get(0).play();
+    }, {
+      offset: 100,
+      triggerOnce: true
     });
   });
 
