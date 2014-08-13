@@ -83,7 +83,7 @@ body.page-prepare-to-die
 
 .prepare-toc
   @include px-rem(padding-top, 16)
-  @include px-rem(padding-bottom, 10)
+  @include px-rem(padding-bottom, 16)
 
   h1
     @include oswald
@@ -95,6 +95,9 @@ body.page-prepare-to-die
 
   .six
     white-space: nowrap
+
+    &:last-of-type
+      height: 500px
 
   .respawn-campfire
     display: block
