@@ -84,7 +84,6 @@ body.page-prepare-to-die
 .prepare-toc
   @include px-rem(padding-top, 16)
   @include px-rem(padding-bottom, 10)
-  background: rgba(4,0,1,1)
 
   h1
     @include oswald
@@ -94,11 +93,23 @@ body.page-prepare-to-die
     @include vollkorn(1)
     margin-top: 1rem
 
+  .six
+    white-space: nowrap
+
   .respawn-campfire
     display: block
     width: 500px
     margin: 0 auto
 
+  .ptd-announce
+    @include oswald(8)
+    position: relative
+
+    &:first-of-type
+      margin-top: -10rem
+
+    &:last-of-type
+      margin-top: 10rem
 
 /*
  * CONTENT
@@ -113,6 +124,10 @@ body.page-prepare-to-die
 .prepare-content
   height: 1500px
   background: rgba(4,0,1,1)
+  position: relative
+  overflow: visible
+  border-top: 10px solid white
+  border-bottom: 10px solid white
 
   &:focus
     outline: 0
@@ -121,9 +136,10 @@ body.page-prepare-to-die
     @include merri(0.9)
     line-height: 1.5rem
 
-.prepare-squared
+.ptd-squared
   @include span(8 of 12)
   width: 300px
+  position: relative
 
   p
     text-align: justify
@@ -150,11 +166,16 @@ body.page-prepare-to-die
   p:last-of-type
     text-align: left
 
-.pot-paragraphs
+.ptd-paragraphs
   float: left
+  position: relative
 
   p:nth-of-type(1)
     @include oswald
+
+  .ptd-paragraphs-fix
+    @include merri(0.9)
+    text-transform: none
 
 /*
  * EACH OF THESE WALLS IS GRANDER
@@ -164,7 +185,7 @@ body.page-prepare-to-die
   @include setbg('each-of-these-walls-is-grander.jpg')
 
 .each-of-these-walls-is-grander
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(7)
   margin-top: 29rem
 
@@ -174,9 +195,10 @@ body.page-prepare-to-die
 
 #under-hypnosis-eyes-spinning
   @include setbg('under-hypnosis-eyes-spinning.jpg')
+  margin-top: 6rem
 
 .under-hypnosis-eyes-spinning
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(2)
   margin-top: 29rem
 
@@ -187,10 +209,15 @@ body.page-prepare-to-die
  * MY SHOULDERS CURVE LIKE ELBOWS IN A NUTSHELL ENCASEMENT
  */
 
-// #my-shoulders-curve-like-elbows-in-a-nutshell-encasement
-
 .my-shoulders-curve-like-elbows-in-a-nutshell-encasement
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
+  @include push(4)
+  margin-top: 29rem
+
+  img
+    position: relative
+    top: -600px
+    left: -340px
 
 /*
  * I AM THE CALLOW PARTNER
@@ -199,7 +226,7 @@ body.page-prepare-to-die
 // #i-am-the-callow-partner
 
 .i-am-the-callow-partner
-  @extend .prepare-squared
+  @extend .ptd-squared
 
 /*
  * MY BROTHERS ARE NPCS
@@ -208,7 +235,7 @@ body.page-prepare-to-die
 // #my-brothers-are-npcs
 
 .my-brothers-are-npcs
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 65px
@@ -217,10 +244,19 @@ body.page-prepare-to-die
  * FLEETS OF LABOR MADE THIS MARKED INFRASTRUCTURE
  */
 
-// #fleets-of-labor-made-this-marked-infrastructure
+#fleets-of-labor-made-this-marked-infrastructure
+  height: 1000px
 
 .fleets-of-labor-made-this-marked-infrastructure
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
+  margin-top: 25rem
+
+  p
+    opacity: 0
+    transition: opacity 1s
+
+  .fleets-show
+    opacity: 1
 
 /*
  * SHARPEN YOUR WEAPON SWING TWO HANDS
@@ -229,7 +265,7 @@ body.page-prepare-to-die
 // #sharpen-your-weapon-swing-two-hands
 
 .sharpen-your-weapon-swing-two-hands
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
@@ -242,7 +278,7 @@ body.page-prepare-to-die
   @include setbg('hunch-girl-and-the-crow-will-carry-you-out.jpg')
 
 .hunch-girl-and-the-crow-will-carry-you-out
-  @extend .prepare-squared
+  @extend .ptd-squared
   @include push(5)
   margin-top: 40rem
 
@@ -258,7 +294,7 @@ body.page-prepare-to-die
   margin-top: 6rem
 
 .who-was-the-magellan-that-cartographed-this-place
-  @extend .pot-paragraphs
+  @extend .ptd-paragraphs
   margin-top: 68rem
   padding: 1.2rem 1.2rem 0 1.2rem
   background: rgba(0,0,0,0.6)
@@ -269,7 +305,7 @@ body.page-prepare-to-die
  */
 
 .you-must-also-have-a-mineral-nature
-  @extend .prepare-squared
+  @extend .ptd-squared
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 46px
@@ -281,14 +317,157 @@ body.page-prepare-to-die
 // #the-cat-lives-behind
 
 .the-cat-lives-behind
-  @extend .prepare-squared
+  @extend .ptd-squared
 
 /*
- * NOW A NOTE ON TEH WORLD ECONOMY
+ * NOW A NOTE ON THE WORLD ECONOMY
  */
 
-// #now-a-note-on-the-world-economy
+[class*="soul-"]
+  position: absolute
+
+[class*="soul-1-"]
+  width: 42px
+  height: 64px
+
+[class*="soul-2-"]
+  width: 59px
+  height: 58px
+
+[class*="soul-3-"]
+  width: 80px
+  height: 90px
+
+[class*="soul-4-"]
+  width: 59px
+  height: 58px
+
+[class*="soul-5-"]
+  width: 81px
+  height: 90px
+
+.soul-1-1
+  top: -100px
+  left: -124px
+
+.soul-1-2
+  top: 0px
+  left: 200px
+
+.soul-1-3
+  top: 0px
+  left: 621px
+
+.soul-1-4
+  top: 0px
+  left: 943px
+
+.soul-1-5
+  top: 0px
+  left: 87px
+
+.soul-1-5
+  top: 0px
+  left: 1107px
+
+.soul-2-1
+  top: -200px
+  left: 1018px
+
+.soul-2-2
+  top: 0px
+  left: 348px
+
+.soul-3-1
+  top: -2000px
+  left: 847px
+
+.soul-4-1
+  top: 0px
+  left: 187px
+
+.soul-4-2
+  top: 0px
+  left: 401px
+
+.soul-4-3
+  top: 0px
+  left: 681px
+
+.soul-5-1
+  top: 0px
+  left: 500px
 
 .now-a-note-on-the-world-economy
-  @extend .pot-paragraphs
-  // margin-top: 68rem
+  @extend .ptd-paragraphs
+  margin-top: 40rem
+
+/*
+ * HE IS WILLING AND FERVENT HE TEASES
+ */
+
+// #he-is-willing-and-fervent-he-teases
+
+.he-is-willing-and-fervent-he-teases
+  @extend .ptd-squared
+  margin-top: 40rem
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 55px
+
+/*
+ * DEMON IS A STUPID WORD
+ */
+
+#demon-is-a-stupid-word
+  background: linear-gradient(to right,#040001,rgba(4,0,1,0) 20%,rgba(4,0,1,0) 80%,#040001) 50%/1500px 1500px no-repeat,linear-gradient(#040001,rgba(4,0,1,0.7) 20%,rgba(4,0,1,0) 50%, rgba(4,0,1,0) 80%,#040001) 50%/1500px 1500px no-repeat,url(../../../../images/chapbooks/prepare-to-die/demon-is-a-stupid-word.jpg) 50%/1500px 1500px no-repeat
+
+.demon-is-a-stupid-word
+  @extend .ptd-squared
+  @include push(7)
+  margin-top: 10rem
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 49px
+
+/*
+ * GHOSTS ARE WHERE TEH BODIES BLED OUT
+ */
+
+.ghosts-are-where-the-bodies-bled-out
+  @extend .ptd-paragraphs
+
+/*
+ * HERE, THE FRAME RATE CHUGS PROCESSING A DEEP BLACK
+ */
+
+.here-the-frame-rate-chugs-processing-a-deep-black
+  @extend .ptd-squared
+
+/*
+ * Evil does not work like a network
+ */
+
+#evil-does-not-work-like-a-network
+  background: linear-gradient(to right,$black,$blackt 20%,$blackt 80%,$black),linear-gradient($black,$blackt 20%,$blackt 80%,$black)
+
+  .webm-gradients
+    position: absolute
+    top: 0px
+    left: 0px
+    z-index: 2
+    width: 100%
+    background: linear-gradient(to right,$black,$blackt 20%,$blackt 80%,$black),linear-gradient($black,$blackt 20%,$blackt 80%,$black)
+
+  video.evil-does-not-webm
+    position: absolute
+    top: 0px
+    left: 0px
+    z-index: 1
+    width: 100%
+
+.evil-does-not-work-like-a-network
+  @extend .ptd-paragraphs
+  margin-left : 10rem
+  z-index: 2
+  margin-top: 27rem

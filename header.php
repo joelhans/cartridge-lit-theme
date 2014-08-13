@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/style.min.css" type="text/css" media="all">
 <link href="http://fonts.googleapis.com/css?family=Ubuntu:500,500italic,400italic|Vollkorn:400italic,400,700|Roboto+Slab" rel="stylesheet" type="text/css">
 
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
+
 <?php wp_head(); ?>
 
 </head>
