@@ -6,6 +6,15 @@ jQuery ($) ->
     horizontalScrolling: false
     hideDistantElements: false
 
+  $('.prepare-toc')
+  .waypoint () ->
+    $('.respawn-campfire').fadeOut(5000)
+  , {
+    offset: 0
+    triggerOnce: true
+  }
+
+
   $('#fleets-of-labor-made-this-marked-infrastructure')
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(1)').toggleClass('fleets-show')

@@ -35,8 +35,6 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
     <div class="six">
 
-      <h1>Table of Contents:</h1>
-
       <?php
         $args = array(
           'posts_per_page' => -1,
@@ -47,7 +45,11 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
         query_posts($args);
       ?>
 
-      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+      <?php if ( have_posts() ) : ?>
+
+      <h1>Table of Contents:</h1>
+
+      <?php while (have_posts()) : the_post(); ?>
 
       <a href="#<?php global $post; echo $post->post_name; ?>"><?php the_title(); ?></a>
 
@@ -55,7 +57,10 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <!-- pagination -->
       <?php wp_reset_postdata(); ?>
       <?php else : ?>
-      <!-- No posts found -->
+
+      <h1 class="ptd-announce">Get ready to die</h1>
+      <h1 class="ptd-announce">09.16.2014</h1>
+
       <?php endif; ?>
 
     </div>

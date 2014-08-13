@@ -93,11 +93,23 @@ body.page-prepare-to-die
     @include vollkorn(1)
     margin-top: 1rem
 
+  .six
+    white-space: nowrap
+
   .respawn-campfire
     display: block
     width: 500px
     margin: 0 auto
 
+  .ptd-announce
+    @include oswald(8)
+    position: relative
+
+    &:first-of-type
+      margin-top: -10rem
+
+    &:last-of-type
+      margin-top: 10rem
 
 /*
  * CONTENT
