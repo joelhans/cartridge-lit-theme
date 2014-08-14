@@ -34,6 +34,8 @@ get_header(); ?>
         <p class="airship-desc">(The wonderful talents who have given us marvelous pixels.)</p>
         <?php elseif ( is_page( 'Masthead' ) ): ?>
         <p class="airship-desc">(The people who are trying to make this crazy thing real.)</p>
+        <?php elseif ( is_page( 'Chapbooks' ) ): ?>
+        <p class="airship-desc">(Because why stop with one story or a handful of poems?)</p>
         <?php endif; ?>
       </div>
 

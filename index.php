@@ -16,6 +16,12 @@ get_header(); ?>
     <!-- STORIES -->
     <section class="featured-work">
 
+      <section class="post type-post ptd-announce" style="background-image: url('<?php $dir = wp_upload_dir(); echo $dir['baseurl']; ?>/2014/08/prepare-to-die-promo.jpg');">
+
+        <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>" class="featured-full-link"></a>
+
+      </section>
+
       <?php
         $args = array (
           'numberposts' => 5,
