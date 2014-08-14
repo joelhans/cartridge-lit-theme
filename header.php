@@ -60,57 +60,58 @@
       <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
       <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
     </div>
-
-    <!-- <div class="nav-dropdown-fiction">
-      <?php
-        $args = array(
-          'posts_per_page' => 3,
-          'category_name' => 'fiction'
-          );
-        query_posts($args);
-      ?>
-      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-      <h1><?php the_title(); ?></h1>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-    </div>
-
-    <div class="nav-dropdown-poetry">
-      <?php
-        $args = array(
-          'posts_per_page' => 3,
-          'category_name' => 'poetry'
-          );
-        query_posts($args);
-      ?>
-      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-      <h1><?php the_title(); ?></h1>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-    </div>
-
-    <div class="nav-dropdown-non-fiction">
-      <?php
-        $args = array(
-          'posts_per_page' => 3,
-          'category_name' => 'non-fiction'
-          );
-        query_posts($args);
-      ?>
-      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-      <h1><?php the_title(); ?></h1>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-    </div>
-
-    <div class="nav-dropdown-chapbooks">
-
-    </div> -->
-
   </nav>
+
+  <!-- <div class="nav-dropdown-container">
+
+    <div class="nav-dropdown-fiction">
+      <?php
+        $args = array(
+          'posts_per_page' => 3,
+          'category_name' => 'fiction',
+          'orderby' => 'date',
+          'order' => 'DESC'
+          );
+        query_posts($args);
+      ?>
+      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+      <h1><?php the_title(); ?></h1>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+
+  </div> -->
+
+  <!-- <div class="nav-dropdown-poetry">
+    <?php
+      $args = array(
+        'posts_per_page' => 3,
+        'category_name' => 'poetry'
+        );
+      query_posts($args);
+    ?>
+    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+  </div>
+
+  <div class="nav-dropdown-non-fiction">
+    <?php
+      $args = array(
+        'posts_per_page' => 3,
+        'category_name' => 'non-fiction'
+        );
+      query_posts($args);
+    ?>
+    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+  </div> -->
 </div>
 
 <div id="page" class="hfeed site">

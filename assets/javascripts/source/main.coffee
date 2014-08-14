@@ -1,19 +1,16 @@
-() ->
-
-  console.log 'Sup.'
-  console.log 'Double-sup.'
+jQuery ($) ->
 
   $('.nav-fiction').hover () ->
-    console.log 'Hi.'
+    $('.nav-dropdown-fiction').show()
   , () ->
-    console.log 'Bye.'
+    $('.nav-dropdown-fiction').hide()
 
   $('.nav-poetry').hover () ->
-    console.log 'Hi.'
+    $('.nav-dropdown-poetry').show()
   , () ->
-    console.log 'Bye.'
+    $('.nav-dropdown-poetry').hide()
 
   $('.nav-non-fiction').hover () ->
-    console.log 'Hi.'
+    $('.nav-dropdown-non-fiction').show()
   , () ->
-    console.log 'Bye.'
+    $('.nav-dropdown-non-fiction').hide()
