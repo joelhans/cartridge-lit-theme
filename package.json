@@ -1,0 +1,16 @@
+{
+  "name": "cartridge_lit",
+  "author": {
+    "name": "Joel Hans",
+    "email": "cartridgelit@gmail.com",
+    "url": "http://cartridgelit.com"
+  },
+  "version": "0.0.1",
+  "description": "Cartride Lit theme generator",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-add-src": "^0.1.1",
+    "gulp-livereload": "^2.1.0",
+    "tiny-lr": "^0.1.0"
+  }
+}

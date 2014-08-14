@@ -48,9 +48,10 @@
 <div class="nav">
   <nav role="navigation">
     <div class="nav-left">
-      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
-      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
-      <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+      <a class="nav-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
+      <a class="nav-poetry" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
+      <a class="nav-non-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+      <a href="<?php echo esc_url( home_url( '/chapbooks/' ) ); ?>">Chapbooks</a>
       <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
     </div>
     <div class="nav-right">
@@ -59,6 +60,56 @@
       <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
       <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
     </div>
+
+    <!-- <div class="nav-dropdown-fiction">
+      <?php
+        $args = array(
+          'posts_per_page' => 3,
+          'category_name' => 'fiction'
+          );
+        query_posts($args);
+      ?>
+      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+      <h1><?php the_title(); ?></h1>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+
+    <div class="nav-dropdown-poetry">
+      <?php
+        $args = array(
+          'posts_per_page' => 3,
+          'category_name' => 'poetry'
+          );
+        query_posts($args);
+      ?>
+      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+      <h1><?php the_title(); ?></h1>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+
+    <div class="nav-dropdown-non-fiction">
+      <?php
+        $args = array(
+          'posts_per_page' => 3,
+          'category_name' => 'non-fiction'
+          );
+        query_posts($args);
+      ?>
+      <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+      <h1><?php the_title(); ?></h1>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+    </div>
+
+    <div class="nav-dropdown-chapbooks">
+
+    </div> -->
+
   </nav>
 </div>
 
