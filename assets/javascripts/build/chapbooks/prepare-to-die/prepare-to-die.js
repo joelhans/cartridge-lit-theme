@@ -71,11 +71,10 @@
   });
 
   $(window).load(function() {
-    webm_height = $('.evil-does-not-webm').height();
-    console.log(webm_height);
-    $('.webm-gradients').css('height', webm_height);
+    var webm;
+    webm = (720 * $(window).width()) / 1280;
+    $('.webm-gradients').css('height', webm);
     return $('#evil-does-not-work-like-a-network').waypoint(function() {
-      console.log(this);
       return $('.evil-does-not-webm').get(0).play();
     }, {
       offset: 100,
