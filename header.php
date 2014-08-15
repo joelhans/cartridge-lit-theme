@@ -32,6 +32,7 @@
 
 <header id="header" class="site-header" role="banner">
   <div class="container">
+    <img class="header-bg" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/header_chrono.png" />
 
     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 

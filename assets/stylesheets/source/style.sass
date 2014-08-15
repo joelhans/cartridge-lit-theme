@@ -151,6 +151,7 @@ body
   .sidebar-search
     input.search-submit
       position: absolute
+      top: 0px
       right: 0px
 
   .sidebar-about p a
@@ -310,7 +311,13 @@ form.search-form
   span
     display: none
 
+  input
+    border: 1px solid $lgray
+    border-radius: 0
+    margin: 0
+
   input.search-field
+    max-width: 100%
     @include ubuntu(0.9)
     padding: 8px
     color: $purple
@@ -319,7 +326,7 @@ form.search-form
     position: relative
     right: 10px
     @include ubuntu(0.9)
-    padding: 7px 6px 6px 6px
+    padding: 8px 6px 8px 6px
     color: $red
     border: 1px solid $purple
     background: white
