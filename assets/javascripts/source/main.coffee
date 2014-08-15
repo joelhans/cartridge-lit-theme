@@ -1,5 +1,9 @@
 jQuery ($) ->
 
+  $(window).stellar
+    horizontalScrolling: false
+    hideDistantElements: false
+
   # $('.nav-fiction').hover () ->
   #   $('.nav-dropdown-fiction').show()
   #   $('nav').css 'height', '+=200px'
