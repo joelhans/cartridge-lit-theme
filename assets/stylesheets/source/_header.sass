@@ -49,6 +49,16 @@ nav
     @include gutters
     float: left
 
+    a
+      display: inline-block
+      @include ubuntu(0.9)
+      padding-top: 10px
+      padding-bottom: 6px
+      color: $orange
+      @include px-rem(margin-right, 2)
+      &:hover
+        color: $yellow
+
   .nav-right
     @include gutters
     float: right
