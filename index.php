@@ -16,9 +16,13 @@ get_header(); ?>
     <!-- STORIES -->
     <section class="featured-work">
 
-      <section class="post type-post ptd-announce" style="background-image: url('<?php $dir = wp_upload_dir(); echo $dir['baseurl']; ?>/2014/08/prepare-to-die-promo.jpg');">
+      <section class="post type-post ptd-announce">
 
         <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>" class="featured-full-link"></a>
+
+        <h1>Prepare to Die</h1>
+        <h2>A poetry chapbook by Jess Jenkins</h2>
+        <h3>09.16.2014</h3>
 
       </section>
 
