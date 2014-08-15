@@ -46,21 +46,146 @@
 </header>
 
 <div class="nav">
+
   <nav role="navigation">
+
     <div class="nav-left">
-      <a class="nav-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
-      <a class="nav-poetry" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
-      <a class="nav-non-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+
+      <!-- NAV ITEM | NAV FICTION -->
+      <div class="nav-item nav-fiction">
+
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
+
+        <!-- NAV DROPDOWN FICTION -->
+        <div class="nav-dropdown-fiction">
+
+          <!-- DROPDOWN FEATURED (FICTION) -->
+          <section class="dropdown-featured" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
+            <?php
+              $sticky = get_option('sticky_posts');
+              $args = array( 'posts_per_page' => 1, 'category_name' => 'fiction', 'post__in' => $sticky, 'ignore_sticky_posts' => 1 );
+              query_posts($args);
+              if ( have_posts() ) : while (have_posts()) : the_post();
+            ?>
+
+            <a href="<?php the_permalink(); ?>" class="featured-full-link"></a>
+
+            <h1><?php the_title(); ?></h1>
+
+          <?php endwhile; wp_reset_postdata(); endif; ?>
+
+          </section>
+          <!-- /DROPDOWN FEATURED (FICTION) -->
+
+          <!-- DROPDOWN RECENT (FICTION) -->
+          <section class="dropdown-recent">
+            <?php
+              $args = array( 'posts_per_page' => 3, 'category_name' => 'fiction', 'orderby' => 'date', 'order' => 'DESC' );
+              query_posts($args);
+              if ( have_posts() ) : while (have_posts()) : the_post();
+            ?>
+
+
+            <h1><?php the_title(); ?></h1>
+
+            <?php endwhile; wp_reset_postdata(); endif; ?>
+          </section>
+          <!-- /DROPDOWN RECENT (FICTION) -->
+
+        </div>
+        <!-- /NAV DROPDOWN FICTION -->
+
+      </div>
+      <!-- /NAV ITEM | NAV FICTION -->
+
+      <div class="nav-item nav-poetry">
+
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
+
+        <div class="nav-dropdown-poetry">
+          <?php
+            $sticky = get_option('sticky_posts');
+            $args = array(
+              'posts_per_page' => 1,
+              'category_name' => 'poetry',
+              'post__in' => $sticky,
+              'ignore_sticky_posts' => 1
+              );
+            query_posts($args);
+          ?>
+          <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+          <h1><?php the_title(); ?></h1>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+
+          <?php
+            $args = array(
+              'posts_per_page' => 3,
+              'category_name' => 'poetry'
+              );
+            query_posts($args);
+          ?>
+          <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+          <h1><?php the_title(); ?></h1>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+        </div>
+
+      </div>
+
+      <div class="nav-item nav-non-fiction">
+
+        <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
+
+        <div class="nav-dropdown-non-fiction">
+          <?php
+            $sticky = get_option('sticky_posts');
+            $args = array(
+              'posts_per_page' => 1,
+              'category_name' => 'non-fiction',
+              'post__in' => $sticky,
+              'ignore_sticky_posts' => 1
+              );
+            query_posts($args);
+          ?>
+          <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+          <h1><?php the_title(); ?></h1>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+
+          <?php
+            $args = array(
+              'posts_per_page' => 3,
+              'category_name' => 'non-fiction'
+              );
+            query_posts($args);
+          ?>
+          <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+          <h1><?php the_title(); ?></h1>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+        </div>
+
+      </div>
+
+      <!--
       <a href="<?php echo esc_url( home_url( '/chapbooks/' ) ); ?>">Chapbooks</a>
-      <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
+      <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a> -->
     </div>
+
     <div class="nav-right">
       <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
       <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
       <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
       <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
     </div>
+
   </nav>
+
 </div>
 
 <div id="page" class="hfeed site">
