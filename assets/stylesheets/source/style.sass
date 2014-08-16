@@ -34,7 +34,7 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   box-sizing: border-box
 
 body
-  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../images/bg_static.jpg')
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../images/bg_pixels.png')
   overflow-x: hidden
 
 /*
@@ -49,7 +49,7 @@ body
 
 #page
   @include container(70em)
-  @include px-rem(margin-top, 6)
+  @include px-rem(margin-top, 4)
 
 /*
  * LOOPS
@@ -66,6 +66,9 @@ body
 /*
  * FEATURED CONTENT
  */
+
+.ptd-announce
+  margin-bottom: 4rem
 
 .featured-work
   @include span(12 of 12)
@@ -143,6 +146,7 @@ body
   .sidebar-search
     input.search-submit
       position: absolute
+      top: 0px
       right: 0px
 
   .sidebar-about p a
@@ -186,14 +190,10 @@ article.page
 .airship
   @include span(9)
 
-.airship-header
-  background-image: url('../../images/airship_flying.png')
-
 .airship-desc
   @include ubuntu(1)
   color: $orange
   @include px-rem(margin-bottom, 2)
-
 
 /*
  * ARCHIVES
@@ -302,7 +302,13 @@ form.search-form
   span
     display: none
 
+  input
+    border: 1px solid $lgray
+    border-radius: 0
+    margin: 0
+
   input.search-field
+    max-width: 100%
     @include ubuntu(0.9)
     padding: 8px
     color: $purple
@@ -311,7 +317,7 @@ form.search-form
     position: relative
     right: 10px
     @include ubuntu(0.9)
-    padding: 7px 6px 6px 6px
+    padding: 8px 6px 8px 6px
     color: $red
     border: 1px solid $purple
     background: white

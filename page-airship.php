@@ -7,7 +7,11 @@ get_header(); ?>
 
   <section class="airship page-full">
 
+    <?php if ( has_post_thumbnail() ): ?>
+    <div class="page-header" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
+    <?php else : ?>
     <div class="page-header airship-header">
+    <?php endif; ?>
 
       <div class="entry-bg"></div>
 

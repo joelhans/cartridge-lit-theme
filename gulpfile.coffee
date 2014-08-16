@@ -1,58 +1,64 @@
-gulp         = require('gulp')
-gutil        = require('gulp-util')
-sass         = require('gulp-ruby-sass')
-autoprefixer = require('gulp-autoprefixer')
-minifycss    = require('gulp-minify-css')
-rename       = require('gulp-rename')
-watch        = require('gulp-watch')
-coffee       = require('gulp-coffee')
-concat       = require('gulp-concat')
-uglify       = require('gulp-uglify')
-ignore       = require('gulp-ignore')
-rimraf       = require('gulp-rimraf')
+gulp         = require 'gulp'
+gutil        = require 'gulp-util'
 
-paths =
-  styles:
-    src:  'assets/stylesheets/source/**/*.sass'
-    dest: 'assets/stylesheets/build/'
-  scripts:
-    src: 'assets/javascripts/source/**/*.coffee'
-    vendor: 'assets/javascripts/vendor/**/*'
-    dest: 'assets/javascripts/build/'
+sass         = require 'gulp-ruby-sass'
+rename       = require 'gulp-rename'
+watch        = require 'gulp-watch'
+coffee       = require 'gulp-coffee'
+concat       = require 'gulp-concat'
+uglify       = require 'gulp-uglify'
+changed      = require 'gulp-changed'
+livereload   = require 'gulp-livereload'
 
-gulp.task 'rimraf', ->
-  return gulp.src(paths.scripts.dest+'*.js', { read: false })
-    .pipe(rimraf())
+styles =
+  src:  'assets/stylesheets/source/**/*.sass'
+  build: 'assets/stylesheets/build/'
 
-gulp.task 'coffee', ['rimraf'], ->
-  return gulp.src(paths.scripts.src)
-    .pipe(coffee().on('error', gutil.log))
-    .pipe(gulp.dest(paths.scripts.dest))
+scripts =
+  src: 'assets/javascripts/source/**/*.coffee'
+  vendor: 'assets/javascripts/vendor/**/*'
+  build: 'assets/javascripts/build/'
 
-gulp.task 'concat', ['coffee'], ->
-  return gulp.src([paths.scripts.vendor+'*.js', paths.scripts.dest+'*.js'])
-    .pipe(concat('script.js'))
-    .pipe(gulp.dest(paths.scripts.dest))
+############################################################
 
-gulp.task 'uglify', ['concat'], ->
-  return gulp.src(paths.scripts.dest+'script.js')
-    .pipe(uglify())
-    .pipe(rename('script.min.js'))
-    .pipe(gulp.dest(paths.scripts.dest))
+# Start the livereload server.
+gulp.task 'livereload', ->
+  livereload.listen()
 
-gulp.task 'cleanup', ['uglify'], ->
-  return gulp.src(paths.scripts.dest+'*.js', { read: false })
-    .pipe(ignore.exclude('**/*.min.js'))
-    .pipe(rimraf())
+# Create vendor.js blob.
+gulp.task 'vendor', ['coffee'], ->
+  return gulp.src scripts.vendor
+    .pipe concat 'vendor.js'
+    .pipe gulp.dest scripts.build
 
+# Compile CoffeeScript files into js file and reload the page.
+gulp.task 'coffee', ->
+  return gulp.src scripts.src
+    .pipe coffee()
+    .pipe gulp.dest scripts.build
+
+gulp.task 'js', ['coffee'], ->
+  return gulp.src [
+      scripts.build+'vendor.js',
+      scripts.build+'main.js'
+    ]
+    .pipe concat 'script.min.js'
+    .pipe uglify()
+    .pipe gulp.dest scripts.build
+    .pipe livereload { auto: false }
+
+# Compile SASS files into a css file and reload the page.
 gulp.task 'sass', ->
-  return gulp.src(paths.styles.src)
-    .pipe(sass({ style: 'compressed', require: 'susy' }))
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest(paths.styles.dest))
+  return gulp.src styles.src
+    .pipe changed styles.build
+    .pipe sass { style: 'compressed', require: 'susy' }
+    .pipe rename {suffix: '.min'}
+    .pipe gulp.dest styles.build
+    .pipe livereload { auto: false }
 
-gulp.task 'watch', ->
-  gulp.watch(paths.scripts.src, ['rimraf', 'coffee', 'concat', 'uglify', 'cleanup'])
-  gulp.watch(paths.styles.src, ['sass'])
+# Set watches on Coffee/SASS files.
+gulp.task 'watch', () ->
+  gulp.watch scripts.src, ['js']
+  gulp.watch styles.src, ['sass']
+
+gulp.task 'default', ['livereload', 'watch']

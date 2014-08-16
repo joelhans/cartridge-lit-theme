@@ -4,63 +4,61 @@
 
 #header
   width: 100%
-  height: 280px
-  background: rgba(23, 34, 29, 1) url('../../images/header_chrono.png')
-  background-size: 1400px auto
-  background-repeat: no-repeat
-  background-position: 65% 50%
+  height: 170px
+  position: relative
+  background: #0e1710
+
+  .header-bg
+    height: 170px
+    position: absolute
+    left: -98px
 
   .container
     @include container(70em)
-
-  .title
-    @include span(12 of 12)
-    @include px-rem(margin-top, 6)
-
-    img
-      width: 80px
+    height: 170px
+    position: relative
 
     h1.site-title
-      @include roboto(4)
+      @include ubuntu(3)
       display: inline-block
       position: relative
-      top: -22px
-      left: 30px
+      top: 55px
+      left: 200px
 
       a
         color: white
         &:hover
-          color: white
+          color: $red
 
-  h2.site-description
-    @include ubuntu(0.9)
-    text-align: center
-
-.nav
-  width: 100%
-  background: $dgray
-
-nav
-  @include container(70em)
-
-  .nav-left
-    @include span(6 of 12)
-
-  .nav-right
-    @include span(6 of 12)
-    text-align: right
+nav.colophon
+  @include gutters
+  position: absolute
+  bottom: 45px
+  right: 0px
 
   a
-    display: inline-block
+    @include ubuntu-l(0.8)
+    margin-left: 2rem
+
+    &:hover
+      color: $orange
+
+nav.categories
+  @include gutters
+  position: absolute
+  bottom: 0.5rem
+  right: 0px
+
+  a
     @include ubuntu(0.9)
-    padding-top: 10px
-    padding-bottom: 6px
-    color: $orange
+    line-height: 0.9rem
+    margin-left: 2rem
+    padding-bottom: 0.5rem
+
     &:hover
       color: $yellow
 
-  .nav-left a
-    @include px-rem(margin-right, 2)
-
-  .nav-right a
-    @include px-rem(margin-left, 2)
+.header-border
+  width: 100%
+  height: 0px
+  border-bottom: 3px solid $purple
