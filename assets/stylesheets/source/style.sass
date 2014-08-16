@@ -34,7 +34,7 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   box-sizing: border-box
 
 body
-  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../images/bg_static.jpg')
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../images/bg_pixels.png')
   overflow-x: hidden
 
 /*
@@ -49,7 +49,7 @@ body
 
 #page
   @include container(70em)
-  @include px-rem(margin-top, 6)
+  @include px-rem(margin-top, 4)
 
 /*
  * LOOPS
@@ -67,11 +67,48 @@ body
  * FEATURED CONTENT
  */
 
+@import url(http://fonts.googleapis.com/css?family=Oswald)
+@import url(http://fonts.googleapis.com/css?family=Merriweather)
+
+@mixin oswald($size: 1, $weight: 400)
+  font-family: 'Oswald', sans-serif
+  font-weight: $weight
+  @include font-size($size)
+  text-transform: uppercase
+  color: white
+
+@mixin merri($size: 1, $weight: 400)
+  font-family: 'Merriweather', serif
+  font-weight: $weight
+  @include font-size($size)
+  color: white
+
 .ptd-announce
+  background: linear-gradient(rgba(4,0,1,0.5),rgba(4,0,1,1)), url('../../images/chapbooks/prepare-to-die/title-background.jpg')
   margin-bottom: 4rem
 
-  .entry-bg
-    background: transparentize($dgray, 1)
+  h1
+    @include oswald(5)
+    position: relative
+    top: 70px
+    left: 4rem
+
+  h2
+    @include oswald(1.4)
+    position: relative
+    top: 70px
+    left: 4rem
+
+  h3
+    @include oswald(5)
+    float: right
+    position: relative
+    top: -82px
+    right: 4rem
+
+  &:hover .entry-bg
+    background: transparentize($purple, 0.2)
+    display: inline-block
 
 .featured-work
   @include span(12 of 12)
@@ -149,6 +186,7 @@ body
   .sidebar-search
     input.search-submit
       position: absolute
+      top: 0px
       right: 0px
 
   .sidebar-about p a
@@ -308,7 +346,13 @@ form.search-form
   span
     display: none
 
+  input
+    border: 1px solid $lgray
+    border-radius: 0
+    margin: 0
+
   input.search-field
+    max-width: 100%
     @include ubuntu(0.9)
     padding: 8px
     color: $purple
@@ -317,7 +361,7 @@ form.search-form
     position: relative
     right: 10px
     @include ubuntu(0.9)
-    padding: 7px 6px 6px 6px
+    padding: 8px 6px 8px 6px
     color: $red
     border: 1px solid $purple
     background: white

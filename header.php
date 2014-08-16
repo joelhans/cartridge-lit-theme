@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon-32x32.png" sizes="32x32">
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/style.min.css" type="text/css" media="all">
-<link href="http://fonts.googleapis.com/css?family=Ubuntu:500,500italic,400italic|Vollkorn:400italic,400,700|Roboto+Slab" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,500,500italic|Vollkorn:400italic,400,700" rel="stylesheet" type="text/css">
 
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
 
@@ -28,39 +28,31 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-stellar-background-ratio="1.1">
 
 <header id="header" class="site-header" role="banner">
   <div class="container">
+    <img class="header-bg" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/header_chrono.png" />
 
-    <div class="title">
+    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-      <img class="header-logo" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/cartridge_lit_logo.png" />
-      <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    <nav class="colophon">
+      <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
+      <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
+      <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
+      <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
+    </nav>
 
-    </div>
-
-    <!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
-
-  </div>
-</header>
-
-<div class="nav">
-  <nav role="navigation">
-    <div class="nav-left">
+    <nav class="categories">
       <a class="nav-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
       <a class="nav-poetry" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
       <a class="nav-non-fiction" href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
       <a href="<?php echo esc_url( home_url( '/chapbooks/' ) ); ?>">Chapbooks</a>
       <a href="<?php echo esc_url( home_url( '/the-airship/' ) ); ?>">The Airship (blog)</a>
-    </div>
-    <div class="nav-right">
-      <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" >About</a>
-      <a href="<?php echo esc_url( home_url( '/submissions/' ) ); ?>" rel="home">Submissions</a>
-      <a href="<?php echo esc_url( home_url( '/contributors/' ) ); ?>" rel="home">Contributors</a>
-      <a href="<?php echo esc_url( home_url( '/masthead/' ) ); ?>">Masthead</a>
-    </div>
-  </nav>
-</div>
+    </nav>
+
+  </div>
+</header>
+<div class="header-border"></div>
 
 <div id="page" class="hfeed site">
