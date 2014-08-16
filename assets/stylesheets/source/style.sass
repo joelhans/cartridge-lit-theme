@@ -67,48 +67,8 @@ body
  * FEATURED CONTENT
  */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald)
-@import url(http://fonts.googleapis.com/css?family=Merriweather)
-
-@mixin oswald($size: 1, $weight: 400)
-  font-family: 'Oswald', sans-serif
-  font-weight: $weight
-  @include font-size($size)
-  text-transform: uppercase
-  color: white
-
-@mixin merri($size: 1, $weight: 400)
-  font-family: 'Merriweather', serif
-  font-weight: $weight
-  @include font-size($size)
-  color: white
-
 .ptd-announce
-  background: linear-gradient(rgba(4,0,1,0.5),rgba(4,0,1,1)), url('../../images/chapbooks/prepare-to-die/title-background.jpg')
   margin-bottom: 4rem
-
-  h1
-    @include oswald(5)
-    position: relative
-    top: 70px
-    left: 4rem
-
-  h2
-    @include oswald(1.4)
-    position: relative
-    top: 70px
-    left: 4rem
-
-  h3
-    @include oswald(5)
-    float: right
-    position: relative
-    top: -82px
-    right: 4rem
-
-  &:hover .entry-bg
-    background: transparentize($purple, 0.2)
-    display: inline-block
 
 .featured-work
   @include span(12 of 12)
