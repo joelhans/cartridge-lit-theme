@@ -14,38 +14,55 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <!-- HEADER -->
   <section class="prepare-header">
-  <div class="container">
 
-    <div class="twelve">
+    <div class="ptd-header-prepare">
 
-      <h1><?php the_title(); ?></h1>
+      <h1>Prepare</h1>
 
+    </div>
+
+    <div class="ptd-header-to">
+
+      <h1>to</h1>
       <h2>A poetry chapbook by Jess Jenkins</h2>
       <h3>Brought to you by <a href="//cartridgelit.com" target="_blank"><em>Cartridge Lit</em></a></h3>
 
     </div>
 
-  </div>
+    <div class="ptd-header-die">
+
+      <h1>Die</h1>
+      <svg>
+        <defs>
+        	<pattern id="bg" patternUnits="userSpaceOnUse" width="1000" height="711" >
+        		<image xlink:href="<?php echo $chap_path; ?>title-background.jpg" width="1000" height="711" />
+        	</pattern>
+        </defs>
+        <text y="1.2em">09.16.2014</text>
+      </svg>
+
+    </div>
+
   </section>
   <!-- /HEADER -->
 
   <!-- TOC -->
+  <?php
+    $args = array(
+      'posts_per_page' => -1,
+      'category_name' => 'prepare-to-die',
+      'orderby' => 'date',
+      'order' => 'ASC'
+      );
+    query_posts($args);
+  ?>
+
+  <?php if ( have_posts() ) : ?>
+
   <section class="prepare-toc">
   <div class="container">
 
     <div class="six">
-
-      <?php
-        $args = array(
-          'posts_per_page' => -1,
-          'category_name' => 'prepare-to-die',
-          'orderby' => 'date',
-          'order' => 'ASC'
-          );
-        query_posts($args);
-      ?>
-
-      <?php if ( have_posts() ) : ?>
 
       <h1>Table of Contents:</h1>
 
@@ -56,11 +73,6 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <?php endwhile; ?>
       <!-- pagination -->
       <?php wp_reset_postdata(); ?>
-      <?php else : ?>
-
-      <h1 class="ptd-announce">09.16.2014</h1>
-
-      <?php endif; ?>
 
     </div>
 
@@ -72,6 +84,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   </div>
   </section>
+
+  <?php else : ?>
+  <?php endif; ?>
   <!-- /TOC -->
 
   <!-- LOOP -->

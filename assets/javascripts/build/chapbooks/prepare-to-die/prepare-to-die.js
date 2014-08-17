@@ -4,10 +4,15 @@
   webm_height = null;
 
   jQuery(function($) {
+    var win_h;
+    win_h = $(window).height();
     $(window).stellar({
       horizontalScrolling: false,
       hideDistantElements: false
     });
+    $('.prepare-header').height(win_h);
+    $('.prepare-header div').height(win_h / 3);
+    $('.prepare-header div h1').fitText(0.6);
     $('.prepare-toc').waypoint(function() {
       if ($('.ptd-announce').length) {
         return $('.respawn-campfire').fadeOut(5000);
