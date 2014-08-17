@@ -2,9 +2,15 @@ webm_height = null
 
 jQuery ($) ->
 
+  win_h = $(window).height()
+
   $(window).stellar
     horizontalScrolling: false
     hideDistantElements: false
+
+  $('.prepare-header').height(win_h)
+  $('.prepare-header div').height(win_h / 3)
+  $('.prepare-header div h1').fitText(0.6)
 
   $('.prepare-toc')
   .waypoint () ->
@@ -59,13 +65,11 @@ jQuery ($) ->
 
 $(window).load () ->
 
-  webm_height = $('.evil-does-not-webm').height()
-  console.log webm_height
-  $('.webm-gradients').css('height', webm_height)
+  webm = (720 * $(window).width()) / 1280
+  $('.webm-gradients').css('height', webm)
 
   $('#evil-does-not-work-like-a-network')
   .waypoint () ->
-    console.log this
     $('.evil-does-not-webm').get(0).play()
   , {
     offset: 100

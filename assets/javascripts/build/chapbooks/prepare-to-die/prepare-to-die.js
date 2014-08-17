@@ -4,10 +4,15 @@
   webm_height = null;
 
   jQuery(function($) {
+    var win_h;
+    win_h = $(window).height();
     $(window).stellar({
       horizontalScrolling: false,
       hideDistantElements: false
     });
+    $('.prepare-header').height(win_h);
+    $('.prepare-header div').height(win_h / 3);
+    $('.prepare-header div h1').fitText(0.6);
     $('.prepare-toc').waypoint(function() {
       if ($('.ptd-announce').length) {
         return $('.respawn-campfire').fadeOut(5000);
@@ -71,11 +76,10 @@
   });
 
   $(window).load(function() {
-    webm_height = $('.evil-does-not-webm').height();
-    console.log(webm_height);
-    $('.webm-gradients').css('height', webm_height);
+    var webm;
+    webm = (720 * $(window).width()) / 1280;
+    $('.webm-gradients').css('height', webm);
     return $('#evil-does-not-work-like-a-network').waypoint(function() {
-      console.log(this);
       return $('.evil-does-not-webm').get(0).play();
     }, {
       offset: 100,
