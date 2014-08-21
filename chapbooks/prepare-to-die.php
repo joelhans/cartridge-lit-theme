@@ -13,7 +13,41 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 ?>
 
   <!-- HEADER -->
-  <section class="prepare-header">
+
+  <nav>
+    <div class="nav-title">
+      <h1>Prepare to Die</h1>
+      <h2>By Jess Jenkins</h2>
+    </div>
+
+    <div class="nav-toc">
+
+      <span class="nav-menu"></span>
+      <a href="#title">Title page</a>
+      <a href="#table-of-contents">Table of contents</a>
+
+      <?php $args = array('posts_per_page' => -1,'category_name' => 'prepare-to-die','orderby' => 'date','order' => 'ASC');
+        query_posts($args);
+        while (have_posts()) : the_post();
+        global $post; ?>
+
+      <a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a>
+
+      <?php endwhile; wp_reset_postdata(); ?>
+
+      <a href="#acknowledgements">Acknowledgements</a>
+
+    </div>
+
+    <div class="nav-cartridge">
+
+      <h2>Brought to you by <em>Cartridge Lit</em></h2>
+
+    </div>
+
+  </nav>
+
+  <section class="prepare-header" id="title">
 
     <div class="ptd-header-prepare">
 
@@ -59,7 +93,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <?php if ( have_posts() ) : ?>
 
-  <section class="prepare-toc">
+  <section class="prepare-toc" id="table-of-contents">
   <div class="container">
 
     <div class="six">
@@ -70,9 +104,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
       <a href="#<?php global $post; echo $post->post_name; ?>"><?php the_title(); ?></a>
 
-      <?php endwhile; ?>
-      <!-- pagination -->
-      <?php wp_reset_postdata(); ?>
+      <?php endwhile; wp_reset_postdata(); ?>
 
     </div>
 
