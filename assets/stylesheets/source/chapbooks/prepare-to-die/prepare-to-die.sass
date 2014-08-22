@@ -40,12 +40,97 @@ body.page-prepare-to-die
 
 .container
   @include container(70em)
+  position: relative
 
 .twelve
   @include span(12 of 12)
 
 .six
   @include span(6 of 12)
+
+/*
+ * NAV
+ */
+
+nav
+  display: none
+  width: 100%
+  height: 40px
+  position: fixed
+  top: 0px
+  left: 0px
+  background-color: $black
+  z-index: 1000
+
+  .nav-title
+    margin-left: 2rem
+
+    h1
+      @include oswald(1.8)
+      display: inline-block
+      color: white
+
+    h2
+      @include oswald(1.4)
+      display: inline-block
+      position: relative
+      top: -4px
+      color: $red
+      margin-left: 1rem
+
+  .nav-toc
+    width: 430px
+    height: 40px
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -200px
+    background-color: $black
+    overflow: hidden
+
+    a
+      @include vollkorn(1)
+      display: block
+      padding: 10px 0 6px 0
+      position: relative
+      left: 30px
+
+    a.nav-item-lit
+      color: white
+
+    .nav-menu
+      width: 20px
+      height: 20px
+      position: absolute
+      top: 11px
+      left: 8px
+      padding-left: 1.25em
+
+      &:hover
+        cursor: pointer
+
+    .nav-menu:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0.25em
+      width: 1em
+      height: 0.15em
+      background: white
+      box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white
+
+  .nav-open
+    height: auto
+
+  .nav-cartridge
+    position: absolute
+    top: 0px
+    right: 2rem
+
+    h2
+      @include oswald(1.2)
+      color: white
+      margin-top: 4px
 
 /*
  * TITLE
@@ -124,28 +209,6 @@ body.page-prepare-to-die
 
       text
         fill: url(#bg) $red
-
-  //
-  // h1
-  //   height: 55px
-  //   text-indent: 100%
-  //   white-space: nowrap
-  //   overflow: hidden
-  //   @include px-rem(margin-top, 16)
-  //   background: url($path+'prepare-to-die.png') no-repeat
-  //   background-size: auto 100%
-  //
-  // h2
-  //   @include oswald(1.4)
-  //   margin-top: 4rem
-  //
-  // h3
-  //   @include oswald
-  //   margin-top: 6rem
-  //
-  //   a
-  //     font-size: 1.2rem
-  //     vertical-align: -2px
 
 /*
  * TOC
@@ -297,6 +360,9 @@ body.page-prepare-to-die
  */
 
 // #i-am-the-callow-partner
+
+#i-am-the-callow-partner
+  @include setbg('i-am-the-callow-partner.jpg')
 
 .i-am-the-callow-partner
   @extend .ptd-squared
@@ -483,10 +549,43 @@ body.page-prepare-to-die
 
 .he-is-willing-and-fervent-he-teases
   @extend .ptd-squared
-  margin-top: 40rem
+  position: absolute
+  top: 575px
+  right: 0px
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
+
+[class*="bugzilla"]
+  position: absolute
+
+.bugzilla-1
+  top: 0px
+  left: 646px
+
+.bugzilla-2
+  top: 800px
+  left: 530px
+
+.bugzilla-3
+  top: 560px
+  left: 45px
+
+.bugzilla-4
+  top: 0px
+  left: -100px
+
+.bugzilla-5
+  top: 1300px
+  right: 0px
+
+.bugzilla-6
+  top: 340px
+  left: 460px
+
+.bugzilla-7
+  top: 961px
+  left: 424px
 
 /*
  * DEMON IS A STUPID WORD
@@ -507,15 +606,44 @@ body.page-prepare-to-die
  * GHOSTS ARE WHERE TEH BODIES BLED OUT
  */
 
+#ghosts-are-where-the-bodies-bled-out
+  background: url($path+'ghosts-are-where-the-bodies-bled-out.jpg') no-repeat
+  background-size: 800px
+  background-position: 50% 10rem
+
 .ghosts-are-where-the-bodies-bled-out
   @extend .ptd-paragraphs
+  @include push(3)
+  margin-top: 44rem
 
 /*
  * HERE, THE FRAME RATE CHUGS PROCESSING A DEEP BLACK
  */
 
+#here-the-frame-rate-chugs-processing-a-deep-black
+  overflow: hidden
+  height: 1075px
+
+  img
+    width: 2000px
+    position: absolute
+    top: 0px
+    left: 0px
+    z-index: 1
+
 .here-the-frame-rate-chugs-processing-a-deep-black
   @extend .ptd-squared
+  @include push(-0.7)
+  margin-top: 9rem
+  z-index: 2
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+  -webkit-transform: rotateZ(3.5deg)
+  -moz-transform: rotateZ(3.5deg)
+  transform: rotateZ(3.5deg)
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 55px
 
 /*
  * Evil does not work like a network
