@@ -6,10 +6,6 @@
   jQuery(function($) {
     var win_h;
     win_h = $(window).height();
-    $(window).stellar({
-      horizontalScrolling: false,
-      hideDistantElements: false
-    });
     $('.prepare-header').height(win_h);
     $('.prepare-header div').height(win_h / 3);
     $('.prepare-header div h1').fitText(0.6);
@@ -67,7 +63,7 @@
         return $('.nav-toc').children('a').css('top', toc_top_pos);
       }
     });
-    return $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {
+    $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(1)').toggleClass('fleets-show');
     }, {
       offset: 100
@@ -94,28 +90,33 @@
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(1)').toggleClass('fleets-show');
     }, {
-      offset: -250
+      offset: -200
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(2)').toggleClass('fleets-show');
     }, {
-      offset: -300
+      offset: -250
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(3)').toggleClass('fleets-show');
     }, {
-      offset: -350
+      offset: -300
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(4)').toggleClass('fleets-show');
     }, {
-      offset: -400
+      offset: -350
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(5)').toggleClass('fleets-show');
     }, {
-      offset: -450
+      offset: -400
     }).waypoint(function() {
       return $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(6)').toggleClass('fleets-show');
     }, {
-      offset: -500
+      offset: -450
     });
+    $.stellar({
+      horizontalScrolling: false,
+      hideDistantElements: false
+    });
+    return console.log('Hi.');
   });
 
   $(window).load(function() {

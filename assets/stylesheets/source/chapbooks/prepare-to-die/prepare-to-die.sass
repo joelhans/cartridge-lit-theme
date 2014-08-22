@@ -40,6 +40,7 @@ body.page-prepare-to-die
 
 .container
   @include container(70em)
+  position: relative
 
 .twelve
   @include span(12 of 12)
@@ -127,7 +128,7 @@ nav
     right: 2rem
 
     h2
-      @include oswald(1.4)
+      @include oswald(1.2)
       color: white
       margin-top: 4px
 
@@ -360,6 +361,9 @@ nav
 
 // #i-am-the-callow-partner
 
+#i-am-the-callow-partner
+  @include setbg('i-am-the-callow-partner.jpg')
+
 .i-am-the-callow-partner
   @extend .ptd-squared
 
@@ -545,10 +549,43 @@ nav
 
 .he-is-willing-and-fervent-he-teases
   @extend .ptd-squared
-  margin-top: 40rem
+  position: absolute
+  top: 575px
+  right: 0px
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
+
+[class*="bugzilla"]
+  position: absolute
+
+.bugzilla-1
+  top: 0px
+  left: 646px
+
+.bugzilla-2
+  top: 800px
+  left: 530px
+
+.bugzilla-3
+  top: 560px
+  left: 45px
+
+.bugzilla-4
+  top: 0px
+  left: -100px
+
+.bugzilla-5
+  top: 1300px
+  right: 0px
+
+.bugzilla-6
+  top: 340px
+  left: 460px
+
+.bugzilla-7
+  top: 961px
+  left: 424px
 
 /*
  * DEMON IS A STUPID WORD
@@ -569,15 +606,44 @@ nav
  * GHOSTS ARE WHERE TEH BODIES BLED OUT
  */
 
+#ghosts-are-where-the-bodies-bled-out
+  background: url($path+'ghosts-are-where-the-bodies-bled-out.jpg') no-repeat
+  background-size: 800px
+  background-position: 50% 10rem
+
 .ghosts-are-where-the-bodies-bled-out
   @extend .ptd-paragraphs
+  @include push(3)
+  margin-top: 44rem
 
 /*
  * HERE, THE FRAME RATE CHUGS PROCESSING A DEEP BLACK
  */
 
+#here-the-frame-rate-chugs-processing-a-deep-black
+  overflow: hidden
+  height: 1075px
+
+  img
+    width: 2000px
+    position: absolute
+    top: 0px
+    left: 0px
+    z-index: 1
+
 .here-the-frame-rate-chugs-processing-a-deep-black
   @extend .ptd-squared
+  @include push(-0.7)
+  margin-top: 9rem
+  z-index: 2
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+  -webkit-transform: rotateZ(3.5deg)
+  -moz-transform: rotateZ(3.5deg)
+  transform: rotateZ(3.5deg)
+
+  p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
+    margin-left: 55px
 
 /*
  * Evil does not work like a network

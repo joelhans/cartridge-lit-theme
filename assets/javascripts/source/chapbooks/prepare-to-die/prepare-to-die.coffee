@@ -6,9 +6,9 @@ jQuery ($) ->
 
   win_h = $(window).height()
 
-  $(window).stellar
-    horizontalScrolling: false
-    hideDistantElements: false
+  # $(window).stellar
+  #   horizontalScrolling: false
+  #   hideDistantElements: false
 
   $('.prepare-header').height(win_h)
   $('.prepare-header div').height(win_h / 3)
@@ -95,22 +95,28 @@ jQuery ($) ->
   , offset: -150
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(1)').toggleClass('fleets-show')
-  , offset: -250
+  , offset: -200
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(2)').toggleClass('fleets-show')
-  , offset: -300
+  , offset: -250
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(3)').toggleClass('fleets-show')
-  , offset: -350
+  , offset: -300
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(4)').toggleClass('fleets-show')
-  , offset: -400
+  , offset: -350
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(5)').toggleClass('fleets-show')
-  , offset: -450
+  , offset: -400
   .waypoint () ->
     $('.fleets-of-labor-made-this-marked-infrastructure p:nth-of-type(6)').toggleClass('fleets-show')
-  , offset: -500
+  , offset: -450
+
+  $.stellar
+    horizontalScrolling: false
+    hideDistantElements: false
+
+  console.log 'Hi.'
 
 $(window).load () ->
 
