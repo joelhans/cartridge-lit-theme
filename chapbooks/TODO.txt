@@ -1,2 +1,0 @@
-For "EVIL DOES NOT WORK" make it so that the text is always centered where the
-circle is.

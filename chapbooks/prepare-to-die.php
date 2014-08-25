@@ -208,8 +208,6 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.webm">
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.mp4">
     </video>
-    <div class="webm-gradients">
-    </div>
   <?php endif; ?>
 
   </section>

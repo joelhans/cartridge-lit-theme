@@ -138,7 +138,7 @@
   $(window).load(function() {
     var webm;
     webm = (720 * $(window).width()) / 1280;
-    $('.webm-gradients').css('height', webm);
+    $('#evil-does-not-work-like-a-network, #evil-does-not-work-like-a-network .container').css('height', webm);
     return $('#evil-does-not-work-like-a-network').waypoint(function() {
       return $('.evil-does-not-webm').get(0).play();
     }, {

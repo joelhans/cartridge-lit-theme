@@ -136,7 +136,8 @@ jQuery ($) ->
 $(window).load () ->
 
   webm = (720 * $(window).width()) / 1280
-  $('.webm-gradients').css('height', webm)
+  $('#evil-does-not-work-like-a-network, #evil-does-not-work-like-a-network .container').css('height', webm)
+
 
   $('#evil-does-not-work-like-a-network')
   .waypoint () ->
