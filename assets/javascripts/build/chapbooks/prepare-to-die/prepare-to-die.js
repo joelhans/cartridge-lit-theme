@@ -56,11 +56,27 @@
       var toc_top_pos;
       if ($('.nav-toc').is('.nav-open') === false) {
         $('.nav-toc').addClass('nav-open');
-        return $('.nav-toc').children('a').css('top', 0);
+        $('.nav-toc').css({
+          'overflow-y': 'auto',
+          'height': 'auto'
+        });
+        $('.nav-toc').children('a').css('top', 0);
+        if ($('.nav-toc').height() > win_h) {
+          return $('.nav-toc').css({
+            'overflow-y': 'scroll',
+            'height': win_h
+          });
+        }
       } else if ($('.nav-toc').is('.nav-open') === true) {
         toc_top_pos = $('.nav-toc').data('toc-top-pos');
+        console.log(toc_top_pos);
         $('.nav-toc').removeClass('nav-open');
-        return $('.nav-toc').children('a').css('top', toc_top_pos);
+        $('.nav-toc').children('a').css('top', toc_top_pos);
+        $('.nav-toc').scrollTop(0);
+        return $('.nav-toc').css({
+          'overflow': 'hidden',
+          'height': 40
+        });
       }
     });
     $('#fleets-of-labor-made-this-marked-infrastructure').waypoint(function() {

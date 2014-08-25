@@ -1,10 +1,2 @@
-Take away navigation TOC width. Take away the <a>'s left: 30 and give them 2rem
-margins on the left and right.
-
-Figure out how to make the navigation TOC work on small screens. Scrollbar?
-
-The "HERE THE FRAME RATE CHUGS" isn't aligned-left properly against the tree.
-Not sure how to fix this. Attach the image to the container and push it left?
-
 For "EVIL DOES NOT WORK" make it so that the text is always centered where the
 circle is.

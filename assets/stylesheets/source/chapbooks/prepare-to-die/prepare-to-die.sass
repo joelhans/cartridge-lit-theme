@@ -34,9 +34,10 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   @include font-size($size)
   color: white
 
-body.page-prepare-to-die
+body
   margin: 0
   background: rgba(4,0,1,1)
+  overflow-x: hidden
 
 .container
   @include container(70em)
@@ -79,7 +80,6 @@ nav
       margin-left: 1rem
 
   .nav-toc
-    width: 430px
     height: 40px
     position: absolute
     top: 0
@@ -89,11 +89,11 @@ nav
     overflow: hidden
 
     a
-      @include vollkorn(1)
       display: block
-      padding: 10px 0 6px 0
       position: relative
-      left: 30px
+      @include vollkorn(1)
+      margin: 0 2rem 0 2rem
+      padding: 10px 0 6px 0
 
     a.nav-item-lit
       color: white
@@ -101,9 +101,9 @@ nav
     .nav-menu
       width: 20px
       height: 20px
-      position: absolute
+      position: fixed
       top: 11px
-      left: 8px
+      margin-left: 8px
       padding-left: 1.25em
 
       &:hover
@@ -257,13 +257,18 @@ nav
   background-position: 50%
   background-repeat: no-repeat
 
+@mixin setbgwide($url: '')
+  background: url($path+$url)
+  background-position: 50%
+  background-repeat: no-repeat
+
 .prepare-content
   height: 1500px
   background: rgba(4,0,1,1)
   position: relative
   overflow: visible
-  border-top: 10px solid white
-  border-bottom: 10px solid white
+  border-top: 1px solid white
+  border-bottom: 1px solid white
 
   &:focus
     outline: 0
@@ -359,13 +364,14 @@ nav
  * I AM THE CALLOW PARTNER
  */
 
-// #i-am-the-callow-partner
-
 #i-am-the-callow-partner
-  @include setbg('i-am-the-callow-partner.jpg')
+  @include setbgwide('i-am-the-callow-partner.jpg')
+  height: 1000px
 
 .i-am-the-callow-partner
   @extend .ptd-squared
+  @include push(5.5)
+  margin-top: 24rem
 
 /*
  * MY BROTHERS ARE NPCS
@@ -401,10 +407,14 @@ nav
  * SHARPEN YOUR WEAPON SWING TWO HANDS
  */
 
-// #sharpen-your-weapon-swing-two-hands
+#sharpen-your-weapon-swing-two-hands
+  @include setbgwide('sharpen-your-weapon-swing-two-hands.jpg')
+  height: 1125px
 
 .sharpen-your-weapon-swing-two-hands
   @extend .ptd-squared
+  @include push(9)
+  margin-top: 30rem
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
@@ -435,16 +445,25 @@ nav
 .who-was-the-magellan-that-cartographed-this-place
   @extend .ptd-paragraphs
   margin-top: 68rem
-  padding: 1.2rem 1.2rem 0 1.2rem
-  background: rgba(0,0,0,0.6)
-  box-shadow: 0px 0px 70px 30px rgba(0,0,0,0.6)
 
 /*
  * YOU-MUST-ALSO-HAVE-A-MINERAL-NATURE
  */
 
+#you-must-also-have-a-mineral-nature
+  height: 700px
+  @include setbgwide('you-must-also-have-a-mineral-nature.jpg')
+
+  img
+    position: absolute
+    top: -150px
+    right: 300px
+    z-index: 1
+
 .you-must-also-have-a-mineral-nature
   @extend .ptd-squared
+  @include push(2)
+  margin-top: 30px
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 46px
@@ -631,9 +650,12 @@ nav
     left: 0px
     z-index: 1
 
-.here-the-frame-rate-chugs-processing-a-deep-black
+  .container
+    display: none
+
+.here-replacement
   @extend .ptd-squared
-  @include push(-0.7)
+  left: 206px
   margin-top: 9rem
   z-index: 2
   -webkit-backface-visibility: hidden

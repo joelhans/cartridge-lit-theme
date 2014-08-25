@@ -192,8 +192,15 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   </div>
 
+  <?php if ( $post->post_name == "you-must-also-have-a-mineral-nature" ) : ?>
+    <img data-stellar-ratio="1.5" data-stellar-vertical-offset="-400" src="<?php echo $image_path; ?>you-must-also-have-a-mineral-nature-vert.jpg" />
+  <?php endif; ?>
+
   <?php if ( $post->post_name == "here-the-frame-rate-chugs-processing-a-deep-black" ) : ?>
     <img src="<?php echo $image_path; ?>here-the-frame-rate-chugs-processing-a-deep-black.jpg" />
+    <article class="here-replacement">
+      <?php the_content(); ?>
+    </article>
   <?php endif; ?>
 
   <?php if ( $post->post_name == "evil-does-not-work-like-a-network" ) : ?>
