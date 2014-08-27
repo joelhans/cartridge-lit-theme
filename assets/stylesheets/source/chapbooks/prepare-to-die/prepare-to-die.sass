@@ -128,9 +128,9 @@ nav
     right: 2rem
 
     h2
-      @include oswald(1.2)
+      @include oswald(1)
       color: white
-      margin-top: 4px
+      margin-top: 8px
 
 /*
  * TITLE
@@ -323,12 +323,13 @@ nav
  */
 
 #each-of-these-walls-is-grander
-  @include setbg('each-of-these-walls-is-grander.jpg')
+  height: 906px
+  @include setbgwide('each-of-these-walls-is-grander.jpg')
 
 .each-of-these-walls-is-grander
   @extend .ptd-squared
   @include push(7)
-  margin-top: 29rem
+  margin-top: 8rem
 
 /*
  * UNDER HYPNOSIS EYES SPINNING
@@ -336,7 +337,7 @@ nav
 
 #under-hypnosis-eyes-spinning
   @include setbg('under-hypnosis-eyes-spinning.jpg')
-  margin-top: 6rem
+  padding-top: 20px
 
 .under-hypnosis-eyes-spinning
   @extend .ptd-squared
@@ -350,13 +351,16 @@ nav
  * MY SHOULDERS CURVE LIKE ELBOWS IN A NUTSHELL ENCASEMENT
  */
 
+#my-shoulders-curve-like-elbows-in-a-nutshell-encasement
+  height: 850px
+
 .my-shoulders-curve-like-elbows-in-a-nutshell-encasement
   @extend .ptd-paragraphs
   @include push(4)
-  margin-top: 29rem
+  margin-top: 18rem
 
   img
-    position: relative
+    position: absolute
     top: -600px
     left: -340px
 
@@ -377,10 +381,14 @@ nav
  * MY BROTHERS ARE NPCS
  */
 
-// #my-brothers-are-npcs
+#my-brothers-are-npcs
+  height: 1200px
+  @include setbgwide('my-brothers-are-npcs.jpg')
 
 .my-brothers-are-npcs
   @extend .ptd-squared
+  @include push(8)
+  margin-top: 8rem
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 65px
@@ -425,6 +433,7 @@ nav
 
 #hunch-girl-and-the-crow-will-carry-you-out
   @include setbg('hunch-girl-and-the-crow-will-carry-you-out.jpg')
+  padding-top: 20rem
 
 .hunch-girl-and-the-crow-will-carry-you-out
   @extend .ptd-squared
@@ -472,10 +481,28 @@ nav
  * THE CAT LIVES BEHIND
  */
 
-// #the-cat-lives-behind
+#the-cat-lives-behind
+  overflow: hidden
+  height: 1340px
+//   // height: 2667px
+//   // @include setbgwide('the-cat-lives-behind.jpg')
 
 .the-cat-lives-behind
   @extend .ptd-squared
+  @include push(8)
+  margin-top: 20rem
+
+  .cat-1
+    position: absolute
+    top: -100px
+    left: -800px
+    z-index: 2
+
+  .cat-2
+    position: absolute
+    top: -200px
+    left: -1000px
+    z-index: 3
 
 /*
  * NOW A NOTE ON THE WORLD ECONOMY
@@ -524,9 +551,17 @@ nav
   top: 0px
   left: 87px
 
-.soul-1-5
+.soul-1-6
   top: 0px
   left: 1107px
+
+.soul-1-7
+  top: 600px
+  left: -87px
+
+.soul-1-8
+  top: 800px
+  left: 331px
 
 .soul-2-1
   top: -200px
@@ -539,6 +574,10 @@ nav
 .soul-3-1
   top: -2000px
   left: 847px
+
+.soul-3-2
+  top: 1200px
+  left: 160px
 
 .soul-4-1
   top: 0px

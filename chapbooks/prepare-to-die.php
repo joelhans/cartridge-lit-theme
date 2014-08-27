@@ -56,7 +56,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
     <div class="nav-cartridge">
 
-      <h2>Brought to you by <em>Cartridge Lit</em></h2>
+      <h2>Brought to you by <a href="//cartridgelit.com"><em>Cartridge Lit</em></a></h2>
 
     </div>
 
@@ -158,7 +158,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <?php the_content(); ?>
 
       <?php if ( $post->post_name == "my-shoulders-curve-like-elbows-in-a-nutshell-encasement" ) : ?>
-        <img data-stellar-ratio="1.4" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>my-shoulders-curve-like-elbows-in-a-nutshell-encasement.png" />
+        <img data-stellar-ratio="1.4" data-stellar-vertical-offset="-1200" src="<?php echo $image_path; ?>my-shoulders-curve-like-elbows-in-a-nutshell-encasement.png" />
+      <?php endif; ?>
+
+      <?php if ( $post->post_name == "the-cat-lives-behind" ) : ?>
+        <img class="cat-1" src="<?php echo $image_path; ?>the-cat-lives-behind_1.jpg" />
+        <img class="cat-2" src="<?php echo $image_path; ?>the-cat-lives-behind_2.jpg" />
       <?php endif; ?>
 
       <?php if ( $post->post_name == "now-a-note-on-the-world-economy" ) : ?>
@@ -169,9 +174,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
         <img class="soul-1-4" data-stellar-ratio="1.247" data-stellar-vertical-offset="-400" src="<?php echo $image_path; ?>soul_1.png" />
         <img class="soul-1-5" data-stellar-ratio="4.917" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_1.png" />
         <img class="soul-1-6" data-stellar-ratio="3.957" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_1.png" />
+        <img class="soul-1-7" data-stellar-ratio="1.086" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_1.png" />
+        <img class="soul-1-8" data-stellar-ratio="1.123" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_1.png" />
         <img class="soul-2-1" data-stellar-ratio="2.1763" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_2.png" />
         <img class="soul-2-2" data-stellar-ratio="4.371" data-stellar-vertical-offset="1000" src="<?php echo $image_path; ?>soul_2.png" />
         <img class="soul-3-1" data-stellar-ratio="4.182" data-stellar-vertical-offset="0" src="<?php echo $image_path; ?>soul_3.png" />
+        <img class="soul-3-2" data-stellar-ratio="2.863" data-stellar-vertical-offset="-200" src="<?php echo $image_path; ?>soul_3.png" />
         <img class="soul-4-1" data-stellar-ratio="1.976" src="<?php echo $image_path; ?>soul_4.png" />
         <img class="soul-4-2" data-stellar-ratio="1.127" src="<?php echo $image_path; ?>soul_4.png" />
         <img class="soul-4-3" data-stellar-ratio="1.236" data-stellar-vertical-offset="-2000" src="<?php echo $image_path; ?>soul_4.png" />
