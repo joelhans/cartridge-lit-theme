@@ -63,14 +63,29 @@ jQuery ($) ->
     return -Math.abs($(this).outerHeight())
 
   $('.nav-menu').click () ->
+
+    # Open navigation menu
     if $('.nav-toc').is('.nav-open') is false
       $('.nav-toc').addClass 'nav-open'
+      $('.nav-toc').css
+        'overflow-y': 'auto'
+        'height': 'auto'
       $('.nav-toc').children('a').css 'top', 0
+      if $('.nav-toc').height() > win_h
+        $('.nav-toc').css
+          'overflow-y': 'scroll'
+          'height': win_h
 
+    # Close navigation menu
     else if $('.nav-toc').is('.nav-open') is true
       toc_top_pos = $('.nav-toc').data 'toc-top-pos'
+      console.log toc_top_pos
       $('.nav-toc').removeClass 'nav-open'
       $('.nav-toc').children('a').css 'top', toc_top_pos
+      $('.nav-toc').scrollTop(0)
+      $('.nav-toc').css
+        'overflow': 'hidden'
+        'height': 40
 
   # WAYPOINTS
 
@@ -121,7 +136,8 @@ jQuery ($) ->
 $(window).load () ->
 
   webm = (720 * $(window).width()) / 1280
-  $('.webm-gradients').css('height', webm)
+  $('#evil-does-not-work-like-a-network, #evil-does-not-work-like-a-network .container').css('height', webm)
+
 
   $('#evil-does-not-work-like-a-network')
   .waypoint () ->

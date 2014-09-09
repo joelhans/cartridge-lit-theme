@@ -34,9 +34,10 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   @include font-size($size)
   color: white
 
-body.page-prepare-to-die
+body
   margin: 0
   background: rgba(4,0,1,1)
+  overflow-x: hidden
 
 .container
   @include container(70em)
@@ -79,7 +80,6 @@ nav
       margin-left: 1rem
 
   .nav-toc
-    width: 430px
     height: 40px
     position: absolute
     top: 0
@@ -89,11 +89,11 @@ nav
     overflow: hidden
 
     a
-      @include vollkorn(1)
       display: block
-      padding: 10px 0 6px 0
       position: relative
-      left: 30px
+      @include vollkorn(1)
+      margin: 0 2rem 0 2rem
+      padding: 10px 0 6px 0
 
     a.nav-item-lit
       color: white
@@ -101,9 +101,9 @@ nav
     .nav-menu
       width: 20px
       height: 20px
-      position: absolute
+      position: fixed
       top: 11px
-      left: 8px
+      margin-left: 8px
       padding-left: 1.25em
 
       &:hover
@@ -128,9 +128,9 @@ nav
     right: 2rem
 
     h2
-      @include oswald(1.2)
+      @include oswald(1)
       color: white
-      margin-top: 4px
+      margin-top: 8px
 
 /*
  * TITLE
@@ -257,13 +257,16 @@ nav
   background-position: 50%
   background-repeat: no-repeat
 
+@mixin setbgwide($url: '')
+  background: url($path+$url)
+  background-position: 50%
+  background-repeat: no-repeat
+
 .prepare-content
   height: 1500px
   background: rgba(4,0,1,1)
   position: relative
   overflow: visible
-  border-top: 10px solid white
-  border-bottom: 10px solid white
 
   &:focus
     outline: 0
@@ -318,12 +321,13 @@ nav
  */
 
 #each-of-these-walls-is-grander
-  @include setbg('each-of-these-walls-is-grander.jpg')
+  height: 906px
+  @include setbgwide('each-of-these-walls-is-grander.jpg')
 
 .each-of-these-walls-is-grander
   @extend .ptd-squared
   @include push(7)
-  margin-top: 29rem
+  margin-top: 8rem
 
 /*
  * UNDER HYPNOSIS EYES SPINNING
@@ -331,7 +335,7 @@ nav
 
 #under-hypnosis-eyes-spinning
   @include setbg('under-hypnosis-eyes-spinning.jpg')
-  margin-top: 6rem
+  padding-top: 20px
 
 .under-hypnosis-eyes-spinning
   @extend .ptd-squared
@@ -345,13 +349,16 @@ nav
  * MY SHOULDERS CURVE LIKE ELBOWS IN A NUTSHELL ENCASEMENT
  */
 
+#my-shoulders-curve-like-elbows-in-a-nutshell-encasement
+  height: 850px
+
 .my-shoulders-curve-like-elbows-in-a-nutshell-encasement
   @extend .ptd-paragraphs
   @include push(4)
-  margin-top: 29rem
+  margin-top: 18rem
 
   img
-    position: relative
+    position: absolute
     top: -600px
     left: -340px
 
@@ -359,22 +366,27 @@ nav
  * I AM THE CALLOW PARTNER
  */
 
-// #i-am-the-callow-partner
-
 #i-am-the-callow-partner
-  @include setbg('i-am-the-callow-partner.jpg')
+  @include setbgwide('i-am-the-callow-partner.jpg')
+  height: 1000px
 
 .i-am-the-callow-partner
   @extend .ptd-squared
+  @include push(5.5)
+  margin-top: 24rem
 
 /*
  * MY BROTHERS ARE NPCS
  */
 
-// #my-brothers-are-npcs
+#my-brothers-are-npcs
+  height: 1200px
+  @include setbgwide('my-brothers-are-npcs.jpg')
 
 .my-brothers-are-npcs
   @extend .ptd-squared
+  @include push(8)
+  margin-top: 8rem
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 65px
@@ -401,10 +413,14 @@ nav
  * SHARPEN YOUR WEAPON SWING TWO HANDS
  */
 
-// #sharpen-your-weapon-swing-two-hands
+#sharpen-your-weapon-swing-two-hands
+  @include setbgwide('sharpen-your-weapon-swing-two-hands.jpg')
+  height: 1125px
 
 .sharpen-your-weapon-swing-two-hands
   @extend .ptd-squared
+  @include push(9)
+  margin-top: 30rem
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 55px
@@ -415,6 +431,7 @@ nav
 
 #hunch-girl-and-the-crow-will-carry-you-out
   @include setbg('hunch-girl-and-the-crow-will-carry-you-out.jpg')
+  padding-top: 20rem
 
 .hunch-girl-and-the-crow-will-carry-you-out
   @extend .ptd-squared
@@ -435,16 +452,25 @@ nav
 .who-was-the-magellan-that-cartographed-this-place
   @extend .ptd-paragraphs
   margin-top: 68rem
-  padding: 1.2rem 1.2rem 0 1.2rem
-  background: rgba(0,0,0,0.6)
-  box-shadow: 0px 0px 70px 30px rgba(0,0,0,0.6)
 
 /*
  * YOU-MUST-ALSO-HAVE-A-MINERAL-NATURE
  */
 
+#you-must-also-have-a-mineral-nature
+  height: 700px
+  @include setbgwide('you-must-also-have-a-mineral-nature.jpg')
+
+  img
+    position: absolute
+    top: -150px
+    right: 300px
+    z-index: 1
+
 .you-must-also-have-a-mineral-nature
   @extend .ptd-squared
+  @include push(2)
+  margin-top: 30px
 
   p:nth-of-type(2), p:nth-of-type(3), p:nth-of-type(4)
     margin-left: 46px
@@ -453,10 +479,28 @@ nav
  * THE CAT LIVES BEHIND
  */
 
-// #the-cat-lives-behind
+#the-cat-lives-behind
+  overflow: hidden
+  height: 1340px
+//   // height: 2667px
+//   // @include setbgwide('the-cat-lives-behind.jpg')
 
 .the-cat-lives-behind
   @extend .ptd-squared
+  @include push(8)
+  margin-top: 20rem
+
+  .cat-1
+    position: absolute
+    top: -100px
+    left: -800px
+    z-index: 2
+
+  .cat-2
+    position: absolute
+    top: -200px
+    left: -1000px
+    z-index: 3
 
 /*
  * NOW A NOTE ON THE WORLD ECONOMY
@@ -505,9 +549,17 @@ nav
   top: 0px
   left: 87px
 
-.soul-1-5
+.soul-1-6
   top: 0px
   left: 1107px
+
+.soul-1-7
+  top: 600px
+  left: -87px
+
+.soul-1-8
+  top: 800px
+  left: 331px
 
 .soul-2-1
   top: -200px
@@ -520,6 +572,10 @@ nav
 .soul-3-1
   top: -2000px
   left: 847px
+
+.soul-3-2
+  top: 1200px
+  left: 160px
 
 .soul-4-1
   top: 0px
@@ -631,9 +687,12 @@ nav
     left: 0px
     z-index: 1
 
-.here-the-frame-rate-chugs-processing-a-deep-black
+  .container
+    display: none
+
+.here-replacement
   @extend .ptd-squared
-  @include push(-0.7)
+  left: 206px
   margin-top: 9rem
   z-index: 2
   -webkit-backface-visibility: hidden
@@ -652,14 +711,6 @@ nav
 #evil-does-not-work-like-a-network
   background: linear-gradient(to right,$black,$blackt 20%,$blackt 80%,$black),linear-gradient($black,$blackt 20%,$blackt 80%,$black)
 
-  .webm-gradients
-    position: absolute
-    top: 0px
-    left: 0px
-    z-index: 2
-    width: 100%
-    background: linear-gradient(to right,$black,$blackt 20%,$blackt 80%,$black),linear-gradient($black,$blackt 20%,$blackt 80%,$black)
-
   video.evil-does-not-webm
     position: absolute
     top: 0px
@@ -669,6 +720,7 @@ nav
 
 .evil-does-not-work-like-a-network
   @extend .ptd-paragraphs
+  top: 50%
+  margin-top: -50px
   margin-left : 10rem
   z-index: 2
-  margin-top: 27rem
