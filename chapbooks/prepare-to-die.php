@@ -214,6 +214,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <?php if ( $post->post_name == "evil-does-not-work-like-a-network" ) : ?>
     <video class="evil-does-not-webm" muted>
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.webm">
+        <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.ogg">
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.mp4">
     </video>
   <?php endif; ?>
