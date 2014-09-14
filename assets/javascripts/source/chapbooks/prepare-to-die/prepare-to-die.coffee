@@ -22,7 +22,7 @@ jQuery ($) ->
     $('nav').slideToggle('slow')
 
   $('.nav-toc').children().removeClass('nav-item-lit')
-  $('.prepare-header, .prepare-toc, .prepare-content, .prepare-footer')
+  $('.prepare-header, .prepare-toc, .prepare-content, #acknowledgements')
   .waypoint (direction) ->
     toc_id = $(this).attr('id')
     toc_target = $('.nav-toc a[href$="'+toc_id+'"]')

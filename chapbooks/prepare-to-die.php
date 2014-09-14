@@ -229,5 +229,40 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <!-- /LOOP -->
 
+  <section id="acknowledgements">
+
+    <div class="container">
+
+      <h1>Prepare to Die</h1>
+      <h2>A poetry chapbook by Jess Jenkins</h2>
+
+      <div class="ack-left">
+
+        <p>JESS JENKINS hails from Southern West Virginia via Iowa and currently lives and works in Chicago. She holds an MFA in poetry from the University of Arizona and was the winner of the 2013 UA Poetry Center Contest. Her works have appeared or are forthcoming in journals like <em>Jellyfish</em>, <em>Cloud Rodeo</em> and <em>Banango Street</em>. She also writes about, thinks about, plays and watches others play lots of games.</p>
+
+        <p>The author gratefully acknowledges the journals in which this work has previously appeared:</p>
+        <p><a href="http://sundoglit.com/jess-jenkins/"><em>Sundog Lit</em></a></p>
+
+      </div>
+
+      <div class="ack-right">
+
+        <p>Jess Jenkins thanks:</p>
+
+      </div>
+
+      <div class="ack-center">
+
+        <p>Web design/layout by <a href="//joelhans.com">Joel Hans</a>, co-editor, <a href="//cartridgelit.com"><em>Cartridge Lit</em></a>. He is extremely grateful for the opportunity to showcase such an amazing collection of poetry.</p>
+
+        <p>All images (except "Who was the Magellan who cartographed this place") courtesy Duncan Harris and his website, <a href="http://deadendthrills.com/"><em>The Art of Gaming</em></a>. The art of this chapbook would not have been possible without his hard work and willingness to let others use the images he captured.</p>
+
+      </div>
+
+    </div>
+
+    <img class="phoenix-down" src="http://cartridgelit.com/wp-content/themes/cartridge-lit/assets/images/phoenix_down_vert.png">
+
+  </section>
 
 <?php get_template_part( 'chapbooks/chapbook', 'footer' ); ?>
