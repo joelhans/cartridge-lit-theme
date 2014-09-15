@@ -239,16 +239,15 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
       <div class="ack-left">
 
-        <p>JESS JENKINS hails from Southern West Virginia via Iowa and currently lives and works in Chicago. She holds an MFA in poetry from the University of Arizona and was the winner of the 2013 UA Poetry Center Contest. Her works have appeared or are forthcoming in journals like <em>Jellyfish</em>, <em>Cloud Rodeo</em> and <em>Banango Street</em>. She also writes about, thinks about, plays and watches others play lots of games.</p>
-
-        <p>The author gratefully acknowledges the journals in which this work has previously appeared:</p>
-        <p><a href="http://sundoglit.com/jess-jenkins/"><em>Sundog Lit</em></a></p>
+        <p>JESS JENKINS hails from Southern West Virginia and currently lives and works in Chicago, IL. She received her MFA from the University of Arizona. She is the winner of the 2013 UA Foundation Award and the 2014 Margaret Sterling Award and her work has appeared in journals like <em>Jellyfish</em>, <em>Sundog Lit</em> and <em>Banango Street</em>. As a student of leisure, she plays, thinks and writes about games in every sense of the word and takes delight in technology, surveillance, symbology, systems and the promise of a post-human world. Right now she is still playing <em>Eufloria</em> (4 years later) and has made lots of progress in <em>Dark Souls 2</em>.</p>
 
       </div>
 
       <div class="ack-right">
 
-        <p>Jess Jenkins thanks:</p>
+        <p>Special thanks to: Charles Crawford, Terrence Quinn and his entertainment system, and Ander Monson (for the constraint that started it all).</p>
+
+        <p>The author gratefully acknowledges <a href="http://sundoglit.com/jess-jenkins/"><em>Sundog Lit</em></a> for previously publishing the piece referred to here as "Sharpen your weapon, swing two hands."</p>
 
       </div>
 
@@ -256,7 +255,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
         <p>Web design/layout by <a href="//joelhans.com">Joel Hans</a>, co-editor, <a href="//cartridgelit.com"><em>Cartridge Lit</em></a>. He is extremely grateful for the opportunity to showcase such an amazing collection of poetry.</p>
 
-        <p>All images (except "Who was the Magellan who cartographed this place") courtesy Duncan Harris and his website, <a href="http://deadendthrills.com/"><em>The Art of Gaming</em></a>. The art of this chapbook would not have been possible without his hard work and willingness to let others use the images he captured.</p>
+        <p>All images (except "Who was the Magellan who cartographed this place") courtesy Duncan Harris and his website, <a href="http://deadendthrills.com/"><em>The Art of Gaming</em></a>. The art of this chapbook would not have been possible without his hard work and willingness to let others freely use the images he captured.</p>
 
       </div>
 
