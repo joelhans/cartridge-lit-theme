@@ -66,29 +66,13 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
     <div class="ptd-header-prepare">
 
-      <!-- <h1>Prepare</h1> -->
-      <svg>
-        <defs>
-          <pattern id="bg" patternUnits="userSpaceOnUse">
-            <image xlink:href="<?php echo $image_path; ?>title-background.jpg" width="1000" height="711" />
-          </pattern>
-        </defs>
-        <text y="97%">Prepare</text>
-      </svg>
+      <h1>Prepare</h1>
 
     </div>
 
     <div class="ptd-header-to">
 
-      <!-- <h1>to</h1> -->
-      <svg>
-        <defs>
-          <pattern id="bg" patternUnits="userSpaceOnUse">
-            <image xlink:href="<?php echo $image_path; ?>title-background.jpg" width="1000" height="711" />
-          </pattern>
-        </defs>
-        <text y="97%">to</text>
-      </svg>
+      <h1>to</h1>
 
       <h2>A poetry chapbook by Jess Jenkins</h2>
       <h3>Brought to you by <a href="//cartridgelit.com" target="_blank"><em>Cartridge Lit</em></a></h3>
@@ -97,14 +81,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
     <div class="ptd-header-die">
 
-      <svg>
-        <defs>
-        	<pattern id="bg" patternUnits="userSpaceOnUse" width="1000" height="711" x="-200" y="-120">
-        		<image xlink:href="<?php echo $image_path; ?>title-background.jpg" width="1000" height="711" />
-        	</pattern>
-        </defs>
-        <text y="97%">Die</text>
-      </svg>
+      <h1>Die</h1>
 
     </div>
 

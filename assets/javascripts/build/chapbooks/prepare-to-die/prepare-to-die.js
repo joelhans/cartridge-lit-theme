@@ -8,7 +8,7 @@
     win_h = $(window).height();
     $('.prepare-header').height(win_h);
     $('.prepare-header div').height(win_h / 3);
-    $('.prepare-header div h1, .prepare-header div svg').fitText(0.6);
+    $('.prepare-header div h1').fitText(0.6);
     $('.prepare-toc').waypoint(function() {
       return $('nav').slideToggle('slow');
     });
