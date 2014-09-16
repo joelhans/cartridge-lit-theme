@@ -75,7 +75,7 @@ nav
       @include oswald(1.4)
       display: inline-block
       position: relative
-      top: -4px
+      top: -3px
       color: $red
       margin-left: 1rem
 
@@ -130,7 +130,7 @@ nav
     h2
       @include oswald(1)
       color: white
-      margin-top: 8px
+      margin-top: 9px
 
 /*
  * TITLE
@@ -184,31 +184,6 @@ nav
   .ptd-header-die
     background: url($path+'header_title_3.jpg')
     background-size: cover
-
-    h2
-      position: absolute
-      @include oswald(10)
-      color: white
-      position: absolute
-      top: 50%
-      right: 4rem
-      -webkit-transform: translateY(-52%)
-      -moz-transform: translateY(-52%)
-      transform: translateY(-52%)
-
-    svg
-      width: 663px
-      height: 1.5em
-      @include oswald(10)
-      position: absolute
-      top: 50%
-      right: 4rem
-      -webkit-transform: translateY(-52%)
-      -moz-transform: translateY(-52%)
-      transform: translateY(-52%)
-
-      text
-        fill: url(#bg) $red
 
 /*
  * TOC
@@ -464,7 +439,7 @@ nav
   img
     position: absolute
     top: -150px
-    right: 300px
+    left: 800px
     z-index: 1
 
 .you-must-also-have-a-mineral-nature
@@ -724,3 +699,45 @@ nav
   margin-top: -50px
   margin-left : 10rem
   z-index: 2
+
+
+/*
+ * ACKNOWLEDGEMENTS
+ */
+
+#acknowledgements
+  height: 1000px
+  padding-top: 12rem
+
+  h1, h2
+    text-align: center
+
+  h1
+    @include oswald(6)
+    color: white
+
+  h2
+    @include oswald(3)
+    color: $red
+    margin-bottom: 6rem
+
+  .ack-left
+    @include span(4 of 12)
+    @include push(2)
+
+  .ack-right
+    @include span(4 of 12)
+
+  .ack-center
+    @include span(6)
+    @include push(3)
+    margin-top: 4rem
+    margin-bottom: 8rem
+
+  p
+    color: white
+
+  .phoenix-down
+    width: 60px
+    display: block
+    margin: 0 auto 6rem auto

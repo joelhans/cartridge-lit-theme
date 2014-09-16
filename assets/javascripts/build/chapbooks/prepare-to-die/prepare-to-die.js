@@ -13,7 +13,7 @@
       return $('nav').slideToggle('slow');
     });
     $('.nav-toc').children().removeClass('nav-item-lit');
-    $('.prepare-header, .prepare-toc, .prepare-content, .prepare-footer').waypoint(function(direction) {
+    $('.prepare-header, .prepare-toc, .prepare-content, #acknowledgements').waypoint(function(direction) {
       var toc_i, toc_id, toc_target, toc_top;
       toc_id = $(this).attr('id');
       toc_target = $('.nav-toc a[href$="' + toc_id + '"]');
