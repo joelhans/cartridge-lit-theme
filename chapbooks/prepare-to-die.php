@@ -73,6 +73,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <div class="ptd-header-to">
 
       <h1>to</h1>
+
       <h2>A poetry chapbook by Jess Jenkins</h2>
       <h3>Brought to you by <a href="//cartridgelit.com" target="_blank"><em>Cartridge Lit</em></a></h3>
 
@@ -81,14 +82,6 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <div class="ptd-header-die">
 
       <h1>Die</h1>
-      <svg>
-        <defs>
-        	<pattern id="bg" patternUnits="userSpaceOnUse" width="1000" height="711" >
-        		<image xlink:href="<?php echo $image_path; ?>title-background.jpg" width="1000" height="711" />
-        	</pattern>
-        </defs>
-        <text y="1.2em">09.16.2014</text>
-      </svg>
 
     </div>
 
@@ -120,6 +113,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <a href="#<?php global $post; echo $post->post_name; ?>"><?php the_title(); ?></a>
 
       <?php endwhile; wp_reset_postdata(); ?>
+
+      <a href="#acknowledgements">Acknowledgements</a>
 
     </div>
 
@@ -214,6 +209,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <?php if ( $post->post_name == "evil-does-not-work-like-a-network" ) : ?>
     <video class="evil-does-not-webm" muted>
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.webm">
+        <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.ogg">
       <source src="<?php echo $image_path; ?>evil-does-not-work-like-a-network.mp4">
     </video>
   <?php endif; ?>
@@ -229,5 +225,39 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <!-- /LOOP -->
 
+  <section id="acknowledgements">
+
+    <div class="container">
+
+      <h1>Prepare to Die</h1>
+      <h2>A poetry chapbook by Jess Jenkins</h2>
+
+      <div class="ack-left">
+
+        <p>JESS JENKINS hails from Southern West Virginia and currently lives and works in Chicago, IL. She received her MFA from the University of Arizona. She is the winner of the 2013 UA Foundation Award and the 2014 Margaret Sterling Award and her work has appeared in journals like <em>Jellyfish</em>, <em>Sundog Lit</em> and <em>Banango Street</em>. As a student of leisure, she plays, thinks and writes about games in every sense of the word and takes delight in technology, surveillance, symbology, systems and the promise of a post-human world. Right now she is still playing <em>Eufloria</em> (4 years later) and has made lots of progress in <em>Dark Souls 2</em>.</p>
+
+      </div>
+
+      <div class="ack-right">
+
+        <p>Special thanks to: Charles Crawford, Terrence Quinn and his entertainment system, and Ander Monson (for the constraint that started it all).</p>
+
+        <p>The author gratefully acknowledges <a href="http://sundoglit.com/jess-jenkins/"><em>Sundog Lit</em></a> for previously publishing the piece referred to here as "Sharpen your weapon, swing two hands."</p>
+
+      </div>
+
+      <div class="ack-center">
+
+        <p>Web design/layout by <a href="//joelhans.com">Joel Hans</a>, co-editor, <a href="//cartridgelit.com"><em>Cartridge Lit</em></a>. He is extremely grateful for the opportunity to showcase such an amazing collection of poetry.</p>
+
+        <p>All images (except "Who was the Magellan who cartographed this place") courtesy Duncan Harris and his website, <a href="http://deadendthrills.com/"><em>The Art of Gaming</em></a>. The art of this chapbook would not have been possible without his hard work and willingness to let others freely use the images he captured.</p>
+
+      </div>
+
+    </div>
+
+    <img class="phoenix-down" src="http://cartridgelit.com/wp-content/themes/cartridge-lit/assets/images/phoenix_down_vert.png">
+
+  </section>
 
 <?php get_template_part( 'chapbooks/chapbook', 'footer' ); ?>
