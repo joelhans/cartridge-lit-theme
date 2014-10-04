@@ -18,9 +18,14 @@
   font-weight: $weight
   @include font-size($size)
 
+@mixin crimson($size: 1, $weight: 400)
+  font-family: 'Crimson Text', 'Georgia', serif
+  font-weight: $weight
+  @include font-size($size)
+
 p,ol,ul,span,blockquote
   color: $dgray
-  @include vollkorn(1, 400)
+  @include crimson(1, 400)
   @include margin-bottom(1.2)
 
 em, i
