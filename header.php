@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon-32x32.png" sizes="32x32">
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/style.min.css" type="text/css" media="all">
-<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,500,500italic|Vollkorn:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,500,500italic|Crimson+Text:400,400italic,600italic,600" rel="stylesheet" type="text/css">
 
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
 
