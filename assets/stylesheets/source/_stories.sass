@@ -1,83 +1,100 @@
+.page-full,
+.work-full,
+.airship-full,
+.nine-stack
 
-.entry-bg
-  width: 100%
-  height: 100%
-  position: absolute
-  background: transparentize($dgray, 0.2)
-  z-index: 9
-
-.entry-title
-  color: white
-
-  &-small
-    @include crimson(1.8, 600)
-
-    a
-      color: $red
-      &:hover
-        color: $purple
-
-  &-large
+  .entry-title
+    color: $dgray
     @include crimson(3, 600)
     line-height: 3rem
     font-style: italic
     margin-bottom: 0.6rem
 
-    a
-      color: white
-      &:hover
-        color: $red
-
-.entry-author
-
-  &-small
-    display: inline-block
-    @include ubuntu(0.9)
-    @include px-rem(margin-bottom, 1)
-    @include px-rem(margin-right, 2)
+  .entry-author
+    @include ubuntu(1.2)
     color: $blue
 
-  &-large
+  .entry-time
+    @include ubuntu(0.8)
+    color: $purple
+    margin-bottom: 3rem
+
+.page-full
+
+  .entry-title
+    color: white
+
+  .entry-bg
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: rgba(33,33,33,0.8)
+
+.work-full
+
+  .entry-title
+    text-align: center
+
+  .entry-author
+    text-align: center
+    margin-bottom: 0.4rem
+
+  .entry-time
+    display: block
+    text-align: center
+
+.airship-full
+
+  .entry-title
+    font-style: normal
+
+  .entry-author
     display: inline-block
-    @include ubuntu(1.2)
-    @include px-rem(margin-right, 2)
-    color: $orange
+    margin-right: 2rem
 
-.entry-time
-  display: inline-block
-  @include px-rem(margin-right, 2)
+  .entry-time
+    display: inline-block
 
-  &-small
-    @include ubuntu(0.9)
-    @include px-rem(margin-bottom, 1)
-    color: $blue
+.nine-stack
 
-  &-large
-    @include ubuntu(1.2)
-    color: $orange
+  .entry-title
+    @include crimson(2, 600)
+    line-height: 2.4rem
+    font-style: normal
+    margin-bottom: 0.6rem
 
-.entry-cats,
-.entry-tags
-  display: inline-block
+  .entry-author
+    display: inline-block
+    margin-right: 2rem
 
-  &-small
-    @include ubuntu(0.9)
-    @include px-rem(margin-bottom, 1)
-    a
-      color: $red
-      @include px-rem(margin-right, 1)
-      &:last-of-type
-        margin-right: 0
-      &:hover
-        color: $purple
+  .entry-time
+    display: inline-block
+    margin-bottom: 0.6rem
 
-  &-large
-    @include ubuntu(1.2)
-    @include px-rem(margin-right, 2)
-    a
-      color: $yellow
-      @include px-rem(margin-right, 1)
-      &:last-of-type
-        margin-right: 0
-      &:hover
-        color: $orange
+// .entry-cats,
+// .entry-tags
+//   display: inline-block
+//
+//   &-small
+//     @include ubuntu(0.9)
+//     @include px-rem(margin-bottom, 1)
+//     a
+//       color: $red
+//       @include px-rem(margin-right, 1)
+//       &:last-of-type
+//         margin-right: 0
+//       &:hover
+//         color: $purple
+//
+//   &-large
+//     @include ubuntu(1.2)
+//     @include px-rem(margin-right, 2)
+//     a
+//       color: $yellow
+//       @include px-rem(margin-right, 1)
+//       &:last-of-type
+//         margin-right: 0
+//       &:hover
+//         color: $orange
