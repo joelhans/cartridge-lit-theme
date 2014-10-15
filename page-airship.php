@@ -40,17 +40,13 @@ get_header(); ?>
 
       <div class="meta">
 
-        <h1 class="entry-title-small"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
         <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
-        <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <h2 class="entry-author"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php endif; ?>
 
-        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-
-        <div class="entry-tags entry-tags-small" class="entry-tags">
-          <?php echo get_the_tag_list(); ?>
-        </div>
+        <time class="entry-time" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 
         <?php the_excerpt(); ?>
 
