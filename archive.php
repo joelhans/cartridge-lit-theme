@@ -30,21 +30,21 @@ get_header(); ?>
 
       <div class="meta">
 
-        <h1 class="entry-title entry-title-small"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
         <?php if ( get_post_meta($post->ID, 'writer', true) ): ?>
-        <h2 class="entry-author entry-author-small"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <h2 class="entry-author"><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <?php endif; ?>
 
-        <time class="entry-time entry-time-small" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
+        <time class="entry-time" datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 
-        <div class="entry-cats entry-cats-small">
+        <!-- <div class="entry-cats entry-cats-small">
           <?php echo get_the_category_list('&nbsp;'); ?>
         </div>
 
         <div class="entry-tags entry-tags-small">
           <?php echo get_the_tag_list(); ?>
-        </div>
+        </div> -->
 
         <?php the_excerpt(); ?>
 
@@ -59,7 +59,7 @@ get_header(); ?>
     <div class="nav-older">
       <?php echo get_next_posts_link( 'Older entries »' ); ?>
     </div>
-    
+
   </section>
 
   <?php get_sidebar(); ?>

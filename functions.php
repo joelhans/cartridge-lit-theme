@@ -14,19 +14,6 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
   return $html;
 }
 
-function cartridge_loop( $num, $categories ) {
-  echo $num;
-  echo $categories;
-
-  $theposts = get_posts( $args );
-
-  foreach( $theposts as $post) :
-    setup_postdata($post);
-
-  endforeach;
-  wp_reset_postdata();
-}
-
 function add_body_class( $classes )
 {
   global $post;
