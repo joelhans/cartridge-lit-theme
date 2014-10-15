@@ -23,11 +23,12 @@ get_header(); ?>
     </div>
 
     <?php
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $offset = 3+ ($paged -2)*5;
     $args = array('
       posts_per_page' => 5,
       'paged' => $paged,
-      'category_name' => 'airship'
+      'category_name' => 'airship',
+      'offset' => $offset
       );
     query_posts($args);
     ?>

@@ -112,11 +112,13 @@ get_header(); ?>
     </section>
 
     <?php
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $args = array(
         'posts_per_page' => 3,
         'category_name' => 'airship',
         'ignore_sticky_posts' => 1,
-        'post__not_in' => get_option( 'sticky_posts' )
+        'post__not_in' => get_option( 'sticky_posts' ),
+        'paged' => $paged
       );
       $query = new WP_Query( $args );
       while ( $query->have_posts() ) : $query->the_post();
