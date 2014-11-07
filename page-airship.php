@@ -23,7 +23,7 @@ get_header(); ?>
     </div>
 
     <?php
-    $offset = 3+ ($paged -2)*5;
+    // $offset = 3+ ($paged -2)*5;
     $args = array('
       posts_per_page' => 5,
       'paged' => $paged,

@@ -16,13 +16,14 @@ get_header(); ?>
     <section class="featured-work">
 
     <!-- ************************
-        STICKY LOOP
+        STICKY + CHAP TEASER
     ************************* -->
     <?php
       $args = array(
       	'posts_per_page' => 1,
       	'post__in'  => get_option( 'sticky_posts' ),
-      	'ignore_sticky_posts' => 1
+      	'ignore_sticky_posts' => 1,
+        'orderby' => 'date'
       );
       $query = new WP_Query( $args );
       $query->the_post();
@@ -57,7 +58,7 @@ get_header(); ?>
     <?php wp_reset_postdata(); ?>
 
     <!-- ************************
-        FIRST WORK LOOP
+        RECENT WORK
     ************************* -->
     <?php
       $args = array(
@@ -101,6 +102,42 @@ get_header(); ?>
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
     </section>
+
+    <!-- ************************
+        3x STICKY LOOP
+    ************************* -->
+    <?php
+      $args = array(
+        'posts_per_page' => 3,
+        'category_name' => 'fiction,poetry,non-fiction,airship',
+        'post__in'  => get_option( 'sticky_posts' ),
+        'ignore_sticky_posts' => 1
+      );
+      $query = new WP_Query( $args );
+      while ( $query->have_posts() ) : $query->the_post();
+    ?>
+
+    <section id="post-<?php the_ID(); ?>" class="featured-post featured-third" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
+
+      <a href="<?php the_permalink(); ?>" class="full-link"></a>
+
+      <div class="entry-bg"></div>
+
+      <div class="meta">
+
+        <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
+        <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
+
+      </div>
+
+      <div class="excerpt">
+        <?php the_excerpt(); ?>
+      </div>
+
+    </section>
+
+    <?php endwhile; wp_reset_postdata(); ?>
 
     <!-- ************************
         FIRST AIRSHIP LOOP

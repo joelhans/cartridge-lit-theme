@@ -161,8 +161,23 @@ body
       h2
         @include ubuntu(1.4)
 
-      time
-        @include ubuntu(0.8)
+  .featured-post.featured-third
+    @include span(4 of 12)
+
+    .meta
+
+      h1
+        @include crimson(2.5, 600)
+        line-height: 2.5rem
+
+      h2
+        @include ubuntu(1.2)
+
+    .excerpt
+      padding: 0 2rem 0 2rem
+
+      p
+        @include crimson(1.2, 600)
 
   .chap-announce
     @include span(4 of 12)
@@ -192,7 +207,7 @@ body
 
   .featured-read-more
     @include span(12 of 12)
-    @include px-rem(margin-bottom, 1.4)
+    margin-bottom: 2rem
     text-align: right
     @include ubuntu(0.9)
     a
