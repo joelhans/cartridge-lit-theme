@@ -36,7 +36,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="fm-hover-box"></div>
 
   <!-- create/delete -->
-  <section class="fm-create-delete">
+  <section class="fm-create-delete fm-showing">
     <p class="fm-option fm-create">Create a new adventure log.</p>
     <p class="fm-delete fm-option-noselect">Delete a new adventure log.</p>
   </section>
@@ -89,7 +89,13 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </article>
   </section>
 
-  <div class="tease-date">Arriving late January.</div>
+  <div class="tease-date">
+    <h1>Arriving late January.</h2>
+    <div class="phoenix-down">
+      <img src="http://cartridgelit.com/wp-content/themes/cartridge-lit/assets/images/phoenix_down_vert.png">
+    </div>
+    <h2>Cartridge Lit</h2>
+  </div>
 
   <div class="story-mask"></div>
 

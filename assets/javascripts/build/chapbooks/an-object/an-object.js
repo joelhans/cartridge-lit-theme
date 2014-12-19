@@ -23,19 +23,14 @@
       return box_hover($(this));
     });
     $('.fm-create').click(function() {
-      $('.fm-hover-box').animate({
-        opacity: 0
-      }, 1000);
-      return $('.fm-create-delete').animate({
-        opacity: 0
+      $('.fm-hover-box').css('transition', 'none');
+      return $('.fm-create-delete, .fm-hover-box').animate({
+        opacity: '0'
       }, 1000, function() {
-        $('.fm-hover-box').css('transition', 'none');
+        $('.fm-keyboard').addClass('fm-showing');
         box_hover($('.fm-keyboard-keys-uppercase').children().first());
-        $('.fm-hover-box').animate({
-          opacity: 1
-        }, 1000);
-        return $('.fm-keyboard').animate({
-          opacity: 1
+        return $('.fm-keyboard, .fm-hover-box').animate({
+          opacity: '1'
         }, 1000, function() {
           return $('.fm-hover-box').css('transition', 'all 0.2s');
         });
@@ -55,42 +50,45 @@
       }
     });
     return $('.fm-keyboard-end').click(function() {
-      var counter, ellipses, nameCache;
+      var nameCache;
       nameCache = $('.fm-textarea').html();
+      console.log(nameCache);
       if (nameCache === '') {
-        $('.fm-enter-name').addClass('fm-enter-name-please').html('Please enter a name.');
+        return $('.fm-enter-name').addClass('fm-enter-name-please').html('Please enter a name.');
       } else {
         $('.fm-player-name').html($('.fm-textarea').html());
-        $('.fm-hover-box').animate({
-          opacity: 0
-        }, 1000);
-        $('.fm-keyboard').animate({
+        $('.fm-hover-box').css('transition', 'none');
+        return $('.fm-keyboard, .fm-hover-box').animate({
           opacity: 0
         }, 1000, function() {
+          $('.fm-creating').addClass('fm-showing');
           $('.fm-hover-box').css('display', 'none');
           return $('.fm-creating').animate({
             opacity: 1
-          }, 1000, function() {});
+          }, 1000, function() {
+            var counter, ellipses;
+            counter = 0;
+            ellipses = setInterval(function() {
+              var number;
+              number = new Array(counter + 1).join('.');
+              $('.fm-ellipsis').html(number);
+              return counter++;
+            }, 300);
+            return setTimeout(function() {
+              return $('.fm-creating').animate({
+                opacity: '0'
+              }, 1000, function() {
+                $('.fm-title').addClass('fm-showing');
+                $('.fm-title').animate({
+                  opacity: '1'
+                }, 1000);
+                $('.content').fadeIn(1000);
+                return clearInterval(ellipses);
+              });
+            }, 5000);
+          });
         });
       }
-      counter = 0;
-      ellipses = setInterval(function() {
-        var number;
-        number = new Array(counter + 1).join('.');
-        $('.fm-ellipsis').html(number);
-        return counter++;
-      }, 300);
-      return setTimeout(function() {
-        return $('.fm-creating').animate({
-          opacity: 0
-        }, 1000, function() {
-          $('.fm-title').animate({
-            opacity: 1
-          }, 1000);
-          $('.content').fadeIn(1000);
-          return clearInterval(ellipses);
-        });
-      }, 5000);
     });
   });
 

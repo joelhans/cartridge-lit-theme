@@ -27,12 +27,11 @@ jQuery ($) ->
 
   # loading keyboard
   $('.fm-create').click () ->
-    $('.fm-hover-box').animate { opacity: 0 }, 1000
-    $('.fm-create-delete').animate { opacity: 0 }, 1000, () ->
-      $('.fm-hover-box').css 'transition', 'none'
+    $('.fm-hover-box').css 'transition', 'none'
+    $('.fm-create-delete, .fm-hover-box').animate { opacity: '0' }, 1000, () ->
+      $('.fm-keyboard').addClass 'fm-showing'
       box_hover($('.fm-keyboard-keys-uppercase').children().first())
-      $('.fm-hover-box').animate { opacity: 1 }, 1000
-      $('.fm-keyboard').animate { opacity: 1 }, 1000, () ->
+      $('.fm-keyboard, .fm-hover-box').animate { opacity: '1' }, 1000, () ->
         $('.fm-hover-box').css 'transition', 'all 0.2s'
 
   # keyboard functions
@@ -54,6 +53,8 @@ jQuery ($) ->
   $('.fm-keyboard-end').click () ->
     nameCache = $('.fm-textarea').html()
 
+    console.log nameCache
+
     # if player name is empty
     if nameCache is ''
       $('.fm-enter-name').addClass('fm-enter-name-please').html 'Please enter a name.'
@@ -61,21 +62,22 @@ jQuery ($) ->
     # if player name isnt empty
     else
       $('.fm-player-name').html $('.fm-textarea').html()
-      $('.fm-hover-box').animate { opacity: 0 }, 1000
-      $('.fm-keyboard').animate { opacity: 0 }, 1000, () ->
+      $('.fm-hover-box').css 'transition', 'none'
+      $('.fm-keyboard, .fm-hover-box').animate { opacity: 0 }, 1000, () ->
+        $('.fm-creating').addClass 'fm-showing'
         $('.fm-hover-box').css 'display', 'none'
         $('.fm-creating').animate { opacity: 1 }, 1000, () ->
+          counter = 0
+          ellipses = setInterval () ->
+            number = new Array(counter + 1).join('.')
+            $('.fm-ellipsis').html(number)
+            counter++
+          , 300
 
-    counter = 0
-    ellipses = setInterval () ->
-      number = new Array(counter + 1).join('.')
-      $('.fm-ellipsis').html(number)
-      counter++
-    , 300
-
-    setTimeout () ->
-      $('.fm-creating').animate { opacity: 0 }, 1000, () ->
-        $('.fm-title').animate { opacity: 1 }, 1000
-        $('.content').fadeIn 1000
-        clearInterval(ellipses)
-    , 5000
+          setTimeout () ->
+            $('.fm-creating').animate { opacity: '0' }, 1000, () ->
+              $('.fm-title').addClass 'fm-showing'
+              $('.fm-title').animate { opacity: '1' }, 1000
+              $('.content').fadeIn 1000
+              clearInterval(ellipses)
+          , 5000

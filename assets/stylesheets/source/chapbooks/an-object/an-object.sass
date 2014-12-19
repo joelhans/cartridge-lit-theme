@@ -16,7 +16,7 @@ $path : '../../../../images/chapbooks/an-object/'
 @import "mixins"
 @import "typography"
 
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400|Montserrat)
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:500|Libre+Baskerville:400|Montserrat)
 
 $susy: ( columns: 12, gutters: .5, gutter-position: inside )
 
@@ -69,13 +69,6 @@ body
   z-index: 2
   transition: all 0.2s
 
-.fm-arrow
-  position: absolute
-  left: 50px
-
-  &:last-of-type
-    margin-bottom: 0
-
 .fm-option
   position: relative
   cursor: pointer
@@ -96,6 +89,10 @@ body
 
 .fm-keyboard, .fm-creating, .fm-title
   opacity: 0
+  visibility: hidden
+
+.fm-showing
+  visibility: visible
 
 /* create/delete */
 .fm-create-delete
@@ -211,11 +208,31 @@ body
 
 .tease-date
   position: relative
-  padding: 12rem 0 20rem 0
-  @include libre(4)
+  padding: 12rem 0 16rem 0
+
   text-align: center
   background: $lgray
   z-index: 3
+
+  h1
+    @include libre(4)
+
+  .phoenix-down
+    width: 200px
+    height: 200px
+    display: block
+    margin: 6rem auto 2rem auto
+    border-radius: 50%
+    background: $purple
+
+    img
+      position: relative
+      top: 23px
+      width: 80px
+
+  h2
+    @include ubuntu(2.4)
+    color: $red
 
 .story-mask
   position: absolute
