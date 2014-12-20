@@ -75,7 +75,7 @@ get_header(); ?>
     while ( $query->have_posts() ) : $query->the_post();
     ?>
 
-    <section id="post-<?php the_ID(); ?>" class="featured-post" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
+    <section id="post-<?php the_ID(); ?>" class="featured-post featured-second" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
 
       <a href="<?php the_permalink(); ?>" class="full-link"></a>
 
