@@ -21,7 +21,6 @@ get_header(); ?>
     <?php
       $args = array(
       	'posts_per_page' => 1,
-      	'post__in'  => get_option( 'sticky_posts' ),
         'orderby' => 'date'
       );
       $query = new WP_Query( $args );
@@ -30,38 +29,33 @@ get_header(); ?>
       $ids[] = get_the_ID();
     ?>
 
-    <section id="post-<?php the_ID(); ?>" class="button-link featured-first" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
-
+    <section id="post-<?php the_ID(); ?>" class="featured-first button-link" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
       <a href="<?php the_permalink(); ?>" class="full-link"></a>
-
       <div class="entry-bg"></div>
-
       <div class="meta">
-
-        <!-- <aside><?php $category = get_the_category(); echo $category[0]->cat_name; ?></aside> -->
         <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
         <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-
       </div>
-
       <div class="excerpt">
         <?php the_excerpt(); ?>
       </div>
-
     </section>
 
-    <section class="button-link chap-announce" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
-
+    <section class="chap-announce button-link" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
       <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>" class="full-link"></a>
-
     </section>
 
     <?php wp_reset_postdata(); ?>
 
     <!-- ************************
-        RECENT WORK
+        CHAP TEASER + TWO RECENT
     ************************* -->
+
+    <section class="chap-announce button-link" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
+      <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>" class="full-link"></a>
+    </section>
+
     <?php
       $args = array(
         'posts_per_page' => 2,
@@ -73,25 +67,17 @@ get_header(); ?>
       $ids[] = get_the_ID();
     ?>
 
-    <section id="post-<?php the_ID(); ?>" class="button-link" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
-
+    <section id="post-<?php the_ID(); ?>" class="featured-second button-link" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
       <a href="<?php the_permalink(); ?>" class="full-link"></a>
-
       <div class="entry-bg"></div>
-
       <div class="meta">
-
-        <!-- <aside><?php $category = get_the_category(); echo $category[0]->cat_name; ?></aside> -->
         <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
         <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-
       </div>
-
       <div class="excerpt">
         <?php the_excerpt(); ?>
       </div>
-
     </section>
 
     <?php endwhile; wp_reset_postdata(); ?>
@@ -99,12 +85,12 @@ get_header(); ?>
     <!-- ************************
         FEATURED READ MORE
     ************************* -->
-    <section class="featured-read-more">
+    <!-- <section class="featured-read-more">
       Read more:&nbsp;
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Fiction' ) ) ) ?>">Fiction</a>
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Poetry' ) ) ) ?>">Poetry</a>
       <a href="<?php echo esc_url( get_category_link( get_cat_ID( 'Non-Fiction' ) ) ) ?>">Non-fiction</a>
-    </section>
+    </section> -->
 
     <!-- ************************
         SECOND RECENT WORK
@@ -122,30 +108,28 @@ get_header(); ?>
 
     <?php if( $query->current_post == 0 && !is_paged() ): ?>
     <section class="recent-fiction-half">
-
       <section id="post-<?php the_ID(); ?>" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
-
         <a href="<?php the_permalink(); ?>" class="full-link"></a>
-
       </section>
-
       <div class="meta">
-
         <!-- <aside><?php $category = get_the_category(); echo $category[0]->cat_name; ?></aside> -->
         <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
         <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-
       </div>
-
       <div class="excerpt">
         <?php the_excerpt(); ?>
       </div>
-
     </section>
     <?php endif; ?>
 
     <?php endwhile; wp_reset_postdata(); ?>
+
+    <!-- ************************
+        FICTION LOOP
+    ************************* -->
+
+
 
     <!-- ************************
         FIRST AIRSHIP LOOP
@@ -169,23 +153,16 @@ get_header(); ?>
     ?>
 
     <section id="post-<?php the_ID(); ?>" class="button-link featured-third" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ) ?>);">
-
       <a href="<?php the_permalink(); ?>" class="full-link"></a>
-
       <div class="entry-bg"></div>
-
       <div class="meta">
-
         <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
         <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
         <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-
       </div>
-
       <div class="excerpt">
         <?php the_excerpt(); ?>
       </div>
-
     </section>
 
     <!-- <section id="post-<?php the_ID(); ?>" class="featured-post featured-airship">
