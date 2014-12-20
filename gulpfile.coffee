@@ -7,6 +7,7 @@ watch        = require 'gulp-watch'
 coffee       = require 'gulp-coffee'
 concat       = require 'gulp-concat'
 uglify       = require 'gulp-uglify'
+plumber      = require 'gulp-plumber'
 changed      = require 'gulp-changed'
 livereload   = require 'gulp-livereload'
 
@@ -22,8 +23,8 @@ scripts =
 ############################################################
 
 # Start the livereload server.
-gulp.task 'livereload', ->
-  livereload.listen()
+# gulp.task 'livereload', ->
+#   livereload.listen()
 
 # Create vendor.js blob.
 gulp.task 'vendor', ['coffee'], ->
@@ -34,6 +35,7 @@ gulp.task 'vendor', ['coffee'], ->
 # Compile CoffeeScript files into js file and reload the page.
 gulp.task 'coffee', ->
   return gulp.src scripts.src
+    .pipe plumber()
     .pipe coffee()
     .pipe gulp.dest scripts.build
 
@@ -45,20 +47,21 @@ gulp.task 'js', ['coffee'], ->
     .pipe concat 'script.min.js'
     .pipe uglify()
     .pipe gulp.dest scripts.build
-    .pipe livereload { auto: false }
+    .pipe livereload()
 
 # Compile SASS files into a css file and reload the page.
 gulp.task 'sass', ->
   return gulp.src styles.src
-    .pipe changed styles.build
+    .pipe plumber()
+    .pipe changed styles.src
     .pipe sass { style: 'compressed', require: 'susy' }
     .pipe rename {suffix: '.min'}
     .pipe gulp.dest styles.build
-    .pipe livereload { auto: false }
+    .pipe livereload()
 
 # Set watches on Coffee/SASS files.
 gulp.task 'watch', () ->
   gulp.watch scripts.src, ['js']
   gulp.watch styles.src, ['sass']
 
-gulp.task 'default', ['livereload', 'watch']
+gulp.task 'default', ['sass', 'js', 'watch']
