@@ -90,11 +90,11 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </section>
 
   <div class="tease-date">
-    <h1>Arriving late January.</h2>
+    <h1>Arriving January 26th, 2015.</h2>
     <div class="phoenix-down">
       <img src="http://cartridgelit.com/wp-content/themes/cartridge-lit/assets/images/phoenix_down_vert.png">
     </div>
-    <h2>Cartridge Lit</h2>
+    <h2><a href="//cartridgelit.com">Cartridge Lit</a></h2>
   </div>
 
   <div class="story-mask"></div>
