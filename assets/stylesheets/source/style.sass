@@ -69,202 +69,154 @@ body
 .featured-work
   @include span(12 of 12)
 
-.featured-work section
-  margin-bottom: 2rem
-
-// first featured section
-.featured-first.button-link
-  @include span(8 of 12)
-  .meta h1
-    @include crimson(3.5, 600)
-    line-height: 4rem
-  .meta h2
-    @include ubuntu(1.4)
-
-// second featured section
-.featured-second.button-link
-  @include span(4 of 12)
-  .meta h1
-    @include crimson(2.5, 600)
-    line-height: 2.5rem
-  .meta h2
-    @include ubuntu(1.2)
-  .excerpt
-    padding: 0 2rem 0 2rem
-    p
-      @include crimson(1.2, 600)
-
-// chapbook announcements
-.chap-announce
-  @include span(4 of 12)
-
-// genres
-.featured-genre
-  @include span(12 of 12)
-  @include ubuntu(1.6)
-  color: $purple
-  margin-top: 1rem
-  margin-bottom: 0.6rem
-
-// fiction
-.fiction-half.button-link
-  @include span(6 of 12)
-
-.fiction-quadruplet
-  position: relative
-  @include span(3 of 12)
-  height: 150px
-  margin-bottom: 0 !important
-  overflow: hidden
-  .meta h1
-    @include crimson(1.4, 600)
-    line-height: 1.4rem
-    margin-bottom: 0.4rem
-  .meta h2
-    @include ubuntu(0.8)
-    color: $purple
-    margin-bottom: 0.2rem
-  .excerpt p
-    @include crimson(0.8)
-
-.featured-mask
-  position: absolute
-  bottom: 0
-  width: 100%
-  height: 70px
-  background: linear-gradient(to bottom, rgba(251,251,251,0) 0%,rgba(251,251,251,1) 100%)
-
-// poetry
-.poetry-quadruplet.button-link
-  @include span(3 of 12)
-  height: 220px
-  .meta h1
-    @include crimson(2, 600)
-    line-height: 2rem
-  .meta h2
-    @include ubuntu(1)
-  &:hover .meta
-    opacity: 1
-    @include transform( translateY(-50%) scale(0.9) )
-
-// non-fiction
-.nonfiction-triplet
-  @include span(4 of 12)
-  .nonfiction-bg
-    height: 150px
+  .featured-post,
+  .chap-announce
+    @include span(4 of 12)
+    position: relative
+    height: 300px
+    margin-bottom: 2rem
     background-size: cover
-  .meta h1
-    @include crimson(2, 600)
-    line-height: 2rem
-    margin-bottom: 0.4rem
-  .meta h2
-    @include ubuntu(1.2)
-    color: $purple
-    margin-bottom: 0.2rem
-  .excerpt p
-    @include crimson(1)
+    background-position: 50% 50%
+    background-clip: content-box
+    display: table
+    overflow: hidden
 
-// .featured-work
-//   @include span(12 of 12)
-//
-//   .button-link,
-//   .chap-announce
-//     @include span(6 of 12)
-//     margin-bottom: 2rem
-//
-//   .featured-first.button-link
-//     @include span(8 of 12)
-//
-//     .meta h1
-//       @include crimson(3.5, 600)
-//       line-height: 4rem
-//
-//     .meta h2
-//       @include ubuntu(1.4)
-//
-//   .featured-third.button-link
-//     @include span(4 of 12)
-//
-//     .meta h1
-//       @include crimson(2.5, 600)
-//       line-height: 2.5rem
-//
-//     .meta h2
-//       @include ubuntu(1.2)
-//
-//     .excerpt
-//       padding: 0 2rem 0 2rem
-//
-//       p
-//         @include crimson(1.2, 600)
-//
-//   .chap-announce
-//     @include span(4 of 12)
-//
-//   [class*="-airship"]
-//     @include span(4 of 12)
-//     position: relative
-//
-//     h1
-//       line-height: 2.4rem
-//       margin-bottom: 0.6rem
-//
-//     h2
-//       display: inline-block
-//       @include ubuntu(1)
-//       color: $blue
-//       margin: 0 0.4rem 1rem 0
-//
-//     time
-//       display: inline-block
-//       @include ubuntu(0.8)
-//       color: $blue
-//       margin: 0 1rem 0.4rem 0
-//
-//   .featured-read-more
-//     @include span(12 of 12)
-//     margin-bottom: 2rem
-//     text-align: right
-//     @include ubuntu(0.9)
-//     a
-//       @include px-rem(margin-left, 1)
-//
+    .full-link,
+    .entry-bg
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
 
-.airship-banner
-  position: relative
-  @include span(12 of 12)
-  text-align: center
-  margin-bottom: 4rem
-  padding-bottom: 18px
-  background-image: url('../../images/border_sunset.png')
-  background-repeat: no-repeat no-repeat
-  background-size: 100% 8px
-  background-position: 0 50px
+    .full-link
+      z-index: 10000
 
-  h1
-    @include crimson(1.7)
+    .entry-bg
+      background: transparentize($dgray, 0.2)
+      z-index: 9
 
-  img
-    width: 80px
-    position: absolute
-    top: 36px
-    left: -11px
+    .meta,
+    .excerpt
+      width: 100%
+      position: absolute
+      top: 50%
+      @include transform( translateY(-50%) )
+      @include transition( all 0.5s ease-in-out )
+      z-index: 11
 
-@import "standards"
+    .meta
+      padding: 0 2rem 0 2rem
+      text-align: center
 
-// .recent-fiction-half
-//   @include span(6 of 12)
-//   position: relative
-//   height: 300px
-//   margin-bottom: 2rem
-//
-//   section
-//     width: 100%
-//     height: 300px
-//     margin-bottom: 2rem
-//     background-size: cover
-//     background-position: 50% 50%
-//     background-clip: content-box
+    .excerpt
+      opacity: 0
+      padding: 0 4rem 0 4rem
+      text-align: left
+      @include transform( translateY(-50%) scale(0.7) )
+
+    &:hover .meta
+      opacity: 0
+      @include transform( translateY(-50%) scale(0.7) )
+
+    &:hover .excerpt
+      opacity: 100
+      @include transform( translateY(-50%) scale(1) )
+
+    .meta h1
+      @include crimson(3, 600)
+      line-height: 3rem
+      font-style: italic
+      margin-bottom: 0.6rem
+
+      a
+        color: white
+        &:hover
+          color: $red
+
+    .meta h2
+      display: block
+      @include ubuntu(1.4)
+      margin-bottom: 0.4rem
+      color: $red
+
+    .meta time
+      @include ubuntu(0.8)
+      color: white
+
+    .excerpt p
+      @include crimson(1.4, 600)
+      color: white
+      margin-bottom: 0
+
+  .featured-post.featured-first
+    @include span(8 of 12)
+
+    .meta
+
+      h1
+        @include crimson(4, 600)
+        line-height: 4rem
+
+      h2
+        @include ubuntu(1.4)
+
+      time
+        @include ubuntu(0.8)
+
+  .chap-announce
+    @include span(4 of 12)
+    height: 300px
+    background-clip: content-box
+    background-size: cover
+
+  [class*="-airship"]
+    @include span(4 of 12)
+    position: relative
+
+    h1
+      line-height: 2.4rem
+      margin-bottom: 0.6rem
+
+    h2
+      display: inline-block
+      @include ubuntu(1)
+      color: $blue
+      margin: 0 0.4rem 1rem 0
+
+    time
+      display: inline-block
+      @include ubuntu(0.8)
+      color: $blue
+      margin: 0 1rem 0.4rem 0
+
+  .featured-read-more
+    @include span(12 of 12)
+    @include px-rem(margin-bottom, 1.4)
+    text-align: right
+    @include ubuntu(0.9)
+    a
+      @include px-rem(margin-left, 1)
+
+  .airship-banner
+    position: relative
+    @include span(12 of 12)
+    text-align: center
+    margin-bottom: 4rem
+    padding-bottom: 18px
+    background-image: url('../../images/border_sunset.png')
+    background-repeat: no-repeat no-repeat
+    background-size: 100% 8px
+    background-position: 0 50px
+
+    h1
+      @include crimson(1.7)
+
+    img
+      width: 80px
+      position: absolute
+      top: 36px
+      left: -11px
 
 .airship-loop
   @include span(9 of 12)
