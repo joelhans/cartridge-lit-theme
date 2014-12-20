@@ -20,6 +20,9 @@ scripts =
   vendor: 'assets/javascripts/vendor/**/*'
   build: 'assets/javascripts/build/'
 
+php =
+  src: '**/*.php'
+
 ############################################################
 
 # Start the livereload server.
@@ -31,6 +34,12 @@ gulp.task 'vendor', ['coffee'], ->
   return gulp.src scripts.vendor
     .pipe concat 'vendor.js'
     .pipe gulp.dest scripts.build
+
+# Set watches on Coffee/SASS files.
+gulp.task 'watch', () ->
+  gulp.watch scripts.src, ['js']
+  gulp.watch styles.src, ['sass']
+  gulp.watch php.src, ['reload']
 
 # Compile CoffeeScript files into js file and reload the page.
 gulp.task 'coffee', ->
@@ -59,9 +68,9 @@ gulp.task 'sass', ->
     .pipe gulp.dest styles.build
     .pipe livereload()
 
-# Set watches on Coffee/SASS files.
-gulp.task 'watch', () ->
-  gulp.watch scripts.src, ['js']
-  gulp.watch styles.src, ['sass']
+gulp.task 'reload', () ->
+  return gulp.src('./')
+    .pipe changed './', {extension: '.php'}
+    .pipe livereload()
 
 gulp.task 'default', ['sass', 'js', 'watch']

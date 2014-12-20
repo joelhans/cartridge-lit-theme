@@ -66,44 +66,116 @@ body
  * FEATURED WORK
  */
 
-
-
 .featured-work
   @include span(12 of 12)
 
-  .button-link,
+  .featured-post,
   .chap-announce
-    @include span(6 of 12)
-    margin-bottom: 2rem
-
-  .featured-first.button-link
-    @include span(8 of 12)
-
-    .meta h1
-      @include crimson(3.5, 600)
-      line-height: 4rem
-
-    .meta h2
-      @include ubuntu(1.4)
-
-  .featured-third.button-link
     @include span(4 of 12)
+    position: relative
+    height: 300px
+    margin-bottom: 2rem
+    background-size: cover
+    background-position: 50% 50%
+    background-clip: content-box
+    display: table
+    overflow: hidden
 
-    .meta h1
-      @include crimson(2.5, 600)
-      line-height: 2.5rem
+    .full-link,
+    .entry-bg
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
 
-    .meta h2
-      @include ubuntu(1.2)
+    .full-link
+      z-index: 10000
+
+    .entry-bg
+      background: transparentize($dgray, 0.2)
+      z-index: 9
+
+    .meta,
+    .excerpt
+      width: 100%
+      position: absolute
+      top: 50%
+      @include transform( translateY(-50%) )
+      @include transition( all 0.5s ease-in-out )
+      z-index: 11
+
+    .meta
+      padding: 0 2rem 0 2rem
+      text-align: center
 
     .excerpt
-      padding: 0 2rem 0 2rem
+      opacity: 0
+      padding: 0 4rem 0 4rem
+      text-align: left
+      @include transform( translateY(-50%) scale(0.7) )
 
-      p
-        @include crimson(1.2, 600)
+    &:hover .meta
+      opacity: 0
+      @include transform( translateY(-50%) scale(0.7) )
+
+    &:hover .excerpt
+      opacity: 100
+      @include transform( translateY(-50%) scale(1) )
+
+    .meta h1
+      @include crimson(3, 600)
+      line-height: 3rem
+      font-style: italic
+      margin-bottom: 0.6rem
+
+      a
+        color: white
+        &:hover
+          color: $red
+
+    .meta h2
+      display: block
+      @include ubuntu(1.4)
+      margin-bottom: 0.4rem
+      color: $red
+
+    .meta time
+      @include ubuntu(0.8)
+      color: white
+
+    .excerpt p
+      @include crimson(1.4, 600)
+      color: white
+      margin-bottom: 0
+
+  .featured-post.featured-first
+    @include span(8 of 12)
+
+    .meta
+      h1
+        @include crimson(4, 600)
+        line-height: 4rem
+
+      h2
+        @include ubuntu(1.4)
+
+      time
+        @include ubuntu(0.8)
+
+  .featured-post.featured-second
+    .meta
+      h1
+        @include crimson(2.5, 600)
+        line-height: 2.5rem
+      h2
+        @include ubuntu(1.2)
 
   .chap-announce
     @include span(4 of 12)
+    height: 300px
+    background-clip: content-box
+    background-size: cover
 
   [class*="-airship"]
     @include span(4 of 12)
@@ -127,7 +199,7 @@ body
 
   .featured-read-more
     @include span(12 of 12)
-    margin-bottom: 2rem
+    @include px-rem(margin-bottom, 1.4)
     text-align: right
     @include ubuntu(0.9)
     a
@@ -152,22 +224,6 @@ body
       position: absolute
       top: 36px
       left: -11px
-
-@import "standards"
-
-.recent-fiction-half
-  @include span(6 of 12)
-  position: relative
-  height: 300px
-  margin-bottom: 2rem
-
-  section
-    width: 100%
-    height: 300px
-    margin-bottom: 2rem
-    background-size: cover
-    background-position: 50% 50%
-    background-clip: content-box
 
 .airship-loop
   @include span(9 of 12)
