@@ -15,7 +15,7 @@ get_header(); ?>
 
 <section class="post-featured">
 
-  <?php $featured_query = new WP_Query( 'posts_per_page=15' );
+  <?php $featured_query = new WP_Query( 'posts_per_page=14' );
   while ( $featured_query->have_posts() ) : $featured_query->the_post();
   $post_count = 'featured-'.($featured_query->current_post + 1) ?>
 
@@ -29,10 +29,12 @@ get_header(); ?>
       </h1>
       <h2><?php echo get_post_meta($post->ID, 'writer', true); ?></h2>
       <time datetime="<?php echo get_the_time( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-      <?php the_category(', '); ?>
     </div>
     <div class="post-excerpt">
       <?php the_excerpt(); ?>
+    </div>
+    <div class="post-category">
+      <?php the_category(', '); ?>
     </div>
     <div class="post-mask"></div>
   </article>
@@ -67,6 +69,23 @@ get_header(); ?>
       </h1>
       <h2>by Sam Martone</h2>
       <p>The second <em>Cartridge Lit</em> chapbook, arriving January 26, 2015.</p>
+    </div>
+  </article>
+
+<?php elseif ( $featured_query->current_post == 5 ): ?>
+
+  <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
+    <div class="print-left">
+      <a href="<?php echo esc_url( home_url( '/print-anthology/' ) ); ?>">Pre-order</a>
+    </div>
+    <div class="print-right">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/print-anthology/' ) ); ?>">
+          Dangerous to Go Alone: An Anthology of Video Game Literature
+        </a>
+      </h1>
+      <h2>Arriving November 2015</h2>
+      <p>A print anthology from <em>Cartridge Lit</em> and <em>FreezeRay Press</em>. Pre-order now.</p>
     </div>
   </article>
 
