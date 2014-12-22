@@ -23,7 +23,7 @@ get_header(); ?>
     </div>
 
     <?php
-    $offset = 3+ ($paged -2)*5;
+    // $offset = 3+ ($paged -2)*5;
     $args = array('
       posts_per_page' => 5,
       'paged' => $paged,
@@ -56,11 +56,13 @@ get_header(); ?>
 
     <?php endwhile; ?>
     <!-- pagination -->
-    <div class="nav-newer">
-      <?php echo get_previous_posts_link( '« Newer entries' ); ?>
-    </div>
-    <div class="nav-older">
-      <?php echo get_next_posts_link( 'Older entries »' ); ?>
+    <div class="pagination">
+      <div class="nav-newer">
+        <?php echo get_previous_posts_link( '« Newer entries' ); ?>
+      </div>
+      <div class="nav-older">
+        <?php echo get_next_posts_link( 'Older entries »' ); ?>
+      </div>
     </div>
     <?php wp_reset_postdata(); ?>
     <?php else : ?>
