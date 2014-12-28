@@ -1,0 +1,396 @@
+$margin-height: 2rem
+
+@mixin pixel($color)
+  &:after
+    display: block
+    position: absolute
+    left: -12px
+    bottom: -12px
+    width: 14px
+    height: 14px
+    border: 2px solid $color
+    border-radius: 2px
+    content: ''
+
+@mixin pixel-link($pixel-size, $font-size, $color)
+  @include ubuntu($font-size)
+  color: $color
+  padding: 0.4rem 0.8rem
+  border: 2px solid $color
+  border-radius: 2px
+  &:after
+    position: absolute
+    left: (-$pixel-size)+px
+    bottom: (-$pixel-size)+px
+    width: $pixel-size+px
+    height: $pixel-size+px
+    border: 2px solid $color
+    border-radius: 2px
+    content: ''
+
+.post-featured
+  position: relative
+
+  // all articles
+  article
+    position: relative
+    @include span(4 of 12)
+    height: 25rem
+    margin-bottom: 2rem
+    border-radius: 2px
+
+    .post-image
+      display: block
+      width: 100%
+      height: 50%
+      background-size: cover
+      background-position: 50% 50%
+
+    .post-meta
+      width: 100%
+      padding: 1.2rem
+      background: transparentize($purple, 0.2)
+
+      h2
+        margin-right: 1rem
+
+      h2, time
+        display: inline-block
+
+    .post-category
+      position: absolute
+      top: 0.8rem
+      right: 0.8rem
+      a
+        display: block
+        @include ubuntu(0.6)
+        padding: 0.3rem 0.5rem
+        border: 2px solid white
+        border-radius: 2px
+        color: white
+        &:after
+          position: absolute
+          left: -10px
+          bottom: -10px
+          width: 12px
+          height: 12px
+          border: 2px solid white
+          border-radius: 2px
+          content: ''
+        &:hover
+          color: $red
+          border: 2px solid $red
+          &:after
+            border: 2px solid $red
+
+    .post-excerpt
+      width: 100%
+      // height: 25%
+      padding: 1.2rem
+      background: transparentize($purple, 0.2)
+
+    .post-mask
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 80px
+      border-radius: 0 2px 2px 0
+
+  // top two pieces, plus last two pieces
+  .featured-1,
+  .featured-2,
+  .featured-12,
+  .featured-13,
+  .featured-14
+    overflow: hidden
+    .post-meta,
+    .post-excerpt
+      padding: 0
+      background: none
+    .post-meta
+      h1
+        padding-top: 0.6rem
+        line-height: 2rem
+        margin-bottom: 0.6rem
+      h2
+        @include ubuntu(1)
+        color: $purple
+        margin-bottom: 0.4rem
+      time
+        @include ubuntu(0.8)
+    .post-excerpt
+      p
+        @include crimson(1)
+    .post-mask
+      background: linear-gradient(to bottom, transparentize(white, 1) 0%, white 100%)
+
+  // two in the middle, stacked on top of each other
+  .featured-3,
+  .featured-5,
+    height: (18.75rem - ($margin-height / 2))
+
+  // two on the right, stacked on top of each other
+  .featured-4,
+  .featured-6
+    height: (12.5rem - ($margin-height / 2))
+    @include span(last 4)
+
+  .featured-3
+    background: $blue
+    background-image: none !important
+    @include pixel($blue)
+    .post-image
+      display: none
+    .post-meta
+      height: 50%
+      padding-top: 3.4rem
+      padding-bottom: 1.6rem
+      background: $blue
+      border-radius: 2px
+      h1
+        line-height: 2rem
+        margin-bottom: 0.6rem
+        a
+          color: white
+          &:hover
+            color: $red
+      h2
+        @include ubuntu(1)
+        color: $yellow
+      time
+        @include ubuntu(0.8)
+    .post-excerpt
+      height: 50%
+      padding-top: 0
+      background: $blue
+      border-radius: 2px
+      p
+        @include crimson(1)
+        color: white
+    .post-mask
+      height: 100px
+      background: linear-gradient(to bottom, transparentize($blue, 1) 0%, $blue 90%)
+
+  .featured-6
+    .post-image
+      position: absolute
+      height: 100%
+    .post-meta
+      position: relative
+      top: 50%
+      @include transform(translateY(-50%))
+      background: none
+      z-index: 2
+      h1
+        @include crimson(1.8)
+        line-height: 1.8rem
+        margin-bottom: 0.6rem
+        a
+          color: white
+          &:hover
+            color: $red
+      h2
+        @include ubuntu(1)
+        color: $yellow
+      time
+        @include ubuntu(0.8)
+        color: white
+    .post-excerpt
+      display: none
+    .post-category
+      z-index: 2
+    .post-mask
+      top: 0px
+      height: 100%
+      background: transparentize($purple, 0.2)
+
+  .featured-5
+    background: $red
+    .post-meta
+      position: relative
+      top: 25%
+      @include transform(translateY(-50%))
+      background: none !important
+      h1
+        line-height: 2rem
+        a
+          color: white
+          &:hover
+            color: $purple
+      h2
+        @include ubuntu(1)
+        color: $yellow
+      time
+        @include ubuntu(0.8)
+        color: white
+    .post-excerpt, .post-mask
+      display: none
+
+  .featured-4
+    background: $purple
+    background-image: none !important
+    @include pixel($purple)
+    .post-image
+      display: none
+    .post-meta
+      position: relative
+      top: 50%
+      @include transform(translateY(-50%))
+      h1
+        @include crimson(1.8)
+        line-height: 1.8rem
+        margin-bottom: 0.6rem
+        a
+          color: white
+          &:hover
+            color: $red
+      h2
+        @include ubuntu(1)
+        color: $yellow
+      time
+        @include ubuntu(0.8)
+        color: white
+    .post-excerpt, .post-mask
+      display: none
+
+  // grid of five across
+  .featured-7,
+  .featured-8,
+  .featured-9,
+  .featured-10,
+  .featured-11
+    @include span(2.4 of 12)
+    height: 12.5rem
+    margin-top: 3rem
+    .post-image
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+    .post-meta
+      position: relative
+      height: 100%
+      h1
+        position: absolute
+        bottom: 3.4rem
+        padding-right: 1.2rem
+        @include crimson(1.4)
+        line-height: 1.4rem
+        a
+          color: white
+          &:hover
+            color: $red
+      h2
+        position: absolute
+        bottom: 1.2rem
+        padding-right: 1.2rem
+        margin-right: 0
+        @include ubuntu(1)
+        color: $yellow
+      time
+        display: none
+    .post-excerpt
+      display: none
+    .post-category
+      display: none
+    .post-mask
+      display: none
+
+  .featured-12,
+  .featured-13,
+  .featured-14
+    height: 30rem
+    margin-top: 3rem
+    .post-image
+      height: 200px
+
+  // chapbook announcements
+  [class^="featured-chap-"]
+    @include span(4 of 12)
+    height: 37.5rem
+    padding: 0rem
+    .chap-top
+      width: 100%
+      height: 50%
+      text-align: center
+      transition: background 0.3s ease-in-out
+      a
+        position: relative
+        @include pixel-link(14, 1, white)
+        display: inline-block
+        margin-top: 10rem
+        opacity: 0
+        transition: opacity 0.3s ease-in-out
+        &:hover
+          @include pixel-link(14, 1, $red)
+    .chap-bottom
+      width: 100%
+      height: 50%
+      padding: 1.2rem
+      background: transparentize($purple, 0.2)
+      h1
+        @include crimson(3)
+        line-height: 3rem
+        margin-bottom: 1.4rem
+      h1 a
+        color: white
+        &:hover
+          color: $red
+      h2
+        @include ubuntu(1.1)
+        color: $yellow
+        margin-bottom: 1.4rem
+      p
+        color: white
+    &:hover > .chap-top
+      background: transparentize($purple, 0.2)
+      a
+        opacity: 1
+
+  .featured-chap-1
+    @include span(last 4)
+
+  // print announcement
+  .featured-print
+    @include span(12 of 12)
+    height: 300px
+    margin-top: 3rem
+    .print-left
+      float: left
+      width: 50%
+      height: 100%
+      text-align: center
+      transition: background 0.3s ease-in-out
+      a
+        position: relative
+        @include pixel-link(14, 1, white)
+        display: inline-block
+        margin-top: 8rem
+        opacity: 0
+        transition: opacity 0.3s ease-in-out
+        &:hover
+          @include pixel-link(14, 1, $red)
+    .print-right
+      float: right
+      width: 50%
+      height: 100%
+      padding: 1.2rem
+      background: transparentize($purple, 0.2)
+      h1
+        @include crimson(2.6)
+        line-height: 2.6rem
+        margin-bottom: 1.4rem
+      h1 a
+        color: white
+        &:hover
+          color: $red
+      h2
+        @include ubuntu(1.1)
+        color: $yellow
+        margin-bottom: 1.4rem
+      p
+        color: white
+    &:hover > .print-left
+      background: transparentize($purple, 0.2)
+      a
+        opacity: 1
