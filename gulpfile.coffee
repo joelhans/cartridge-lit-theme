@@ -23,6 +23,9 @@ scripts =
 php =
   src: '**/*.php'
 
+img =
+  src: 'assets/images/**/*'
+
 ############################################################
 
 # Start the livereload server.
@@ -39,7 +42,8 @@ gulp.task 'vendor', ['coffee'], ->
 gulp.task 'watch', () ->
   gulp.watch scripts.src, ['js']
   gulp.watch styles.src, ['sass']
-  gulp.watch php.src, ['reload']
+  gulp.watch php.src, ['php']
+  # gulp.watch img.src, ['img']
 
 # Compile CoffeeScript files into js file and reload the page.
 gulp.task 'coffee', ->
@@ -68,7 +72,11 @@ gulp.task 'sass', ->
     .pipe gulp.dest styles.build
     .pipe livereload()
 
-gulp.task 'reload', () ->
+gulp.task 'img', () ->
+  return gulp.src(img.src)
+    .pipe livereload()
+
+gulp.task 'php', () ->
   return gulp.src('./')
     .pipe changed './', {extension: '.php'}
     .pipe livereload()

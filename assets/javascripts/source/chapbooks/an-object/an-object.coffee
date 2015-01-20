@@ -6,15 +6,27 @@ jQuery ($) ->
 
   win_h = $(window).height()
 
-  $('.fm-keyboard-keys').children('li').addClass('fm-option')
+  # position background image
+  offset = win_h - ((win_h - 800) * 2)
+  console.log offset
+  $('.an-object-background').css 'top', -(offset)
+
+  # set front-matter and back-matter heights
+  $('.front-matter, .back-matter').height win_h
+
+  $('.content article').each () ->
+    offset = $(this).offset()
+    console.log offset.top
+
+  $('.fm-keyboard-keys').children('li').addClass('interact-option')
 
   # FRONT MATTER
 
-  $('.fm-keyboard-keys-uppercase, .fm-keyboard-keys-lowercase').children().addClass('fm-option')
+  $('.fm-keyboard-keys-uppercase, .fm-keyboard-keys-lowercase').children().addClass('interact-option')
 
   # box hover
   box_hover = (target) ->
-    hover_box = $('.fm-hover-box')
+    hover_box = $('.interact-hover-box')
     target_pos = target.offset()
     hover_box.css
       width: target.css "width"
@@ -22,17 +34,18 @@ jQuery ($) ->
       left: target_pos.left
       top: target_pos.top
 
-  $('.fm-option').on 'mouseenter', () ->
+  $('.interact-option').on 'mouseenter', () ->
+    $('.interact-hover-box').show()
     box_hover($(this))
 
   # loading keyboard
   $('.fm-create').click () ->
-    $('.fm-hover-box').css 'transition', 'none'
-    $('.fm-create-delete, .fm-hover-box').animate { opacity: '0' }, 1000, () ->
-      $('.fm-keyboard').addClass 'fm-showing'
+    $('.interact-hover-box').css 'transition', 'none'
+    $('.fm-create-delete, .interact-hover-box').animate { opacity: '0' }, 1000, () ->
+      $('.fm-keyboard').addClass 'interact-showing'
       box_hover($('.fm-keyboard-keys-uppercase').children().first())
-      $('.fm-keyboard, .fm-hover-box').animate { opacity: '1' }, 1000, () ->
-        $('.fm-hover-box').css 'transition', 'all 0.2s'
+      $('.fm-keyboard, .interact-hover-box').animate { opacity: '1' }, 1000, () ->
+        $('.interact-hover-box').css 'transition', 'all 0.2s'
 
   # keyboard functions
   $('.fm-keyboard ul li').click () ->
@@ -53,8 +66,6 @@ jQuery ($) ->
   $('.fm-keyboard-end').click () ->
     nameCache = $('.fm-textarea').html()
 
-    console.log nameCache
-
     # if player name is empty
     if nameCache is ''
       $('.fm-enter-name').addClass('fm-enter-name-please').html 'Please enter a name.'
@@ -62,11 +73,12 @@ jQuery ($) ->
     # if player name isnt empty
     else
       $('.fm-player-name').html $('.fm-textarea').html()
-      $('.fm-hover-box').css 'transition', 'none'
-      $('.fm-keyboard, .fm-hover-box').animate { opacity: 0 }, 1000, () ->
-        $('.fm-creating').addClass 'fm-showing'
-        $('.fm-hover-box').css 'display', 'none'
-        $('.fm-creating').animate { opacity: 1 }, 1000, () ->
+      $('.interact-hover-box').css 'transition', 'none'
+      $('.fm-keyboard, .interact-hover-box').animate { opacity: 0 }, 1000, () ->
+        $('.fm-keyboard').hide()
+        $('.fm-creating').addClass 'interact-showing'
+        $('.interact-hover-box').css 'display', 'none'
+        $('.fm-creating, .interact-hover-box').animate { opacity: 1 }, 1000, () ->
           counter = 0
           ellipses = setInterval () ->
             number = new Array(counter + 1).join('.')
@@ -76,8 +88,21 @@ jQuery ($) ->
 
           setTimeout () ->
             $('.fm-creating').animate { opacity: '0' }, 1000, () ->
-              $('.fm-title').addClass 'fm-showing'
+              $('.fm-title').addClass 'interact-showing'
               $('.fm-title').animate { opacity: '1' }, 1000
               $('.content').fadeIn 1000
               clearInterval(ellipses)
           , 5000
+
+  # loading respite, then acknowledgments
+
+  $('.bm-yes').click () ->
+    $('.interact-hover-box').css 'transition', 'none'
+    $('.bm-continue, .interact-hover-box').animate { opacity: '0' }, 1000, () ->
+      $('.bm-respite').addClass 'interact-showing'
+      $('.bm-respite').animate { opacity: '1' }, 1000, () ->
+        setTimeout () ->
+          $('.bm-respite').animate { opacity: '0' }, 1000, () ->
+            $('.bm-acknowledgments').addClass 'interact-showing'
+            $('.bm-acknowledgments').animate { opacity: '1' }, 1000
+        , 5000
