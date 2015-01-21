@@ -49,12 +49,68 @@ body
   background: white
   overflow: hidden
 
-.an-object-background
+// .an-object-background
+//   position: absolute
+//   left: 50%
+//   @include transform(translate(-50%, 0%))
+//   width: 3000px
+//   height: 25000px
+
+.object-bg
   position: absolute
   left: 50%
   @include transform(translate(-50%, 0%))
   width: 3000px
-  height: 25000px
+
+.bg-ocean
+  top: 0px
+  height: 4000px
+  background: url($path+'bg_ocean.png')
+
+.bg-ocean-beach
+  height: 320px
+  background: url($path+'bg_ocean_beach.png')
+  // background-size: 320px 320px
+
+.bg-beach
+  height: 2600px
+  background: url($path+'bg_beach.png')
+
+.bg-grass-trans
+  height: 960px
+  background: url($path+'bg_grass_trans.png')
+
+.bg-grass
+  height: 1440px
+  background: url($path+'bg_grass.png')
+
+.bg-dirt-trans
+  height: 1280px
+  background: url($path+'bg_dirt_trans.png')
+
+.bg-girl-one
+  width: 160px
+  height: 200px
+  @include transform(translate(380px, 0%))
+  background: url($path+'bg_girl_base.png')
+
+.bg-wood-trans-up
+  height: 320px
+  background: url($path+'bg_wood_trans_up.png')
+
+.bg-wood
+  height: 1500px
+  background: url($path+'bg_wood.png')
+
+.bg-wood-trans-down
+  height: 320px
+  background: url($path+'bg_wood_trans_down.png')
+
+.bg-button
+  width: 1250px
+  height: 2000px
+  background: url($path+'bg_button.png')
+  background-size: 1250px 2000px
 
 /*
  * INTERACTIONS

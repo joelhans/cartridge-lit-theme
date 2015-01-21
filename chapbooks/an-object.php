@@ -27,7 +27,20 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 <body <?php body_class(); ?>>
 
   <!-- background -->
-  <img class="an-object-background" src="<?php echo $image_path.'background.png'; ?>" />
+  <!-- <img class="bg-ocean" src="<?php echo $image_path.'ocean.png'; ?>" /> -->
+  <!-- <img class="an-object-background" src="<?php echo $image_path.'background.png'; ?>" /> -->
+  <div class="object-bg bg-ocean"></div>
+  <div class="object-bg bg-beach"></div>
+  <div class="object-bg bg-ocean-beach"></div>
+  <div class="object-bg bg-grass-trans"></div>
+  <div class="object-bg bg-grass"></div>
+  <div class="object-bg bg-girl-one"></div>
+  <div class="object-bg bg-dirt-trans"></div>
+
+  <!-- <div class="object-bg bg-wood-trans-up"></div> -->
+  <!-- <div class="object-bg bg-wood"></div> -->
+  <!-- <div class="object-bg bg-wood-trans-down"></div> -->
+
 
   <!-- hover box -->
   <div class="interact-hover-box"></div>

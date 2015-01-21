@@ -11,6 +11,21 @@ jQuery ($) ->
   console.log offset
   $('.an-object-background').css 'top', -(offset)
 
+  bg_offset = (push) ->
+    return Math.round((win_h + push) / 10) * 10
+
+  $('.bg-ocean-beach').css 'top', bg_offset(1800)
+  $('.bg-beach').css 'top', bg_offset(2100)
+  $('.bg-grass-trans').css 'top', bg_offset(3600)
+  $('.bg-grass').css 'top', bg_offset(4560)
+  $('.bg-girl-one').css 'top', bg_offset(5260)
+  $('.bg-dirt-trans').css 'top', bg_offset(8000)
+
+  $('.bg-wood-trans-up').css 'top', Math.round((win_h + 2300) / 10) * 10
+  $('.bg-wood-trans-down').css 'top', Math.round((win_h + 4000) / 10) * 10
+  $('.bg-wood').css 'top', Math.round((win_h + 2610) / 10) * 10
+  $('.bg-button').css 'top', Math.round((win_h + 6300) / 10) * 10
+
   # set front-matter and back-matter heights
   $('.front-matter, .back-matter').height win_h
 
