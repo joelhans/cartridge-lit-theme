@@ -44,23 +44,79 @@ html
   box-sizing: inherit
 
 body
+  position: relative
   margin: 0
-  background: rgba(4,0,1,1)
-  overflow-x: hidden
-  background: url($path+'background.png')
+  background: white
+  overflow: hidden
+
+// .an-object-background
+//   position: absolute
+//   left: 50%
+//   @include transform(translate(-50%, 0%))
+//   width: 3000px
+//   height: 25000px
+
+.object-bg
+  position: absolute
+  left: 50%
+  @include transform(translate(-50%, 0%))
+  width: 3000px
+
+.bg-ocean
+  top: 0px
+  height: 4000px
+  background: url($path+'bg_ocean.png')
+
+.bg-ocean-beach
+  height: 320px
+  background: url($path+'bg_ocean_beach.png')
+  // background-size: 320px 320px
+
+.bg-beach
+  height: 2600px
+  background: url($path+'bg_beach.png')
+
+.bg-grass-trans
+  height: 960px
+  background: url($path+'bg_grass_trans.png')
+
+.bg-grass
+  height: 1440px
+  background: url($path+'bg_grass.png')
+
+.bg-dirt-trans
+  height: 1280px
+  background: url($path+'bg_dirt_trans.png')
+
+.bg-girl-one
+  width: 160px
+  height: 200px
+  @include transform(translate(380px, 0%))
+  background: url($path+'bg_girl_base.png')
+
+.bg-wood-trans-up
+  height: 320px
+  background: url($path+'bg_wood_trans_up.png')
+
+.bg-wood
+  height: 1500px
+  background: url($path+'bg_wood.png')
+
+.bg-wood-trans-down
+  height: 320px
+  background: url($path+'bg_wood_trans_down.png')
+
+.bg-button
+  width: 1250px
+  height: 2000px
+  background: url($path+'bg_button.png')
+  background-size: 1250px 2000px
 
 /*
- * FRONT MATTER
+ * INTERACTIONS
  */
 
-.front-matter
-  height: 800px
-
-.front-matter p, .front-matter span
-  @include libre(1)
-  color: $dgray
-
-.fm-hover-box
+.interact-hover-box
   position: absolute
   width: 0
   height: 0
@@ -68,22 +124,39 @@ body
   border-radius: 3px
   z-index: 2
   transition: all 0.2s
+  pointer-events: none
 
-.fm-option
+.interact-option
   position: relative
   cursor: pointer
   text-align: center
   z-index: 3
 
-.fm-option-noselect
+.interact-option-noselect
   cursor: not-allowed
   text-decoration: line-through
   text-align: center
 
+.interact-showing
+  visibility: visible !important
+
+/*
+ * FRONT MATTER
+ */
+
+.front-matter
+  position: relative
+  height: 800px
+
+.front-matter p, .front-matter span
+  @include libre(1)
+  color: $dgray
+
 .fm-create-delete, .fm-keyboard, .fm-creating, .fm-title
   position: absolute
+  top: 50%
   left: 50%
-  margin: 14rem auto 0 auto
+  @include transform(translate(-50%, -50%))
   padding: 3rem 5rem 3rem 5rem
   background: rgba(230,230,240,1)
 
@@ -91,14 +164,10 @@ body
   opacity: 0
   visibility: hidden
 
-.fm-showing
-  visibility: visible
-
 /* create/delete */
 .fm-create-delete
   width: 460px
   height: 240px
-  margin-left: -230px
   padding: 5rem 5rem 3rem 5rem
   background: url($path+'fm-create-delete.png')
 
@@ -109,7 +178,6 @@ body
 .fm-keyboard
   width: 840px
   height: 400px
-  margin-left: -420px
   padding: 5rem 5rem 3rem 5rem
   background: url($path+'fm-keyboard.png')
 
@@ -157,7 +225,6 @@ body
 .fm-creating
   width: 500px
   height: 290px
-  margin-left: -250px
   padding: 4.5rem 5rem 3rem 5rem
   background: url($path+'fm-creating.png')
 
@@ -165,8 +232,6 @@ body
 .fm-title
   width: 740px
   height: 340px
-  margin-left: -370px
-  margin-bottom: 10rem
   padding: 4.5rem 1rem 3rem 11rem
   background: url($path+'fm-title.png')
 
@@ -178,23 +243,25 @@ body
     margin-top: 1rem
 
 /*
- * FRONT MATTER
+ * CONTENT
  */
 
 .content
-  display: none
+  // display: none
   position: relative
   overflow: hidden
 
 .container
   @include container(70em)
+  margin-top: 10rem
 
 .content article
   @include span(8 of 12)
   @include push(2)
   @include gutters(10em)
   padding-top: 4rem
-  padding-bottom: 2rem
+  padding-bottom: 6rem
+  margin-bottom: 40rem
   background: $lgray
 
   h1
@@ -202,43 +269,67 @@ body
     text-align: center
     margin-bottom: 2rem
 
+  h2
+    @include libre(1.2)
+    text-align: center
+    text-transform: uppercase
+    margin: 3rem auto 2rem auto
+
   p
     @include libre(1)
     line-height: 1.8rem
 
-.tease-date
+/*
+ * BACK MATTER
+ */
+
+.back-matter
   position: relative
-  padding: 12rem 0 16rem 0
-
-  text-align: center
-  background: $lgray
-  z-index: 3
-
-  h1
-    @include libre(4)
-
-  .phoenix-down
-    width: 200px
-    height: 200px
-    display: block
-    margin: 6rem auto 2rem auto
-    border-radius: 50%
-    background: $purple
-
-    img
-      position: relative
-      top: 23px
-      width: 80px
-
-  h2
-    @include ubuntu(2.4)
-    color: $red
-
-.story-mask
-  position: absolute
-  top: 200px
-  left: 0
-  width: 100%
   height: 800px
-  background: url($path+'story-mask.png')
-  z-index: 2
+
+.bm-continue, .bm-respite, .bm-acknowledgments
+  position: absolute
+  top: 50%
+  left: 50%
+  @include transform(translate(-50%, -50%))
+  padding: 3rem 5rem 3rem 5rem
+  background: rgba(230,230,240,1)
+
+.bm-respite, .bm-acknowledgments
+  opacity: 0
+  visibility: hidden
+
+// TESTING CODE //
+// .bm-continue, .bm-respite, .bm-acknowledgments
+//   position: relative
+//   opacity: 1
+//   visibility: visible
+// REMOVE ME PLZ //
+
+.bm-continue
+  width: 500px
+  height: 290px
+  padding: 4.5rem 5rem 3rem 5rem
+  background: url($path+'fm-creating.png')
+
+  ul.bm-continue-options
+    clear: both
+    text-align: center
+
+    li
+      display: inline-block
+      padding: 4px 8px 4px 8px
+      &:first-of-type
+        margin-right: 2rem
+
+.bm-respite
+  width: 500px
+  height: 290px
+  padding: 7.5rem 5rem 3rem 5rem
+  background: url($path+'fm-creating.png')
+
+.bm-acknowledgments
+  width: 940px
+  height: 400px
+  padding: 4.5rem 11rem 3rem 11rem
+  background: url($path+'fm-title.png')
