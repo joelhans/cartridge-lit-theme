@@ -26,20 +26,36 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <body <?php body_class(); ?>>
 
-  <!-- background -->
-  <!-- <img class="bg-ocean" src="<?php echo $image_path.'ocean.png'; ?>" /> -->
-  <!-- <img class="an-object-background" src="<?php echo $image_path.'background.png'; ?>" /> -->
+  <!---------------------->
+  <!-- BACKGROUNDS     -->
+  <!---------------------->
+
+  <!-- Frontmatter -->
   <div class="object-bg bg-ocean"></div>
+  <!-- Open Water -->
   <div class="object-bg bg-beach"></div>
   <div class="object-bg bg-ocean-beach"></div>
-  <div class="object-bg bg-grass-trans"></div>
-  <div class="object-bg bg-grass"></div>
+  <!-- The Village of Whealbrook -->
+  <div class="object-bg bg-wood"></div>
+  <!-- The Town of Roundbeck -->
+  <div class="object-bg bg-snow-trans"></div>
+  <div class="object-bg bg-snow"></div>
+  <div class="object-bg bg-wood-two"></div>
+  <div class="object-bg bg-girl-portal-one"></div>
   <div class="object-bg bg-girl-one"></div>
-  <div class="object-bg bg-dirt-trans"></div>
-
-  <!-- <div class="object-bg bg-wood-trans-up"></div> -->
-  <!-- <div class="object-bg bg-wood"></div> -->
-  <!-- <div class="object-bg bg-wood-trans-down"></div> -->
+  <!-- Uptaten Towers -->
+  <div class="object-bg bg-girl-portal-two"></div>
+  <div class="object-bg bg-girl-two"></div>
+  <div class="object-bg bg-girl-portal-three"></div>
+  <div class="object-bg bg-girl-three"></div>
+  <div class="object-bg bg-girl-portal-four"></div>
+  <div class="object-bg bg-girl-four"></div>
+  <div class="object-bg bg-girl-portal-five"></div>
+  <div class="object-bg bg-girl-five"></div>
+  <div class="object-bg bg-girl-portal-six"></div>
+  <div class="object-bg bg-girl-six"></div>
+  <!-- The Village of Whealbrook (II) -->
+  <div class="object-bg bg-wood-three"></div>
 
 
   <!-- hover box -->
