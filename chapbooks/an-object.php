@@ -36,11 +36,11 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-beach"></div>
   <div class="object-bg bg-ocean-beach"></div>
   <!-- The Village of Whealbrook -->
-  <div class="object-bg bg-wood"></div>
-  <!-- The Town of Roundbeck -->
   <div class="object-bg bg-snow-trans"></div>
   <div class="object-bg bg-snow"></div>
-  <div class="object-bg bg-wood-two"></div>
+  <div class="object-bg bg-village-whealbrook"></div>
+  <!-- The Town of Roundbeck -->
+  <div class="object-bg bg-village-roundbeck"></div>
   <div class="object-bg bg-girl-portal-one"></div>
   <div class="object-bg bg-girl-one"></div>
   <!-- Uptaten Towers -->
@@ -55,8 +55,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-girl-portal-six"></div>
   <div class="object-bg bg-girl-six"></div>
   <!-- The Village of Whealbrook (II) -->
-  <div class="object-bg bg-wood-three"></div>
-
+  <div class="object-bg bg-grass"></div>
+  <div class="object-bg bg-snow-trans-down-two"></div>
+  <div class="object-bg bg-snow-trans-down"></div>
+  <div class="object-bg bg-village-whealbrook-two"></div>
+  <!-- Coburg Castle -->
+  <div class="object-bg bg-grass-river"></div>
 
   <!-- hover box -->
   <div class="interact-hover-box"></div>

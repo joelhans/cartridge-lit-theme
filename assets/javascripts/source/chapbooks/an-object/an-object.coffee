@@ -19,11 +19,11 @@ jQuery ($) ->
   # Open Water
   $('.bg-beach').css 'top', bg_offset(2100)
   # The Village of Whealbrook
-  $('.bg-wood').css 'top', bg_offset(2660)
+  $('.bg-snow').css 'top', bg_offset(3360)
+  $('.bg-snow-trans').css 'top', bg_offset(2400)
+  $('.bg-village-whealbrook').css 'top', bg_offset(2960)
   # The Town of Roundbeck
-  $('.bg-snow').css 'top', bg_offset(5160)
-  $('.bg-snow-trans').css 'top', bg_offset(4200)
-  $('.bg-wood-two').css 'top', bg_offset(4920)
+  $('.bg-village-roundbeck').css 'top', bg_offset(4920)
   $('.bg-girl-one').css 'top', bg_offset(5260)
   $('.bg-girl-portal-one').css 'top', bg_offset(5200)
   # Uptaten Towers
@@ -38,7 +38,12 @@ jQuery ($) ->
   $('.bg-girl-six').css 'top', bg_offset(9420)
   $('.bg-girl-portal-six').css 'top', bg_offset(9360)
   # The Village of Whealbrook (II)
-  $('.bg-wood-three').css 'top', bg_offset(10640)
+  $('.bg-village-whealbrook-two').css 'top', bg_offset(10240)
+  $('.bg-snow-trans-down').css 'top', bg_offset(11400)
+  $('.bg-snow-trans-down-two').css 'top', bg_offset(12260)
+  $('.bg-grass').css 'top', bg_offset(11400)
+  # Coburg Castle
+  $('.bg-grass-river').css 'top', bg_offset(13600)
 
   # set front-matter and back-matter heights
   $('.front-matter, .back-matter').height win_h
