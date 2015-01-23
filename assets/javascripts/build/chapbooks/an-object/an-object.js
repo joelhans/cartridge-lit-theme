@@ -17,9 +17,14 @@
     $('.bg-snow').css('top', bg_offset(3360));
     $('.bg-snow-trans').css('top', bg_offset(2400));
     $('.bg-village-whealbrook').css('top', bg_offset(2960));
+    $('.bg-forest-trans-up-one').css('top', bg_offset(4000));
+    $('.bg-forest-one').css('top', bg_offset(4320));
+    $('.bg-forest-trans-down-one').css('top', bg_offset(4960));
     $('.bg-village-roundbeck').css('top', bg_offset(4920));
     $('.bg-girl-one').css('top', bg_offset(5260));
     $('.bg-girl-portal-one').css('top', bg_offset(5200));
+    $('.bg-forest-trans-up-two').css('top', bg_offset(7350));
+    $('.bg-forest-two').css('top', bg_offset(7670));
     $('.bg-girl-two').css('top', bg_offset(7340));
     $('.bg-girl-portal-two').css('top', bg_offset(7280));
     $('.bg-girl-three').css('top', bg_offset(7830));
@@ -30,6 +35,8 @@
     $('.bg-girl-portal-five').css('top', bg_offset(8860));
     $('.bg-girl-six').css('top', bg_offset(9420));
     $('.bg-girl-portal-six').css('top', bg_offset(9360));
+    $('.bg-forest-three').css('top', bg_offset(9460));
+    $('.bg-forest-trans-down-two').css('top', bg_offset(10100));
     $('.bg-village-whealbrook-two').css('top', bg_offset(10240));
     $('.bg-snow-trans-down').css('top', bg_offset(11400));
     $('.bg-snow-trans-down-two').css('top', bg_offset(12260));

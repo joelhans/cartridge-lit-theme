@@ -39,11 +39,16 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-snow-trans"></div>
   <div class="object-bg bg-snow"></div>
   <div class="object-bg bg-village-whealbrook"></div>
+  <div class="object-bg bg-forest-trans-up-one"></div>
+  <div class="object-bg bg-forest-one"></div>
+  <div class="object-bg bg-forest-trans-down-one"></div>
   <!-- The Town of Roundbeck -->
   <div class="object-bg bg-village-roundbeck"></div>
   <div class="object-bg bg-girl-portal-one"></div>
   <div class="object-bg bg-girl-one"></div>
   <!-- Uptaten Towers -->
+  <div class="object-bg bg-forest-trans-up-two"></div>
+  <div class="object-bg bg-forest-two"></div>
   <div class="object-bg bg-girl-portal-two"></div>
   <div class="object-bg bg-girl-two"></div>
   <div class="object-bg bg-girl-portal-three"></div>
@@ -52,9 +57,11 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-girl-four"></div>
   <div class="object-bg bg-girl-portal-five"></div>
   <div class="object-bg bg-girl-five"></div>
+  <div class="object-bg bg-forest-three"></div>
   <div class="object-bg bg-girl-portal-six"></div>
   <div class="object-bg bg-girl-six"></div>
   <!-- The Village of Whealbrook (II) -->
+  <div class="object-bg bg-forest-trans-down-two"></div>
   <div class="object-bg bg-grass"></div>
   <div class="object-bg bg-snow-trans-down-two"></div>
   <div class="object-bg bg-snow-trans-down"></div>
@@ -193,7 +200,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <section class="bm-acknowledgments">
     <h1>Acknowledgments</h1>
-    <p>The sections of this chapbook originally appeared in slightly different form in the following journals: “Open Water” as “Wake” in the Diverse Arts Project Journal, “The Village of Whealbrook” in Corium Magazine, “The Town of Roundbeck” in decomP, “Uptaten Towers” in Hobart, “The Village of Whealbrook (II)” in elimae, “Coburg Castle” in Necessary Fiction and “The Cave Where Your Father Dies” in matchbook.</p>
+    <p>The sections of this chapbook originally appeared in slightly different form in the following journals: “Open Water” as “Wake” in the <em>Diverse Arts Project Journal</em>, “The Village of Whealbrook” in <em>Corium Magazine</em>, “The Town of Roundbeck” in <em>decomP</em>, “Uptaten Towers” in <em>Hobart</em>, “The Village of Whealbrook (II)” in <em>elimae</em>, “Coburg Castle” in <em>Necessary Fiction</em> and “The Cave Where Your Father Dies” in <em>matchbook</em>.</p>
   </section>
 
   </section>
