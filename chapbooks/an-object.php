@@ -51,6 +51,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-forest-two"></div>
   <div class="object-bg bg-girl-portal-two"></div>
   <div class="object-bg bg-girl-two"></div>
+  <div class="object-bg bg-uptaten"></div>
   <div class="object-bg bg-girl-portal-three"></div>
   <div class="object-bg bg-girl-three"></div>
   <div class="object-bg bg-girl-portal-four"></div>
