@@ -428,28 +428,43 @@ body
 .back-matter
   display: none
   position: relative
-  height: 800px
+  min-height: 800px
   z-index: 2
 
-.bm-continue, .bm-respite, .bm-acknowledgments
+.bm-continue, .bm-sure, .bm-respite, .bm-acknowledgments
   position: absolute
   top: 50%
   left: 50%
   @include transform(translate(-50%, -50%))
   padding: 3rem 5rem 3rem 5rem
-  background: rgba(230,230,240,1)
 
-.bm-respite, .bm-acknowledgments
+.bm-sure, .bm-respite, .bm-acknowledgments
   opacity: 0
   visibility: hidden
 
 .bm-continue
   width: 500px
   height: 290px
-  padding: 4.5rem 5rem 3rem 5rem
-  background: url($path+'fm-creating.png')
+  padding: 5.5rem 5rem 3rem 5rem
+  background: url($path+'bm-creating.png')
 
   ul.bm-continue-options
+    clear: both
+    text-align: center
+
+    li
+      display: inline-block
+      padding: 4px 8px 4px 8px
+      &:first-of-type
+        margin-right: 2rem
+
+.bm-sure
+  width: 500px
+  height: 290px
+  padding: 6.5rem 5rem 3rem 5rem
+  background: url($path+'bm-sure.png')
+
+  ul.bm-sure-options
     clear: both
     text-align: center
 
@@ -463,13 +478,17 @@ body
   width: 500px
   height: 290px
   padding: 7.5rem 5rem 3rem 5rem
-  background: url($path+'fm-creating.png')
+  background: url($path+'bm-respite.png')
 
 .bm-acknowledgments
   width: 940px
-  height: 400px
+  height: 800px
   padding: 4.5rem 11rem 3rem 11rem
-  background: url($path+'bm-acknowledgments.png')
+  // background: url($path+'bm-acknowledgments.png')
+  h1
+    margin-bottom: 2rem
+  h1, p
+    color: white
 
 .flood
   position: absolute

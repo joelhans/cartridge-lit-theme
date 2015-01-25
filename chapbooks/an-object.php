@@ -87,7 +87,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <!-- create/delete -->
   <section class="fm-create-delete fm-showing">
     <p class="interact-option fm-create">Create a new adventure log.</p>
-    <p class="fm-delete interact-option-noselect">Delete a new adventure log.</p>
+    <p class="fm-delete interact-option-noselect">Delete an adventure log.</p>
   </section>
 
   <!-- keyboard -->
@@ -202,7 +202,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <section class="bm-continue">
     <p>Do you intend to continue on your quest at this point, my child?</p>
     <ul class="bm-continue-options">
-      <li class="interact-option bm-yes">Yes</li><li class="interact-option-noselect bm-no">No</li>
+      <li class="interact-option bm-yes">Yes</li><li class="interact-option bm-no">No</li>
+    </ul>
+  </section>
+
+  <section class="bm-sure">
+    <p>Are you sure?</p>
+    <ul class="bm-sure-options">
+      <li class="interact-option bm-yes">Yes</li><li class="interact-option bm-no">No</li>
     </ul>
   </section>
 
@@ -212,6 +219,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <section class="bm-acknowledgments">
     <h1>Acknowledgments</h1>
+    <p>Special thanks to the editors who first gave homes to portions of this chapbook: Matthew Clair, Jason Jordan, Brandi Wells, Brandon Hobson and Cooper Renner, Steve Himmer, Edward Mullany and Brian Mihok, and especially Lauren Becker, whose brief but significant encouragement ensured these pieces numbered beyond two.
+    <p>Thanks as always to my writing buddies and trusted readers Lyndsey Reese and Rebecca King and to my parents for buying me that very first Game Boy.</p>
+    <p>I am totally indebted to Brian Oliu and his video game writing, without which I don’t think I would’ve ever written <em>An Object You Cannot Lose</em>, or even considered it a possibility.</p>
     <p>The sections of this chapbook originally appeared in slightly different form in the following journals: “Open Water” as “Wake” in the <em>Diverse Arts Project Journal</em>, “The Village of Whealbrook” in <em>Corium Magazine</em>, “The Town of Roundbeck” in <em>decomP</em>, “Uptaten Towers” in <em>Hobart</em>, “The Village of Whealbrook (II)” in <em>elimae</em>, “Coburg Castle” in <em>Necessary Fiction</em> and “The Cave Where Your Father Dies” in <em>matchbook</em>.</p>
   </section>
 

@@ -140,29 +140,47 @@ jQuery ($) ->
           , 5000
 
   # loading respite, then acknowledgments
-  $('.flood').height (win_h_r + 100)
+  $('.flood').height (win_h_r + 200)
   flood = () ->
-    flood_y = -(win_h_r) - 100
+    flood_y = -(win_h_r) - 198
     floody = setInterval () ->
       flood_y = flood_y + 10
       console.log flood_y
-      if flood_y is 10
+      if flood_y >= 10
         clearInterval(floody)
       else
         $('.flood').css('bottom', flood_y)
     , 800
 
-
+  sure_showing = false
   $('.bm-yes').click () ->
+
+    if sure_showing is false
+      $('.interact-hover-box').css 'transition', 'none'
+      $('.bm-continue, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
+        $('.bm-sure').addClass 'interact-showing'
+        box_hover($('.bm-sure-options').children().first())
+        $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000, () ->
+          console.log 'Sure opened.'
+          sure_showing = true
+
+    else if sure_showing is true
+      $('.interact-hover-box').css 'transition', 'none'
+      $('.bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
+        $('.bm-sure').addClass 'interact-showing'
+        box_hover($('.bm-sure-options').children().first())
+        $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000
+
+  $('.bm-no').click () ->
     $('.interact-hover-box').css 'transition', 'none'
-    $('.bm-continue, .interact-hover-box').animate { opacity: '0' }, 1000, () ->
+    $('.bm-continue, .bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
       $('.bm-respite').addClass 'interact-showing'
-      $('.bm-respite').animate { opacity: '1' }, 1000, () ->
+      $('.bm-respite').animate { opacity: '1' }, 2000, () ->
         setTimeout () ->
-          $('.bm-respite').animate { opacity: '0' }, 1000, () ->
+          $('.bm-respite').animate { opacity: '0' }, 2000, () ->
             $('.bm-acknowledgments').addClass 'interact-showing'
-            $('.bm-acknowledgments').animate { opacity: '1' }, 1000
-        , 5000
+            $('.bm-acknowledgments').animate { opacity: '1' }, 2000
+        , 4000
     setTimeout () ->
       flood()
-    , 8000
+    , 10000
