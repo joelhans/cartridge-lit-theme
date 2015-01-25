@@ -106,7 +106,7 @@ body
   background: url($path+'bg_forest_trans_up.png')
 
 .bg-forest-two
-  height: 1200px
+  height: 1790px
   background: url($path+'bg_forest.png')
 
 .bg-girl-one
@@ -209,6 +209,29 @@ body
   height: 320px
   background: url($path+'bg_grass_river.png'), url($path+'bg_ocean.png')
 
+.bg-cave
+  height: 960px
+  background: url($path+'bg_cave.png')
+  @include transform(translate(-950px, 0%))
+
+.bg-cave-mouth
+  width: 320px
+  height: 320px
+  background: url($path+'bg_cave_mouth.png')
+  @include transform(translate(-650px, 0%))
+
+.bg-cave-int
+  height: 10000px
+  background: url($path+'bg_cave_int.png')
+
+.bg-fadeout
+  height: 3000px
+  background: url($path+'bg_fadeout.png')
+
+.bg-faded
+  height: 3000px
+  background: rgba(39,39,41,1)
+
 /*
  * INTERACTIONS
  */
@@ -277,6 +300,7 @@ body
   height: 400px
   padding: 5rem 5rem 3rem 5rem
   background: url($path+'fm-keyboard.png')
+  list-style: none
 
   .fm-textarea
     height: 38px
@@ -291,8 +315,6 @@ body
 
   .fm-enter-name-please
     color: $red
-
-  list-style: none
 
   ul.fm-keyboard-keys-uppercase
     float: left
@@ -356,6 +378,7 @@ body
   @include span(8 of 12)
   @include push(2)
   @include gutters(10em)
+  position: relative
   padding-top: 4rem
   padding-bottom: 6rem
   margin-bottom: 40rem
@@ -377,10 +400,27 @@ body
     line-height: 1.8rem
 
 /*
+ * INDIVIDUAL PIECES
+ */
+
+/* Uptaten Towers */
+.uptaten-towers
+  position: absolute
+  top: 1263px
+  right: -357px
+
+/* Coburg Castle */
+.coburg-castle
+  position: absolute
+  top: 1599px
+  left: -357px
+
+/*
  * BACK MATTER
  */
 
 .back-matter
+  display: none
   position: relative
   height: 800px
 
@@ -395,13 +435,6 @@ body
 .bm-respite, .bm-acknowledgments
   opacity: 0
   visibility: hidden
-
-// TESTING CODE //
-// .bm-continue, .bm-respite, .bm-acknowledgments
-//   position: relative
-//   opacity: 1
-//   visibility: visible
-// REMOVE ME PLZ //
 
 .bm-continue
   width: 500px

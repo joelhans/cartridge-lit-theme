@@ -8,11 +8,22 @@ jQuery ($) ->
 
   # position background image
   offset = win_h - ((win_h - 800) * 2)
-  console.log offset
   $('.an-object-background').css 'top', -(offset)
 
   bg_offset = (push) ->
     return Math.round((win_h + push) / 10) * 10
+
+  # $('.story img').each () ->
+  #   offset = $(this).offset()
+  #   p_offset = $(this).parent().offset()
+  #   console.log offset.top, p_offset.top
+  #   offset_x = Math.round(offset.left / 10) * 10
+  #   offset_y = Math.round((offset.top - p_offset_y) / 10) * 10
+  #
+  #   console.log offset_x, offset_y
+  #   $(this).css
+  #     'left': offset_x
+  #     'top': offset_y
 
   # Frontmatter
   $('.bg-ocean-beach').css 'top', bg_offset(1800)
@@ -51,14 +62,17 @@ jQuery ($) ->
   $('.bg-grass').css 'top', bg_offset(11400)
   # Coburg Castle
   $('.bg-grass-river').css 'top', bg_offset(13600)
+  # The Cave Where Your Father Dies
+  $('.bg-cave').css 'top', bg_offset(14900)
+  $('.bg-cave-mouth').css 'top', bg_offset(14900)
+  $('.bg-cave-int').css 'top', bg_offset(15260)
+  $('.bg-fadeout').css 'top', bg_offset(16000)
+  $('.bg-faded').css 'top', bg_offset(19000)
 
   # set front-matter and back-matter heights
   $('.front-matter, .back-matter').height win_h
 
-  $('.content article').each () ->
-    offset = $(this).offset()
-    console.log offset.top
-
+  # Add class via JS instead of HMTL (whoopsies).
   $('.fm-keyboard-keys').children('li').addClass('interact-option')
 
   # FRONT MATTER
@@ -131,7 +145,7 @@ jQuery ($) ->
             $('.fm-creating').animate { opacity: '0' }, 1000, () ->
               $('.fm-title').addClass 'interact-showing'
               $('.fm-title').animate { opacity: '1' }, 1000
-              $('.content').fadeIn 1000
+              $('.content, .back-matter').fadeIn 1000
               clearInterval(ellipses)
           , 5000
 

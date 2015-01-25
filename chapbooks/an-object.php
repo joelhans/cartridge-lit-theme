@@ -68,6 +68,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <div class="object-bg bg-village-whealbrook-two"></div>
   <!-- Coburg Castle -->
   <div class="object-bg bg-grass-river"></div>
+  <!-- The Cave Where Your Father Dies -->
+  <div class="object-bg bg-cave"></div>
+  <div class="object-bg bg-cave-int"></div>
+  <div class="object-bg bg-cave-mouth"></div>
+  <div class="object-bg bg-fadeout"></div>
+  <div class="object-bg bg-faded"></div>
 
   <!-- hover box -->
   <div class="interact-hover-box"></div>
@@ -143,6 +149,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </article>
 
     <article class="story">
+      <!-- images -->
+      <img class="uptaten-towers" src="<?php echo $image_path.'uptaten_towers.png'; ?>" />
+      <!-- text -->
       <h1>Uptaten Towers</h1>
       <h2>HER HAND IS A TOWER IN THE DARK</h2>
       <p>A hand over your mouth. A hush in the darkness. It’s the girl, whose name reminds you of another, who you remember marrying in some uncertain future or almost-forgotten dream. She is unaware that, even if her palm was not curled around your lips, you would not be able to speak unless she asked you a question. She tells you it is time. Your father stirs and coughs beside you in his stiff inn bed. He rolls over, his swamp-monster snores resume. He fell ill before you could leave town, before you could return to your village. Now, here she is, to steal you away from the inn, from him, in the middle of the night, her hand firm over your ever-silent boy mouth. Here she is.</p>
@@ -162,6 +171,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </article>
 
     <article class="story">
+      <!-- images -->
+      <img class="coburg-castle" src="<?php echo $image_path.'coburg_castle.png'; ?>" />
+      <!-- text -->
       <h1>Coburg Castle</h1>
       <h2>SUMMONS</h2>
       <p>Your father has been summoned to a castle. By now, you’ve probably noticed all your stories begin this way: with your father. Don’t worry. There is an end coming to that. Soon, there will be no more stories beginning that way, though you will retell the old ones again and again in your head, beginning always and forever with him. Your father is summoned to a castle, and he brings you along. It will be just a little trip, your father says, Nothing like the sea journey before. But you don’t remember the sea journey. All you remember doing, before the ship arrived at port, is dreaming. In your dreams, you packed all your belongings into a car, a futon like a useless blue tongue unrolled on top, and drove across an unknown landscape. Your father was not a warrior, and your mother you’d always known. There was a girl you wanted to marry who traveled in the opposite direction. After this excursion, your real father says, we’ll settle down for a while. You are not sure you believe him. Try to make sense of all the lives you’ve led asleep, summon to mind the sum of all your dreaming, an answer to a question that isn’t Yes or No. Try to begin a story that begins somewhere else.</p>

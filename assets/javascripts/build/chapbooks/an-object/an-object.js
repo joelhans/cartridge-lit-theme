@@ -7,7 +7,6 @@
     var bg_offset, box_hover, offset, win_h;
     win_h = $(window).height();
     offset = win_h - ((win_h - 800) * 2);
-    console.log(offset);
     $('.an-object-background').css('top', -offset);
     bg_offset = function(push) {
       return Math.round((win_h + push) / 10) * 10;
@@ -42,11 +41,12 @@
     $('.bg-snow-trans-down-two').css('top', bg_offset(12260));
     $('.bg-grass').css('top', bg_offset(11400));
     $('.bg-grass-river').css('top', bg_offset(13600));
+    $('.bg-cave').css('top', bg_offset(14900));
+    $('.bg-cave-mouth').css('top', bg_offset(14900));
+    $('.bg-cave-int').css('top', bg_offset(15260));
+    $('.bg-fadeout').css('top', bg_offset(16000));
+    $('.bg-faded').css('top', bg_offset(19000));
     $('.front-matter, .back-matter').height(win_h);
-    $('.content article').each(function() {
-      offset = $(this).offset();
-      return console.log(offset.top);
-    });
     $('.fm-keyboard-keys').children('li').addClass('interact-option');
     $('.fm-keyboard-keys-uppercase, .fm-keyboard-keys-lowercase').children().addClass('interact-option');
     box_hover = function(target) {
@@ -124,7 +124,7 @@
                 $('.fm-title').animate({
                   opacity: '1'
                 }, 1000);
-                $('.content').fadeIn(1000);
+                $('.content, .back-matter').fadeIn(1000);
                 return clearInterval(ellipses);
               });
             }, 5000);
