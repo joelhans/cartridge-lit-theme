@@ -248,7 +248,7 @@ body
   height: 0
   border: 2px solid black
   border-radius: 3px
-  z-index: 2
+  z-index: 3
   transition: all 0.2s
   pointer-events: none
 
@@ -372,7 +372,7 @@ body
  */
 
 .content
-  // display: none
+  display: none
   position: relative
   overflow: hidden
 
@@ -412,7 +412,7 @@ body
 /* Uptaten Towers */
 .uptaten-towers
   position: absolute
-  top: 1263px
+  top: 1207px
   right: -357px
 
 /* Coburg Castle */
@@ -429,6 +429,7 @@ body
   display: none
   position: relative
   height: 800px
+  z-index: 2
 
 .bm-continue, .bm-respite, .bm-acknowledgments
   position: absolute
@@ -469,3 +470,13 @@ body
   height: 400px
   padding: 4.5rem 11rem 3rem 11rem
   background: url($path+'bm-acknowledgments.png')
+
+.flood
+  position: absolute
+  left: 50%
+  bottom: -2000px
+  @include transform(translate(-50%, 0%))
+  width: 3000px
+  height: 2000px
+  background: url($path+'bg_ocean_fadein.png') repeat-x, url($path+'bg_ocean.png') repeat
+  z-index: 1

@@ -5,6 +5,7 @@ jQuery ($) ->
   # INIT
 
   win_h = $(window).height()
+  win_h_r = Math.round(win_h / 10) * 10
 
   # position background image
   offset = win_h - ((win_h - 800) * 2)
@@ -12,18 +13,6 @@ jQuery ($) ->
 
   bg_offset = (push) ->
     return Math.round((win_h + push) / 10) * 10
-
-  # $('.story img').each () ->
-  #   offset = $(this).offset()
-  #   p_offset = $(this).parent().offset()
-  #   console.log offset.top, p_offset.top
-  #   offset_x = Math.round(offset.left / 10) * 10
-  #   offset_y = Math.round((offset.top - p_offset_y) / 10) * 10
-  #
-  #   console.log offset_x, offset_y
-  #   $(this).css
-  #     'left': offset_x
-  #     'top': offset_y
 
   # Frontmatter
   $('.bg-ocean-beach').css 'top', bg_offset(1800)
@@ -151,6 +140,18 @@ jQuery ($) ->
           , 5000
 
   # loading respite, then acknowledgments
+  $('.flood').height (win_h_r + 100)
+  flood = () ->
+    flood_y = -(win_h_r) - 100
+    floody = setInterval () ->
+      flood_y = flood_y + 10
+      console.log flood_y
+      if flood_y is 10
+        clearInterval(floody)
+      else
+        $('.flood').css('bottom', flood_y)
+    , 800
+
 
   $('.bm-yes').click () ->
     $('.interact-hover-box').css 'transition', 'none'
@@ -162,3 +163,6 @@ jQuery ($) ->
             $('.bm-acknowledgments').addClass 'interact-showing'
             $('.bm-acknowledgments').animate { opacity: '1' }, 1000
         , 5000
+    setTimeout () ->
+      flood()
+    , 8000
