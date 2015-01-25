@@ -70,12 +70,12 @@
       $('.interact-hover-box').css('transition', 'none');
       return $('.fm-create-delete, .interact-hover-box').animate({
         opacity: '0'
-      }, 1000, function() {
+      }, 2000, function() {
         $('.fm-keyboard').addClass('interact-showing');
         box_hover($('.fm-keyboard-keys-uppercase').children().first());
         return $('.fm-keyboard, .interact-hover-box').animate({
           opacity: '1'
-        }, 1000, function() {
+        }, 2000, function() {
           return $('.interact-hover-box').css('transition', 'all 0.2s');
         });
       });
@@ -103,13 +103,13 @@
         $('.interact-hover-box').css('transition', 'none');
         return $('.fm-keyboard, .interact-hover-box').animate({
           opacity: 0
-        }, 1000, function() {
+        }, 2000, function() {
           $('.fm-keyboard').hide();
           $('.fm-creating').addClass('interact-showing');
           $('.interact-hover-box').css('display', 'none');
           return $('.fm-creating, .interact-hover-box').animate({
             opacity: 1
-          }, 1000, function() {
+          }, 2000, function() {
             var counter, ellipses;
             counter = 0;
             ellipses = setInterval(function() {
@@ -121,12 +121,12 @@
             return setTimeout(function() {
               return $('.fm-creating').animate({
                 opacity: '0'
-              }, 1000, function() {
+              }, 2000, function() {
                 $('.fm-title').addClass('interact-showing');
                 $('.fm-title').animate({
                   opacity: '1'
-                }, 1000);
-                $('.content, .back-matter').fadeIn(1000);
+                }, 2000);
+                $('.content, .back-matter').fadeIn(2000);
                 return clearInterval(ellipses);
               });
             }, 5000);
@@ -140,7 +140,6 @@
       flood_y = -win_h_r - 198;
       return floody = setInterval(function() {
         flood_y = flood_y + 10;
-        console.log(flood_y);
         if (flood_y >= 10) {
           return clearInterval(floody);
         } else {

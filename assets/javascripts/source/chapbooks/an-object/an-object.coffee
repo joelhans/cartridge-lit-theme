@@ -86,10 +86,10 @@ jQuery ($) ->
   # loading keyboard
   $('.fm-create').click () ->
     $('.interact-hover-box').css 'transition', 'none'
-    $('.fm-create-delete, .interact-hover-box').animate { opacity: '0' }, 1000, () ->
+    $('.fm-create-delete, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
       $('.fm-keyboard').addClass 'interact-showing'
       box_hover($('.fm-keyboard-keys-uppercase').children().first())
-      $('.fm-keyboard, .interact-hover-box').animate { opacity: '1' }, 1000, () ->
+      $('.fm-keyboard, .interact-hover-box').animate { opacity: '1' }, 2000, () ->
         $('.interact-hover-box').css 'transition', 'all 0.2s'
 
   # keyboard functions
@@ -119,11 +119,11 @@ jQuery ($) ->
     else
       $('.fm-player-name').html $('.fm-textarea').html()
       $('.interact-hover-box').css 'transition', 'none'
-      $('.fm-keyboard, .interact-hover-box').animate { opacity: 0 }, 1000, () ->
+      $('.fm-keyboard, .interact-hover-box').animate { opacity: 0 }, 2000, () ->
         $('.fm-keyboard').hide()
         $('.fm-creating').addClass 'interact-showing'
         $('.interact-hover-box').css 'display', 'none'
-        $('.fm-creating, .interact-hover-box').animate { opacity: 1 }, 1000, () ->
+        $('.fm-creating, .interact-hover-box').animate { opacity: 1 }, 2000, () ->
           counter = 0
           ellipses = setInterval () ->
             number = new Array(counter + 1).join('.')
@@ -132,10 +132,10 @@ jQuery ($) ->
           , 300
 
           setTimeout () ->
-            $('.fm-creating').animate { opacity: '0' }, 1000, () ->
+            $('.fm-creating').animate { opacity: '0' }, 2000, () ->
               $('.fm-title').addClass 'interact-showing'
-              $('.fm-title').animate { opacity: '1' }, 1000
-              $('.content, .back-matter').fadeIn 1000
+              $('.fm-title').animate { opacity: '1' }, 2000
+              $('.content, .back-matter').fadeIn 2000
               clearInterval(ellipses)
           , 5000
 
@@ -145,7 +145,6 @@ jQuery ($) ->
     flood_y = -(win_h_r) - 198
     floody = setInterval () ->
       flood_y = flood_y + 10
-      console.log flood_y
       if flood_y >= 10
         clearInterval(floody)
       else
