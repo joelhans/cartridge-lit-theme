@@ -26,6 +26,7 @@
     $('.bg-forest-two').css('top', bg_offset(7670));
     $('.bg-girl-two').css('top', bg_offset(7340));
     $('.bg-girl-portal-two').css('top', bg_offset(7280));
+    $('.bg-uptaten').css('top', bg_offset(7860));
     $('.bg-girl-three').css('top', bg_offset(7830));
     $('.bg-girl-portal-three').css('top', bg_offset(7770));
     $('.bg-girl-four').css('top', bg_offset(8420));
