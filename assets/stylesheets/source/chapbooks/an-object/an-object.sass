@@ -44,46 +44,245 @@ html
   box-sizing: inherit
 
 body
+  position: relative
   margin: 0
-  background: rgba(4,0,1,1)
-  overflow-x: hidden
-  background: url($path+'background.png')
+  background: white
+  overflow: hidden
+
+/*
+ * BACKGROUNDS
+ */
+
+.object-bg
+  position: absolute
+  left: 50%
+  @include transform(translate(-50%, 0%))
+  width: 3000px
+
+.bg-ocean
+  top: 0px
+  height: 4000px
+  background: url($path+'bg_ocean.png')
+
+.bg-ocean-beach
+  height: 320px
+  background: url($path+'bg_ocean_beach.png')
+  // background-size: 320px 320px
+
+.bg-beach
+  height: 3000px
+  background: url($path+'bg_beach.png')
+
+.bg-village-whealbrook
+  height: 1130px
+  background: url($path+'bg_village_whealbrook.png')
+
+.bg-forest-trans-up-one
+  height: 320px
+  background: url($path+'bg_forest_trans_up.png')
+
+.bg-forest-one
+  height: 640px
+  background: url($path+'bg_forest.png')
+
+.bg-forest-trans-down-one
+  height: 320px
+  background: url($path+'bg_forest_trans_down.png')
+
+.bg-snow-trans
+  height: 960px
+  background: url($path+'bg_snow_trans.png')
+
+.bg-snow
+  height: 20000px
+  background: url($path+'bg_snow.png')
+
+.bg-village-roundbeck
+  height: 2500px
+  background: url($path+'bg_village_roundbeck.png')
+
+.bg-forest-trans-up-two
+  height: 320px
+  background: url($path+'bg_forest_trans_up.png')
+
+.bg-forest-two
+  height: 1790px
+  background: url($path+'bg_forest.png')
+
+.bg-girl-one
+  width: 160px
+  height: 200px
+  @include transform(translate(460px, 0%))
+  background: url($path+'bg_girl_base.png')
+
+.bg-girl-portal-one
+  width: 320px
+  height: 320px
+  @include transform(translate(380px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-girl-two
+  width: 160px
+  height: 200px
+  @include transform(translate(-620px, 0%))
+  background: url($path+'bg_girl_light.png')
+
+.bg-girl-portal-two
+  width: 320px
+  height: 320px
+  @include transform(translate(-700px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-uptaten
+  width: 1280px
+  height: 1280px
+  @include transform(translate(20px, 0%))
+  background: url($path+'bg_uptaten.png')
+
+.bg-girl-three
+  width: 160px
+  height: 200px
+  @include transform(translate(460px, 0%))
+  background: url($path+'bg_girl_knife.png')
+
+.bg-girl-portal-three
+  width: 320px
+  height: 320px
+  @include transform(translate(380px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-girl-four
+  width: 160px
+  height: 200px
+  @include transform(translate(-620px, 0%))
+  background: url($path+'bg_girl_water.png')
+
+.bg-girl-portal-four
+  width: 320px
+  height: 320px
+  @include transform(translate(-700px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-girl-five
+  width: 160px
+  height: 200px
+  @include transform(translate(460px, 0%))
+  background: url($path+'bg_girl_ghost.png')
+
+.bg-girl-portal-five
+  width: 320px
+  height: 320px
+  @include transform(translate(380px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-girl-six
+  width: 160px
+  height: 200px
+  @include transform(translate(-620px, 0%))
+  background: url($path+'bg_girl_ribbon.png')
+
+.bg-girl-portal-six
+  width: 320px
+  height: 320px
+  @include transform(translate(-700px, 0%))
+  background: url($path+'bg_girl_portal.png')
+
+.bg-forest-three
+  height: 640px
+  background: url($path+'bg_forest.png')
+
+.bg-forest-trans-down-two
+  height: 320px
+  background: url($path+'bg_forest_trans_down.png')
+
+.bg-village-whealbrook-two
+  height: 1650px
+  background: url($path+'bg_village_whealbrook.png')
+
+.bg-snow-trans-down
+  height: 960px
+  background: url($path+'bg_snow_trans_down.png')
+
+.bg-snow-trans-down-two
+  height: 320px
+  background: url($path+'bg_snow_trans_down_two.png')
+
+.bg-grass
+  height: 10000px
+  background: url($path+'bg_grass.png')
+
+.bg-grass-river
+  height: 320px
+  background: url($path+'bg_grass_river.png'), url($path+'bg_ocean.png')
+
+.bg-cave
+  height: 960px
+  background: url($path+'bg_cave.png')
+  @include transform(translate(-950px, 0%))
+
+.bg-cave-mouth
+  width: 320px
+  height: 320px
+  background: url($path+'bg_cave_mouth.png')
+  @include transform(translate(-650px, 0%))
+
+.bg-cave-int
+  height: 10000px
+  background: url($path+'bg_cave_int.png')
+
+.bg-fadeout
+  height: 3000px
+  background: url($path+'bg_fadeout.png')
+
+.bg-faded
+  height: 3000px
+  background: rgba(39,39,41,1)
+
+/*
+ * INTERACTIONS
+ */
+
+.interact-hover-box
+  position: absolute
+  width: 0
+  height: 0
+  border: 2px solid black
+  border-radius: 3px
+  z-index: 3
+  transition: all 0.2s
+  pointer-events: none
+
+.interact-option
+  position: relative
+  cursor: pointer
+  text-align: center
+  z-index: 3
+
+.interact-option-noselect
+  cursor: not-allowed
+  text-decoration: line-through
+  text-align: center
+
+.interact-showing
+  visibility: visible !important
 
 /*
  * FRONT MATTER
  */
 
 .front-matter
+  position: relative
   height: 800px
 
 .front-matter p, .front-matter span
   @include libre(1)
   color: $dgray
 
-.fm-hover-box
-  position: absolute
-  width: 0
-  height: 0
-  border: 2px solid black
-  border-radius: 3px
-  z-index: 2
-  transition: all 0.2s
-
-.fm-option
-  position: relative
-  cursor: pointer
-  text-align: center
-  z-index: 3
-
-.fm-option-noselect
-  cursor: not-allowed
-  text-decoration: line-through
-  text-align: center
-
 .fm-create-delete, .fm-keyboard, .fm-creating, .fm-title
   position: absolute
+  top: 50%
   left: 50%
-  margin: 14rem auto 0 auto
+  @include transform(translate(-50%, -50%))
   padding: 3rem 5rem 3rem 5rem
   background: rgba(230,230,240,1)
 
@@ -91,14 +290,10 @@ body
   opacity: 0
   visibility: hidden
 
-.fm-showing
-  visibility: visible
-
 /* create/delete */
 .fm-create-delete
   width: 460px
   height: 240px
-  margin-left: -230px
   padding: 5rem 5rem 3rem 5rem
   background: url($path+'fm-create-delete.png')
 
@@ -109,9 +304,9 @@ body
 .fm-keyboard
   width: 840px
   height: 400px
-  margin-left: -420px
   padding: 5rem 5rem 3rem 5rem
   background: url($path+'fm-keyboard.png')
+  list-style: none
 
   .fm-textarea
     height: 38px
@@ -126,8 +321,6 @@ body
 
   .fm-enter-name-please
     color: $red
-
-  list-style: none
 
   ul.fm-keyboard-keys-uppercase
     float: left
@@ -157,7 +350,6 @@ body
 .fm-creating
   width: 500px
   height: 290px
-  margin-left: -250px
   padding: 4.5rem 5rem 3rem 5rem
   background: url($path+'fm-creating.png')
 
@@ -165,8 +357,6 @@ body
 .fm-title
   width: 740px
   height: 340px
-  margin-left: -370px
-  margin-bottom: 10rem
   padding: 4.5rem 1rem 3rem 11rem
   background: url($path+'fm-title.png')
 
@@ -178,7 +368,7 @@ body
     margin-top: 1rem
 
 /*
- * FRONT MATTER
+ * CONTENT
  */
 
 .content
@@ -188,13 +378,16 @@ body
 
 .container
   @include container(70em)
+  margin-top: 10rem
 
 .content article
   @include span(8 of 12)
   @include push(2)
   @include gutters(10em)
+  position: relative
   padding-top: 4rem
-  padding-bottom: 2rem
+  padding-bottom: 6rem
+  margin-bottom: 40rem
   background: $lgray
 
   h1
@@ -202,43 +395,107 @@ body
     text-align: center
     margin-bottom: 2rem
 
+  h2
+    @include libre(1.2)
+    text-align: center
+    text-transform: uppercase
+    margin: 3rem auto 2rem auto
+
   p
     @include libre(1)
     line-height: 1.8rem
 
-.tease-date
-  position: relative
-  padding: 12rem 0 16rem 0
+/*
+ * INDIVIDUAL PIECES
+ */
 
-  text-align: center
-  background: $lgray
-  z-index: 3
-
-  h1
-    @include libre(4)
-
-  .phoenix-down
-    width: 200px
-    height: 200px
-    display: block
-    margin: 6rem auto 2rem auto
-    border-radius: 50%
-    background: $purple
-
-    img
-      position: relative
-      top: 23px
-      width: 80px
-
-  h2
-    @include ubuntu(2.4)
-    color: $red
-
-.story-mask
+/* Uptaten Towers */
+.uptaten-towers
   position: absolute
-  top: 200px
-  left: 0
-  width: 100%
-  height: 800px
-  background: url($path+'story-mask.png')
+  top: 1207px
+  right: -357px
+
+/* Coburg Castle */
+.coburg-castle
+  position: absolute
+  top: 1599px
+  left: -357px
+
+/*
+ * BACK MATTER
+ */
+
+.back-matter
+  display: none
+  position: relative
+  min-height: 800px
   z-index: 2
+
+.bm-continue, .bm-sure, .bm-respite, .bm-acknowledgments
+  position: absolute
+  top: 50%
+  left: 50%
+  @include transform(translate(-50%, -50%))
+  padding: 3rem 5rem 3rem 5rem
+
+.bm-sure, .bm-respite, .bm-acknowledgments
+  opacity: 0
+  visibility: hidden
+
+.bm-continue
+  width: 500px
+  height: 290px
+  padding: 5.5rem 5rem 3rem 5rem
+  background: url($path+'bm-continue.png')
+
+  ul.bm-continue-options
+    clear: both
+    text-align: center
+
+    li
+      display: inline-block
+      padding: 4px 8px 4px 8px
+      &:first-of-type
+        margin-right: 2rem
+
+.bm-sure
+  width: 500px
+  height: 290px
+  padding: 6.5rem 5rem 3rem 5rem
+  background: url($path+'bm-sure.png')
+
+  ul.bm-sure-options
+    clear: both
+    text-align: center
+
+    li
+      display: inline-block
+      padding: 4px 8px 4px 8px
+      &:first-of-type
+        margin-right: 2rem
+
+.bm-respite
+  width: 500px
+  height: 290px
+  padding: 7.5rem 5rem 3rem 5rem
+  background: url($path+'bm-respite.png')
+
+.bm-acknowledgments
+  width: 940px
+  height: 800px
+  padding: 4.5rem 11rem 3rem 11rem
+  h1
+    margin-bottom: 2rem
+  h1, p
+    color: white
+    text-shadow: 2px 2px 1px black
+
+.flood
+  position: absolute
+  left: 50%
+  bottom: -2000px
+  @include transform(translate(-50%, 0%))
+  width: 3000px
+  height: 2000px
+  background: url($path+'bg_ocean_fadein.png') repeat-x, url($path+'bg_ocean.png') repeat
+  z-index: 1
