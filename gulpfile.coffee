@@ -28,6 +28,22 @@ img =
 
 ############################################################
 
+# Reload gulp itself on gulpfile change.
+# This is weird/experimental.
+spawn = require('child_process').spawn;
+gulp.task 'auto-reload', () ->
+	process = null
+
+	restart = () ->
+		if (process)
+			process.kill()
+
+		process = spawn('gulp', ['default'], {stdio: 'inherit'})
+
+	gulp.watch('gulpfile.coffee', restart)
+	restart()
+
+
 # Start the livereload server.
 # gulp.task 'livereload', ->
 #   livereload.listen()
