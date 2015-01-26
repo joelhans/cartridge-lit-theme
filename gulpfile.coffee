@@ -78,7 +78,9 @@ gulp.task 'img', () ->
 
 gulp.task 'php', () ->
   return gulp.src('./')
+    # .pipe cachebust {type: 'timestamp'}
     .pipe changed './', {extension: '.php'}
+    .pipe gulp.dest php.src
     .pipe livereload()
 
 gulp.task 'default', ['sass', 'js', 'watch']
