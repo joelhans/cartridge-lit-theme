@@ -142,7 +142,7 @@ jQuery ($) ->
   # loading respite, then acknowledgments
   $('.flood').height (win_h_r + 200)
   flood = () ->
-    flood_y = -(win_h_r) - 198
+    flood_y = -(win_h_r) - 200
     floody = setInterval () ->
       flood_y = flood_y + 10
       if flood_y >= 10
@@ -152,34 +152,44 @@ jQuery ($) ->
     , 800
 
   sure_showing = false
+  animating = false
   $('.bm-yes').click () ->
+    if $('.bm-continue, .bm-sure').is ':animated'
+      return false
+    else
+      if sure_showing is false
+        $('.interact-hover-box').css 'transition', 'none'
+        animating = true
+        $('.bm-continue, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
+          $('.bm-sure').addClass 'interact-showing'
+          box_hover($('.bm-sure-options').children().first())
+          $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000, () ->
+            console.log 'Sure opened.'
+            sure_showing = true
+            animating = false
 
-    if sure_showing is false
-      $('.interact-hover-box').css 'transition', 'none'
-      $('.bm-continue, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
-        $('.bm-sure').addClass 'interact-showing'
-        box_hover($('.bm-sure-options').children().first())
-        $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000, () ->
-          console.log 'Sure opened.'
-          sure_showing = true
-
-    else if sure_showing is true
-      $('.interact-hover-box').css 'transition', 'none'
-      $('.bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
-        $('.bm-sure').addClass 'interact-showing'
-        box_hover($('.bm-sure-options').children().first())
-        $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000
+      else if sure_showing is true
+        $('.interact-hover-box').css 'transition', 'none'
+        $('.bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
+          $('.bm-sure').addClass 'interact-showing'
+          box_hover($('.bm-sure-options').children().first())
+          $('.bm-sure, .interact-hover-box').animate { opacity: '1' }, 2000, () ->
+            sure_showing = false
+            animating = false
 
   $('.bm-no').click () ->
-    $('.interact-hover-box').css 'transition', 'none'
-    $('.bm-continue, .bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
-      $('.bm-respite').addClass 'interact-showing'
-      $('.bm-respite').animate { opacity: '1' }, 2000, () ->
-        setTimeout () ->
-          $('.bm-respite').animate { opacity: '0' }, 2000, () ->
-            $('.bm-acknowledgments').addClass 'interact-showing'
-            $('.bm-acknowledgments').animate { opacity: '1' }, 2000
-        , 4000
-    setTimeout () ->
-      flood()
-    , 10000
+    if $('.bm-continue, .bm-sure').is ':animated'
+      return false
+    else
+      $('.interact-hover-box').css 'transition', 'none'
+      $('.bm-continue, .bm-sure, .interact-hover-box').animate { opacity: '0' }, 2000, () ->
+        $('.bm-respite').addClass 'interact-showing'
+        $('.bm-respite').animate { opacity: '1' }, 2000, () ->
+          setTimeout () ->
+            $('.bm-respite').animate { opacity: '0' }, 2000, () ->
+              $('.bm-acknowledgments').addClass 'interact-showing'
+              $('.bm-acknowledgments').animate { opacity: '1' }, 2000
+          , 4000
+      setTimeout () ->
+        flood()
+      , 10000

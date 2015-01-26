@@ -4,7 +4,7 @@
   reader_name = null;
 
   jQuery(function($) {
-    var bg_offset, box_hover, flood, offset, sure_showing, win_h, win_h_r;
+    var animating, bg_offset, box_hover, flood, offset, sure_showing, win_h, win_h_r;
     win_h = $(window).height();
     win_h_r = Math.round(win_h / 10) * 10;
     offset = win_h - ((win_h - 800) * 2);
@@ -137,7 +137,7 @@
     $('.flood').height(win_h_r + 200);
     flood = function() {
       var flood_y, floody;
-      flood_y = -win_h_r - 198;
+      flood_y = -win_h_r - 200;
       return floody = setInterval(function() {
         flood_y = flood_y + 10;
         if (flood_y >= 10) {
@@ -148,58 +148,72 @@
       }, 800);
     };
     sure_showing = false;
+    animating = false;
     $('.bm-yes').click(function() {
-      if (sure_showing === false) {
-        $('.interact-hover-box').css('transition', 'none');
-        return $('.bm-continue, .interact-hover-box').animate({
-          opacity: '0'
-        }, 2000, function() {
-          $('.bm-sure').addClass('interact-showing');
-          box_hover($('.bm-sure-options').children().first());
-          return $('.bm-sure, .interact-hover-box').animate({
-            opacity: '1'
+      if ($('.bm-continue, .bm-sure').is(':animated')) {
+        return false;
+      } else {
+        if (sure_showing === false) {
+          $('.interact-hover-box').css('transition', 'none');
+          animating = true;
+          return $('.bm-continue, .interact-hover-box').animate({
+            opacity: '0'
           }, 2000, function() {
-            console.log('Sure opened.');
-            return sure_showing = true;
+            $('.bm-sure').addClass('interact-showing');
+            box_hover($('.bm-sure-options').children().first());
+            return $('.bm-sure, .interact-hover-box').animate({
+              opacity: '1'
+            }, 2000, function() {
+              console.log('Sure opened.');
+              sure_showing = true;
+              return animating = false;
+            });
           });
-        });
-      } else if (sure_showing === true) {
-        $('.interact-hover-box').css('transition', 'none');
-        return $('.bm-sure, .interact-hover-box').animate({
-          opacity: '0'
-        }, 2000, function() {
-          $('.bm-sure').addClass('interact-showing');
-          box_hover($('.bm-sure-options').children().first());
+        } else if (sure_showing === true) {
+          $('.interact-hover-box').css('transition', 'none');
           return $('.bm-sure, .interact-hover-box').animate({
-            opacity: '1'
-          }, 2000);
-        });
+            opacity: '0'
+          }, 2000, function() {
+            $('.bm-sure').addClass('interact-showing');
+            box_hover($('.bm-sure-options').children().first());
+            return $('.bm-sure, .interact-hover-box').animate({
+              opacity: '1'
+            }, 2000, function() {
+              sure_showing = false;
+              return animating = false;
+            });
+          });
+        }
       }
     });
     return $('.bm-no').click(function() {
-      $('.interact-hover-box').css('transition', 'none');
-      $('.bm-continue, .bm-sure, .interact-hover-box').animate({
-        opacity: '0'
-      }, 2000, function() {
-        $('.bm-respite').addClass('interact-showing');
-        return $('.bm-respite').animate({
-          opacity: '1'
+      if ($('.bm-continue, .bm-sure').is(':animated')) {
+        return false;
+      } else {
+        $('.interact-hover-box').css('transition', 'none');
+        $('.bm-continue, .bm-sure, .interact-hover-box').animate({
+          opacity: '0'
         }, 2000, function() {
-          return setTimeout(function() {
-            return $('.bm-respite').animate({
-              opacity: '0'
-            }, 2000, function() {
-              $('.bm-acknowledgments').addClass('interact-showing');
-              return $('.bm-acknowledgments').animate({
-                opacity: '1'
-              }, 2000);
-            });
-          }, 4000);
+          $('.bm-respite').addClass('interact-showing');
+          return $('.bm-respite').animate({
+            opacity: '1'
+          }, 2000, function() {
+            return setTimeout(function() {
+              return $('.bm-respite').animate({
+                opacity: '0'
+              }, 2000, function() {
+                $('.bm-acknowledgments').addClass('interact-showing');
+                return $('.bm-acknowledgments').animate({
+                  opacity: '1'
+                }, 2000);
+              });
+            }, 4000);
+          });
         });
-      });
-      return setTimeout(function() {
-        return flood();
-      }, 10000);
+        return setTimeout(function() {
+          return flood();
+        }, 10000);
+      }
     });
   });
 

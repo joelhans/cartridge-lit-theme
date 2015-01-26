@@ -42,7 +42,22 @@ get_header(); ?>
   <!-- both chapbook announcements -->
   <?php if ( $featured_query->current_post == 1 ): ?>
 
-  <article class="featured-chap-1" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
+  <article class="featured-chap-1" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
+    <div class="chap-top">
+      <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">Read</a>
+    </div>
+    <div class="chap-bottom">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">
+          An Object You Cannot Lose
+        </a>
+      </h1>
+      <h2>by Sam Martone</h2>
+      <p><em>Cartridge Lit</em>'s second chapbook. Create an adventure log, visit Coburg Castle, try to remember your father.</p>
+    </div>
+  </article>
+
+  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>">Read</a>
     </div>
@@ -54,21 +69,6 @@ get_header(); ?>
       </h1>
       <h2>by Jess Jenkins</h2>
       <p>The first chapbook from <em>Cartridge Lit</em>. Get your fill of <em>Dark Souls</em> and then some.</p>
-    </div>
-  </article>
-
-  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
-    <div class="chap-top">
-      <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">Preview</a>
-    </div>
-    <div class="chap-bottom">
-      <h1>
-        <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">
-          An Object You Cannot Lose
-        </a>
-      </h1>
-      <h2>by Sam Martone</h2>
-      <p>The second <em>Cartridge Lit</em> chapbook, arriving January 26, 2015.</p>
     </div>
   </article>
 
