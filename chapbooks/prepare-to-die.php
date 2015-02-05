@@ -252,6 +252,15 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
         <p>All images (except "Who was the Magellan who cartographed this place") courtesy Duncan Harris and his website, <a href="http://deadendthrills.com/"><em>The Art of Gaming</em></a>. The art of this chapbook would not have been possible without his hard work and willingness to let others freely use the images he captured.</p>
 
+        <p>Did you enjoy reading this chapbook? Why not show your appreciation and send a few dollars the author's way? Help make more work like this possible. All funds will go directly to the author.</p>
+
+        <form style="text-align: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="STCCG4GHFZ7WJ">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
       </div>
 
     </div>

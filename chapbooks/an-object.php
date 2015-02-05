@@ -223,6 +223,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <p>Thanks as always to my writing buddies and trusted readers Lyndsey Reese and Rebecca King and to my parents for buying me that very first Game Boy.</p>
     <p>I am totally indebted to Brian Oliu and his video game writing, without which I don’t think I would’ve ever written <em>An Object You Cannot Lose</em>, or even considered it a possibility.</p>
     <p>The sections of this chapbook originally appeared in slightly different form in the following journals: “Open Water” as “Wake” in the <em>Diverse Arts Project Journal</em>, “The Village of Whealbrook” in <em>Corium Magazine</em>, “The Town of Roundbeck” in <em>decomP</em>, “Uptaten Towers” in <em>Hobart</em>, “The Village of Whealbrook (II)” in <em>elimae</em>, “Coburg Castle” in <em>Necessary Fiction</em> and “The Cave Where Your Father Dies” in <em>matchbook</em>.</p>
+    <p>&nbsp;</p>
+    <p>Did you enjoy reading this chapbook? Why not show your appreciation and send a few dollars the author's way? Help make more work like this possible. All funds will go directly to the author.</p>
+    <form style="text-align: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="STCCG4GHFZ7WJ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
   </section>
 
   </section>
