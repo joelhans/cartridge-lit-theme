@@ -7,6 +7,8 @@ jQuery ($) ->
   win_h = $(window).height()
   win_h_r = Math.round(win_h / 10) * 10
 
+  console.log win_h
+
   # position background image
   offset = win_h - ((win_h - 800) * 2)
   $('.an-object-background').css 'top', -(offset)
@@ -32,17 +34,17 @@ jQuery ($) ->
   # Uptaten Towers
   $('.bg-forest-trans-up-two').css 'top', bg_offset(7350)
   $('.bg-forest-two').css 'top', bg_offset(7670)
-  $('.bg-girl-two').css 'top', bg_offset(7340)
-  $('.bg-girl-portal-two').css 'top', bg_offset(7280)
+  $('.bg-girl-two').css 'top', bg_offset(7410)
+  $('.bg-girl-portal-two').css 'top', bg_offset(7350)
   $('.bg-uptaten').css 'top', bg_offset(7860)
-  $('.bg-girl-three').css 'top', bg_offset(7830)
-  $('.bg-girl-portal-three').css 'top', bg_offset(7770)
-  $('.bg-girl-four').css 'top', bg_offset(8420)
-  $('.bg-girl-portal-four').css 'top', bg_offset(8360)
-  $('.bg-girl-five').css 'top', bg_offset(8920)
-  $('.bg-girl-portal-five').css 'top', bg_offset(8860)
-  $('.bg-girl-six').css 'top', bg_offset(9420)
-  $('.bg-girl-portal-six').css 'top', bg_offset(9360)
+  $('.bg-girl-three').css 'top', bg_offset(7900)
+  $('.bg-girl-portal-three').css 'top', bg_offset(7840)
+  $('.bg-girl-four').css 'top', bg_offset(8510)
+  $('.bg-girl-portal-four').css 'top', bg_offset(8410)
+  $('.bg-girl-five').css 'top', bg_offset(9030)
+  $('.bg-girl-portal-five').css 'top', bg_offset(8970)
+  $('.bg-girl-six').css 'top', bg_offset(9530)
+  $('.bg-girl-portal-six').css 'top', bg_offset(9470)
   # The Village of Whealbrook (II)
   $('.bg-forest-three').css 'top', bg_offset(9460)
   $('.bg-forest-trans-down-two').css 'top', bg_offset(10100)
@@ -51,13 +53,13 @@ jQuery ($) ->
   $('.bg-snow-trans-down-two').css 'top', bg_offset(12260)
   $('.bg-grass').css 'top', bg_offset(11400)
   # Coburg Castle
-  $('.bg-grass-river').css 'top', bg_offset(13600)
+  $('.bg-grass-river').css 'top', bg_offset(13800)
   # The Cave Where Your Father Dies
-  $('.bg-cave').css 'top', bg_offset(14900)
-  $('.bg-cave-mouth').css 'top', bg_offset(14900)
-  $('.bg-cave-int').css 'top', bg_offset(15260)
-  $('.bg-fadeout').css 'top', bg_offset(16000)
-  $('.bg-faded').css 'top', bg_offset(19000)
+  $('.bg-cave').css 'top', bg_offset(15400)
+  $('.bg-cave-mouth').css 'top', bg_offset(15400)
+  $('.bg-cave-int').css 'top', bg_offset(15760)
+  $('.bg-fadeout').css 'top', bg_offset(16500)
+  $('.bg-faded').css 'top', bg_offset(19500)
 
   # set front-matter and back-matter heights
   $('.front-matter, .back-matter').height win_h
@@ -140,9 +142,9 @@ jQuery ($) ->
           , 5000
 
   # loading respite, then acknowledgments
-  $('.flood').height (win_h_r + 200)
+  $('.flood').height (win_h_r + 400)
   flood = () ->
-    flood_y = -(win_h_r) - 200
+    flood_y = -(win_h_r) - 400
     floody = setInterval () ->
       flood_y = flood_y + 10
       if flood_y >= 10
