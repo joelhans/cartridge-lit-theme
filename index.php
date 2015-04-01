@@ -89,6 +89,14 @@ get_header(); ?>
     </div>
   </article>
 
+  <article class="featured-sharkpack" >
+    <a href="http://sharkpackpoetry.com/valus-sigil/"></a>
+    <div class="sharkpack-left" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/sharkpack/sharkpack_left.jpg"; ?>');">
+    </div>
+    <div class="sharkpack-right" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/sharkpack/sharkpack_right.jpg"; ?>');">
+    </div>
+  </article>
+
   <!-- end chapbook announcements -->
   <?php endif; ?>
 
