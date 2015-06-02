@@ -15,7 +15,21 @@ get_header(); ?>
 
 <section class="post-featured">
 
-  <?php $featured_query = new WP_Query( 'posts_per_page=14' );
+  <article class="featured-issue" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <div class="issue-content">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/issue-vi/' ) ); ?>">
+          Issue VI: Scanlines
+        </a>
+      </h1>
+      <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
+      <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
+      <p>Russell. Hensley. Stabley-Conde.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-vi/' ) ); ?>">Read</a>
+    </div>
+  </article>
+
+  <?php $featured_query = new WP_Query( 'posts_per_page=13' );
   while ( $featured_query->have_posts() ) : $featured_query->the_post();
   $post_count = 'featured-'.($featured_query->current_post + 1) ?>
 
@@ -72,7 +86,7 @@ get_header(); ?>
     </div>
   </article>
 
-<?php elseif ( $featured_query->current_post == 5 ): ?>
+  <?php elseif ( $featured_query->current_post == 5 ): ?>
 
   <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
     <div class="print-left">
@@ -89,7 +103,6 @@ get_header(); ?>
     </div>
   </article>
 
-  <!-- end chapbook announcements -->
   <?php endif; ?>
 
   <?php endwhile; ?>
