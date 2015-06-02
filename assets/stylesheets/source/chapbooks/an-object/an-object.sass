@@ -48,6 +48,7 @@ body
   margin: 0
   background: white
   overflow: hidden
+  font-size: 16px
 
 /*
  * BACKGROUNDS
@@ -273,6 +274,7 @@ body
 .front-matter
   position: relative
   height: 800px
+  z-index: 2
 
 .front-matter p, .front-matter span
   @include libre(1)
@@ -357,7 +359,7 @@ body
 .fm-title
   width: 740px
   height: 340px
-  padding: 4.5rem 1rem 3rem 11rem
+  padding: 4.5rem 5rem 3rem 11rem
   background: url($path+'fm-title.png')
 
   h1
@@ -372,23 +374,25 @@ body
  */
 
 .content
-  display: none
+  // display: none
   position: relative
-  overflow: hidden
+  // overflow: hidden
 
 .container
   @include container(70em)
   margin-top: 10rem
 
 .content article
-  @include span(8 of 12)
-  @include push(2)
-  @include gutters(10em)
+  width: 100%
   position: relative
-  padding-top: 4rem
-  padding-bottom: 6rem
-  margin-bottom: 40rem
+
+.content article .text
+  position: relative
+  width: 747px
+  margin: 0 auto 40rem auto
+  padding: 4rem 4rem 6rem 4rem
   background: $lgray
+  z-index: 10
 
   h1
     @include montserrat(2.6)
@@ -409,16 +413,37 @@ body
  * INDIVIDUAL PIECES
  */
 
+/* Open Water */
+.content article .img-attach
+  height: 100%
+  z-index: 1
+
+.img-attach .bg
+  position: absolute
+  width: 3000px
+  @include transform(translate(-50%, 0%))
+
+.ocean
+  bottom: -100px
+  height: 4000px
+  background: url($path+'bg_ocean.png')
+  z-inbex: 1
+
+.ocean-beach
+  height: 320px
+  background: url($path+'bg_ocean_beach.png')
+  bottom: -350px
+
 /* Uptaten Towers */
 .uptaten-towers
   position: absolute
-  top: 1207px
+  top: 1298px
   right: -357px
 
 /* Coburg Castle */
 .coburg-castle
   position: absolute
-  top: 1599px
+  top: 1900px
   left: -357px
 
 /*
@@ -428,7 +453,7 @@ body
 .back-matter
   display: none
   position: relative
-  min-height: 800px
+  min-height: 1200px
   z-index: 2
 
 .bm-continue, .bm-sure, .bm-respite, .bm-acknowledgments
@@ -482,8 +507,8 @@ body
 
 .bm-acknowledgments
   width: 940px
-  height: 800px
-  padding: 4.5rem 11rem 3rem 11rem
+  height: auto
+  padding: 4.5rem 11rem 0rem 11rem
   h1
     margin-bottom: 2rem
   h1, p

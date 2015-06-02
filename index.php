@@ -15,7 +15,42 @@ get_header(); ?>
 
 <section class="post-featured">
 
-  <?php $featured_query = new WP_Query( 'posts_per_page=14' );
+  <!-- Is the page published yet? -->
+  <?php
+    $page = get_page_by_path('issue-razzle-dazzle',OBJECT,'page');
+    if ($page->post_status == 'publish') :
+  ?>
+
+  <article class="featured-issue" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <div class="issue-content">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
+          The <em>Razzle Dazze!</em> Temple Issue
+        </a>
+      </h1>
+      <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
+      <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
+      <p>Russell. Hensley. Stabley-Conde.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">Read</a>
+    </div>
+  </article>
+
+  <?php endif;?>
+
+  <!-- BEGIN FEATURED QUERIES -->
+  <?php
+  $args = array(
+    'posts_per_page' => 14,
+    'meta_query' => array(
+        array(
+            'key' => 'issue',
+            'compare' => 'NOT EXISTS'
+        )
+    )
+  );
+  $featured_query = new WP_Query( $args );
+
+  // $featured_query = new WP_Query( 'posts_per_page=14' );
   while ( $featured_query->have_posts() ) : $featured_query->the_post();
   $post_count = 'featured-'.($featured_query->current_post + 1) ?>
 
@@ -72,7 +107,7 @@ get_header(); ?>
     </div>
   </article>
 
-<?php elseif ( $featured_query->current_post == 5 ): ?>
+  <?php elseif ( $featured_query->current_post == 5 ): ?>
 
   <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
     <div class="print-left">
@@ -89,6 +124,7 @@ get_header(); ?>
     </div>
   </article>
 
+<<<<<<< HEAD
   <article class="featured-sharkpack" >
     <a href="http://sharkpackpoetry.com/valus-sigil/"></a>
     <div class="sharkpack-left" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/sharkpack/sharkpack_left.jpg"; ?>');">
@@ -98,9 +134,13 @@ get_header(); ?>
   </article>
 
   <!-- end chapbook announcements -->
+=======
+>>>>>>> develop
   <?php endif; ?>
 
   <?php endwhile; ?>
+
+  <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 
 </section>
 <!-- FEATURED -->

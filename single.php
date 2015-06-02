@@ -35,6 +35,14 @@ get_header(); ?>
     </aside>
     <?php endif; ?>
 
+    <?php if ( get_post_meta( $post->ID, 'issue', 'true' ) ): ?>
+    <aside class="issue-back">
+      <a href="<?php echo esc_url( home_url( get_post_meta( $post->ID, 'issue', true) ) ); ?>">
+        &larr; Back to the issue.
+      </a>
+    </aside>
+    <?php endif; ?>
+
   </article>
 
   <?php if ( has_category( 'airship' ) ): get_sidebar(); endif; ?>
