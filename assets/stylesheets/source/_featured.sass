@@ -394,31 +394,3 @@ $margin-height: 2rem
       background: transparentize($purple, 0.2)
       a
         opacity: 1
-
-  // print announcement
-  .featured-issue
-    @include span(12 of 12)
-    height: 300px
-    margin-top: 3rem
-    background: black
-    text-align: center
-    .issue-content
-      position: relative
-      top: 50%
-      @include transform(translateY(-50%))
-    h1 a
-      color: white
-      &:hover
-        color: $red
-    p
-      color: white
-      margin-bottom: 0rem
-      &:last-of-type
-        margin-bottom: 1.2rem
-    a.issue-bottom
-      position: relative
-      @include pixel-link(14, 1, white)
-      display: inline-block
-      transition: opacity 0.3s ease-in-out
-      &:hover
-        @include pixel-link(14, 1, $red)

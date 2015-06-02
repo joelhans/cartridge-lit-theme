@@ -8,15 +8,14 @@ get_header(); ?>
 <section class="issue-2015june">
 
   <section class="issue-header">
-    <h1>The <em>Where in the World is Carmen Sandiego</em> Temple Issue</h1>
+    <h1>The <em>Razzle Dazze!</em> Temple Issue</h1>
     <h2>June 3, 2015</h2>
   </section>
 
   <?php
   $args = array(
     'post_type'   => 'post',
-    'meta_value'    => 'issue-one',
-    'post_status' => 'future'
+    'meta_value'    => 'razzle-dazzle'
   );
   $the_query = new WP_Query( $args );
   ?>

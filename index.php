@@ -15,21 +15,42 @@ get_header(); ?>
 
 <section class="post-featured">
 
+  <!-- Is the page published yet? -->
+  <?php
+    $page = get_page_by_path('issue-razzle-dazzle',OBJECT,'page');
+    if ($page->post_status == 'publish') :
+  ?>
+
   <article class="featured-issue" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-one/' ) ); ?>">
-          The Water Temple Issue
+        <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
+          The <em>Razzle Dazze!</em> Temple Issue
         </a>
       </h1>
       <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
       <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
       <p>Russell. Hensley. Stabley-Conde.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-one/' ) ); ?>">Read</a>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">Read</a>
     </div>
   </article>
 
-  <?php $featured_query = new WP_Query( 'posts_per_page=13' );
+  <?php endif;?>
+
+  <!-- BEGIN FEATURED QUERIES -->
+  <?php
+  $args = array(
+    'posts_per_page' => 14,
+    'meta_query' => array(
+        array(
+            'key' => 'issue',
+            'compare' => 'NOT EXISTS'
+        )
+    )
+  );
+  $featured_query = new WP_Query( $args );
+
+  // $featured_query = new WP_Query( 'posts_per_page=14' );
   while ( $featured_query->have_posts() ) : $featured_query->the_post();
   $post_count = 'featured-'.($featured_query->current_post + 1) ?>
 
