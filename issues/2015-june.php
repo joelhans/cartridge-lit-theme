@@ -7,40 +7,41 @@ get_header(); ?>
 
 <section class="issue-2015june">
 
+  <section class="issue-header">
+    <h1>The <em>Where in the World is Carmen Sandiego</em> Temple Issue</h1>
+    <h2>June 3, 2015</h2>
+  </section>
+
   <?php
-  // $args = array(
-  //     'orderby' => 'title',
-  //     'order' => 'ASC',
-  //     'meta_query' => array(
-  //         array(
-  //             'key' => 'issue',
-  //             'value' => '2015june',
-  //             'compare' => 'LIKE'
-  //         )
-  //     )
-  // );
   $args = array(
-  	'meta_key'   => 'issue',
-  	'meta_value' => '2015june'
+    'post_type'   => 'post',
+    'meta_value'    => 'issue-one',
+    'post_status' => 'future'
   );
-  $issue_query = new WP_Query( 'meta_value=2015june' );
-  while ( $issue_query->have_posts() ) : $issue_query->the_post();
+  $the_query = new WP_Query( $args );
   ?>
 
-  <article class="issue-piece">
-    <h1>
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <?php the_title(); ?>
-      </a>
-    </h1>
-    <p class="issue-piece-author"><?php echo get_post_meta($post->ID, 'writer', true); ?></p>
-    <p class="issue-piece-excerpt"><?php the_excerpt(); ?></p>
-    <a class="issue-bottom" href="<?php echo esc_url( home_url( '/2015/06/03/mountain-simulator/' ) ); ?>">Read</a>
-  </article>
+  <?php if( $the_query->have_posts() ): ?>
+    <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-  <?php endwhile; ?>
+      <article class="issue-piece">
+        <h1 class="issue-piece-title">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </h1>
+        <p class="issue-piece-author"><?php echo get_post_meta($post->ID, 'writer', true); ?></p>
+        <p class="issue-piece-genre"><?php the_category(', '); ?></p>
+        <p class="issue-piece-excerpt">
+          <?php echo get_post_meta($post->ID, 'issue-tease', true); ?>
+          <a class="issue-piece-read" href="<?php the_permalink(); ?>">Read</a>
+        </p>
+      </article>
+
+    <?php endwhile; ?>
+  <?php endif; ?>
+  <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 
 </section>
-<!-- FEATURED -->
 
 <?php get_footer(); ?>

@@ -1,2 +1,90 @@
+/*
+ * JUNE 2015
+ */
+
+$one-blue : #0B486B
+$one-teal : #3B8686
+$one-seafoam : #A8DBA8
+$one-yellow : #CFF09E
+// http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
+
 body[class*="issues2015-june"]
   background: black
+  color: white
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $one-teal
+
+    h2
+      @include ubuntu(1.2)
+      color: $one-yellow
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 2rem
+
+    .issue-piece-title
+      @include crimson(2)
+      line-height: 2.2rem
+      margin-bottom: 0.6rem
+      a
+        color: $one-seafoam
+        &:hover
+          color: $one-yellow
+
+    .issue-piece-author
+      display: inline-block
+      @include ubuntu(1.1)
+      color: $one-yellow
+
+    .issue-piece-genre
+      display: inline-block
+      margin-left: 2rem
+      @include ubuntu(1.1)
+      a
+        color: white
+        &:hover
+          color: $one-yellow
+
+    .issue-piece-excerpt
+      position: relative
+      height: 200px
+      overflow: hidden
+      color: white
+
+      // .issue-piece-mask
+      //   position: absolute
+      //   bottom: 0
+      //   width: 100%
+      //   height: 100px
+      //   background: linear-gradient(to bottom, transparentize(black, 1) 0%, black 90%)
+
+    a.issue-piece-read
+      position: relative
+      top: -3px
+      @include pixel-link(10, 0.6, white)
+      display: inline-block
+      margin-left: 1rem
+      padding: 0.2rem 0.3rem
+      &:hover
+        @include pixel-link(10, 0.6, $one-yellow)
+        padding: 0.2rem 0.3rem
+
+.issue-back
+  @include span(12 of 12)
+  margin-top: 1.6rem
+  a
+    position: relative
+    @include pixel-link(18, 1.1, $red)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(18, 1.1, $purple)

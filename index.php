@@ -18,14 +18,14 @@ get_header(); ?>
   <article class="featured-issue" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-vi/' ) ); ?>">
-          Issue VI: Scanlines
+        <a href="<?php echo esc_url( home_url( '/issue-one/' ) ); ?>">
+          The Water Temple Issue
         </a>
       </h1>
       <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
       <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
       <p>Russell. Hensley. Stabley-Conde.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-vi/' ) ); ?>">Read</a>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-one/' ) ); ?>">Read</a>
     </div>
   </article>
 
@@ -106,6 +106,8 @@ get_header(); ?>
   <?php endif; ?>
 
   <?php endwhile; ?>
+
+  <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 
 </section>
 <!-- FEATURED -->
