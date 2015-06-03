@@ -25,7 +25,7 @@ get_header(); ?>
     <div class="issue-content">
       <h1>
         <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
-          The <em>Razzle Dazze!</em> Temple Issue
+          The <em>Razzle Dazzle!</em> Temple Issue
         </a>
       </h1>
       <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
