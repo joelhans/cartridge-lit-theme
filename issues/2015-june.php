@@ -15,6 +15,7 @@ get_header(); ?>
   <?php
   $args = array(
     'post_type'   => 'post',
+    'posts_per_page' => 15,
     'meta_value'    => 'razzle-dazzle'
   );
   $the_query = new WP_Query( $args );
