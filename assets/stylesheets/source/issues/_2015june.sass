@@ -9,35 +9,34 @@ $one-yellow : #CFF09E
 // http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
 
 // FRONT PAGE
-.post-featured
-  .featured-issue
-    @include span(12 of 12)
-    height: 300px
-    margin-top: 3rem
-    background: black
-    text-align: center
-    .issue-content
-      position: relative
-      top: 50%
-      @include transform(translateY(-50%))
-    h1
-      @include crimson(3)
-      a
-        color: $one-teal
-        &:hover
-          color: $one-yellow
-    p
-      color: white
-      margin-bottom: 0rem
-      &:last-of-type
-        margin-bottom: 1.2rem
-    a.issue-bottom
-      position: relative
-      @include pixel-link(14, 1, white)
-      display: inline-block
-      transition: opacity 0.3s ease-in-out
+.post-featured .featured-issue, .issue-razzle-dazzle
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: black
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    a
+      color: $one-teal
       &:hover
-        @include pixel-link(14, 1, $one-yellow)
+        color: $one-yellow
+  p
+    color: white
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, white)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $one-yellow)
 
 // ISSUE PAGE
 
