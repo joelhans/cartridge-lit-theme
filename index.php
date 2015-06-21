@@ -42,15 +42,19 @@ get_header(); ?>
   $args = array(
     'posts_per_page' => 14,
     'meta_query' => array(
+      'relation' => 'OR',
         array(
             'key' => 'issue',
             'compare' => 'NOT EXISTS'
+        ),
+        array(
+            'key' => 'issue',
+            'value' => ''
         )
     )
   );
   $featured_query = new WP_Query( $args );
 
-  // $featured_query = new WP_Query( 'posts_per_page=14' );
   while ( $featured_query->have_posts() ) : $featured_query->the_post();
   $post_count = 'featured-'.($featured_query->current_post + 1) ?>
 
