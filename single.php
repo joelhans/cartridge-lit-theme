@@ -37,7 +37,7 @@ get_header(); ?>
 
     <?php if ( get_post_meta( $post->ID, 'issue', 'true' ) ): ?>
     <aside class="issue-back">
-      <a href="<?php echo esc_url( home_url( get_post_meta( $post->ID, 'issue', true) ) ); ?>">
+      <a href="<?php echo esc_url( home_url( 'issue-'.get_post_meta( $post->ID, 'issue', true) ) ); ?>">
         &larr; Back to the issue.
       </a>
     </aside>
