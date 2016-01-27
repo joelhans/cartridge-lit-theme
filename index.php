@@ -30,7 +30,7 @@ get_header(); ?>
       </h1>
       <p>Donora Hillard-Hare. Ron Riekki. Aubrey Hirsch. Tabitha Blankenbiller.</p>
       <p>Jenni B. Baker. Marissa Landrigan. Jess Dutschmann. Phillip Spotswood.</p>
-      <p>Anna Lea Jancewicz. Jerrold Yam. Marissa Landrigan.</p>
+      <p>Anna Lea Jancewicz. Jerrold Yam. Aiko Grieg.</p>
       <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-inter-sections/' ) ); ?>">Read</a>
     </div>
   </article>
