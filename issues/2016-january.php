@@ -9,7 +9,7 @@ get_header(); ?>
 
   <section class="issue-header">
     <h1>The <em>Inter++sections</em> Temple Issue</h1>
-    <h2>January 25, 2016</h2>
+    <h2>January 27, 2016</h2>
   </section>
 
   <?php
