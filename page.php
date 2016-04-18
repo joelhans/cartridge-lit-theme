@@ -44,15 +44,38 @@ get_header(); ?>
         <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd.jpg" />
         <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd_pixel.png" />
       </div>
-      <p><?php echo get_post_meta( $post->ID, 'justin-bio', true); ?></p>
+      <div class="masthead-bio">
+        <p>
+          <?php echo get_post_meta( $post->ID, 'justin-bio', true); ?>
+          <a class="masthead-twitter" href="https://twitter.com/JDaugherty1081">@JDaugherty1081</a>
+        </p>
+      </div>
     </div>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jh.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jh_pixel.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hans.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hans_pixel.jpg" />
       </div>
-      <p><?php echo get_post_meta( $post->ID, 'joel-bio', true); ?></p>
+      <div class="masthead-bio">
+        <p>
+          <?php echo get_post_meta( $post->ID, 'joel-bio', true); ?>
+          <a class="masthead-twitter" href="http://twitter.com/joelhans">@joelhans</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="masthead-editor">
+      <div class="masthead-images">
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/balaskovits.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/balaskovits_pixel.jpg" />
+      </div>
+      <div class="masthead-bio">
+        <p>
+          <?php echo get_post_meta( $post->ID, 'alison-bio', true); ?>
+          <a class="masthead-twitter" href="https://twitter.com/AABalaskovits">@AABalaskovits</a>
+        </p>
+      </div>
     </div>
 
     <?php else: ?>

@@ -113,7 +113,7 @@ get_header(); ?>
 
   <?php elseif ( $featured_query->current_post == 5 ): ?>
 
-  <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
+  <!-- <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
     <div class="print-left">
       <a href="<?php echo esc_url( home_url( '/print-anthology/' ) ); ?>">Pre-order</a>
     </div>
@@ -126,7 +126,7 @@ get_header(); ?>
       <h2>Arriving November 2015</h2>
       <p>A print anthology from <em>Cartridge Lit</em> and <em>FreezeRay Press</em>. Pre-order now.</p>
     </div>
-  </article>
+  </article> -->
 
   <?php endif; ?>
 
