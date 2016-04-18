@@ -17,21 +17,21 @@ get_header(); ?>
 
   <!-- Is the page published yet? -->
   <?php
-    $page = get_page_by_path('issue-razzle-dazzle',OBJECT,'page');
+    $page = get_page_by_path('issue-inter-sections',OBJECT,'page');
     if ($page->post_status == 'publish') :
   ?>
 
-  <article class="featured-issue" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+  <article class="featured-issue issue-inter-sections" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
-          The <em>Razzle Dazzle!</em> Temple Issue
+        <a href="<?php echo esc_url( home_url( '/issue-inter-sections/' ) ); ?>">
+          The <em>Inter++sections</em> Temple Issue
         </a>
       </h1>
-      <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
-      <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
-      <p>Russell. Hensley. Stabley-Conde.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">Read</a>
+      <p>Donora Hillard-Hare. Ron Riekki. Aubrey Hirsch. Tabitha Blankenbiller.</p>
+      <p>Jenni B. Baker. Marissa Landrigan. Jess Dutschmann. Phillip Spotswood.</p>
+      <p>Anna Lea Jancewicz. Jerrold Yam. Aiko Grieg.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-inter-sections/' ) ); ?>">Read</a>
     </div>
   </article>
 
@@ -119,12 +119,14 @@ get_header(); ?>
     </div>
     <div class="print-right">
       <h1>
-        <a href="<?php echo esc_url( home_url( '/print-anthology/' ) ); ?>">
-          Dangerous to Go Alone: An Anthology of Video Game Literature
+        <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
+          The <em>Razzle Dazzle!</em> Temple Issue
         </a>
       </h1>
-      <h2>Arriving November 2015</h2>
-      <p>A print anthology from <em>Cartridge Lit</em> and <em>FreezeRay Press</em>. Pre-order now.</p>
+      <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
+      <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
+      <p>Russell. Hensley. Stabley-Conde.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">Read</a>
     </div>
   </article> -->
 

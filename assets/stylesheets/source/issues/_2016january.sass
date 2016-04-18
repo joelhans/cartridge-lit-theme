@@ -1,20 +1,24 @@
 /*
- * JUNE 2015
+ * JANUARY 2016
  */
+
+$two-background    : #ECE7E1
+$two-primary       : #2E1130
+$two-secondary     : #4B4261
+$two-contrast      : #89B0C1
 
 $one-blue : #0B486B
 $one-teal : #3B8686
 $one-seafoam : #A8DBA8
 $one-yellow : #CFF09E
-// http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
 
 // FRONT PAGE
-.post-featured .featured-issue.issue-razzle-dazzle,
-.issue-razzle-dazzle
+.post-featured .featured-issue.issue-inter-sections,
+.issue-inter-sections
   @include span(12 of 12)
   height: 300px
   margin-top: 3rem
-  background: black
+  background: $two-background
   text-align: center
   .issue-content
     position: relative
@@ -23,27 +27,27 @@ $one-yellow : #CFF09E
   h1
     @include crimson(3)
     a
-      color: $one-teal
+      color: $two-primary
       &:hover
-        color: $one-yellow
+        color: $two-contrast
   p
-    color: white
+    color: $dgray
     margin-bottom: 0rem
     &:last-of-type
       margin-bottom: 1.2rem
   a.issue-bottom
     position: relative
-    @include pixel-link(14, 1, white)
+    @include pixel-link(14, 1, $two-secondary)
     display: inline-block
     transition: opacity 0.3s ease-in-out
     &:hover
-      @include pixel-link(14, 1, $one-yellow)
+      @include pixel-link(14, 1, $two-contrast)
 
 // ISSUE PAGE
 
-body[class*="issues2015-june"]
-  background: black
-  color: white
+body[class*="issues2016-january"]
+  background: $two-background
+  color: $dgray
 
   .issue-header
     @include span(12 of 12)
@@ -52,11 +56,11 @@ body[class*="issues2015-june"]
 
     h1
       @include crimson(3)
-      color: $one-teal
+      color: $two-primary
 
     h2
       @include ubuntu(1.2)
-      color: $one-yellow
+      color: $two-secondary
 
   article
     position: relative
@@ -69,59 +73,43 @@ body[class*="issues2015-june"]
       line-height: 2.2rem
       margin-bottom: 0.6rem
       a
-        color: $one-seafoam
+        color: $two-primary
         &:hover
-          color: $one-yellow
+          color: $two-contrast
 
     .issue-piece-author
       display: inline-block
       @include ubuntu(1.1)
-      color: $one-yellow
+      color: $two-secondary
 
     .issue-piece-genre
       display: inline-block
       margin-left: 2rem
       @include ubuntu(1.1)
       a
-        color: white
+        color: $two-contrast
         &:hover
-          color: $one-yellow
+          color: $two-secondary
 
     .issue-piece-excerpt
       position: relative
       height: 200px
       overflow: hidden
-      color: white
-
-      // .issue-piece-mask
-      //   position: absolute
-      //   bottom: 0
-      //   width: 100%
-      //   height: 100px
-      //   background: linear-gradient(to bottom, transparentize(black, 1) 0%, black 90%)
+      color: $dgray
 
     a.issue-piece-read
       position: relative
       top: -3px
-      @include pixel-link(10, 0.6, white)
+      @include pixel-link(10, 0.6, $two-primary)
       display: inline-block
       margin-left: 1rem
       padding: 0.2rem 0.3rem
       &:hover
-        @include pixel-link(10, 0.6, $one-yellow)
+        @include pixel-link(10, 0.6, $two-contrast)
         padding: 0.2rem 0.3rem
 
-
-.issue-back.back-razzle-dazzle
+.issue-back.back-inter-sections
   a
-    @include pixel-link(18, 1.1, $red)
+    @include pixel-link(18, 1.1, $two-primary)
     &:hover
-      @include pixel-link(18, 1.1, $purple)
-
-.work-full aside.issue-back
-  @include span(12 of 12)
-  margin-top: 4rem
-  a
-    position: relative
-    display: inline-block
-    transition: opacity 0.3s ease-in-out
+      @include pixel-link(18, 1.1, $two-contrast)
