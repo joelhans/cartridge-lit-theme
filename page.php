@@ -41,8 +41,8 @@ get_header(); ?>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/jd_pixel.png" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/daugherty.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/daugherty_pixel.jpg" />
       </div>
       <div class="masthead-bio">
         <p>

@@ -1,10 +1,8 @@
-
 .masthead-editor
   @include span(12 of 12)
   @include px-rem(margin-bottom, 4)
 
   .masthead-images
-    // max-width: 300px
     @include span(6 of 12)
     height: 300px
     display: block
@@ -25,9 +23,8 @@
     img:last-of-type
       opacity: 1
 
-    &:hover
-      img:first-of-type
-        opacity: 1
+    img:hover
+      opacity: 1
 
   div.masthead-bio
     @include span(6 of 12 last)
