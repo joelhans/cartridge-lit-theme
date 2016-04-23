@@ -7,6 +7,20 @@ get_header(); ?>
 
   <section class="page-full">
 
+    <article class="issue-solstice" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+      <div class="issue-content">
+        <h1>
+          <a href="<?php echo esc_url( home_url( '/issue-solstice/' ) ); ?>">
+            The <em>Solstice</em> Temple Issue
+          </a>
+        </h1>
+        <p>P. Scott Cunningham. Liam Swanson. Julia Madsen. Matthew Burnside. Sarah Merchant.</p>
+        <p>Mike Salisbury. Marlin M. Jenkins. Meg Eden. Riley Bingham.</p>
+        <p>Caolan Madden. Paul Crenshaw. Gabriel Ojeda-Sague. Catherine Kyle.</p>
+        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-solstice/' ) ); ?>">Read</a>
+      </div>
+    </article>
+
     <article class="issue-inter-sections" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">
         <h1>

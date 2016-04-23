@@ -21,17 +21,17 @@ get_header(); ?>
     if ($page->post_status == 'publish') :
   ?>
 
-  <article class="featured-issue issue-inter-sections" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+  <article class="featured-issue issue-solstice" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-inter-sections/' ) ); ?>">
-          The <em>Inter++sections</em> Temple Issue
+        <a href="<?php echo esc_url( home_url( '/issue-solstice/' ) ); ?>">
+          The <em>Solstice</em> Temple Issue
         </a>
       </h1>
-      <p>Donora Hillard-Hare. Ron Riekki. Aubrey Hirsch. Tabitha Blankenbiller.</p>
-      <p>Jenni B. Baker. Marissa Landrigan. Jess Dutschmann. Phillip Spotswood.</p>
-      <p>Anna Lea Jancewicz. Jerrold Yam. Aiko Grieg.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-inter-sections/' ) ); ?>">Read</a>
+      <p>P. Scott Cunningham. Liam Swanson. Julia Madsen. Matthew Burnside. Sarah Merchant.</p>
+      <p>Mike Salisbury. Marlin M. Jenkins. Meg Eden. Riley Bingham.</p>
+      <p>Caolan Madden. Paul Crenshaw. Gabriel Ojeda-Sague. Catherine Kyle.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-solstice/' ) ); ?>">Read</a>
     </div>
   </article>
 

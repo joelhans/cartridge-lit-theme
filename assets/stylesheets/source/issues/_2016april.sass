@@ -1,0 +1,110 @@
+/*
+ * JANUARY 2016
+ */
+
+$three-background    : #42405C
+$three-primary       : #C580A0
+$three-secondary     : #F2DECA
+$three-contrast      : #EABBBF
+
+// FRONT PAGE
+.post-featured .featured-issue.issue-solstice,
+.issue-solstice
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: $three-background
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    a
+      color: $three-primary
+      &:hover
+        color: $three-contrast
+  p
+    color: $three-contrast
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $three-secondary)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $three-contrast)
+
+// ISSUE PAGE
+
+body[class*="issues2016-april"]
+  background: $three-background
+  color: $dgray
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $three-primary
+
+    h2
+      @include ubuntu(1.2)
+      color: $three-secondary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 2rem
+
+    .issue-piece-title
+      @include crimson(2.6)
+      line-height: 2.2rem
+      margin-bottom: 0.6rem
+      a
+        color: $three-primary
+        &:hover
+          color: $three-contrast
+
+    .issue-piece-author
+      display: inline-block
+      @include ubuntu(1.1)
+      color: $three-secondary
+
+    .issue-piece-genre
+      display: inline-block
+      margin-left: 2rem
+      @include ubuntu(1.1)
+      a
+        color: $three-contrast
+        &:hover
+          color: $three-secondary
+
+    .issue-piece-excerpt
+      position: relative
+      height: 200px
+      overflow: hidden
+      color: $three-contrast
+
+    a.issue-piece-read
+      position: relative
+      top: -3px
+      @include pixel-link(10, 0.6, $three-primary)
+      display: inline-block
+      margin-left: 1rem
+      padding: 0.2rem 0.3rem
+      &:hover
+        @include pixel-link(10, 0.6, $three-contrast)
+        padding: 0.2rem 0.3rem
+
+.issue-back.back-solstice
+  a
+    @include pixel-link(18, 1.1, $three-primary)
+    &:hover
+      @include pixel-link(18, 1.1, $three-contrast)
