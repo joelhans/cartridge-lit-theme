@@ -2,10 +2,10 @@
  * JANUARY 2016
  */
 
-$three-background    : #42405C
-$three-primary       : #C580A0
-$three-secondary     : #F2DECA
-$three-contrast      : #EABBBF
+$three-background    : #373B44
+$three-primary       : #E1B866
+$three-secondary     : #DEE1B6
+$three-contrast      : #73C8A9
 
 // FRONT PAGE
 .post-featured .featured-issue.issue-solstice,
@@ -43,6 +43,7 @@ $three-contrast      : #EABBBF
 body[class*="issues2016-april"]
   background: $three-background
   color: $dgray
+  text-align: center
 
   .issue-header
     @include span(12 of 12)
@@ -59,27 +60,33 @@ body[class*="issues2016-april"]
 
   article
     position: relative
-    @include span(6 of 12)
-    @include push(3)
-    margin-bottom: 2rem
+    @include span(4 of 12 inside no-gutters)
+    height: 300px
+    padding: 2rem
+
+    div
+      display: block
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
 
     .issue-piece-title
       @include crimson(2.6)
       line-height: 2.2rem
-      margin-bottom: 0.6rem
+      margin-bottom: 2rem
       a
         color: $three-primary
         &:hover
           color: $three-contrast
 
     .issue-piece-author
-      display: inline-block
+      display: block
       @include ubuntu(1.1)
       color: $three-secondary
 
     .issue-piece-genre
-      display: inline-block
-      margin-left: 2rem
+      display: block
+      // margin-left: 2rem
       @include ubuntu(1.1)
       a
         color: $three-contrast
@@ -102,6 +109,55 @@ body[class*="issues2016-april"]
       &:hover
         @include pixel-link(10, 0.6, $three-contrast)
         padding: 0.2rem 0.3rem
+
+    .issue-piece-title a
+      color: #373B44
+      &:hover
+        color: #BD5532
+
+    .issue-piece-author
+      color: #BD5532
+
+    .issue-piece-genre a
+      color: #BD5532
+      &:hover
+        color: #373B44
+
+  article:nth-of-type(1), article:nth-of-type(6), article:nth-of-type(8), article:nth-of-type(10)
+    background: $three-primary
+
+    .issue-piece-author
+      color: $three-secondary
+
+    .issue-piece-genre a
+      color: $three-secondary
+      &:hover
+        color: #373B44
+
+  article:nth-of-type(2), article:nth-of-type(4), article:nth-of-type(9), article:nth-of-type(11)
+    background: $three-secondary
+
+    .issue-piece-author
+      color: $three-contrast
+
+    .issue-piece-genre a
+      color: $three-contrast
+      &:hover
+        color: #373B44
+
+  article:nth-of-type(3), article:nth-of-type(5), article:nth-of-type(7), article:nth-of-type(12), article:nth-of-type(13)
+    background: $three-contrast
+
+    .issue-piece-author
+      color: $three-secondary
+
+    .issue-piece-genre a
+      color: $three-secondary
+      &:hover
+        color: #373B44
+
+  article:last-of-type
+    margin-left: span(4 of 12 inside no-gutters)
 
 .issue-back.back-solstice
   a
