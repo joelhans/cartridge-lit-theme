@@ -1,0 +1,92 @@
+$yellow  : #ECD078
+$orange  : #D95B43
+$red     : #C02942
+$purple  : #542437
+$blue    : #53777A
+$lgray   : #999
+$dgray   : #303030
+$black   : rgba(4,0,1,1)
+$blackt  : rgba(4,0,1,0)
+
+$path : '../../../../images/chapbooks/prepare-to-die/'
+
+@import "../vendor/reset"
+@import "../vendor/bourbon/bourbon"
+@import "susy"
+@import "mixins"
+@import "typography"
+
+$susy: ( columns: 12, gutters: .5, gutter-position: inside )
+
+@import url(https://fonts.googleapis.com/css?family=VT323|Playfair+Display:400,400i,700)
+
+@font-face
+  font-family: 'VeniceClassic'
+  src: url('../../../../fonts/VeniceClassic.woff'), url('../../../../fonts/VeniceClassic.ttf')
+
+@mixin venice($size: 1, $weight: 400)
+  font-family: 'VeniceClassic', sans-serif
+  font-weight: $weight
+  @include font-size($size)
+  color: black
+
+@mixin VT($size: 1, $weight: 400)
+  font-family: 'VT323', sans-serif
+  font-weight: $weight
+  @include font-size($size)
+  color: black
+
+@mixin playfair($size: 1, $weight: 400)
+  font-family: 'Playfair Display', serif
+  font-weight: $weight
+  @include font-size($size)
+
+body
+  margin: 0
+  background: white
+  overflow-x: hidden
+
+.container
+  @include container(70em)
+  position: relative
+
+/* FRONTMATTER */
+.tg-fm
+  text-align: center
+  h1
+    @include venice($size: 6)
+  h2
+    @include playfair($size: 3)
+
+/* TABLE OF CONTENTS */
+.tg-toc
+  ul li
+    @include playfair(1)
+    font-weight: 700
+    ul li
+      font-weight: 400
+      margin-left: 2rem
+
+/* SECTIONS */
+.tg-section
+  h1
+    @include playfair($size: 2)
+
+  .tg-pixel
+    h1
+      @include venice($size: 3)
+      text-align: center
+      text-decoration: underline
+    p
+      @include VT($size: 1.2)
+      letter-spacing: -0.5px
+      text-indent: 2rem
+    p.tg-center
+      text-align: center
+
+  .tg-clean
+    h1
+      @include playfair($size: 1)
+      font-style: italic
+    p
+      @include playfair($size: 1)
