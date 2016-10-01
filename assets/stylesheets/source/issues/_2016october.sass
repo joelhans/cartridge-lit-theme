@@ -1,0 +1,86 @@
+/*
+ * OCTOBER 2016
+ */
+
+$four-background    : #2E2633
+$four-primary       : #DCE9BE
+$four-secondary     : #99173C
+$four-contrast      : #EFFFCD
+
+// FRONT PAGE
+.post-featured .featured-issue.issue-consequences,
+.issue-consequences
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: $four-background
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    line-height: 3rem
+    margin-bottom: 0.6rem
+    a
+      color: $four-primary
+      &:hover
+        color: $four-secondary
+  p
+    color: $four-secondary
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $four-contrast)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $four-secondary)
+
+// ISSUE PAGE
+
+body[class*="issues2016-october"]
+  background: $four-background
+  color: $four-primary
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $four-secondary
+
+    h2
+      @include ubuntu(1.2)
+      color: $four-primary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 5rem
+
+    .issue-piece-tease
+      @include crimson(2.6)
+      line-height: 2.2rem
+      margin-bottom: 0.6rem
+      a
+        display: block
+        color: $four-secondary
+        &:hover
+          color: $four-contrast
+
+    .issue-piece-meta
+      @include ubuntu(1.1)
+      color: $four-primary
+
+.issue-back.back-inter-sections
+  a
+    @include pixel-link(18, 1.1, $four-secondary)
+    &:hover
+      @include pixel-link(18, 1.1, $four-contrast)

@@ -7,6 +7,20 @@ get_header(); ?>
 
   <section class="page-full">
 
+    <article class="issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+      <div class="issue-content">
+        <h1>
+          <a href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">
+            The <em>Unforseen Consequences</em> Temple Issue
+          </a>
+        </h1>
+        <p>Adrienne Celt. Brian Oliu. Margaret Brandl. JD Scott.</p>
+        <p>Maxwell Neely-Cohen. Emma Fissenden. Berit Ellingsen.</p>
+        <p>J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
+        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
+      </div>
+    </article>
+
     <article class="issue-solstice" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">
         <h1>
