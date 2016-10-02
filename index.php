@@ -17,7 +17,7 @@ get_header(); ?>
 
   <!-- Is the page published yet? -->
   <?php
-    $page = get_page_by_path('issue-inter-sections',OBJECT,'page');
+    $page = get_page_by_path('issue-consequences',OBJECT,'page');
     if ($page->post_status == 'publish') :
   ?>
 
