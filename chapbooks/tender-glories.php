@@ -13,17 +13,21 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   $image_path = $chap_path."/assets/images/chapbooks/tender-glories/";
   $style_path = $chap_path."/assets/stylesheets/build/chapbooks/tender-glories/";
+  $javas_path = $chap_path."/assets/javascripts/build/chapbooks/tender-glories/";
+
 
 ?>
 
 <link rel="stylesheet" href="<?php echo $style_path; ?>tender-glories.min.css?v1.0">
 
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
-<script src="<?php echo $javas_path; ?>an-object.js?v1.0"></script>
+<script src="<?php echo $javas_path; ?>tender-glories.js?v1.0"></script>
 
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="clickable"></div>
 
 <section class="container">
 

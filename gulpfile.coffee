@@ -1,6 +1,5 @@
 gulp         = require 'gulp'
 gutil        = require 'gulp-util'
-
 sass         = require 'gulp-ruby-sass'
 rename       = require 'gulp-rename'
 watch        = require 'gulp-watch'

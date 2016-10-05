@@ -8,7 +8,7 @@ $dgray   : #303030
 $black   : rgba(4,0,1,1)
 $blackt  : rgba(4,0,1,0)
 
-$path : '../../../../images/chapbooks/prepare-to-die/'
+$path : '../../../../images/chapbooks/tender-glories/'
 
 @import "../vendor/reset"
 @import "../vendor/bourbon/bourbon"
@@ -41,7 +41,21 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   font-weight: $weight
   @include font-size($size)
 
+.clickable
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  z-index: 100
+
+*
+  cursor: url($path+'cursor.png'), auto
+
 body
+  width: 4000px
   margin: 0
   background: white
   overflow-x: hidden
