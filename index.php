@@ -28,9 +28,9 @@ get_header(); ?>
           The <em>Unforseen Consequences</em> Temple Issue
         </a>
       </h1>
-      <p>Adrienne Celt. Brian Oliu. Margaret Brandl. JD Scott.</p>
-      <p>Maxwell Neely-Cohen. Emma Fissenden. Berit Ellingsen.</p>
-      <p>J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
+      <p>Adrienne Celt. Brian Oliu. Margaret Emma Brandl. JD Scott.</p>
+      <p>Maxwell Neely-Cohen. Tom Kelly. Emma Fissenden. Berit Ellingsen.</p>
+      <p>Jackson Culpepper. J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
       <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
     </div>
   </article>
