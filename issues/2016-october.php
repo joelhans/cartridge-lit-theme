@@ -12,15 +12,6 @@ get_header(); ?>
     <h2>October 10, 2016</h2>
   </section>
 
-  <article class="issue-piece">
-    <h1 class="issue-piece-title">
-      <a href="http://cartridgelit.com/2016/10/10/justin-joel-goodbye/">
-        GOODBYE TEASE GOES HERE.
-      </a>
-    </h1>
-    <p class="issue-piece-meta">"GOODBYE TITLE GOES HERE" by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
-  </article>
-
   <?php
   $args = array(
     'post_type'   => 'post',
