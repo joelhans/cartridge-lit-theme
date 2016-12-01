@@ -34,25 +34,3 @@ jQuery ($) ->
     $('html, body').animate
       scrollTop: scrollY + diffY
       scrollLeft: scrollX + diffX
-
-    # # Get window dimensions, plus center
-    #
-    # winY = $(window).height()
-    # # centerY = winY / 2
-    #
-    # # Get click offset
-    #
-    # posY = $(this).offset().top
-    # posX = $(this).offset().left
-    #
-    # console.log posY
-    #
-    # # Find the difference
-    #
-    # # offsetY =
-    # #
-    # # console.log
-    #
-    # # Scroll to new location
-    #
-    # $(window).scrollTop() + posY

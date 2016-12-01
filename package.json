@@ -9,6 +9,7 @@
   "description": "Cartride Lit theme generator",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.17.5",
     "gulp": "^3.8.7",
     "gulp-changed": "^1.0.0",
     "gulp-coffee": "^2.1.1",
