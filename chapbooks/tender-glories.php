@@ -252,6 +252,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Can you and your allies negotiate a peace treaty between the feuding factions and avoid a war, as you apparently must do? Can you defeat the demon behind the discord before he unleashes an army of his fellow demons on the jungle and savannah dwelling cultures of Eastern Fricana? Can you buy into the idea that your intervention is strictly necessary in this altercation between cultures? Can you sleep at night (without being eaten by monsters or your conscience)?</p>
     </article>
 
+    <img class="clouds-01-rev" src="<?php echo $image_path; ?>clouds_01.png" />
+    <img class="clouds-01" src="<?php echo $image_path; ?>clouds_01.png" />
+
     <article class="tg-clean">
       <h1>NPC</h1>
       <p>Players like mystery and power, but only if they are accompanied by beauty and utility. If you want to be chosen, to maximize your interaction, some of that is out of your control, because it’s a product of how you were designed. Your story is there, written into the game in so many ways, but you shouldn’t tell it yourself, because then you aren’t functional for the players. It’s important to know your role. Some players will click on you all day long, because they think you’re interesting, but others have read the walkthrough and they know that you won’t advance their game. If you try too hard to resist your role, then the game might glitch, so it’s important not to do that. Think of it as a game of chance. If you play your role, then maybe this time someone will choose you. Maybe not. It’s not a reflection on you, because you are doing your job. Your job is to be chosen.</p>
@@ -267,6 +270,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>It’s nice to be a rusalka, because you have a job. Luring men into the water and drowning them is actually quite fulfilling. I don’t remember much of who I was when I was alive, but I can’t imagine it was better than this. After all, if it had been a good life, I wouldn’t have become a rusalka. I try not to think about it.</p>
     </article>
 
+    <img class="clouds-02-rev" src="<?php echo $image_path; ?>clouds_02.png" />
+    <img class="clouds-02" src="<?php echo $image_path; ?>clouds_02.png" />
+
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
       <figure>
@@ -280,6 +286,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Of course, I’m not trying to offend you. Yes, it’s a lovely drawing. My nose seems to be exaggerated, and I just wondered if it was intentional. You’re absolutely right. I’m only an expert at the arcane arts, not the fine arts.</p>
       <p>Let me see if I can find Rakeesh for you. I’m sure you two have a lot of catching up to do.</p>
     </article>
+
+    <img class="clouds-03-rev" src="<?php echo $image_path; ?>clouds_03.png" />
+    <img class="clouds-03" src="<?php echo $image_path; ?>clouds_03.png" />
 
     <article class="tg-clean">
       <h1>Glitch</h1>
@@ -313,6 +322,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Will you discover the truth about Katrina before it’s too late? Can you subvert the evil plans of the Dark Master and Ad Avis to summon the Dark One, Avoozl? If you succeed, you will release the town of Mordavia from the darkness that has afflicted it for many years, but if you fail (perhaps many many times, and I hope you saved your game) then all of your renown from past exploits will count for little, your body buried in an unmarked grave outside the beleaguered Slavic hamlet for all time. Some days, when you wake up in the Inn, and you prepare yourself to deal with the hostile gaze of the villagers, who are really quite unbelievably wary of strangers, you may wish you had. Died, I mean. Of course I’m not trying to be morbid, but don’t you find it tiring? Running around, dealing with strangers, meddling in people’s lives?</p>
     </article>
 
+    <img class="moon" src="<?php echo $image_path; ?>moon.png" />
+
     <article class="tg-clean">
       <h1>Adventures in Collegiate Absence</h1>
       <p>If you haven’t played the game in a long time, you forget to pause it when you are interrupted. If you don’t pause the game, then mostly you end up dead. Monsters wander into you, kill you while you’re in the other room, on the phone with your sister who’s transitioning. It’s more important to answer the phone than it is to go to Theatre History or avoid monsters, because everyone else in the family has stopped talking to her, and she’s a wreck from the hormones. The third time you come back to the computer and find that a mantaray has killed you, and you didn’t pause the game, and you forgot to save it, you cry. It’s a week before you go back to classes.</p>
@@ -328,6 +339,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>No, I never regret my decision to fight the Dark One, Avoozl, even though I’ve been trapped in limbo for many years because of the final battle. Even here, I dream. Often I am walking through one of my gardens. If someone sleeps in a garden I’ve planted, sometimes they visit me in their dreams. Or in my dreams. The lines between us blur. Of course I don’t resent them the flesh of my fruit trees or the scent of my flowers, even though I can’t taste or smell those things here. It would be too hard to exist like this if I wasn’t sure it was the right thing to do.</p>
     </article>
 
+    <img class="woods" src="<?php echo $image_path; ?>woods.png" />
+
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
       <figure>
@@ -340,6 +353,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Empathy. It always gets you in the end. I should have been content with you seeing me as a villain. Shouldn’t have cared what you thought in the first place.</p>
       <p>No, I’m not going to make a case for you to choose to bring me back from the dead. You choose who you want to choose. That’s the one constant in my life since I met you. You choose. I wait to get chosen. Or staked. Whichever.</p>
     </article>
+
+    <img class="abstraction" src="<?php echo $image_path; ?>abstraction.png" />
 
     <article class="tg-clean">
       <h1>Metamorph my First Marriage</h1>
