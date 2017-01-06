@@ -391,6 +391,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Sigh.</p>
     </article>
 
+    <img class="hero" src="<?php echo $image_path; ?>hero.png" />
+
     <article class="tg-clean">
       <h1>Restore My Game</h1>
       <p>In Quest for Glory, the only narrative that counts is the saved game. Every death from misadventure, every other possible outcome, disappears in the clean construction of the saved game. After I separated from my first husband, I reached out to the great unrequited love of my life via Facebook. To restart. To resurrect my hero, a version of me that had existed before the misadventure and disappointment, as my protagonist. To make the right decision. IRL, there is only so much tabula rasa afforded us. When you restore your game at an earlier point, you carry the scars and the conditioned responses of every personal tragedy, large and small, that you have incurred since that time. Of course, in the decade since I’d last known Ryan, he’d collected his share of narrative wounds as well. We set out to revivify each other.</p>
@@ -405,6 +407,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       </figure>
       <p>Sometimes it’s hard for me not to fault you for your absence. Many days, since you brought me back from the dead, I hate you for it. It is frustrating to try to be good and to content myself with daylight after having known nocturnal mysteries and power. Why, I ask myself, couldn’t you have found me before I became a vampire? I have been humbled by your love. Which is a cliché and comforting way of saying that you make me both less and grateful to be so. Life in the light is exhausting, for all its rewards.</p>
     </article>
+
+    <img class="rainbow" src="<?php echo $image_path; ?>rainbow.png" />
 
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
