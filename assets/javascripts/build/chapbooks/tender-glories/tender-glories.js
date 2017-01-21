@@ -1,20 +1,19 @@
 (function() {
   jQuery(function($) {
     return $('.clickable').click(function(ev) {
-      var centX, centY, clickX, clickY, diffX, diffY, scrollX, scrollY, winX, winY;
+      var centY, clickY, diffY, scrollY, winY;
       winY = $(window).height();
-      winX = $(window).width();
       clickY = ev.pageY;
-      clickX = ev.pageX;
       scrollY = $(window).scrollTop();
-      scrollX = $(window).scrollLeft();
       centY = (winY / 2) + scrollY;
-      centX = (winX / 2) + scrollX;
       diffY = clickY - centY;
-      diffX = clickX - centX;
+      if (clickY > centY) {
+        diffY = diffY + 200;
+      } else {
+        diffY = diffY - 200;
+      }
       return $('html, body').animate({
-        scrollTop: scrollY + diffY,
-        scrollLeft: scrollX + diffX
+        scrollTop: scrollY + diffY
       });
     });
   });

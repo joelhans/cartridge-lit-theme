@@ -37,7 +37,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <nav class="tg-fm">
 
-    <h1 class="tg-title">Tender Glories</h1>
+    <h1 class="tg-title glitch" data-text="Tender Glories">Tender Glories</h1>
 
     <h2 class="tg-author">K. Jane Childs</h2>
 
@@ -117,7 +117,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </header>
 
     <article class="tg-pixel">
-      <h1>So You Want to be a Hero</h1>
+      <h1 class="glitch-small" data-text="So You Want to be a Hero">So You Want to be a Hero</h1>
       <p>In an idyllic alpine valley sits the barony of Spielburg, where ten years ago the ogress Baba Yaga laid a curse on the Baron for trying to drive her away. Both of the Baron’s children have been missing since that time. Hope for Spielburg exists in the form of a poetic prophecy:</p>
       <p class="tg-center">Comes a Hero from the East</p>
       <p class="tg-center">Free the Man from in the Beast</p>
@@ -129,7 +129,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <img class="mountain" src="<?php echo $image_path; ?>mountain.png" />
 
     <article class="tg-clean play-man">
-      <h1>I Play as a Man</h1>
+      <h1 class="glitch" data-text="I Play as a Man">I Play as a Man</h1>
       <p>When I was a kid, my older half-brother would come home from college at Christmas and bring us computer games. The first Sierra adventure games I played were from the King’s Quest series, but it wasn’t long before my younger brother and I discovered the Quest for Glory games. Over the three decades of my life so far, I have played through the five game series dozens of times. If I played as a Paladin, I named myself Percival or Galahad. When I was a Thief, I went by Dodger or Jimmy the Hand. I seldom played as a Wizard or Fighter, unless I was working toward becoming a Paladin. Always, because of the nature of the games, I played as a man. I rescued Elsa von Spielburg from Baba Yaga’s curse, helped Zayishah, daughter of the Emir, escape from Raseir, broke Johari out of her spelled cage in the Simbani village, met the mysterious Katrina outside the gates of the town of Mordavia after nightfall, and traveled to the underworld through a portal on the island of Marete in order to bring the mage Erana back from the dead. I practiced honor or stealth, fell in love and had adventures, learned bits of foreign language and folklore, but all as a blond man with no history or story of his own, no name until you name him, and no desire except what his character type grants him.</p>
       <figure>
         <img alt="Elsa (I)" src="<?php echo $image_path; ?>/portraits/elsa.png" />
@@ -138,13 +138,15 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Before Baba Yaga’s curse, before abduction and brigandry, as a small girl strong from riding horses I hide behind the stable to watch the swordmaster instruct my brother. See parry, think parry, learn parry. Dust rising from the earth pounded by feet—advance and retreat—more urgent than the dance steps demonstrated to me in the afternoon. Only Yorick, the fool, knows about my denied request for instruction. The pompous poltroon’s sneering dodge: “wasted on a woman.” Few women in the castle, mother lost the moment gained, I dance behind the stables, in the shadow of the barracks, in empty wings of Spielburg Castle, imagining myself a sword.</p>
     </article>
 
-    <img class="sky" src="<?php echo $image_path; ?>sky.png" />
+    <div class="image-looper sky">
+      <img src="<?php echo $image_path; ?>sky.png" />
+    </div>
 
     <article class="tg-pixel">
       <figure>
         <img alt="Baba Yaga" src="<?php echo $image_path; ?>/portraits/baba.png" />
       </figure>
-      <h1>Baba Yaga: A (R)end(er)ing</h1>
+      <h1 class="glitch" data-text="Baba Yaga: A (R)end(er)ing">Baba Yaga: A (R)end(er)ing</h1>
       <p>So, what should we tell them, pets? That they don’t know already. Heroes know so much.</p>
       <p>The Baron? Pah. Don’t talk to me about that fool. He and his son tried to run me out of the valley so they could market Spielburg as a tourist destination.</p>
       <p>Ah, they didn’t tell you that, eh? Of course not, pets. Yes, they needed two things, or two absences: me and the brigands. And you took care of that for them, didn’t you?</p>
@@ -156,7 +158,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <img class="mound" src="<?php echo $image_path; ?>mound.png" />
 
     <article class="tg-clean">
-      <h1>I Channel the Body Electric</h1>
+      <h1 class="glitch" data-text="I Channel the Body Electric">I Channel the Body Electric</h1>
       <p>In fifth grade, after an all-nighter of adventure gaming, my consciousness thin and stretched from lack of sleep, I decide to apply the gaming paradigm to my daily life. In other words, if events are happening, they are likely to be connected, or to result in a humorous cut-scene. That morning my friend Bobbi goes on the Morning Announcements and tells the whole school which fifth grade girls have a crush on the new boy, Richie. I am unnamed, because I know to keep my own counsel, even on the playground, even in grade school. But one of the named girls, big for our age, both taller and stronger, is embarrassed and angry. The week before, I’d been the victim of an attempted prank call by my former friend, Nate. So, when it is time for recess, I tell the girl Nate was the one who’d given her name to Bobbi. Then I watch while she chases Nate around the playground. Level up.</p>
       <figure>
         <img alt="Elsa (II)" src="<?php echo $image_path; ?>/portraits/elsa.png" />
@@ -252,8 +254,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Can you and your allies negotiate a peace treaty between the feuding factions and avoid a war, as you apparently must do? Can you defeat the demon behind the discord before he unleashes an army of his fellow demons on the jungle and savannah dwelling cultures of Eastern Fricana? Can you buy into the idea that your intervention is strictly necessary in this altercation between cultures? Can you sleep at night (without being eaten by monsters or your conscience)?</p>
     </article>
 
-    <img class="clouds-01-rev" src="<?php echo $image_path; ?>clouds_01.png" />
-    <img class="clouds-01" src="<?php echo $image_path; ?>clouds_01.png" />
+    <div class="image-looper rev clouds-01-rev">
+      <img src="<?php echo $image_path; ?>clouds_01.png" />
+    </div>
+    <div class="image-looper clouds-01">
+      <img src="<?php echo $image_path; ?>clouds_01.png" />
+    </div>
 
     <article class="tg-clean">
       <h1>NPC</h1>
@@ -270,8 +276,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>It’s nice to be a rusalka, because you have a job. Luring men into the water and drowning them is actually quite fulfilling. I don’t remember much of who I was when I was alive, but I can’t imagine it was better than this. After all, if it had been a good life, I wouldn’t have become a rusalka. I try not to think about it.</p>
     </article>
 
-    <img class="clouds-02-rev" src="<?php echo $image_path; ?>clouds_02.png" />
-    <img class="clouds-02" src="<?php echo $image_path; ?>clouds_02.png" />
+    <div class="image-looper rev clouds-02-rev">
+      <img src="<?php echo $image_path; ?>clouds_02.png" />
+    </div>
+    <div class="image-looper clouds-02">
+      <img src="<?php echo $image_path; ?>clouds_02.png" />
+    </div>
 
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
@@ -287,8 +297,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Let me see if I can find Rakeesh for you. I’m sure you two have a lot of catching up to do.</p>
     </article>
 
-    <img class="clouds-03-rev" src="<?php echo $image_path; ?>clouds_03.png" />
-    <img class="clouds-03" src="<?php echo $image_path; ?>clouds_03.png" />
+    <div class="image-looper rev clouds-03-rev">
+      <img src="<?php echo $image_path; ?>clouds_03.png" />
+    </div>
+    <div class="image-looper clouds-03">
+      <img src="<?php echo $image_path; ?>clouds_03.png" />
+    </div>
 
     <article class="tg-clean">
       <h1>Glitch</h1>
@@ -316,7 +330,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </header>
 
     <article class="tg-pixel">
-      <h1>Shadows of Darkness</h1>
+      <h1 class="glitch" data-text="Hover me!">Shadows of Darkness</h1>
       <p>Immediately after defeating the Demon Wizard in the Forbidden City to the west of Tarna, you disappear before the eyes of your assembled allies, plucked from the site of your victory by magic. Absolutely no one can argue that you sought this out. Not this time.</p>
       <p>When you awaken, you are trapped inside a strange cave marked with signs of dark ritual magic. I mean, even for an extreme vacation, this would be excessive. Clearly, someone here needs your help. After escaping the cave, you meet the mysterious Katrina, who directs you to the town of Mordavia and warns you to be careful. Past enemies Baba Yaga and Ad Avis make appearances as you attempt to aid the suspicious villagers against wraiths, werewolves, vampires, ghosts, rusalki, and the Lovecraftian cult of the Dark One.</p>
       <p>Will you discover the truth about Katrina before it’s too late? Can you subvert the evil plans of the Dark Master and Ad Avis to summon the Dark One, Avoozl? If you succeed, you will release the town of Mordavia from the darkness that has afflicted it for many years, but if you fail (perhaps many many times, and I hope you saved your game) then all of your renown from past exploits will count for little, your body buried in an unmarked grave outside the beleaguered Slavic hamlet for all time. Some days, when you wake up in the Inn, and you prepare yourself to deal with the hostile gaze of the villagers, who are really quite unbelievably wary of strangers, you may wish you had. Died, I mean. Of course I’m not trying to be morbid, but don’t you find it tiring? Running around, dealing with strangers, meddling in people’s lives?</p>
@@ -339,7 +353,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>No, I never regret my decision to fight the Dark One, Avoozl, even though I’ve been trapped in limbo for many years because of the final battle. Even here, I dream. Often I am walking through one of my gardens. If someone sleeps in a garden I’ve planted, sometimes they visit me in their dreams. Or in my dreams. The lines between us blur. Of course I don’t resent them the flesh of my fruit trees or the scent of my flowers, even though I can’t taste or smell those things here. It would be too hard to exist like this if I wasn’t sure it was the right thing to do.</p>
     </article>
 
-    <img class="woods" src="<?php echo $image_path; ?>woods.png" />
+    <div class="image-looper woods">
+      <img src="<?php echo $image_path; ?>woods.png" />
+    </div>
 
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
@@ -408,7 +424,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>Sometimes it’s hard for me not to fault you for your absence. Many days, since you brought me back from the dead, I hate you for it. It is frustrating to try to be good and to content myself with daylight after having known nocturnal mysteries and power. Why, I ask myself, couldn’t you have found me before I became a vampire? I have been humbled by your love. Which is a cliché and comforting way of saying that you make me both less and grateful to be so. Life in the light is exhausting, for all its rewards.</p>
     </article>
 
-    <img class="rainbow" src="<?php echo $image_path; ?>rainbow.png" />
+    <div class="image-looper sky">
+      <img src="<?php echo $image_path; ?>rainbow.png" />
+    </div>
 
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
@@ -424,6 +442,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <p>It’s been hundreds of years since I last saw Zara. I miss her. I miss her sharp wit, her misanthropy, her dramatic gestures. I miss her conversation and I miss her body. I spent a very long time isolated from the small intimate moments between friends and lovers. I want to make art and magic and love. Garden. Be a caretaker and a creator. Seek tender glories.</p>
     </article>
 
+    <img class="tapestry" src="<?php echo $image_path; ?>tapestry.png" />
+
     <article class="tg-clean">
       <h1>Premature Plug and Play</h1>
       <p>It makes a certain kind of sense that my child would be incubated both in my body and in a machine. That his limbs would be augmented by myriad coiling cords, lines of power pumping oxygen and milk, like health and stamina potions. I watch his health bar, waiting for it to reach full strength. The symphony of beeps and alarms in the NICU is like the synth soundtrack of my life.</p>
@@ -433,6 +453,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       </figure>
       <p>In my village, you cannot be a warrior and a wife. Also, in my village, you cannot be a mother if you are not a wife. I was a warrior, but I wanted to be a mother. I left my village and travelled to Shapeir so that I could become a mother without becoming a wife. In Shapeir, they recognized that as a warrior, I was the best. I became Guild Master for the Adventurer’s Guild, training others with spears to fight jackalmen and giant scorpions in the desert. My son, Simba, will be a warrior like me. Soon it will be time to take him home.</p>
     </article>
+
+    <img class="tapestry-02" src="<?php echo $image_path; ?>tapestry_02.png" />
 
     <article class="tg-clean">
       <h1>Cutting the Cord</h1>
@@ -444,6 +466,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       </figure>
       <p>Ya, my daughter Tanya was a vampire. My husband Yuri doesn’t like for me to talk about it. I like to think that it makes her special and protects her. It was a terrible time, when she was missing, a dead thing in the castle. Now that the hero used Erana’s Staff to resurrect her, she’s a lovely child, and she plays in the sunshine. Not many women know this feeling, to have a child come back from the dead.</p>
     </article>
+
+    <img class="dungeon" src="<?php echo $image_path; ?>dungeon.png" />
 
     <article class="tg-pixel">
       <img class="tg-pixel-header" />
@@ -463,6 +487,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <!-- END (M)Others -->
 
   <footer>
+    <h1>Dedication for <em>Tender Glories</em></h1>
+    <p>This strange little chapbook would never have happened without the help and support of friends and family.</p>
+    <p>So, <span>Thank You</span>: to Pete Beatty, Joel Brouwer, Rebecca Brown, Tyler Corbridge, Nabila Lovelace, Tim Payne, Mark Ramirez, Brett Shaw, Elizabeth Theriot, and Keith Wiley for being the first readers outside the family.</p>
+    <p>Also, <span>Thank You</span>: to my older half-brother Scott, who first introduced me to the Sierra Adventure Games, providing many hours of problematic enjoyment, and my younger brother, Bobby, for encouraging me to play as often as possible without using a UHS file.</p>
+    <p>And, <span>Thank You</span>: to the 3-4-5 other friends who make up my online writing community.</p>
+    <p>And, as Always, <span>Thank You</span>: Ryan and Donovan. <3 <3 <3</p>
 
   </footer>
 

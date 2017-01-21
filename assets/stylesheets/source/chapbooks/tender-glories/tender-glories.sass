@@ -102,7 +102,7 @@ body
     h1
       @include venice($size: 3)
       text-align: center
-      text-decoration: underline
+      // text-decoration: underline
       margin-bottom: 3rem
     p
       @include VT($size: 1.2)
@@ -138,17 +138,55 @@ body
       display: block
       @include playfair($size: 1)
 
+.image-looper
+  position: relative
+  &::before
+    content: ''
+    display: block
+    width: 1600px
+    height: 100%
+    position: absolute
+    top: 0
+    left: -2000px
+    transform: scaleX(-1)
+  &::after
+    content: ''
+    display: block
+    width: 1600px
+    height: 100%
+    position: absolute
+    top: 0
+    right: -2000px
+    transform: scaleX(-1)
+
+.image-looper.rev
+  img
+    transform: scaleY(-1)
+    margin-bottom: 0
+  &:before, &:after
+    transform: scaleX(-1) scaleY(-1)
+
 /* SECTION SPECIFICS */
 
 .tg-curses-spells
   margin-top: 14rem
+
   .mountain
     margin-left: -62.5px
-  .sky
+
+  .sky img
     margin-left: -147.5px
+  .sky::before
+    background: url($path+'sky.png')
+    width: 1095px
+    left: -1242.5px
+  .sky::after
+    background: url($path+'sky.png')
+    width: 1095px
+    right: -1242.5px
+
   .mound
     margin-left: -400px
-
 
 .tg-quiet-girls
   .desert
@@ -157,32 +195,81 @@ body
     margin-left: -400px
 
 .tg-unquiet-girls
-  .clouds-01,
-  .clouds-02,
-  .clouds-03
+
+  .clouds-01 img,
+  .clouds-02 img,
+  .clouds-03 img,
+  .clouds-01-rev img,
+  .clouds-02-rev img,
+  .clouds-03-rev img
     margin-left: -400px
-  .clouds-01-rev,
-  .clouds-02-rev,
-  .clouds-03-rev
-    margin-left: -400px
-    margin-bottom: 0
-    transform: scaleY(-1)
+
+  .clouds-01-rev::before,
+  .clouds-01-rev::after
+    background: url($path+'clouds_01.png')
+
+  .clouds-01::before,
+  .clouds-01::after
+    background: url($path+'clouds_01.png')
+
+  .clouds-02-rev
+    margin-top: -100px
+  .clouds-02
+    margin-bottom: -100px
+
+  .clouds-02-rev::before,
+  .clouds-02-rev::after
+    background: url($path+'clouds_02.png')
+
+  .clouds-02::before,
+  .clouds-02::after
+    background: url($path+'clouds_02.png')
+
+  .clouds-03-rev::before,
+  .clouds-03-rev::after
+    background: url($path+'clouds_03.png')
+
+  .clouds-03::before,
+  .clouds-03::after
+    background: url($path+'clouds_03.png')
 
 .tg-femme-fatales
   .moon
     margin-left: 500px
-  .woods
+
+  .woods img
     margin-left: -400px
+  .woods::before
+    background: url($path+'woods.png')
+  .woods::after
+    background: url($path+'woods.png')
+
   .abstraction
     margin-left: -387.5px
 
 .tg-mothers
   .hero
     margin-left: -20px
+
   .rainbow
     margin-top: -200px
     margin-bottom: -200px
+  .sky img
     margin-left: -400px
+  .sky::before
+    background: url($path+'rainbow.png')
+  .sky::after
+    background: url($path+'rainbow.png')
+
+  .tapestry
+    margin-left: -400px
+
+  .tapestry-02
+    margin-left: -400px
+
+  .dungeon
+    margin-left: -400px
+    margin-bottom: 0
 
 /* IMAGES */
 
@@ -193,3 +280,130 @@ body
     position: absolute
     left: 50%
     margin-left: -767px
+
+/* FOOTER */
+
+footer
+  margin-top: 24rem
+  margin-bottom: 14rem
+  h1
+    @include playfair($size: 3)
+    margin-bottom: 4rem
+  p
+    @include playfair(1)
+    span
+      @include VT($size: 1.2)
+      letter-spacing: -0.5px
+      // text-indent: 2rem
+
+
+/* ANIMATIONS */
+.glitch
+  position: relative
+  mix-blend-mode: darken
+
+  &:before,
+  &:after
+    content: attr(data-text)
+    position: absolute
+    top: 0
+    width: 100%
+
+  &:before
+    left: -1px
+    text-shadow: 2px 0 rgba(red,0.7)
+    animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse
+
+  &:after
+    left: 1px
+    text-shadow: -2px 0 rgba(blue,0.7)
+    animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse
+
+.glitch-small
+  position: relative
+  mix-blend-mode: darken
+
+  &:before,
+  &:after
+    content: attr(data-text)
+    position: absolute
+    top: 0
+    width: 100%
+
+  &:before
+    left: -1px
+    text-shadow: 1px 0 rgba(red,0.7)
+    animation: glitch-loop-small-1 0.8s infinite ease-in-out alternate-reverse
+
+  &:after
+    left: 1px
+    text-shadow: -1px 0 rgba(blue,0.7)
+    animation: glitch-loop-small-2 0.8s infinite ease-in-out alternate-reverse
+
+@keyframes glitch-loop-1
+  0%
+    clip: rect(36px, 9999px, 9px, 0)
+  25%
+    clip: rect(25px, 9999px, 99px, 0)
+  50%
+    clip: rect(50px, 9999px, 102px, 0)
+  75%
+    clip: rect(30px, 9999px, 92px, 0)
+  100%
+    clip: rect(91px, 9999px, 98px, 0)
+
+@keyframes glitch-loop-2
+  0%
+    top: -1px
+    left: 1px
+    clip: rect(65px, 9999px, 119px, 0)
+  25%
+    top: -6px
+    left: 4px
+    clip: rect(79px, 9999px, 19px, 0)
+  50%
+    top: -3px
+    left: 2px
+    clip: rect(68px, 9999px, 11px, 0)
+  75%
+    top: 0px
+    left: -4px
+    clip: rect(95px, 9999px, 53px, 0)
+  100%
+    top: -1px
+    left: -1px
+    clip: rect(31px, 9999px, 149px, 0)
+
+@keyframes glitch-loop-small-1
+  0%
+    clip: rect(1px, 9999px, 17px, 0)
+  25%
+    clip: rect(11px, 9999px, 38px, 0)
+  50%
+    clip: rect(28px, 9999px, 47px, 0)
+  75%
+    clip: rect(26px, 9999px, 34px, 0)
+  100%
+    clip: rect(2px, 9999px, 4px, 0)
+
+@keyframes glitch-loop-small-2
+  0%
+    top: -1px
+    left: 1px
+    clip: rect(23px, 9999px, 50px, 0)
+  25%
+    top: -3px
+    left: 2px
+    clip: rect(30px, 9999px, 8px, 0)
+  50%
+    top: -3px
+    left: 2px
+    clip: rect(37px, 9999px, 4px, 0)
+  75%
+    top: 0px
+    left: -4px
+    clip: rect(45px, 9999px, 27px, 0)
+  100%
+    top: -1px
+    left: -1px
+    clip: rect(11px, 9999px, 59px, 0)
