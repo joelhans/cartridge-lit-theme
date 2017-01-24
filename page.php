@@ -41,26 +41,13 @@ get_header(); ?>
 
     <div class="masthead-editor">
       <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/daugherty.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/daugherty_pixel.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hoffacker.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hoffacker_pixel.jpg" />
       </div>
       <div class="masthead-bio">
         <p>
-          <?php echo get_post_meta( $post->ID, 'justin-bio', true); ?>
-          <a class="masthead-twitter" href="https://twitter.com/JDaugherty1081">@JDaugherty1081</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="masthead-editor">
-      <div class="masthead-images">
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hans.jpg" />
-        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hans_pixel.jpg" />
-      </div>
-      <div class="masthead-bio">
-        <p>
-          <?php echo get_post_meta( $post->ID, 'joel-bio', true); ?>
-          <a class="masthead-twitter" href="http://twitter.com/joelhans">@joelhans</a>
+          <?php echo get_post_meta( $post->ID, 'will-bio', true); ?>
+          <a class="masthead-twitter" href="https://twitter.com/YoungestOfOne">@YoungestOfOne</a>
         </p>
       </div>
     </div>
