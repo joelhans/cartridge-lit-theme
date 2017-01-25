@@ -25,7 +25,7 @@ get_header(); ?>
     <div class="issue-content">
       <h1>
         <a href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">
-          The <em>Unforseen Consequences</em> Temple Issue
+          The <em>Unforeseen Consequences</em> Temple Issue
         </a>
       </h1>
       <p>Adrienne Celt. Brian Oliu. Margaret Emma Brandl. JD Scott.</p>

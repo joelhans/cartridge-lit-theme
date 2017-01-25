@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="issue2016-january">
 
   <section class="issue-header">
-    <h1>The <em>Unforseen Consequences</em> Temple Issue</h1>
+    <h1>The <em>Unforeseen Consequences</em> Temple Issue</h1>
     <h2>October 10, 2016</h2>
   </section>
 
