@@ -188,7 +188,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </header>
 
     <article class="tg-pixel">
-      <h1>Trial By Fire</h1>
+      <h1 class="glitch-small" data-text="Trial By Fire">Trial By Fire</h1>
       <p>Fresh from being named the Hero of Spielburg, you travel with your new friends Abdulla, Shameen, and Shema to their homeland of Shapeir on Abdulla’s flying carpet. It’s good to have friends, even if the only way you know to make friends is through quests. You are tasked with defeating four Elementals that were set loose upon Shapeir by an unknown villain. Afterwards, you must travel to Shapeir’s sister city, Raseir, to get to the bottom of all the troubles in the land. Of course, there’s a prophecy or two involved. Raseir has been beset by corruption, tyranny, and black magic ever since the disappearance of the Emir Arus al-Din.</p>
       <p>Can you defeat the evil vizier, Ad Avis, before he summons the demon Iblis from beyond Suleiman’s Seal? Can you find and restore the missing Emir? Can you trust anyone? What do they want from you?</p>
     </article>
@@ -217,7 +217,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <figure>
         <img alt="Zayishah" src="<?php echo $image_path; ?>/portraits/zayishah.png" />
       </figure>
-      <h1>Zayishah: A Retrospective</h1>
+      <h1 class="glitch-small" data-text="Zayishah: A Retrospective">Zayishah: A Retrospective</h1>
       <p>After you left? Mayzun and I married, in secret. Of course, she’s not my servant anymore. Naturally, my uncle the Emir put up something of a fuss, but I told him if it came down to it, I’d consider a political marriage as well. I think the term is polyamorous?</p>
       <p>You know, money and power go a long way toward letting you bend the rules in any culture. It’s only those without either money or power who are doomed to follow tradition. Though you can always choose tradition. Is that what you did?</p>
       <p>Well, you know you keep buying into these voluntourism, hero-for-hire adventure vacations.</p>
@@ -247,7 +247,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </header>
 
     <article class="tg-pixel">
-      <h1>Wages of War</h1>
+      <h1 class="glitch-small" data-text="Wages of War">Wages of War</h1>
       <p>After saving Shapeir from the elementals and liberating Raseir from the influence of the corrupt vizier Ad Avis, which you absolutely did, and there’s no disputing that, the Hero of Spielburg was adopted by the Sultan of Shapeir.</p>
       <p>Now the Prince of Shapeir, you travel with your friends Uhura and Rakeesh to their home in Tarna, which is on the brink of war. You were invited, for what it’s worth. Actually, many people think you’re quite capable and helpful, as evidenced by the epithets you keep picking up on your adventures. Uhura’s tribe, the Simbani, are at odds with the magic-wielding Leopardmen who live in the jungle outside of Tarna. Both groups mistakenly believe that the other has stolen a sacred relic from them. It seems obvious that only you can rectify this situation.</p>
       <p>Rajah, the king of the Liontaurs, sends you and Rakeesh to investigate the troubles. Rajah’s mandate is that if peace cannot be achieved, the Liontaurs will also go to war. Honestly, there’s a part of you that wonders if these events would play out more honestly without your involvement. I mean, some of this posturing and grandstanding, well. I’m not saying it’s for your benefit, exactly, but it seems unlikely that this is how everyone behaves when it’s just folks and family around.</p>
@@ -288,7 +288,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <figure>
         <img alt="Kreesha" src="<?php echo $image_path; ?>/portraits/kreesha.png" />
       </figure>
-      <h1>Kreesha: An Alternate Reading</h1>
+      <h1 class="glitch-small" data-text="Kreesha: An Alternate Reading">Kreesha: An Alternate Reading</h1>
       <p>Hero, you know you are a great friend of our family. My husband Rakeesh considers you his protege. You helped rescue our daughter, Reeshaka, from the demons, and helped create an antidote to the poison that was used on our son, Shakra.</p>
       <p>Can I ask you a question, in light of that friendship?</p>
       <p>I couldn’t help but notice the portraits you’ve created of your acquaintances for this memoir you’re writing.</p>
@@ -330,7 +330,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </header>
 
     <article class="tg-pixel">
-      <h1 class="glitch" data-text="Hover me!">Shadows of Darkness</h1>
+      <h1 class="glitch" data-text="Shadows of Darkness">Shadows of Darkness</h1>
       <p>Immediately after defeating the Demon Wizard in the Forbidden City to the west of Tarna, you disappear before the eyes of your assembled allies, plucked from the site of your victory by magic. Absolutely no one can argue that you sought this out. Not this time.</p>
       <p>When you awaken, you are trapped inside a strange cave marked with signs of dark ritual magic. I mean, even for an extreme vacation, this would be excessive. Clearly, someone here needs your help. After escaping the cave, you meet the mysterious Katrina, who directs you to the town of Mordavia and warns you to be careful. Past enemies Baba Yaga and Ad Avis make appearances as you attempt to aid the suspicious villagers against wraiths, werewolves, vampires, ghosts, rusalki, and the Lovecraftian cult of the Dark One.</p>
       <p>Will you discover the truth about Katrina before it’s too late? Can you subvert the evil plans of the Dark Master and Ad Avis to summon the Dark One, Avoozl? If you succeed, you will release the town of Mordavia from the darkness that has afflicted it for many years, but if you fail (perhaps many many times, and I hope you saved your game) then all of your renown from past exploits will count for little, your body buried in an unmarked grave outside the beleaguered Slavic hamlet for all time. Some days, when you wake up in the Inn, and you prepare yourself to deal with the hostile gaze of the villagers, who are really quite unbelievably wary of strangers, you may wish you had. Died, I mean. Of course I’m not trying to be morbid, but don’t you find it tiring? Running around, dealing with strangers, meddling in people’s lives?</p>
@@ -362,7 +362,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <figure>
         <img alt="Katrina" src="<?php echo $image_path; ?>/portraits/katrina-2.png" />
       </figure>
-      <h1>Katrina: A Reckoning</h1>
+      <h1 class="glitch" data-text="Katrina: A Reckoning">Katrina: A Reckoning</h1>
       <p>No, in fact I don’t think it’s accurate to say that I asked for it. No one asks for a stake through the heart. And don’t feed me that crap about how you were going to redeem me, make me give up my magic and my plans. All you offered me was mediocrity.</p>
       <p>Yes, I know I was the one that summoned you to Mordavia.</p>
       <p>No, it wasn’t arrogance. I am more capable and intelligent than Ad Avis. I don’t know what went wrong! I should have let him kill you, there at the end. If I had, then you’d be gone, and I’d still be living in the Castle. Avoozl would be free, and I’d have an eternity of nights to draw cute little pictures of you while I ruled my own world. Yes, I see that sketch. Honestly, with the cleavage? I’m wearing a turtleneck.</p>
@@ -394,11 +394,11 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <section class="tg-section tg-mothers">
 
     <header>
-      <h1>Dragon Fire</h1>
+      <h1>(M)Others</h1>
     </header>
 
     <article class="tg-pixel">
-      <h1>So You Want to be a Hero</h1>
+      <h1 class="glitch" data-text="Dragon Fire">Dragon Fire</h1>
       <p>After freeing the trapped soul of the benevolent mage Erana and vanquishing Avoozl, you are summoned by your friend, the wizard Erasmus, to sunny Silmaria. Again, not a decision you made. At this point, other people just assume that you’re happy to intervene in their problems.</p>
       <p>The king of Silmaria has been assassinated, and the kingdom is holding its traditional Rites of Rulership: a competition to find a new king. Competing against you are a handful of other worthy adventurers: the humble Silmarian guard, Kokeeno Pookameso; the warrior Magnum Opus; the Frankenstein-esque creation of the scientists, Gort; and your old friend, Elsa von Spielburg. It’s actually nice to see Elsa. Of course, that won’t be enough for you. You’ll end up making a pass at her. Oh, well.</p>
       <p>You and the other competitors must face mercenaries, Tritons from the underwater city of Atlantis, the Hydra, your own futures as foretold by the Sibyl, and even a trip to the Underworld, all while trying to avoid the poisoned blade of the assassin.</p>
@@ -434,7 +434,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
         <img alt="Erana" src="<?php echo $image_path; ?>/portraits/erana.png" />
         <img alt="Zara" src="<?php echo $image_path; ?>/portraits/zara.png" />
       </figure>
-      <h1>Erana &amp; Zara: A Revisioning</h1>
+      <h1 class="glitch" data-text="Erana &amp; Zara: A Revisioning">Erana &amp; Zara: A Revisioning</h1>
       <p>Hero, I will always be grateful that you freed me from Avoozl and brought me back from the dead. It is my hope that we will always be friends. I wanted to tell you, now that we’ve defeated the Dragon of Doom, and Elsa has been crowned the Ruler of Silmaria, I am planning to return to Spielburg.</p>
       <p>The garden I planted in those forests was one of the first I’d ever made. And, of course, there is Zara. I hope.</p>
       <p>Yes, I heard about your exploits there. Without Baba Yaga to check him, I’m concerned that the Baron’s ambitions for the valley will only grow. The Dryad will need assistance.</p>
@@ -474,7 +474,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <figure>
         <img alt="Elsa" src="<?php echo $image_path; ?>/portraits/elsa.png" />
       </figure>
-      <h1>Elsa: A Reorientation</h1>
+      <h1 class="glitch" data-text="Elsa: A Reorientation">Elsa: A Reorientation</h1>
       <p>It has been good to work with you again. I was glad to see you, when you first showed up here in Silmaria. After all, I’m not afraid of competition. Since I left Spielburg, I’ve sought out many challenges, to prove to myself and others that I am capable and worthy. I suppose we have that in common.</p>
       <p>I must say, I will be grateful to be rooted in one place again. My life has taken many turns, and I have suffered many disappointments. This new life will challenge me without asking that I sacrifice my character. Finally I will be able to surround myself with trustworthy advisors and friends. As ruler of Silmaria, I can institute all of the changes I envisioned to the guard force based on my experiences in Spielburg. I can negotiate fair treaties and trade agreements with the neighboring islands, as well, now that the mercenaries have been driven away.</p>
       <p>You know my plans. What are yours? Will you continue to seek adventure and glory? You must visit, no matter the course you choose.</p>
