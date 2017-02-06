@@ -196,7 +196,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <img class="desert" src="<?php echo $image_path; ?>desert.png" />
 
     <article class="tg-clean">
-      <h1>I Play as a Man</h1>
+      <h1>LARPing Middle School</h1>
       <p>On the first day of 6th grade, I play as the smart girl. I wear a plaid skirt and non-prescription glasses, so that everyone will know. If you are the smart girl, you aren’t the love interest. If you are the love interest, there will be questions. If you are the smart girl, you can answer questions instead of being the answer to questions. By 8th grade, I often play as the granola hippie girl. I wear peasant blouses and bell bottoms from Loose Lucys and don’t brush my hair. I watch other players be answers, but I know the answers to all of the questions about how to solve puzzles and tell stories. I play sage advisor to my friends. I am separate and safe. I have a role.</p>
       <figure>
         <img alt="Erana (I)" src="<?php echo $image_path; ?>/portraits/erana.png" />
