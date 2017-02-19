@@ -65,6 +65,32 @@ get_header(); ?>
       </div>
     </div>
 
+    <div class="masthead-editor">
+      <div class="masthead-images">
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/bowers.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/bowers_pixel.jpg" />
+      </div>
+      <div class="masthead-bio">
+        <p>
+          <?php echo get_post_meta( $post->ID, 'jess-bio', true); ?>
+          <a class="masthead-twitter" href="https://twitter.com/prettyminotaur">@prettyminotaur</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="masthead-editor">
+      <div class="masthead-images">
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/spotswood.jpg" />
+        <img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/spotswood_pixel.jpg" />
+      </div>
+      <div class="masthead-bio">
+        <p>
+          <?php echo get_post_meta( $post->ID, 'phil-bio', true); ?>
+          <a class="masthead-twitter" href="https://twitter.com/queermicrobiome">@queermicrobiome</a>
+        </p>
+      </div>
+    </div>
+
     <?php else: ?>
 
     <?php the_content(); ?>
