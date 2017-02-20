@@ -40,7 +40,7 @@ get_header(); ?>
   <!-- BEGIN FEATURED QUERIES -->
   <?php
   $args = array(
-    'posts_per_page' => 14,
+    'posts_per_page' => 13,
     'meta_query' => array(
       'relation' => 'OR',
         array(
@@ -81,7 +81,22 @@ get_header(); ?>
   <!-- both chapbook announcements -->
   <?php if ( $featured_query->current_post == 1 ): ?>
 
-  <article class="featured-chap-1" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
+  <article class="featured-chap-1" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/tender-glories/front_page_teaser.jpg"; ?>');">
+    <div class="chap-top">
+      <a href="<?php echo esc_url( home_url( '/tender-glories/' ) ); ?>">Read</a>
+    </div>
+    <div class="chap-bottom">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/tender-glories/' ) ); ?>">
+          Tender Glories
+        </a>
+      </h1>
+      <h2>by K. Jane Childs</h2>
+      <p><em>Cartridge Lit</em>'s third chapbook. Wander into the glitchy, five-layered world of <em>Quest for Glory</em>.</p>
+    </div>
+  </article>
+
+  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">Read</a>
     </div>
@@ -96,7 +111,8 @@ get_header(); ?>
     </div>
   </article>
 
-  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
+<?php elseif ( $featured_query->current_post == 10 ): ?>
+  <article class="featured-chap-3" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>">Read</a>
     </div>
@@ -110,25 +126,6 @@ get_header(); ?>
       <p>The first chapbook from <em>Cartridge Lit</em>. Get your fill of <em>Dark Souls</em> and then some.</p>
     </div>
   </article>
-
-  <?php elseif ( $featured_query->current_post == 5 ): ?>
-
-  <!-- <article class="featured-print" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/print-announcement.jpg"; ?>');">
-    <div class="print-left">
-      <a href="<?php echo esc_url( home_url( '/print-anthology/' ) ); ?>">Pre-order</a>
-    </div>
-    <div class="print-right">
-      <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">
-          The <em>Razzle Dazzle!</em> Temple Issue
-        </a>
-      </h1>
-      <p>Oliu. Swearingen-Steadwell. Yaeger. Crabtree. Luman.</p>
-      <p>Hoffacker. Siebel. Romo. Spece. Bender-Murphy.</p>
-      <p>Russell. Hensley. Stabley-Conde.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-razzle-dazzle/' ) ); ?>">Read</a>
-    </div>
-  </article> -->
 
   <?php endif; ?>
 
