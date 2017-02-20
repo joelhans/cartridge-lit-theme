@@ -1,0 +1,38 @@
+$yellow  : #ECD078
+$orange  : #D95B43
+$red     : #C02942
+$purple  : #542437
+$blue    : #53777A
+$lgray   : #999
+$dgray   : #303030
+$black   : rgba(4,0,1,1)
+$blackt  : rgba(4,0,1,0)
+
+$path : '../../../../images/chapbooks/please-please/'
+
+@import "../vendor/reset"
+@import "../vendor/bourbon/bourbon"
+@import "susy"
+@import "mixins"
+@import "typography"
+
+$susy: ( columns: 12, gutters: .5, gutter-position: inside )
+
+@import url(https://fonts.googleapis.com/css?family=VT323|Playfair+Display:400,400i,700)
+
+@mixin venice($size: 1, $weight: 400)
+  font-family: 'VeniceClassic', sans-serif
+  font-weight: $weight
+  @include font-size($size)
+  color: black
+
+.pp-title
+  +span(6 of 12 last)
+
+.pp-poem
+
+.pp-poem h1
+  text-transform: uppercase
+  font-style: italic
+
+.pp-acknowledgments
