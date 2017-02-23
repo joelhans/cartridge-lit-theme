@@ -1,14 +1,18 @@
 gulp         = require 'gulp'
 gutil        = require 'gulp-util'
-sass         = require 'gulp-ruby-sass'
+# sass         = require 'gulp-ruby-sass'
+sass         = require 'gulp-sass'
 rename       = require 'gulp-rename'
-watch        = require 'gulp-watch'
+autoprefixer = require 'gulp-autoprefixer'
+cssnano      = require 'gulp-cssnano'
+# watch        = require 'gulp-watch'
 coffee       = require 'gulp-coffee'
 concat       = require 'gulp-concat'
-uglify       = require 'gulp-uglify'
+
+# uglify       = require 'gulp-uglify'
 plumber      = require 'gulp-plumber'
 changed      = require 'gulp-changed'
-livereload   = require 'gulp-livereload'
+# livereload   = require 'gulp-livereload'
 browserSync  = require('browser-sync').create()
 
 styles =
@@ -26,13 +30,19 @@ php =
 img =
   src: 'assets/images/**/*'
 
+sassPaths = [ 'node_modules/susy/sass' ]
+
+onError = (err) ->
+  console.log err.message
+  this.emit 'end'
+
 ############################################################
 
 # BrowserSync
-gulp.task 'browsersync', ->
-  browserSync.init
-    files: ['*.coffee', '*.js', '*.php', '{chapbooks}/**/*.php', '{issues}/**/*.php']
-    proxy: 'http://localhost/wp-cartridge/'
+# gulp.task 'browsersync', ->
+#   browserSync.init
+#     files: ['*.coffee', '*.js', '*.php', '{chapbooks}/**/*.php', '{issues}/**/*.php']
+#     proxy: 'http://localhost/wp-cartridge/'
 
 # Create vendor.js blob.
 gulp.task 'vendor', ['coffee'], ->
@@ -64,15 +74,23 @@ gulp.task 'js', ['coffee'], ->
       stream: true
 
 # Compile SASS files into a css file and reload the page.
-gulp.task 'sass', ->
-  return gulp.src styles.src
-    # .pipe plumber()
-    # .pipe changed styles.src
-    .pipe sass { style: 'compressed', require: 'susy' }
-    .pipe rename {suffix: '.min'}
+gulp.task 'styles', ->
+  gulp.src styles.src
+    .pipe plumber { errorHandler: onError }
+    .pipe sass { includePaths: sassPaths }
+    .pipe autoprefixer 'last 2 versions'
+    .pipe rename { suffix: '.min' }
+    .pipe cssnano()
     .pipe gulp.dest styles.build
-    .pipe browserSync.reload
-      stream: true
+    .pipe browserSync.reload { stream: true }
+
+    # # .pipe plumber()
+    # # .pipe changed styles.src
+    # .pipe sass { style: 'compressed', require: 'susy' }
+    # .pipe rename {suffix: '.min'}
+    # .pipe gulp.dest styles.build
+    # .pipe browserSync.reload
+    #   stream: true
 #
 # gulp.task 'img', () ->
 #   return gulp.src(img.src)
@@ -87,4 +105,9 @@ gulp.task 'sass', ->
 #     .pipe browserSync.reload
 #       stream: true
 
-gulp.task 'default', ['browsersync', 'watch']
+gulp.task 'default', ->
+  browserSync.init {
+    files: ['*.php', '{chapbooks}/**/*.php', '{issues}/**/*.php']
+    proxy: 'http://localhost/wp-cartridge/'
+  }
+  gulp.watch styles.src, ['styles']

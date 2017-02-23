@@ -10,29 +10,45 @@ $blackt  : rgba(4,0,1,0)
 
 $path : '../../../../images/chapbooks/please-please/'
 
-@import "../vendor/reset"
-@import "../vendor/bourbon/bourbon"
+@import "../../../vendor/reset"
+@import "../../../vendor/bourbon/bourbon"
 @import "susy"
-@import "mixins"
-@import "typography"
+@import "../../mixins"
+@import "../../typography"
 
 $susy: ( columns: 12, gutters: .5, gutter-position: inside )
 
-@import url(https://fonts.googleapis.com/css?family=VT323|Playfair+Display:400,400i,700)
+@import url('https://fonts.googleapis.com/css?family=Vesper+Libre')
 
-@mixin venice($size: 1, $weight: 400)
-  font-family: 'VeniceClassic', sans-serif
+@mixin vesper($size: 1, $weight: 400)
+  font-family: 'Versper Libre', serif
   font-weight: $weight
   @include font-size($size)
-  color: black
+  color: $purple
 
 .pp-title
-  +span(6 of 12 last)
+  +span(8 of 12)
 
 .pp-poem
+  +span(8 of 12)
+  +vesper
+  color: black
+  text-align: justify
 
 .pp-poem h1
-  text-transform: uppercase
+  +vesper($size: 2)
+  // text-transform: uppercase
   font-style: italic
+  font-variant: small-caps
+
+.pp-indent-1
+  margin-left: 3rem
+
+.pp-indent-2
+  margin-left: 6rem
+
+.pp-indent-3
+  margin-left: 9rem
 
 .pp-acknowledgments
+  +span(12 of 12)
