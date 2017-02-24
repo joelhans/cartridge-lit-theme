@@ -42,13 +42,35 @@ $susy: ( columns: 12, gutters: .5, gutter-position: inside )
   font-variant: small-caps
 
 .pp-indent-1
-  margin-left: 3rem
+  text-indent: 3rem
 
 .pp-indent-2
-  margin-left: 6rem
+  text-indent: 6rem
 
 .pp-indent-3
-  margin-left: 9rem
+  text-indent: 9rem
+
+.pp-indent-4
+  text-indent: 12rem
+
+.pp-indent-5
+  text-indent: 15rem
+
+.pp-indent-6
+  text-indent: 18rem
+
+.pp-indent-7
+  text-indent: 21rem
+
+.pp-indent-8
+  text-indent: 24rem
+
+.pp-justify
+  text-align: justify
+  &::after
+    content: ""
+    display: inline-block
+    width: 100%
 
 .pp-acknowledgments
   +span(12 of 12)
