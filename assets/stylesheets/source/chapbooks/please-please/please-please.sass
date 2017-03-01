@@ -1,12 +1,4 @@
-$yellow  : #ECD078
-$orange  : #D95B43
-$red     : #C02942
-$purple  : #542437
-$blue    : #53777A
-$lgray   : #999
-$dgray   : #303030
-$black   : rgba(4,0,1,1)
-$blackt  : rgba(4,0,1,0)
+$blue    : #228DFF
 
 $path : '../../../../images/chapbooks/please-please/'
 
@@ -16,61 +8,92 @@ $path : '../../../../images/chapbooks/please-please/'
 @import "../../mixins"
 @import "../../typography"
 
-$susy: ( columns: 12, gutters: .5, gutter-position: inside )
+$susy: ( columns: 12, gutters: 10, gutter-position: inside )
 
 @import url('https://fonts.googleapis.com/css?family=Vesper+Libre')
+@import url('https://fonts.googleapis.com/css?family=Cardo:400:400i')
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400i')
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans')
 
-@mixin vesper($size: 1, $weight: 400)
-  font-family: 'Versper Libre', serif
-  font-weight: $weight
-  @include font-size($size)
-  color: $purple
+.pp-container
+  +container(80em)
+  padding-top: 8rem
+  padding-bottom: 8rem
+  text-align: left
 
 .pp-title
   +span(8 of 12)
+  margin-bottom: 12rem
+  h1
+    +fontmake($family: 'Cardo', $size: 4)
+    text-align: left
+    @media (min-width: 0em) and (max-width: 40em)
+      +fontmake($family: 'Cardo', $size: 3)
+  h2
+    +fontmake($family: 'Josefin Sans', $size: 2)
+    @media (min-width: 0em) and (max-width: 40em)
+      +fontmake($family: 'Josefin Sans', $size: 1.7)
 
 .pp-poem
-  +span(8 of 12)
-  +vesper
+  +span(12 of 12)
   color: black
   text-align: justify
+  margin-bottom: 12rem
+  @media (min-width: 0em) and (max-width: 66em)
+    width: span(12)
 
 .pp-poem h1
-  +vesper($size: 2)
-  // text-transform: uppercase
+  +fontmake($family: 'Noto Serif', $size: 3, $weight: 400)
+  color: white
   font-style: italic
-  font-variant: small-caps
+  animation: neon 6s ease-in-out infinite alternate
+  @media (min-width: 47em) and (max-width: 54em)
+    +fontmake($family: 'Noto Serif', $size: 2.2)
+  @media (min-width: 0em) and (max-width: 47em)
+    +fontmake($family: 'Noto Serif', $size: 1.8)
 
-.pp-indent-1
-  text-indent: 3rem
 
-.pp-indent-2
-  text-indent: 6rem
+.pp-poem p
+  +fontmake($family: 'Cardo', $size: 1.4)
+  @media (min-width: 80em)
+    +fontmake($family: 'Cardo', $size: 1.6)
+  @media (min-width: 47em) and (max-width: 54em)
+    +fontmake($family: 'Cardo', $size: 1.2)
+  @media (min-width: 0em) and (max-width: 47em)
+    +fontmake($family: 'Cardo', $size: 1)
 
-.pp-indent-3
-  text-indent: 9rem
+@for $i from 1 through 8
+  .pp-indent-#{$i}
+    text-indent: $i * 3rem
+    @media (min-width: 47em) and (max-width: 54em)
+      text-indent: $i * 2.25rem
+    @media (min-width: 0em) and (max-width: 47em)
+      text-indent: $i * 1.5rem
 
-.pp-indent-4
-  text-indent: 12rem
-
-.pp-indent-5
-  text-indent: 15rem
-
-.pp-indent-6
-  text-indent: 18rem
-
-.pp-indent-7
-  text-indent: 21rem
-
-.pp-indent-8
-  text-indent: 24rem
-
-.pp-justify
-  text-align: justify
-  &::after
-    content: ""
-    display: inline-block
-    width: 100%
 
 .pp-acknowledgments
   +span(12 of 12)
+
+  h1
+    +fontmake($family: 'Josefin Sans', $size: 2.4)
+    @media (min-width: 0em) and (max-width: 40em)
+      +fontmake($family: 'Josefin Sans', $size: 2)
+
+  p
+    +fontmake($family: 'Cardo', $size: 1.4)
+    @media (min-width: 80em)
+      +fontmake($family: 'Cardo', $size: 1.6)
+    @media (min-width: 47em) and (max-width: 54em)
+      +fontmake($family: 'Cardo', $size: 1.2)
+    @media (min-width: 0em) and (max-width: 47em)
+      +fontmake($family: 'Cardo', $size: 1)
+
+@keyframes neon
+  from
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  to
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+
+@keyframes blink
+  70%
+    opacity: 0.7

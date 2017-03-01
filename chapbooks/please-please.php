@@ -17,12 +17,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <link rel="stylesheet" href="<?php echo $style_path; ?>please-please.min.css?v1.0">
 
-<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
-<script src="<?php echo $javas_path; ?>please-please.js?v1.0"></script>
+<!-- <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
+<script src="<?php echo $javas_path; ?>please-please.js?v1.0"></script> -->
 
 </head>
 
 <body <?php body_class(); ?>>
+
+  <section class="pp-container">
 
   <section class="pp-title">
     <h1>please please get over here please</h1>
@@ -197,20 +199,20 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
   <article class="pp-poem">
     <h1>Rend the feelings the heart with painful feelings</h1>
-    <p>I say "<em>my favorite thing about ghosts are the taste</em>."</p>
-    <p>I say "<em>every piñata is filled with spiders that turn, immaculately, into candy as <br />
-       soon as they're touched by light</em>."</p>
-    <p>I say "<em>the dead displace the ground, each moment we get closer to touching <br />
-       the sky</em>."</p>
-    <p>I say "<em>before you can play pin-the-tail-on-the-donkey, you'll have to rip the <br />
-       tail off of a horse</em>."</p>
-    <p>I say "<em>until you open it, you can't know the difference between what's in a <br />
-       present and what's in a grave</em>."</p>
-    <p>I say "<em>when you close your eyes, you disappear; if you didn't already know <br />
-       this, it meant that no one cared</em>."</p>
-    <p>I say "<em>the difference between telling a lie and telling a truth amounts to what <br />
-       you believe, regardless of the facts</em>."</p>
-    <p>I say "<em>everyone deserves to be loved</em>." </p>
+    <p>I say &ldquo;<em>my favorite thing about ghosts are the taste</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>every piñata is filled with spiders that turn, immaculately, into candy as <br />
+       soon as they're touched by light</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>the dead displace the ground, each moment we get closer to touching <br />
+       the sky</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>before you can play pin-the-tail-on-the-donkey, you'll have to rip the <br />
+       tail off of a horse</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>until you open it, you can't know the difference between what's in a <br />
+       present and what's in a grave</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>when you close your eyes, you disappear; if you didn't already know <br />
+       this, it meant that no one cared</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>the difference between telling a lie and telling a truth amounts to what <br />
+       you believe, regardless of the facts</em>.&rdquo;</p>
+    <p>I say &ldquo;<em>everyone deserves to be loved</em>.&rdquo; </p>
   </article>
 
   <article class="pp-poem">
@@ -304,12 +306,12 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <p>All of time and space and the space outside of space where does it end takes its title from <em>Fez</em></p>
     <p>Beware, I live, I hunger takes its title from <em>Sinistar</em></p>
     <p>The Chase, They Meet, and Junior takes their titles from <em>Ms. Pacman</em></p>
-    <p>The phrase "Get over here" is taken from <em>Mortal Kombat</em></p>
+    <p>The phrase &ldquo;Get over here&rdquo; is taken from <em>Mortal Kombat</em></p>
     <p>Please choose two other kids takes its title from <em>Maniac Mansion</em></p>
     <p>Rend the feelings the heart with painful feelings takes its title from <em>Rambo</em> (NES game)</p>
     <p>Watch out, the heart attacks takes its title from <em>Castlevania 2: Simon's Quest</em></p>
   </section>
 
-</section>
+  </section>
 
 <?php get_template_part( 'chapbooks/chapbook', 'footer' ); ?>
