@@ -10,19 +10,11 @@
  * Text Domain: cartridge-lit
  * Domain Path: /languages/ */
 
-$yellow  : #ECD078
-$orange  : #D95B43
-$red     : #C02942
-$purple  : #542437
-$blue    : #53777A
-$lgray   : #999
-$dgray   : #303030
-
 @import "../vendor/reset"
 @import "../vendor/bourbon/bourbon"
 @import "susy"
+@import "vars"
 @import "mixins"
-@import "typography"
 
 $susy: ( columns: 12, gutters: .5, gutter-position: split )
 
@@ -33,45 +25,47 @@ html
   box-sizing: inherit
 
 body
-  // background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('../../images/bg_pixels.png')
   background: white
   overflow-x: hidden
+  color: $dgray
 
-/*
- * HEADER
- */
+@import "typography"
+
+//
+// HEADER
+//
 
 @import "header"
 
-/*
- * THE PAGE
- */
+//
+// THE PAGE
+//
 
 #page
   @include container(70em)
   @include px-rem(margin-top, 4)
 
-/*
- * LOOPS
- */
+//
+// LOOPS
+//
 
 @import "loops"
 
-/*
- * STORIES
- */
+//
+// STORIES
+//
 
 @import "stories"
 
-/*
- * FEATURED POSTS
- */
+//
+// FEATURED POSTS
+//
 
 @import "featured"
 
-/*
- * SIDEBAR
- */
+//
+// SIDEBAR
+//
 
 .sidebar
   @include span(3 of 12)
@@ -116,15 +110,15 @@ body
     li
       @include ubuntu(0.9)
 
-/*
- * CONTENT / SINGLE POST
- */
+//
+// CONTENT / SINGLE POST
+//
 
 @import "content-single"
 
-/*
- * CONTENT / SINGLE PAGE
- */
+//
+// CONTENT / SINGLE PAGE
+//
 
 article.page
   @include span(8 of 12)
@@ -134,9 +128,9 @@ article.page
     text-align: center
     margin-bottom: 4rem
 
-/*
- * AIRSHIP
- */
+//
+// AIRSHIP
+//
 
 .airship
   @include span(9)
@@ -146,9 +140,9 @@ article.page
   color: $orange
   @include px-rem(margin-bottom, 2)
 
-/*
- * ARCHIVES
- */
+//
+// ARCHIVES
+//
 
 .archives
   @include span(9)
@@ -157,21 +151,21 @@ article.page
     text-align: center
     @include px-rem(margin-bottom, 4)
 
-/*
- * MASTHEAD
- */
+//
+// MASTHEAD
+//
 
 @import "masthead"
 
-/*
- * FOOTER
- */
+//
+// FOOTER
+//
 
 @import "footer"
 
-/*
- * ALL CONTENT PAGES
- */
+//
+// ALL CONTENT PAGES
+//
 
 .entry-content img
   max-width: 100%
@@ -215,18 +209,18 @@ hr
     background: url('../../images/cartridge_lit_logo.png')
     background-size: 20px 20px
 
-/*
- * ISSUES
- */
+//
+// ISSUES
+//
 
 @import "issues/2015june"
 @import "issues/2016january"
 @import "issues/2016april"
 @import "issues/2016october"
 
-/*
- * 404
- */
+//
+// 404
+//
 
 .error-404
   @include span(9 of 12)
@@ -241,9 +235,9 @@ hr
     @include ubuntu(1.5)
     @include px-rem(margin-bottom, 1)
 
-/*
- * SEARCH RESULTS
- */
+//
+// SEARCH RESULTS
+//
 
 .search-page
   @include span(9 of 12)
@@ -251,9 +245,9 @@ hr
   > h1
     @include px-rem(margin-bottom, 1)
 
-/*
- * ETC STANDARDS
- */
+//
+// ETC STANDARDS
+//
 
 /* search form */
 form.search-form
@@ -285,8 +279,8 @@ form.search-form
       color: $purple
       cursor: pointer
 
-/*
- * RESPONSIVE
- */
+//
+// RESPONSIVE
+//
 
 @import "responsive"

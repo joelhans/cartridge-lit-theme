@@ -1,4 +1,4 @@
-$blue    : #228DFF
+// $blue    : $neon-blue
 
 $path : '../../../../images/chapbooks/please-please/'
 
@@ -15,11 +15,22 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400i')
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans')
 
+#gradient
+  position: fixed
+  width: 100vw
+  height: 100vh
+  padding: 0px
+  margin: 0px
+  background-color: #fff
+  z-index: 0
+
 .pp-container
   +container(80em)
+  position: relative
   padding-top: 8rem
   padding-bottom: 8rem
   text-align: left
+  z-index: 1
 
 .pp-title
   +span(8 of 12)
@@ -43,10 +54,11 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
     width: span(12)
 
 .pp-poem h1
-  +fontmake($family: 'Noto Serif', $size: 3, $weight: 400)
-  color: white
+  +fontmake($family: 'Noto Serif', $size: 3, $weight: 400, $margin: 6)
+  color: transparentize($dgray, 0.1)
   font-style: italic
-  animation: neon 6s ease-in-out infinite alternate
+  // animation: neon 6s ease-in-out infinite alternate
+  -webkit-transform: translate3d(0,0,0)
   @media (min-width: 47em) and (max-width: 54em)
     +fontmake($family: 'Noto Serif', $size: 2.2)
   @media (min-width: 0em) and (max-width: 47em)
@@ -70,7 +82,6 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
     @media (min-width: 0em) and (max-width: 47em)
       text-indent: $i * 1.5rem
 
-
 .pp-acknowledgments
   +span(12 of 12)
 
@@ -88,11 +99,13 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
     @media (min-width: 0em) and (max-width: 47em)
       +fontmake($family: 'Cardo', $size: 1)
 
+$neon-blue : #d0d8e0
+
 @keyframes neon
   from
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $neon-blue, 0 0 70px $neon-blue, 0 0 80px $neon-blue, 0 0 100px $neon-blue, 0 0 120px $neon-blue , 0 0 150px $neon-blue
   to
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $neon-blue, 0 0 35px $neon-blue, 0 0 40px $neon-blue, 0 0 50px $neon-blue, 0 0 60px $neon-blue , 0 0 75px $neon-blue
 
 @keyframes blink
   70%

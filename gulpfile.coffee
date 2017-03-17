@@ -9,7 +9,7 @@ cssnano      = require 'gulp-cssnano'
 coffee       = require 'gulp-coffee'
 concat       = require 'gulp-concat'
 
-# uglify       = require 'gulp-uglify'
+uglify       = require 'gulp-uglify'
 plumber      = require 'gulp-plumber'
 changed      = require 'gulp-changed'
 # livereload   = require 'gulp-livereload'
@@ -111,3 +111,4 @@ gulp.task 'default', ->
     proxy: 'http://localhost/wp-cartridge/'
   }
   gulp.watch styles.src, ['styles']
+  gulp.watch scripts.src, ['js']

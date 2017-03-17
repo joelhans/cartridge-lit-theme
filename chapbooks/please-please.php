@@ -17,12 +17,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <link rel="stylesheet" href="<?php echo $style_path; ?>please-please.min.css?v1.0">
 
-<!-- <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
-<script src="<?php echo $javas_path; ?>please-please.js?v1.0"></script> -->
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
+<script src="<?php echo $javas_path; ?>please-please.js?v1.0"></script>
 
 </head>
 
 <body <?php body_class(); ?>>
+
+  <div id="gradient"></div>
 
   <section class="pp-container">
 

@@ -1,32 +1,40 @@
-@mixin ubuntu($size: 1, $weight: 500)
+$yellow  : #ECD078
+$orange  : #D95B43
+$red     : #C02942
+$purple  : #542437
+$blue    : #53777A
+$lgray   : #999
+$dgray   : #303030
+
+=ubuntu($size: 1, $weight: 500)
   font-family: 'Ubuntu', sans-serif
   font-weight: $weight
-  @include font-size($size)
+  +font-size($size)
 
-@mixin ubuntu-l($size: 1, $weight: 300)
+=ubuntu-l($size: 1, $weight: 300)
   font-family: 'Ubuntu', sans-serif
   font-weight: $weight
-  @include font-size($size)
+  +font-size($size)
 
-@mixin vollkorn($size: 1.4, $weight: 400)
+=vollkorn ($size: 1.4, $weight: 400)
   font-family: 'Vollkorn', serif
   font-weight: $weight
-  @include font-size($size)
+  +font-size($size)
 
-@mixin roboto($size: 1, $weight: 400)
+=roboto ($size: 1, $weight: 400)
   font-family: 'Roboto Slab', serif
   font-weight: $weight
-  @include font-size($size)
+  +font-size($size)
 
-@mixin crimson($size: 1, $weight: 400)
+=crimson ($size: 1, $weight: 400)
   font-family: 'Crimson Text', 'Georgia', serif
   font-weight: $weight
-  @include font-size($size)
+  +font-size($size)
 
-p,ol,ul,span,blockquote
+p, ol, ul, span, blockquote
   color: $dgray
-  @include crimson(1.2, 400)
-  @include margin-bottom(1.2)
+  +crimson(1.2, 400)
+  +margin-bottom(1.2)
 
 em, i
   font-style: italic
@@ -37,7 +45,7 @@ strong, b
 
 h1,h2,h3,h4,h5,h6
   color: $dgray
-  @include crimson(2, 600)
+  +crimson(2, 600)
 
 a
   color: $red
