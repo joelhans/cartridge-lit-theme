@@ -1,8 +1,16 @@
 $(document).ready ->
 
+  $('.svg--poem')
+    .waypoint (dir) ->
+      if dir is 'down'
+        console.log 'hi'
+        $(this.element).attr "class", "svg--poem animated"
+    ,
+      offset: 'bottom-in-view'
+
   # http://codepen.io/quasimondo/pen/lDdrF
 
-  colors = [[62,35,255,0.2], [60,255,60,0.2], [255,35,98,0.2], [45,175,230,0.2], [255,0,255,0.2], [255,128,0,0.2]]
+  colors = [[62,35,255,0.1], [60,255,60,0.1], [255,35,98,0.1], [45,175,230,0.1], [255,0,255,0.1], [255,128,0,0.1]]
   step = 0
   colorIndices = [0,1,2,3]
   gradientSpeed = 0.02
@@ -30,9 +38,7 @@ $(document).ready ->
     a2 = c0_0[3]
     color2 = "rgba("+r2+","+g2+","+b2+","+a2+")"
 
-    # $('#gradient').css({background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
     $('#gradient').css("background-image", "linear-gradient(to right, "+color1+", "+color2+")")
-    # linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
 
     step += gradientSpeed
     if step >= 1

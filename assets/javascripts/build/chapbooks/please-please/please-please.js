@@ -1,7 +1,15 @@
 (function() {
   $(document).ready(function() {
     var colorIndices, colors, gradientSpeed, step, updateGradient;
-    colors = [[62, 35, 255, 0.2], [60, 255, 60, 0.2], [255, 35, 98, 0.2], [45, 175, 230, 0.2], [255, 0, 255, 0.2], [255, 128, 0, 0.2]];
+    $('.svg--poem').waypoint(function(dir) {
+      if (dir === 'down') {
+        console.log('hi');
+        return $(this.element).attr("class", "svg--poem animated");
+      }
+    }, {
+      offset: 'bottom-in-view'
+    });
+    colors = [[62, 35, 255, 0.1], [60, 255, 60, 0.1], [255, 35, 98, 0.1], [45, 175, 230, 0.1], [255, 0, 255, 0.1], [255, 128, 0, 0.1]];
     step = 0;
     colorIndices = [0, 1, 2, 3];
     gradientSpeed = 0.02;

@@ -27,14 +27,15 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 .pp-container
   +container(80em)
   position: relative
-  padding-top: 8rem
+  padding-top: 12rem
   padding-bottom: 8rem
   text-align: left
   z-index: 1
 
 .pp-title
-  +span(8 of 12)
-  margin-bottom: 12rem
+  +span(12 of 12)
+  height: 100vh
+  margin-bottom: 2rem
   h1
     +fontmake($family: 'Cardo', $size: 4)
     text-align: left
@@ -99,14 +100,63 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
     @media (min-width: 0em) and (max-width: 47em)
       +fontmake($family: 'Cardo', $size: 1)
 
-$neon-blue : #d0d8e0
+.pp-back
+  margin-top: 8rem
 
-@keyframes neon
-  from
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $neon-blue, 0 0 70px $neon-blue, 0 0 80px $neon-blue, 0 0 100px $neon-blue, 0 0 120px $neon-blue , 0 0 150px $neon-blue
-  to
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $neon-blue, 0 0 35px $neon-blue, 0 0 40px $neon-blue, 0 0 50px $neon-blue, 0 0 60px $neon-blue , 0 0 75px $neon-blue
+$colors: #360745, #D61C59, #E7D84B, #EB6841, #1B8798
+$max: 5
+$stroke-step: 3%
 
-@keyframes blink
-  70%
-    opacity: 0.7
+svg
+  width: 100%
+
+#svg--title
+  margin
+
+#svg--poem
+  width: 100%
+  margin-bottom: -3rem
+
+.three--line svg
+  margin-bottom: 4rem
+
+.title--line,
+.title--line2
+  font-family: 'Cardo'
+  font-size: 6rem
+
+.text--line,
+.text--line2,
+.text--line3
+  font-family: 'Cardo'
+  font-size: 4rem
+
+.text-copy
+  fill: none
+  stroke: white
+  stroke-dasharray: $stroke-step $stroke-step * ($max - 1)
+  stroke-width: 1px
+
+  // animation: stroke-offset 0s ease-in-out
+  animation: stroke-offset 5s ease-in-out
+  animation-iteration-count: 1
+
+  @for $item from 1 through $max
+    $stroke-color: nth($colors, $item)
+
+    &:nth-child(#{$item})
+      stroke: $stroke-color
+      stroke-dashoffset: $stroke-step * $item
+
+.paused .text-copy
+  animation-play-state: paused
+
+.animated .text-copy
+  animation-play-state: running
+  // animation: stroke-offset 9s ease-in-out
+
+
+@keyframes stroke-offset
+  0%
+    stroke-dashoffset: $stroke-step * $max
+    stroke-dasharray: 0 $stroke-step * $max*2.5

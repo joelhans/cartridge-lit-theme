@@ -19,6 +19,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
 <script src="<?php echo $javas_path; ?>please-please.js?v1.0"></script>
+<script src="<?php echo $javas_path; ?>jquery.waypoints.min.js"></script>
 
 </head>
 
@@ -29,12 +30,72 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <section class="pp-container">
 
   <section class="pp-title">
-    <h1>please please get over here please</h1>
+    <svg id="svg--title" viewBox="0 0 800 200">
+      <symbol id="s-text">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="title--line"
+              >
+          please please
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="90%"
+              class="title--line2"
+              >
+          get over here please
+        </text>
+      </symbol>
+
+      <g class="g-ants">
+        <use xlink:href="#s-text"
+          class="text-copy"></use>
+        <use xlink:href="#s-text"
+          class="text-copy"></use>
+        <use xlink:href="#s-text"
+          class="text-copy"></use>
+        <use xlink:href="#s-text"
+          class="text-copy"></use>
+        <use xlink:href="#s-text"
+          class="text-copy"></use>
+      </g>
+    </svg>
+    <!-- <h1>please please get over here please</h1> -->
     <h2>Jamison Crabtree</h2>
   </section>
 
   <article class="pp-poem">
-    <h1>Watch out the heart attacks</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text2">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          Watch out
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          the heart attacks
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text2"
+          class="text-copy"></use>
+        <use xlink:href="#s-text2"
+          class="text-copy"></use>
+        <use xlink:href="#s-text2"
+          class="text-copy"></use>
+        <use xlink:href="#s-text2"
+          class="text-copy"></use>
+        <use xlink:href="#s-text2"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p class="pp-indent-4">A fist is capricious; the heart: more so.
 	  <p class="pp-indent-1">Show me what's inside of you &amp; how you can live without it. </p>
 		<p class="pp-indent-2">Here; the ground below each tree: it secrets a prison of roots. </p>
@@ -49,7 +110,36 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>The medical arcades</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text3">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          The medical
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          arcades
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text3"
+          class="text-copy"></use>
+        <use xlink:href="#s-text3"
+          class="text-copy"></use>
+        <use xlink:href="#s-text3"
+          class="text-copy"></use>
+        <use xlink:href="#s-text3"
+          class="text-copy"></use>
+        <use xlink:href="#s-text3"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>look up, the stars are moving <br />
        away from you. the earthshined</p>
     <p>moon, too. injured men float on <br />
@@ -67,7 +157,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Beware I live, I hunger</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text4">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Beware I live, I hunger
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text4"
+          class="text-copy"></use>
+        <use xlink:href="#s-text4"
+          class="text-copy"></use>
+        <use xlink:href="#s-text4"
+          class="text-copy"></use>
+        <use xlink:href="#s-text4"
+          class="text-copy"></use>
+        <use xlink:href="#s-text4"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p class="pp-indent-4">A face hewn from the sky.</p>
     <p>The stars twinkle like a dead man's eyes. </p>
     <p class="pp-indent-7">A shard of light lays <br />
@@ -83,7 +195,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Modeling, geometrically</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text5">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Modeling, geometrically
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text5"
+          class="text-copy"></use>
+        <use xlink:href="#s-text5"
+          class="text-copy"></use>
+        <use xlink:href="#s-text5"
+          class="text-copy"></use>
+        <use xlink:href="#s-text5"
+          class="text-copy"></use>
+        <use xlink:href="#s-text5"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>as a child; a man explained to me <br />
        that the body was nothing but inter-</p>
     <p>secting vertices all wrapped in skin, <br />
@@ -101,7 +235,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>The Chase</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text6">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          The Chase
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text6"
+          class="text-copy"></use>
+        <use xlink:href="#s-text6"
+          class="text-copy"></use>
+        <use xlink:href="#s-text6"
+          class="text-copy"></use>
+        <use xlink:href="#s-text6"
+          class="text-copy"></use>
+        <use xlink:href="#s-text6"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>Ghosts or haints. </p>
     <p class="pp-indent-5">A haunt is another word for a face; <br />
        scary to see so many floating through the world.</p>
@@ -119,7 +275,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Healing potion</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text7">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Healing potion
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text7"
+          class="text-copy"></use>
+        <use xlink:href="#s-text7"
+          class="text-copy"></use>
+        <use xlink:href="#s-text7"
+          class="text-copy"></use>
+        <use xlink:href="#s-text7"
+          class="text-copy"></use>
+        <use xlink:href="#s-text7"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>there are places where you mention your injuries, <br />
        i've heard, &amp; they will be healed. but not here.</p>
      <p>here, make a secret of your sickness. if someone asks  <br />
@@ -137,7 +315,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>They meet</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text8">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          They meet
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text8"
+          class="text-copy"></use>
+        <use xlink:href="#s-text8"
+          class="text-copy"></use>
+        <use xlink:href="#s-text8"
+          class="text-copy"></use>
+        <use xlink:href="#s-text8"
+          class="text-copy"></use>
+        <use xlink:href="#s-text8"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>She falls in love with a blank. </p>
     <p class="pp-indent-1">He has no eyes; hers are blue. </p>
     <p class="pp-indent-1">He has no lips; hers are red. </p>
@@ -149,7 +349,36 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>you can use a bullet to make a meat</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text9">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          you can use a bullet
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          to make a meat
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text9"
+          class="text-copy"></use>
+        <use xlink:href="#s-text9"
+          class="text-copy"></use>
+        <use xlink:href="#s-text9"
+          class="text-copy"></use>
+        <use xlink:href="#s-text9"
+          class="text-copy"></use>
+        <use xlink:href="#s-text9"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>you can use a face to bring yourself back
        to life. you can throw a knife &amp; it will</p>
     <p>fly forever, parallel to the sharp
@@ -167,7 +396,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Junior</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text10">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Junior
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text10"
+          class="text-copy"></use>
+        <use xlink:href="#s-text10"
+          class="text-copy"></use>
+        <use xlink:href="#s-text10"
+          class="text-copy"></use>
+        <use xlink:href="#s-text10"
+          class="text-copy"></use>
+        <use xlink:href="#s-text10"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p class="pp-indent-3">Children fall from the sky, abandoned by the birds.</p>
     <p>Earless and armless, smiling (liplessly), they keep falling. </p>
     <p class="pp-indent-1">Every child is male and small and they stare at their parents and their <br />
@@ -182,7 +433,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Speak to the villagers</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text11">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Speak to the villagers
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text11"
+          class="text-copy"></use>
+        <use xlink:href="#s-text11"
+          class="text-copy"></use>
+        <use xlink:href="#s-text11"
+          class="text-copy"></use>
+        <use xlink:href="#s-text11"
+          class="text-copy"></use>
+        <use xlink:href="#s-text11"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>you rarely hear your own voice &amp; when you do, <br />
        your thoughts aren't your own. strangers</p>
     <p>repeat themselves; out of words, they nod, <br />
@@ -200,7 +473,36 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Rend the feelings the heart with painful feelings</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text12">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          Rend the feelings the heart
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          with painful feelings
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text12"
+          class="text-copy"></use>
+        <use xlink:href="#s-text12"
+          class="text-copy"></use>
+        <use xlink:href="#s-text12"
+          class="text-copy"></use>
+        <use xlink:href="#s-text12"
+          class="text-copy"></use>
+        <use xlink:href="#s-text12"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>I say &ldquo;<em>my favorite thing about ghosts are the taste</em>.&rdquo;</p>
     <p>I say &ldquo;<em>every piñata is filled with spiders that turn, immaculately, into candy as <br />
        soon as they're touched by light</em>.&rdquo;</p>
@@ -218,7 +520,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>The empty room</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text13">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          The empty room
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text13"
+          class="text-copy"></use>
+        <use xlink:href="#s-text13"
+          class="text-copy"></use>
+        <use xlink:href="#s-text13"
+          class="text-copy"></use>
+        <use xlink:href="#s-text13"
+          class="text-copy"></use>
+        <use xlink:href="#s-text13"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>is empty. which you should've known. but why, &amp; why <br />
        fill it? you open an unknown door &amp; find the room</p>
     <p>where you touched a boy's face &amp; he punched yours. <br />
@@ -235,8 +559,44 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
        is the ground; a promise you can ful &amp; fill.</p>
   </article>
 
-  <article class="pp-poem">
-    <h1>All of time and space and the space outside of space where does it end</h1>
+  <article class="pp-poem three--line">
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text14">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          All of time and space
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          and the space outside of
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="85%"
+              class="text--line3"
+              >
+          space where does it end
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text14"
+          class="text-copy"></use>
+        <use xlink:href="#s-text14"
+          class="text-copy"></use>
+        <use xlink:href="#s-text14"
+          class="text-copy"></use>
+        <use xlink:href="#s-text14"
+          class="text-copy"></use>
+        <use xlink:href="#s-text14"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>Turn around until you're facing the ground: open it.</p>
     <p class="pp-indent-7">Behind you are the <br />
        ruins of the sky &amp; between you &amp; another sky is the ground. </p>
@@ -253,7 +613,36 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>i break into my friends houses when they're gone</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text15">
+        <text text-anchor="start"
+              x="0%"
+              y="25%"
+              class="text--line"
+              >
+          i break into my friends
+        </text>
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line2"
+              >
+          houses when they're gone
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text15"
+          class="text-copy"></use>
+        <use xlink:href="#s-text15"
+          class="text-copy"></use>
+        <use xlink:href="#s-text15"
+          class="text-copy"></use>
+        <use xlink:href="#s-text15"
+          class="text-copy"></use>
+        <use xlink:href="#s-text15"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>through the kitchen light of alleys, all akimbo, <br />
       i go (slowly). strangers leave their windows</p>
     <p>open, their doors unbolted, all for me, <br />
@@ -271,7 +660,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>Please choose two other kids</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text16">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Please choose two other kids
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text16"
+          class="text-copy"></use>
+        <use xlink:href="#s-text16"
+          class="text-copy"></use>
+        <use xlink:href="#s-text16"
+          class="text-copy"></use>
+        <use xlink:href="#s-text16"
+          class="text-copy"></use>
+        <use xlink:href="#s-text16"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p class="pp-indent-2">Boys over-ripen as the summer deepens. </p>
     <p>A dusting of dusk hangs in the stars-- mostly purplish and softing into the <br />
        canopies of the oaks.</p>
@@ -286,7 +697,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <article class="pp-poem">
-    <h1>start over?</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text17">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          start over?
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text17"
+          class="text-copy"></use>
+        <use xlink:href="#s-text17"
+          class="text-copy"></use>
+        <use xlink:href="#s-text17"
+          class="text-copy"></use>
+        <use xlink:href="#s-text17"
+          class="text-copy"></use>
+        <use xlink:href="#s-text17"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>if you know how to love then you know what <br />
        it means to hurt. passion is even worse</p>
     <p>(<em>pati</em>, its root, means: <em>suffer</em>). &amp; hate is <br />
@@ -304,7 +737,29 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   </article>
 
   <section class="pp-acknowledgments">
-    <h1>Acknowledgments</h1>
+    <svg class="svg--poem paused" viewBox="0 0 800 200">
+      <symbol id="s-text18">
+        <text text-anchor="start"
+              x="0%"
+              y="55%"
+              class="text--line"
+              >
+          Acknowledgments
+        </text>
+      </symbol>
+      <g class="g-ants">
+        <use xlink:href="#s-text18"
+          class="text-copy"></use>
+        <use xlink:href="#s-text18"
+          class="text-copy"></use>
+        <use xlink:href="#s-text18"
+          class="text-copy"></use>
+        <use xlink:href="#s-text18"
+          class="text-copy"></use>
+        <use xlink:href="#s-text18"
+          class="text-copy"></use>
+      </g>
+    </svg>
     <p>All of time and space and the space outside of space where does it end takes its title from <em>Fez</em></p>
     <p>Beware, I live, I hunger takes its title from <em>Sinistar</em></p>
     <p>The Chase, They Meet, and Junior takes their titles from <em>Ms. Pacman</em></p>
@@ -312,6 +767,8 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     <p>Please choose two other kids takes its title from <em>Maniac Mansion</em></p>
     <p>Rend the feelings the heart with painful feelings takes its title from <em>Rambo</em> (NES game)</p>
     <p>Watch out, the heart attacks takes its title from <em>Castlevania 2: Simon's Quest</em></p>
+
+    <p class="pp-back">Back to <a href="//cartridgelit.com"><em>Cartridge Lit</em></a>.</p>
   </section>
 
   </section>
