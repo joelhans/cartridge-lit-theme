@@ -30,18 +30,18 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <section class="pp-container">
 
   <section class="pp-title">
-    <svg id="svg--title" viewBox="0 0 800 200">
+    <svg id="svg--title" viewBox="0 0 800 300">
       <symbol id="s-text">
         <text text-anchor="start"
               x="0%"
-              y="55%"
+              y="39%"
               class="title--line"
               >
           please please
         </text>
         <text text-anchor="start"
               x="0%"
-              y="90%"
+              y="83%"
               class="title--line2"
               >
           get over here please

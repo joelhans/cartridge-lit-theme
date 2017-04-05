@@ -103,15 +103,11 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 .pp-back
   margin-top: 8rem
 
-$colors: #360745, #D61C59, #E7D84B, #EB6841, #1B8798
-$max: 5
-$stroke-step: 3%
-
 svg
   width: 100%
 
 #svg--title
-  margin
+  margin-bottom: 2rem
 
 #svg--poem
   width: 100%
@@ -131,13 +127,16 @@ svg
   font-family: 'Cardo'
   font-size: 4rem
 
+$colors: #360745, #D61C59, #E7D84B, #EB6841, #1B8798
+$max: 5
+$stroke-step: 5%
+
 .text-copy
   fill: none
   stroke: white
   stroke-dasharray: $stroke-step $stroke-step * ($max - 1)
   stroke-width: 1px
 
-  // animation: stroke-offset 0s ease-in-out
   animation: stroke-offset 5s ease-in-out
   animation-iteration-count: 1
 
@@ -153,10 +152,9 @@ svg
 
 .animated .text-copy
   animation-play-state: running
-  // animation: stroke-offset 9s ease-in-out
 
 
 @keyframes stroke-offset
-  0%
+ 0%
     stroke-dashoffset: $stroke-step * $max
-    stroke-dasharray: 0 $stroke-step * $max*2.5
+    stroke-dasharray: 0 $stroke-step * $max*1.5
