@@ -106,12 +106,8 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 svg
   width: 100%
 
-#svg--title
+.svg--title
   margin-bottom: 2rem
-
-#svg--poem
-  width: 100%
-  margin-bottom: -3rem
 
 .three--line svg
   margin-bottom: 4rem
@@ -131,30 +127,77 @@ $colors: #360745, #D61C59, #E7D84B, #EB6841, #1B8798
 $max: 5
 $stroke-step: 5%
 
+/***************************/
+/* SOLID BLACK, FUNCTIONAL */
+/***************************/
+
 .text-copy
   fill: none
-  stroke: white
-  stroke-dasharray: $stroke-step $stroke-step * ($max - 1)
+  stroke: $purple
   stroke-width: 1px
 
-  animation: stroke-offset 5s ease-in-out
-  animation-iteration-count: 1
+  stroke-dashoffset: 400
+  stroke-dasharray: 400
 
-  @for $item from 1 through $max
-    $stroke-color: nth($colors, $item)
-
-    &:nth-child(#{$item})
-      stroke: $stroke-color
-      stroke-dashoffset: $stroke-step * $item
-
-.paused .text-copy
-  animation-play-state: paused
+  transition: 15s stroke-dashoffset linear
 
 .animated .text-copy
-  animation-play-state: running
+  stroke-dashoffset: 0
 
 
-@keyframes stroke-offset
- 0%
-    stroke-dashoffset: $stroke-step * $max
-    stroke-dasharray: 0 $stroke-step * $max*1.5
+/***************************/
+/* COLORS, UNTESTED        */
+/***************************/
+
+// .text-copy
+//   fill: none
+//   stroke: black
+//   stroke-width: 1px
+//
+//   // stroke-dashoffset: 400
+//   stroke-dasharray: $stroke-step $stroke-step * ($max - 1)
+//
+//   transition: 7s stroke-dashoffset linear
+//
+//   @for $item from 1 through $max
+//     $stroke-color: nth($colors, $item)
+//
+//     &:nth-child(#{$item})
+//       stroke: $stroke-color
+//       stroke-dashoffset: $stroke-step * $item
+//
+// .animated .text-copy
+//   stroke-dashoffset: 25%
+//   stroke-dasharray: 0 $stroke-step * $max*1.5
+
+/***************************/
+/* COLORS, NOT WORKING IN FIREFOX        */
+/***************************/
+
+// .text-copy
+//   fill: none
+//   stroke: white
+//   stroke-dasharray: $stroke-step $stroke-step * ($max - 1)
+//   stroke-width: 1px
+//
+//   animation: stroke-offset 5s linear
+//   animation-iteration-count: 1
+//
+//   @for $item from 1 through $max
+//     $stroke-color: nth($colors, $item)
+//
+//     &:nth-child(#{$item})
+//       stroke: $stroke-color
+//       stroke-dashoffset: $stroke-step * $item
+//
+// .paused .text-copy
+//   animation-play-state: paused
+//
+// .animated .text-copy
+//   animation-play-state: running
+//
+//
+// @keyframes stroke-offset
+//  from
+//     stroke-dashoffset: $stroke-step * $max
+//     stroke-dasharray: 0 $stroke-step * $max

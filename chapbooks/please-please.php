@@ -30,7 +30,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
   <section class="pp-container">
 
   <section class="pp-title">
-    <svg id="svg--title" viewBox="0 0 800 300">
+    <svg class="svg--title" viewBox="0 0 800 300">
       <symbol id="s-text">
         <text text-anchor="start"
               x="0%"
@@ -51,14 +51,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text"
           class="text-copy"></use>
-        <use xlink:href="#s-text"
+        <!-- <use xlink:href="#s-text"
           class="text-copy"></use>
         <use xlink:href="#s-text"
           class="text-copy"></use>
         <use xlink:href="#s-text"
           class="text-copy"></use>
         <use xlink:href="#s-text"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <!-- <h1>please please get over here please</h1> -->
@@ -86,14 +86,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text2"
           class="text-copy"></use>
-        <use xlink:href="#s-text2"
+        <!-- <use xlink:href="#s-text2"
           class="text-copy"></use>
         <use xlink:href="#s-text2"
           class="text-copy"></use>
         <use xlink:href="#s-text2"
           class="text-copy"></use>
         <use xlink:href="#s-text2"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p class="pp-indent-4">A fist is capricious; the heart: more so.
@@ -130,14 +130,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text3"
           class="text-copy"></use>
-        <use xlink:href="#s-text3"
+        <!-- <use xlink:href="#s-text3"
           class="text-copy"></use>
         <use xlink:href="#s-text3"
           class="text-copy"></use>
         <use xlink:href="#s-text3"
           class="text-copy"></use>
         <use xlink:href="#s-text3"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>look up, the stars are moving <br />
@@ -170,14 +170,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text4"
           class="text-copy"></use>
-        <use xlink:href="#s-text4"
+        <!-- <use xlink:href="#s-text4"
           class="text-copy"></use>
         <use xlink:href="#s-text4"
           class="text-copy"></use>
         <use xlink:href="#s-text4"
           class="text-copy"></use>
         <use xlink:href="#s-text4"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p class="pp-indent-4">A face hewn from the sky.</p>
@@ -208,14 +208,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text5"
           class="text-copy"></use>
-        <use xlink:href="#s-text5"
+        <!-- <use xlink:href="#s-text5"
           class="text-copy"></use>
         <use xlink:href="#s-text5"
           class="text-copy"></use>
         <use xlink:href="#s-text5"
           class="text-copy"></use>
         <use xlink:href="#s-text5"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>as a child; a man explained to me <br />
@@ -248,14 +248,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text6"
           class="text-copy"></use>
-        <use xlink:href="#s-text6"
+        <!-- <use xlink:href="#s-text6"
           class="text-copy"></use>
         <use xlink:href="#s-text6"
           class="text-copy"></use>
         <use xlink:href="#s-text6"
           class="text-copy"></use>
         <use xlink:href="#s-text6"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>Ghosts or haints. </p>
@@ -288,14 +288,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text7"
           class="text-copy"></use>
-        <use xlink:href="#s-text7"
+        <!-- <use xlink:href="#s-text7"
           class="text-copy"></use>
         <use xlink:href="#s-text7"
           class="text-copy"></use>
         <use xlink:href="#s-text7"
           class="text-copy"></use>
         <use xlink:href="#s-text7"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>there are places where you mention your injuries, <br />
@@ -328,14 +328,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text8"
           class="text-copy"></use>
-        <use xlink:href="#s-text8"
+        <!-- <use xlink:href="#s-text8"
           class="text-copy"></use>
         <use xlink:href="#s-text8"
           class="text-copy"></use>
         <use xlink:href="#s-text8"
           class="text-copy"></use>
         <use xlink:href="#s-text8"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>She falls in love with a blank. </p>
@@ -369,14 +369,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text9"
           class="text-copy"></use>
-        <use xlink:href="#s-text9"
+        <!-- <use xlink:href="#s-text9"
           class="text-copy"></use>
         <use xlink:href="#s-text9"
           class="text-copy"></use>
         <use xlink:href="#s-text9"
           class="text-copy"></use>
         <use xlink:href="#s-text9"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>you can use a face to bring yourself back
@@ -409,14 +409,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text10"
           class="text-copy"></use>
-        <use xlink:href="#s-text10"
+        <!-- <use xlink:href="#s-text10"
           class="text-copy"></use>
         <use xlink:href="#s-text10"
           class="text-copy"></use>
         <use xlink:href="#s-text10"
           class="text-copy"></use>
         <use xlink:href="#s-text10"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p class="pp-indent-3">Children fall from the sky, abandoned by the birds.</p>
@@ -446,14 +446,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text11"
           class="text-copy"></use>
-        <use xlink:href="#s-text11"
+        <!-- <use xlink:href="#s-text11"
           class="text-copy"></use>
         <use xlink:href="#s-text11"
           class="text-copy"></use>
         <use xlink:href="#s-text11"
           class="text-copy"></use>
         <use xlink:href="#s-text11"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>you rarely hear your own voice &amp; when you do, <br />
@@ -493,14 +493,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text12"
           class="text-copy"></use>
-        <use xlink:href="#s-text12"
+        <!-- <use xlink:href="#s-text12"
           class="text-copy"></use>
         <use xlink:href="#s-text12"
           class="text-copy"></use>
         <use xlink:href="#s-text12"
           class="text-copy"></use>
         <use xlink:href="#s-text12"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>I say &ldquo;<em>my favorite thing about ghosts are the taste</em>.&rdquo;</p>
@@ -533,14 +533,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text13"
           class="text-copy"></use>
-        <use xlink:href="#s-text13"
+        <!-- <use xlink:href="#s-text13"
           class="text-copy"></use>
         <use xlink:href="#s-text13"
           class="text-copy"></use>
         <use xlink:href="#s-text13"
           class="text-copy"></use>
         <use xlink:href="#s-text13"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>is empty. which you should've known. but why, &amp; why <br />
@@ -587,14 +587,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text14"
           class="text-copy"></use>
-        <use xlink:href="#s-text14"
+        <!-- <use xlink:href="#s-text14"
           class="text-copy"></use>
         <use xlink:href="#s-text14"
           class="text-copy"></use>
         <use xlink:href="#s-text14"
           class="text-copy"></use>
         <use xlink:href="#s-text14"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>Turn around until you're facing the ground: open it.</p>
@@ -633,14 +633,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text15"
           class="text-copy"></use>
-        <use xlink:href="#s-text15"
+        <!-- <use xlink:href="#s-text15"
           class="text-copy"></use>
         <use xlink:href="#s-text15"
           class="text-copy"></use>
         <use xlink:href="#s-text15"
           class="text-copy"></use>
         <use xlink:href="#s-text15"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>through the kitchen light of alleys, all akimbo, <br />
@@ -673,14 +673,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text16"
           class="text-copy"></use>
-        <use xlink:href="#s-text16"
+        <!-- <use xlink:href="#s-text16"
           class="text-copy"></use>
         <use xlink:href="#s-text16"
           class="text-copy"></use>
         <use xlink:href="#s-text16"
           class="text-copy"></use>
         <use xlink:href="#s-text16"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p class="pp-indent-2">Boys over-ripen as the summer deepens. </p>
@@ -710,14 +710,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text17"
           class="text-copy"></use>
-        <use xlink:href="#s-text17"
+        <!-- <use xlink:href="#s-text17"
           class="text-copy"></use>
         <use xlink:href="#s-text17"
           class="text-copy"></use>
         <use xlink:href="#s-text17"
           class="text-copy"></use>
         <use xlink:href="#s-text17"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>if you know how to love then you know what <br />
@@ -750,14 +750,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       <g class="g-ants">
         <use xlink:href="#s-text18"
           class="text-copy"></use>
-        <use xlink:href="#s-text18"
+        <!-- <use xlink:href="#s-text18"
           class="text-copy"></use>
         <use xlink:href="#s-text18"
           class="text-copy"></use>
         <use xlink:href="#s-text18"
           class="text-copy"></use>
         <use xlink:href="#s-text18"
-          class="text-copy"></use>
+          class="text-copy"></use> -->
       </g>
     </svg>
     <p>All of time and space and the space outside of space where does it end takes its title from <em>Fez</em></p>

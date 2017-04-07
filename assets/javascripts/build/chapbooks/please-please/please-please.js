@@ -3,8 +3,14 @@
     var colorIndices, colors, gradientSpeed, step, updateGradient;
     $('.svg--poem').waypoint(function(dir) {
       if (dir === 'down') {
-        console.log('hi');
         return $(this.element).attr("class", "svg--poem animated");
+      }
+    }, {
+      offset: 'bottom-in-view'
+    });
+    $('.svg--title').waypoint(function(dir) {
+      if (dir === 'down') {
+        return $(this.element).attr("class", "svg--title animated");
       }
     }, {
       offset: 'bottom-in-view'
