@@ -14,13 +14,7 @@
 get_header(); ?>
 
 <section class="post-featured">
-
-  <!-- Is the page published yet? -->
-  <?php
-    $page = get_page_by_path('issue-consequences',OBJECT,'page');
-    if ($page->post_status == 'publish') :
-  ?>
-
+  
   <article class="featured-issue issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
@@ -34,8 +28,6 @@ get_header(); ?>
       <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
     </div>
   </article>
-
-  <?php endif;?>
 
   <!-- BEGIN FEATURED QUERIES -->
   <?php
