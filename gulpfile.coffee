@@ -108,7 +108,7 @@ gulp.task 'styles', ->
 gulp.task 'default', ->
   browserSync.init {
     files: ['*.php', '{chapbooks}/**/*.php', '{issues}/**/*.php']
-    proxy: 'http://localhost/wp-cartridge/'
+    proxy: 'http://vccw.dev/'
   }
   gulp.watch styles.src, ['styles']
   gulp.watch scripts.src, ['js']

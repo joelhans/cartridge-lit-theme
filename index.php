@@ -14,7 +14,7 @@
 get_header(); ?>
 
 <section class="post-featured">
-  
+
   <article class="featured-issue issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
     <div class="issue-content">
       <h1>
@@ -32,7 +32,7 @@ get_header(); ?>
   <!-- BEGIN FEATURED QUERIES -->
   <?php
   $args = array(
-    'posts_per_page' => 13,
+    'posts_per_page' => 12,
     'meta_query' => array(
       'relation' => 'OR',
         array(
@@ -73,7 +73,22 @@ get_header(); ?>
   <!-- both chapbook announcements -->
   <?php if ( $featured_query->current_post == 1 ): ?>
 
-  <article class="featured-chap-1" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/tender-glories/front_page_teaser.jpg"; ?>');">
+    <article class="featured-chap-1" id="gradient">
+      <div class="chap-top">
+        <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">Read</a>
+      </div>
+      <div class="chap-bottom">
+        <h1>
+          <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">
+            please please get over here please
+          </a>
+        </h1>
+        <h2>by Jamison Crabtree</h2>
+        <p>It's time to be put back together.</p>
+      </div>
+    </article>
+
+  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/tender-glories/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/tender-glories/' ) ); ?>">Read</a>
     </div>
@@ -88,7 +103,9 @@ get_header(); ?>
     </div>
   </article>
 
-  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
+  <?php elseif ( $featured_query->current_post == 10 ): ?>
+
+  <article class="featured-chap-3" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">Read</a>
     </div>
@@ -103,8 +120,9 @@ get_header(); ?>
     </div>
   </article>
 
-<?php elseif ( $featured_query->current_post == 10 ): ?>
-  <article class="featured-chap-3" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
+  <?php elseif ( $featured_query->current_post == 11 ): ?>
+
+  <article class="featured-chap-4" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>">Read</a>
     </div>

@@ -51,6 +51,10 @@ $margin-height: 2rem
       padding: 1.2rem
       background: transparentize($purple, 0.2)
 
+      h1
+        @media (min-width: 0em) and (max-width: 60em)
+          +crimson(1.6)
+
       h2
         margin-right: 1rem
 
@@ -116,6 +120,8 @@ $margin-height: 2rem
         @include ubuntu(1)
         color: $purple
         margin-bottom: 0.4rem
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         @include ubuntu(0.8)
     .post-excerpt
@@ -157,6 +163,8 @@ $margin-height: 2rem
       h2
         @include ubuntu(1)
         color: $yellow
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         @include ubuntu(0.8)
     .post-excerpt
@@ -192,6 +200,8 @@ $margin-height: 2rem
       h2
         @include ubuntu(1)
         color: $yellow
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         @include ubuntu(0.8)
         color: white
@@ -220,6 +230,8 @@ $margin-height: 2rem
       h2
         @include ubuntu(1)
         color: $yellow
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         @include ubuntu(0.8)
         color: white
@@ -247,6 +259,8 @@ $margin-height: 2rem
       h2
         @include ubuntu(1)
         color: $yellow
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         @include ubuntu(0.8)
         color: white
@@ -287,6 +301,8 @@ $margin-height: 2rem
         margin-right: 0
         @include ubuntu(1)
         color: $yellow
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       time
         display: none
     .post-excerpt
@@ -332,6 +348,9 @@ $margin-height: 2rem
         @include crimson(3)
         line-height: 3rem
         margin-bottom: 1.4rem
+        @media (min-width: 0em) and (max-width: 60em)
+          +crimson(2.4)
+          line-height: 2rem
       h1 a
         color: white
         &:hover
@@ -340,6 +359,8 @@ $margin-height: 2rem
         @include ubuntu(1.1)
         color: $yellow
         margin-bottom: 1.4rem
+        @media (min-width: 0em) and (max-width: 60em)
+          +ubuntu(0.8)
       p
         color: white
     &:hover > .chap-top
@@ -350,70 +371,6 @@ $margin-height: 2rem
   .featured-chap-1
     @include span(last 4)
 
-  .featured-chap-3
+  .featured-chap-3,
+  .featured-chap-4
     margin-top: 3rem
-
-  // print announcement
-  .featured-print
-    @include span(12 of 12)
-    height: 300px
-    margin-top: 3rem
-    .print-left
-      float: left
-      width: 50%
-      height: 100%
-      text-align: center
-      transition: background 0.3s ease-in-out
-      a
-        position: relative
-        @include pixel-link(14, 1, white)
-        display: inline-block
-        margin-top: 8rem
-        opacity: 0
-        transition: opacity 0.3s ease-in-out
-        &:hover
-          @include pixel-link(14, 1, $red)
-    .print-right
-      float: right
-      width: 50%
-      height: 100%
-      padding: 1.2rem
-      background: transparentize($purple, 0.2)
-      h1
-        @include crimson(2.6)
-        line-height: 2.6rem
-        margin-bottom: 1.4rem
-      h1 a
-        color: white
-        &:hover
-          color: $red
-      h2
-        @include ubuntu(1.1)
-        color: $yellow
-        margin-bottom: 1.4rem
-      p
-        color: white
-    &:hover > .print-left
-      background: transparentize($purple, 0.2)
-      a
-        opacity: 1
-
-  .featured-sharkpack
-    @include span(12 of 12)
-    height: 300px
-    margin-top: 3rem
-    border: 3px solid $purple
-    a
-      position: absolute
-      left: 0px
-      right: 0px
-      top: 0px
-      bottom: 0px
-    .sharkpack-left
-      float: left
-      width: 50%
-      height: 100%
-    .sharkpack-right
-      float: right
-      width: 50%
-      height: 100%
