@@ -24,9 +24,14 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <body <?php body_class(); ?>>
 
-<section id="container">
+  <canvas width="1280" height="800"></canvas>
+  <canvas width="1280" height="800"></canvas>
 
-<h1>Everything Makes a Noise When it Reveals Itself</h1>
+<section class="everything__container">
+
+<article>
+  <h1>Everything Makes a Noise When it Reveals Itself</h1>
+</article>
 
 <article>
   <p>

@@ -16,12 +16,16 @@ changed      = require 'gulp-changed'
 browserSync  = require('browser-sync').create()
 
 styles =
-  src:  'assets/stylesheets/source/**/*.sass'
+  src: 'assets/stylesheets/source/**/*.sass'
   build: 'assets/stylesheets/build/'
 
 scripts =
   src: 'assets/javascripts/source/**/*.coffee'
   vendor: 'assets/javascripts/vendor/**/*'
+  build: 'assets/javascripts/build/'
+
+js =
+  src: 'assets/javascripts/source/**/*.js'
   build: 'assets/javascripts/build/'
 
 php =

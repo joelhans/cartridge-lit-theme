@@ -1,4 +1,4 @@
-$path : '../../../../images/chapbooks/please-please/'
+$path : '../../../../images/chapbooks/everything-makes-a-noise/'
 
 @import "../../../vendor/reset"
 @import "../../../vendor/bourbon/bourbon"
@@ -9,11 +9,31 @@ $path : '../../../../images/chapbooks/please-please/'
 $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 
 @import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua:700')
+@import url('https://fonts.googleapis.com/css?family=Barrio|Josefin+Sans:300,400')
 
-.pp-container
+body.page-everything-makes-a-noise-when-it-reveals-itself
+  background: rgb(22,22,22)
+
+canvas
+  position: fixed
+  top     : 0px
+  left    : 0px
+  z-index : 100
+
+.everything__container
   +container(80em)
   position: relative
-  padding-top: 12rem
-  padding-bottom: 8rem
   text-align: left
-  z-index: 1
+
+.everything__container article
+  margin-bottom: 10rem
+  +span(12)
+
+  h1
+    color: white
+    +fontmake($family: 'Barrio', $weight: 700, $size: 4)
+    margin: 20rem 0
+
+  p
+    color: white
+    +fontmake($family: 'Josefin Sans', $weight: 400, $size: 1.4)
