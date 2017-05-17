@@ -33,7 +33,11 @@ canvas
     color: white
     +fontmake($family: 'Barrio', $weight: 700, $size: 4)
     margin: 20rem 0
+    @media (min-width: 0em) and (max-width: 40em)
+      +fontmake($family: 'Barrio', $weight: 700, $size: 2)
 
   p
     color: white
     +fontmake($family: 'Josefin Sans', $weight: 400, $size: 1.4)
+    @media (min-width: 0em) and (max-width: 40em)
+      +fontmake($family: 'Josefin Sans', $weight: 400, $size: 0.9)

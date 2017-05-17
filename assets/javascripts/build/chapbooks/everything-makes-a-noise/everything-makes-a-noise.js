@@ -12,7 +12,7 @@
     hideFill = 'rgba( 0, 0, 0, .95 )';
     overlay = 'rgba( 0, 0, 0, 1 )';
     ctxWidth = window.innerWidth;
-    ctxHeight = window.innerHeight;
+    ctxHeight = window.outerHeight;
     canvas[0].width = ctxWidth;
     canvas[0].height = ctxHeight;
     canvas[1].width = ctxWidth;
@@ -20,11 +20,12 @@
     ctx.fillStyle = overlay;
     ctx.fillRect(0, 0, ctxWidth, ctxHeight);
     ctx.globalCompositeOperation = 'destination-out';
-    canvas.last().on('mousemove', function(ev, ev2) {
+    canvas.last().on('mousemove touchmove', function(ev, ev2) {
       var pX, pY, radGrd;
       ev2 && (ev = ev2);
-      pX = ev.pageX;
-      pY = ev.pageY;
+      pX = ev.clientX;
+      pY = ev.clientY;
+      console.log(ev.touches);
       radGrd = ctx.createRadialGradient(pX, pY, r1, pX, pY, r2);
       radGrd.addColorStop(0, 'rgba( 0, 0, 0,  1 )');
       radGrd.addColorStop(density, 'rgba( 0, 0, 0, .1 )');
@@ -43,8 +44,8 @@
       ctx2.fillStyle = radGrd;
       ctx2.fillRect(pX - r2, pY - r2, r2 * 2, r2 * 2);
     }).trigger('mousemove', {
-      pageX: 150,
-      pageY: 150
+      clientX: 150,
+      clientY: 150
     });
   });
 
