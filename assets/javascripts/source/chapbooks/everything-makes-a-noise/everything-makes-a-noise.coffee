@@ -12,10 +12,10 @@ $ ->
   r2         = 300
   density    = .7
   hideOnMove = true
-  hideFill   = 'rgba( 0, 0, 0, .95 )'
+  hideFill   = 'rgba( 0, 0, 0, .92 )'
   overlay    = 'rgba( 0, 0, 0, 1 )'
   ctxWidth   = window.innerWidth
-  ctxHeight  = window.outerHeight
+  ctxHeight  = window.screen.availHeight
 
   # resize the canvases
   canvas[0].width = ctxWidth
@@ -36,7 +36,9 @@ $ ->
     pX = ev.clientX
     pY = ev.clientY
 
-    console.log ev.touches
+    if ev.type is 'touchmove'
+      pX = ev.originalEvent.touches[0].clientX
+      pY = ev.originalEvent.touches[0].clientY
 
     # reveal wherever we drag
     radGrd = ctx.createRadialGradient(pX, pY, r1, pX, pY, r2)
