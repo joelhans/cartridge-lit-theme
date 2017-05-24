@@ -11,14 +11,38 @@ $susy: ( columns: 12, gutters: 10, gutter-position: inside )
 @import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua:700')
 @import url('https://fonts.googleapis.com/css?family=Barrio|Josefin+Sans:300,400')
 
+html
+  overflow-x: hidden
+  margin: 0
+
 body.page-template-everything-makes-a-noise
   background: rgb(22,22,22)
+  margin: 0
+  overflow-x: hidden
 
 canvas
   position: fixed
   top     : 0px
   left    : 0px
   z-index : 100
+
+.fog-container
+  width: 100vw
+  height: 100vh
+  position: fixed
+  overflow: hidden
+  z-index: 98
+  opacity: 0.4
+
+  canvas
+    display: block
+    min-width: 100%
+    min-height: 100%
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%)
+    z-index: 99
 
 .everything__container
   +container(80em)
@@ -43,20 +67,20 @@ canvas
     @media (min-width: 0em) and (max-width: 40em)
       +fontmake($family: 'Josefin Sans', $weight: 400, $size: 0.8)
 
-.everything__container::before
-  animation: grain 5s steps(10) infinite
-  background: url($path + 'noisy-texture-300x300-o15-d10-c-161616-t1.png')
-  background-size: auto
-  background-repeat: repeat
-  content: ""
-  display: block
-  height: 500%
-  left: -250%
-  position: fixed
-  top: -250%
-  width: 500%
-  z-index: 1
-  opacity: 1
+// .everything__container::before
+//   animation: grain 5s steps(10) infinite
+//   background: url($path + 'noisy-texture-300x300-o15-d10-c-161616-t1.png'), url($path + '15-dark-texture-stock.png'), url($path + '12-free-stock-film.png')
+//   background-size: auto, cover, cover
+//   background-repeat: repeat
+//   content: ""
+//   display: block
+//   height: 500%
+//   left: -250%
+//   position: fixed
+//   top: -250%
+//   width: 500%
+//   z-index: 1
+//   opacity: 1
 
 @keyframes grain
   0%, 100%

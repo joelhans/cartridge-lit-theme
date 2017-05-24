@@ -27,6 +27,10 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 <canvas width="1280" height="800"></canvas>
 <canvas width="1280" height="800"></canvas>
 
+<div class="fog-container">
+  <canvas id="fog" width="1280" height="800"></canvas>
+</div>
+
 <section class="everything__container">
 
   <article>
@@ -243,3 +247,5 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 </section>
 
 <?php get_template_part( 'chapbooks/chapbook', 'footer' ); ?>
+
+<script src="<?php echo $javas_path; ?>fog.js"></script>

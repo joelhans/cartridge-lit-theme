@@ -1,9 +1,10 @@
 (function() {
   $(function() {
-    var canvas, ctx, ctx2, ctxHeight, ctxWidth, density, hideFill, hideOnMove, mDown, overlay, r1, r2, resizeTimer;
+    var canvas, ctx, ctx2, ctxHeight, ctxLast, ctxWidth, density, hideFill, hideOnMove, mDown, overlay, r1, r2, resizeTimer;
     canvas = $('canvas');
     ctx = canvas[0].getContext('2d');
     ctx2 = canvas[1].getContext('2d');
+    ctxLast = canvas[1];
     mDown = false;
     r1 = 150;
     r2 = 400;
@@ -20,7 +21,7 @@
     ctx.fillStyle = overlay;
     ctx.fillRect(0, 0, ctxWidth, ctxHeight);
     ctx.globalCompositeOperation = 'destination-out';
-    canvas.last().on('mousemove touchmove', function(ev, ev2) {
+    $('canvas, 1').on('mousemove touchmove', function(ev, ev2) {
       var pX, pY, radGrd;
       ev2 && (ev = ev2);
       pX = ev.clientX;
@@ -51,18 +52,6 @@
       clientY: 150
     });
     resizeTimer = null;
-    $(window).on('resize', function(e) {
-      clearTimeout(resizeTimer);
-      return resizeTimer = setTimeout(function() {
-        canvas[0].width = ctxWidth;
-        canvas[0].height = ctxHeight;
-        canvas[1].width = ctxWidth;
-        canvas[1].height = ctxHeight;
-        ctx.fillStyle = overlay;
-        ctx.fillRect(0, 0, ctxWidth, ctxHeight);
-        return ctx.globalCompositeOperation = 'destination-out';
-      }, 250);
-    });
   });
 
 }).call(this);

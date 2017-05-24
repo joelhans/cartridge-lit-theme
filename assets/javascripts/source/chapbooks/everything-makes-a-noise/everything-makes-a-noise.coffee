@@ -7,6 +7,7 @@ $ ->
   canvas     = $('canvas')
   ctx        = canvas[0].getContext('2d')
   ctx2       = canvas[1].getContext('2d')
+  ctxLast    = canvas[1]
   mDown      = false
   r1         = 150
   r2         = 400
@@ -30,7 +31,7 @@ $ ->
   # set up our "eraser"
   ctx.globalCompositeOperation = 'destination-out'
 
-  canvas.last().on('mousemove touchmove', (ev, ev2) ->
+  $('canvas, 1').on('mousemove touchmove', (ev, ev2) ->
     ev2 and (ev = ev2)
 
     pX = ev.clientX
@@ -72,24 +73,24 @@ $ ->
 
   resizeTimer = null
 
-  $(window).on 'resize', (e) ->
-
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout () ->
-
-      # resize the canvases
-      canvas[0].width = ctxWidth
-      canvas[0].height = ctxHeight
-      canvas[1].width = ctxWidth
-      canvas[1].height = ctxHeight
-
-      # black out the canvas
-      ctx.fillStyle = overlay
-      ctx.fillRect 0, 0, ctxWidth, ctxHeight
-
-      # set up our "eraser"
-      ctx.globalCompositeOperation = 'destination-out'
-
-    , 250
+  # $(window).on 'resize', (e) ->
+  #
+  #   clearTimeout(resizeTimer)
+  #   resizeTimer = setTimeout () ->
+  #
+  #     # resize the canvases
+  #     canvas[0].width = ctxWidth
+  #     canvas[0].height = ctxHeight
+  #     canvas[1].width = ctxWidth
+  #     canvas[1].height = ctxHeight
+  #
+  #     # black out the canvas
+  #     ctx.fillStyle = overlay
+  #     ctx.fillRect 0, 0, ctxWidth, ctxHeight
+  #
+  #     # set up our "eraser"
+  #     ctx.globalCompositeOperation = 'destination-out'
+  #
+  #   , 250
 
   return
