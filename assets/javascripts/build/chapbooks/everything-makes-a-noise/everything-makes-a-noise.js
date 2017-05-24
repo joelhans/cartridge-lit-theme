@@ -1,12 +1,12 @@
 (function() {
   $(function() {
-    var canvas, ctx, ctx2, ctxHeight, ctxWidth, density, hideFill, hideOnMove, mDown, overlay, r1, r2;
+    var canvas, ctx, ctx2, ctxHeight, ctxWidth, density, hideFill, hideOnMove, mDown, overlay, r1, r2, resizeTimer;
     canvas = $('canvas');
     ctx = canvas[0].getContext('2d');
     ctx2 = canvas[1].getContext('2d');
     mDown = false;
-    r1 = 100;
-    r2 = 300;
+    r1 = 150;
+    r2 = 400;
     density = .7;
     hideOnMove = true;
     hideFill = 'rgba( 0, 0, 0, .92 )';
@@ -49,6 +49,19 @@
     }).trigger('mousemove', {
       clientX: 150,
       clientY: 150
+    });
+    resizeTimer = null;
+    $(window).on('resize', function(e) {
+      clearTimeout(resizeTimer);
+      return resizeTimer = setTimeout(function() {
+        canvas[0].width = ctxWidth;
+        canvas[0].height = ctxHeight;
+        canvas[1].width = ctxWidth;
+        canvas[1].height = ctxHeight;
+        ctx.fillStyle = overlay;
+        ctx.fillRect(0, 0, ctxWidth, ctxHeight);
+        return ctx.globalCompositeOperation = 'destination-out';
+      }, 250);
     });
   });
 

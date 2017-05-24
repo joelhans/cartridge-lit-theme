@@ -8,8 +8,8 @@ $ ->
   ctx        = canvas[0].getContext('2d')
   ctx2       = canvas[1].getContext('2d')
   mDown      = false
-  r1         = 100
-  r2         = 300
+  r1         = 150
+  r2         = 400
   density    = .7
   hideOnMove = true
   hideFill   = 'rgba( 0, 0, 0, .92 )'
@@ -68,5 +68,28 @@ $ ->
   ).trigger 'mousemove',
     clientX: 150
     clientY: 150
+
+
+  resizeTimer = null
+
+  $(window).on 'resize', (e) ->
+
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout () ->
+
+      # resize the canvases
+      canvas[0].width = ctxWidth
+      canvas[0].height = ctxHeight
+      canvas[1].width = ctxWidth
+      canvas[1].height = ctxHeight
+
+      # black out the canvas
+      ctx.fillStyle = overlay
+      ctx.fillRect 0, 0, ctxWidth, ctxHeight
+
+      # set up our "eraser"
+      ctx.globalCompositeOperation = 'destination-out'
+
+    , 250
 
   return

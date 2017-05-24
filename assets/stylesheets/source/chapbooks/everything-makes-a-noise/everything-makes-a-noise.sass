@@ -24,6 +24,7 @@ canvas
   +container(80em)
   position: relative
   text-align: left
+  // overflow: hidden
 
 .everything__container article
   margin-bottom: 10rem
@@ -41,3 +42,40 @@ canvas
     +fontmake($family: 'Josefin Sans', $weight: 400, $size: 1.4)
     @media (min-width: 0em) and (max-width: 40em)
       +fontmake($family: 'Josefin Sans', $weight: 400, $size: 0.8)
+
+.everything__container::before
+  animation: grain 5s steps(10) infinite
+  background: url($path + 'noisy-texture-300x300-o15-d10-c-161616-t1.png')
+  background-size: auto
+  background-repeat: repeat
+  content: ""
+  display: block
+  height: 500%
+  left: -250%
+  position: fixed
+  top: -250%
+  width: 500%
+  z-index: 99
+  opacity: 1
+
+@keyframes grain
+  0%, 100%
+    +transform(translate(0, 0))
+  10%
+    +transform(translate(-5%, -10%))
+  20%
+    +transform(translate(-15%, 5%))
+  30%
+    +transform(translate(7%, -25%))
+  40%
+    +transform(translate(-5%, 25%))
+  50%
+    +transform(translate(-15%, 10%))
+  60%
+    +transform(translate(15%, 0%))
+  70%
+    +transform(translate(0%, 15%))
+  80%
+    +transform(translate(3%, 35%))
+  90%
+    +transform(translate(-10%, 10%))
