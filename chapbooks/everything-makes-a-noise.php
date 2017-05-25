@@ -33,8 +33,9 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
 
 <section class="everything__container">
 
-  <article>
-    <h1>Everything Makes a Noise When it Reveals Itself</h1>
+  <article class="title">
+    <h1>Everything Makes a Noise <br />When it Reveals Itself</h1>
+    <h2>a chapbook by Lisa Ciccarello</h2>
   </article>
 
   <article>
@@ -237,10 +238,13 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
     </p>
   </article>
 
-  <article>
+  <article class="acknowledgements">
     <h2>Acknowledgments</h2>
     <p>
-
+      Sections of this chapbook were previously published in <em>The Collapsar</em>.
+    </p>
+    <p class="ack__back">
+      <a href="//cartridgelit.com">Back to <em>Cartridge Lit</em></a>.
     </p>
   </article>
 
