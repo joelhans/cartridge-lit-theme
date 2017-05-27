@@ -52,6 +52,18 @@
       clientY: 150
     });
     resizeTimer = null;
+    $(window).on('resize', function(e) {
+      clearTimeout(resizeTimer);
+      return resizeTimer = setTimeout(function() {
+        canvas[0].width = ctxWidth;
+        canvas[0].height = ctxHeight;
+        canvas[1].width = ctxWidth;
+        canvas[1].height = ctxHeight;
+        ctx.fillStyle = overlay;
+        ctx.fillRect(0, 0, ctxWidth, ctxHeight);
+        return ctx.globalCompositeOperation = 'destination-out';
+      }, 250);
+    });
   });
 
 }).call(this);

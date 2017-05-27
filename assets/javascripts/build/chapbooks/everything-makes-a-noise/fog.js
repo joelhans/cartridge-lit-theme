@@ -223,7 +223,7 @@ const bgi = 'http://saijogeorge.com/test/assets/images/mybackground.png'
 
 new Fog({
     selector: '#fog',
-    particle: 'http://asista.pl/f/fog-particle.png',
+    particle: '/wp-content/themes/Cartridge-Lit/assets/images/chapbooks/everything-makes-a-noise/fog-particle.png',
     density: 80,
     bgi,
 })
