@@ -22,6 +22,10 @@
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/stylesheets/build/style.min.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ubuntu:300,500,500italic|Crimson+Text:400,400italic,600italic,600" rel="stylesheet" type="text/css">
 
+<!-- <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script> -->
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/script.min.js"></script>
 
 <?php wp_head(); ?>

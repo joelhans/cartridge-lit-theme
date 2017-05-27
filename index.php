@@ -15,24 +15,10 @@ get_header(); ?>
 
 <section class="post-featured">
 
-  <article class="featured-issue issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
-    <div class="issue-content">
-      <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">
-          The <em>Unforeseen Consequences</em> Temple Issue
-        </a>
-      </h1>
-      <p>Adrienne Celt. Brian Oliu. Margaret Emma Brandl. JD Scott.</p>
-      <p>Maxwell Neely-Cohen. Tom Kelly. Emma Fissenden. Berit Ellingsen.</p>
-      <p>Jackson Culpepper. J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
-    </div>
-  </article>
-
   <!-- BEGIN FEATURED QUERIES -->
   <?php
   $args = array(
-    'posts_per_page' => 12,
+    'posts_per_page' => 11,
     'meta_query' => array(
       'relation' => 'OR',
         array(
@@ -73,22 +59,56 @@ get_header(); ?>
   <!-- both chapbook announcements -->
   <?php if ( $featured_query->current_post == 1 ): ?>
 
-    <article class="featured-chap-1" id="gradient">
-      <div class="chap-top">
-        <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">Read</a>
-      </div>
-      <div class="chap-bottom">
-        <h1>
-          <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">
-            please please get over here please
-          </a>
-        </h1>
-        <h2>by Jamison Crabtree</h2>
-        <p>It's time to be put back together.</p>
-      </div>
-    </article>
+  <article class="featured-chap-1">
+    <canvas id="fog"></canvas>
+    <div class="chap-top">
+      <a href="<?php echo esc_url( home_url( '/everything-makes-a-noise-when-it-reveals-itself/' ) ); ?>">Read</a>
+    </div>
+    <div class="chap-bottom">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/everything-makes-a-noise-when-it-reveals-itself/' ) ); ?>">
+          Everything Makes a Noise When it Reveals Itself
+        </a>
+      </h1>
+      <h2>by Lisa Ciccarello</h2>
+      <p>Take a wander through the dark and the fog. Our last chapbook.</p>
+    </div>
+  </article>
 
-  <article class="featured-chap-2" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/tender-glories/front_page_teaser.jpg"; ?>');">
+  <article class="featured-chap-2" id="gradient">
+    <div class="chap-top">
+      <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">Read</a>
+    </div>
+    <div class="chap-bottom">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/please-please-get-over-here-please/' ) ); ?>">
+          please please get over here please
+        </a>
+      </h1>
+      <h2>by Jamison Crabtree</h2>
+      <p><em>Cartridge Lit's</em> fourth chapbook. It's time to be put back together.</p>
+    </div>
+  </article>
+
+  <?php elseif ( $featured_query->current_post == 5 ): ?>
+
+  <article class="featured-issue issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <div class="issue-content">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">
+          The <em>Unforeseen Consequences</em> Temple Issue
+        </a>
+      </h1>
+      <p>Adrienne Celt. Brian Oliu. Margaret Emma Brandl. JD Scott.</p>
+      <p>Maxwell Neely-Cohen. Tom Kelly. Emma Fissenden. Berit Ellingsen.</p>
+      <p>Jackson Culpepper. J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
+    </div>
+  </article>
+
+  <?php elseif ( $featured_query->current_post == 10 ): ?>
+
+  <article class="featured-chap-3" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/tender-glories/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/tender-glories/' ) ); ?>">Read</a>
     </div>
@@ -103,9 +123,7 @@ get_header(); ?>
     </div>
   </article>
 
-  <?php elseif ( $featured_query->current_post == 10 ): ?>
-
-  <article class="featured-chap-3" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
+  <article class="featured-chap-4" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/an-object/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/an-object-you-cannot-lose/' ) ); ?>">Read</a>
     </div>
@@ -120,9 +138,7 @@ get_header(); ?>
     </div>
   </article>
 
-  <?php elseif ( $featured_query->current_post == 11 ): ?>
-
-  <article class="featured-chap-4" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
+  <article class="featured-chap-5" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/prepare-to-die/front_page_teaser.jpg"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/prepare-to-die/' ) ); ?>">Read</a>
     </div>

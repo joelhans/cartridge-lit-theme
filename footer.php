@@ -50,5 +50,7 @@
 
 <?php wp_footer(); ?>
 
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/javascripts/build/chapbooks/everything-makes-a-noise/fog.js"></script>
+
 </body>
 </html>
