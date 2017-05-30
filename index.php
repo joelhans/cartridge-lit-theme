@@ -71,7 +71,7 @@ get_header(); ?>
         </a>
       </h1>
       <h2>by Lisa Ciccarello</h2>
-      <p>Take a wander through the dark and the fog. Our last chapbook.</p>
+      <p>Take a wander through the dark and the fog. Our fifth chapbook.</p>
     </div>
   </article>
 
