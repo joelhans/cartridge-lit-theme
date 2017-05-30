@@ -328,8 +328,10 @@ $margin-height: 2rem
     .chap-top
       width: 100%
       height: 50%
+      position: relative
       text-align: center
       transition: background 0.3s ease-in-out
+      z-index: 100
       a
         position: relative
         @include pixel-link(14, 1, white)
@@ -343,13 +345,15 @@ $margin-height: 2rem
       width: 100%
       height: 50%
       padding: 1.2rem
+      position: relative
       background: transparentize($purple, 0.2)
+      z-index: 100
       h1
-        @include crimson(3)
-        line-height: 3rem
+        @include crimson(2.4)
+        line-height: 2.8rem
         margin-bottom: 1.4rem
         @media (min-width: 0em) and (max-width: 60em)
-          +crimson(2.4)
+          +crimson(2)
           line-height: 2rem
       h1 a
         color: white
@@ -372,5 +376,13 @@ $margin-height: 2rem
     @include span(last 4)
 
   .featured-chap-3,
-  .featured-chap-4
+  .featured-chap-4,
+  .featured-chap-5
     margin-top: 3rem
+
+#fog
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
