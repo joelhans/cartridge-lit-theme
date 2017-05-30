@@ -244,7 +244,7 @@ get_template_part( 'chapbooks/chapbook', 'header' ); ?>
       Sections of this chapbook were previously published in <em>The Collapsar</em>.
     </p>
     <p class="ack__back">
-      <a href="//cartridgelit.com">Back to <em>Cartridge Lit</em></a>.
+      <a href="//cartridgelit.com">Back to <em>Cartridge Lit</em>.</a>
     </p>
   </article>
 

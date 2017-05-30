@@ -73,24 +73,24 @@ $ ->
 
   resizeTimer = null
 
-  # $(window).on 'resize', (e) ->
-  #
-  #   clearTimeout(resizeTimer)
-  #   resizeTimer = setTimeout () ->
-  #
-  #     # resize the canvases
-  #     canvas[0].width = ctxWidth
-  #     canvas[0].height = ctxHeight
-  #     canvas[1].width = ctxWidth
-  #     canvas[1].height = ctxHeight
-  #
-  #     # black out the canvas
-  #     ctx.fillStyle = overlay
-  #     ctx.fillRect 0, 0, ctxWidth, ctxHeight
-  #
-  #     # set up our "eraser"
-  #     ctx.globalCompositeOperation = 'destination-out'
-  #
-  #   , 250
+  $(window).on 'resize', (e) ->
+
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout () ->
+
+      # resize the canvases
+      canvas[0].width = ctxWidth
+      canvas[0].height = ctxHeight
+      canvas[1].width = ctxWidth
+      canvas[1].height = ctxHeight
+
+      # black out the canvas
+      ctx.fillStyle = overlay
+      ctx.fillRect 0, 0, ctxWidth, ctxHeight
+
+      # set up our "eraser"
+      ctx.globalCompositeOperation = 'destination-out'
+
+    , 250
 
   return

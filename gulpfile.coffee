@@ -112,7 +112,7 @@ gulp.task 'styles', ->
 gulp.task 'default', ->
   browserSync.init {
     files: ['*.php', '{chapbooks}/**/*.php', '{issues}/**/*.php']
-    proxy: 'http://vccw.dev/'
+    proxy: 'http://127.0.0.1:8001'
   }
   gulp.watch styles.src, ['styles']
   gulp.watch scripts.src, ['js']
