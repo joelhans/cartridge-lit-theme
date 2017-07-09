@@ -15,8 +15,9 @@ get_header(); ?>
   <?php
   $args = array(
     'post_type'   => 'post',
-    'posts_per_page' => 10,
-    'meta_value'    => 'next-gen'
+    'posts_per_page' => 15,
+    'meta_value'    => 'next-gen',
+    'post_status' => 'draft'
   );
   $the_query = new WP_Query( $args );
   ?>
