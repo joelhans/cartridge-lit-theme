@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<section class="issue2016-january">
+<section class="issues2017-july">
 
   <section class="issue-header">
     <h1>The <em>Next Gen</em> Temple Issue</h1>
@@ -16,8 +16,7 @@ get_header(); ?>
   $args = array(
     'post_type'   => 'post',
     'posts_per_page' => 15,
-    'meta_value'    => 'next-gen',
-    'post_status' => 'draft'
+    'meta_value'    => 'next-gen'
   );
   $the_query = new WP_Query( $args );
   ?>
@@ -26,12 +25,7 @@ get_header(); ?>
     <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <article class="issue-piece">
-        <h1 class="issue-piece-title">
-          <a href="<?php the_permalink(); ?>">
-            <?php echo get_post_meta($post->ID, 'issue-tease', true); ?>
-          </a>
-        </h1>
-        <p class="issue-piece-meta">"<?php the_title(); ?>" by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
+        <p class="issue-piece-meta"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
       </article>
 
     <?php endwhile; ?>

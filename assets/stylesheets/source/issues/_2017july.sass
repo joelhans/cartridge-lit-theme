@@ -1,0 +1,85 @@
+/*
+ * OCTOBER 2016
+ */
+
+$five-background    : #F1EFF4
+$five-primary       : #A3A3AC
+$five-secondary     : #69D2F0
+$five-contrast      : #9BF8F4
+
+// FRONT PAGE
+.post-featured .featured-issue.issue-next-gen,
+.issue-next-gen
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: $five-background
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    line-height: 3rem
+    margin-bottom: 0.6rem
+    a
+      color: $five-primary
+      &:hover
+        color: $five-secondary
+  p
+    color: $five-secondary
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $five-contrast)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $five-secondary)
+
+// ISSUE PAGE
+
+body[class*="issues2017-july"]
+  background: $five-background
+  color: $five-primary
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $five-secondary
+
+    h2
+      @include ubuntu(1.2)
+      color: $five-primary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 5rem
+
+    .issue-piece-tease
+      @include crimson(2.6)
+      margin-bottom: 1.2rem
+      a
+        display: block
+        color: $five-secondary
+        &:hover
+          color: $five-contrast
+
+    .issue-piece-meta
+      @include ubuntu(1.1)
+      color: $five-primary
+
+.issue-back.back-next-gen
+  a
+    @include pixel-link(18, 1.1, $five-secondary)
+    &:hover
+      @include pixel-link(18, 1.1, $five-contrast)
