@@ -2,10 +2,10 @@
  * OCTOBER 2016
  */
 
-$five-background    : #F1EFF4
+$five-background    : #F7F7F7
 $five-primary       : #A3A3AC
-$five-secondary     : #69D2F0
-$five-contrast      : #9BF8F4
+$five-secondary     : #0C79FC
+$five-contrast      : #FF3B2F
 
 // FRONT PAGE
 .post-featured .featured-issue.issue-next-gen,
@@ -24,11 +24,11 @@ $five-contrast      : #9BF8F4
     line-height: 3rem
     margin-bottom: 0.6rem
     a
-      color: $five-primary
+      color: $five-secondary
       &:hover
-        color: $five-secondary
+        color: $five-contrast
   p
-    color: $five-secondary
+    color: $five-primary
     margin-bottom: 0rem
     &:last-of-type
       margin-bottom: 1.2rem
@@ -68,15 +68,17 @@ body[class*="issues2017-july"]
     .issue-piece-tease
       @include crimson(2.6)
       margin-bottom: 1.2rem
-      a
-        display: block
-        color: $five-secondary
-        &:hover
-          color: $five-contrast
 
     .issue-piece-meta
       @include ubuntu(1.1)
       color: $five-primary
+
+    h1 a
+      display: block
+      color: $five-contrast
+      +crimson(2)
+      &:hover
+        color: $five-primary
 
 .issue-back.back-next-gen
   a

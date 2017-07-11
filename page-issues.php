@@ -7,6 +7,20 @@ get_header(); ?>
 
   <section class="page-full">
 
+    <article class="issue-next-gen" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+      <div class="issue-content">
+        <h1>
+          <a href="<?php echo esc_url( home_url( '/issue-next-gen/' ) ); ?>">
+            The <em>Next Gen</em> Temple Issue
+          </a>
+        </h1>
+        <p>Melissa Goodrich. Benjamin Kinney. Jackson Culpepper. dezireé a. brown.</p>
+        <p>August Smith. Elizabeth Deanna Morris Lakes. Dylan Brown.</p>
+        <p>Ashley Harris. Rhys Timson. Wesley Adam Rhodes.</p>
+        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-next-gen/' ) ); ?>">Read</a>
+      </div>
+    </article>
+
     <article class="issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">
         <h1>

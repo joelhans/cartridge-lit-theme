@@ -25,7 +25,8 @@ get_header(); ?>
     <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <article class="issue-piece">
-        <p class="issue-piece-meta"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
+        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+        <p class="issue-piece-meta"> by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
       </article>
 
     <?php endwhile; ?>

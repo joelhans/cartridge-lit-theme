@@ -15,6 +15,20 @@ get_header(); ?>
 
 <section class="post-featured">
 
+  <article class="featured-issue issue-next-gen" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <div class="issue-content">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/issue-next-gen/' ) ); ?>">
+          The <em>Next Gen</em> Temple Issue
+        </a>
+      </h1>
+      <p>Melissa Goodrich. Benjamin Kinney. Jackson Culpepper. dezireé a. brown.</p>
+      <p>August Smith. Elizabeth Deanna Morris Lakes. Dylan Brown.</p>
+      <p>Ashley Harris. Rhys Timson. Wesley Adam Rhodes.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-next-gen/' ) ); ?>">Read</a>
+    </div>
+  </article>
+
   <!-- BEGIN FEATURED QUERIES -->
   <?php
   $args = array(
@@ -87,22 +101,6 @@ get_header(); ?>
       </h1>
       <h2>by Jamison Crabtree</h2>
       <p><em>Cartridge Lit's</em> fourth chapbook. It's time to be put back together.</p>
-    </div>
-  </article>
-
-  <?php elseif ( $featured_query->current_post == 5 ): ?>
-
-  <article class="featured-issue issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
-    <div class="issue-content">
-      <h1>
-        <a href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">
-          The <em>Unforeseen Consequences</em> Temple Issue
-        </a>
-      </h1>
-      <p>Adrienne Celt. Brian Oliu. Margaret Emma Brandl. JD Scott.</p>
-      <p>Maxwell Neely-Cohen. Tom Kelly. Emma Fissenden. Berit Ellingsen.</p>
-      <p>Jackson Culpepper. J. Bowers. Hannah Stephenson. Eric Shonkwiler.</p>
-      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-consequences/' ) ); ?>">Read</a>
     </div>
   </article>
 
