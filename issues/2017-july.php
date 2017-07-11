@@ -26,7 +26,7 @@ get_header(); ?>
 
       <article class="issue-piece">
         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <p class="issue-piece-meta"> by <?php echo get_post_meta($post->ID, 'writer', true); ?></p>
+        <p class="issue-piece-meta"> by <?php echo get_post_meta($post->ID, 'writer', true); ?><span class="issue-piece-genre"><?php the_category(', '); ?></span></p>
       </article>
 
     <?php endwhile; ?>
