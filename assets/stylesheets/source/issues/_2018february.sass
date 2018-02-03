@@ -1,0 +1,94 @@
+/*
+ * FEBRUARY 2018
+ */
+
+$six-background    : #6fe7dd
+$six-primary       : #521262
+$six-secondary     : #6639a6
+$six-contrast      : #3490de
+
+// FRONT PAGE
+.post-featured .featured-issue.issue-feb2018,
+.issue-feb2018
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: $six-background
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    line-height: 3rem
+    margin-bottom: 0.6rem
+    a
+      color: $six-secondary
+      &:hover
+        color: $six-contrast
+  p
+    color: $six-primary
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $six-contrast)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $six-secondary)
+
+// ISSUE PAGE
+
+body[class*="issues2018-february"]
+  background: linear-gradient(to bottom right, #fff, #6fe7dd)
+  color: $six-primary
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $six-secondary
+
+    h2
+      @include ubuntu(1.2)
+      color: $six-primary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 5rem
+
+    .issue-piece-tease
+      @include crimson(2.6)
+      margin-bottom: 1.2rem
+
+    .issue-piece-meta
+      @include ubuntu(1.1)
+      color: $six-primary
+
+    .issue-piece-genre a
+      @include ubuntu(0.9)
+      color: $six-secondary
+      margin-left: 2rem
+      &:hover
+        color: $six-primary
+
+    h1 a
+      display: block
+      color: $six-contrast
+      +crimson(2)
+      &:hover
+        color: $six-primary
+
+.issue-back.back-next-gen
+  a
+    @include pixel-link(18, 1.1, $six-secondary)
+    &:hover
+      @include pixel-link(18, 1.1, $six-contrast)

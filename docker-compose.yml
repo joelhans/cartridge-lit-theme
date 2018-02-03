@@ -19,7 +19,7 @@ services:
      volumes:
        - .:/var/www/html/wp-content/themes/Cartridge-Lit
      ports:
-       - "8001:80"
+       - "8020:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306

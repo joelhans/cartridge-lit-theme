@@ -1,0 +1,2 @@
+require('gulp-coffee').register();
+require('./gulpfile.coffee');
