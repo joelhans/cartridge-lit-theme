@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="issues2018-february">
 
   <section class="issue-header">
-    <h1>The <em>???</em> Temple Issue</h1>
+    <h1>The <em>Foul Play</em> Temple Issue</h1>
     <h2>February 14, 2018</h2>
   </section>
 
@@ -16,7 +16,7 @@ get_header(); ?>
   $args = array(
     'post_type'   => 'post',
     'posts_per_page' => 15,
-    'meta_value'    => 'next-gen'
+    'meta_value'    => 'foul-play'
   );
   $the_query = new WP_Query( $args );
   ?>

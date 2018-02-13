@@ -7,19 +7,19 @@ get_header(); ?>
 
   <section class="page-full">
 
-    <article class="issue-feb2018" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+<!--     <article class="issue-feb2018" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">
         <h1>
           <a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">
-            The <em>???</em> Temple Issue
+            The <em>Foul Play</em> Temple Issue
           </a>
         </h1>
-        <p>Names names names.</p>
-        <p>Names names names.</p>
-        <p>Names names names.</p>
-        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/#/' ) ); ?>">Read</a>
+        <p>Elana Lev Friedland. Mary Coons. M. Shaw. Jacqueline Boucher.</p>
+        <p>Jeff Pearson. Lukasz Drobnik. Hilary Hall. Tim Terhaar.</p>
+        <p>Anastasia Jill. Bobby Rich. Geoff Peck.</p>
+        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-foul-play/' ) ); ?>">Read</a>
       </div>
-    </article>
+    </article> -->
 
     <article class="issue-consequences" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">

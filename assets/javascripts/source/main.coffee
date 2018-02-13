@@ -1,8 +1,8 @@
 jQuery ($) ->
 
-  $(window).stellar
-    horizontalScrolling: false
-    hideDistantElements: false
+  # $(window).stellar
+  #   horizontalScrolling: false
+  #   hideDistantElements: false
 
   # http://codepen.io/quasimondo/pen/lDdrF
 
