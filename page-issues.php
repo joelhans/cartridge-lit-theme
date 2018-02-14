@@ -10,7 +10,7 @@ get_header(); ?>
     <article class="featured-issue issue-feb2018">
       <div class="issue-content">
         <h1>
-          <a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">
+          <a href="<?php echo esc_url( home_url( '/issue-foul-play/' ) ); ?>">
             The <em>Foul Play</em> Temple Issue
           </a>
         </h1>
