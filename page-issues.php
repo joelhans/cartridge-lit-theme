@@ -7,7 +7,7 @@ get_header(); ?>
 
   <section class="page-full">
 
-<!--     <article class="issue-feb2018" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <article class="featured-issue issue-feb2018">
       <div class="issue-content">
         <h1>
           <a href="<?php echo esc_url( home_url( '/#/' ) ); ?>">
@@ -19,9 +19,9 @@ get_header(); ?>
         <p>Anastasia Jill. Bobby Rich. Geoff Peck.</p>
         <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-foul-play/' ) ); ?>">Read</a>
       </div>
-    </article> -->
+    </article>
 
-    <article class="featured-issue issue-next-gen" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
+    <article class="issue-next-gen" style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/a.jpg"; ?>');">
       <div class="issue-content">
         <h1>
           <a href="<?php echo esc_url( home_url( '/issue-next-gen/' ) ); ?>">
