@@ -7,7 +7,21 @@ get_header(); ?>
 
   <section class="page-full">
 
-    <article class="featured-issue issue-feb2018">
+    <article class="featured-issue issue__bug-feature">
+      <div class="issue-content">
+        <h1>
+          <a href="<?php echo esc_url( home_url( '/issue-bug-feature/' ) ); ?>">
+            The <em>Bug/Feature</em> Temple Issue
+          </a>
+        </h1>
+        <p>James Ardis. Kim Stoll. Ashely Adams. Sam Martone.</p>
+        <p>Alan Chazaro. Tom Kelly. Anthony Michael Morena.</p>
+        <p>Terrence Abrahams. Kevin Stebner. Wheeler Light.</p>
+        <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-bug-feature/' ) ); ?>">Read</a>
+      </div>
+    </article>
+
+    <article class="issue-feb2018">
       <div class="issue-content">
         <h1>
           <a href="<?php echo esc_url( home_url( '/issue-foul-play/' ) ); ?>">

@@ -1,0 +1,96 @@
+/*
+ * SEPTEMBER 2018
+ */
+
+$seven-background    : #6fe7dd
+$seven-primary       : #521262
+$seven-secondary     : #6639a6
+$seven-contrast      : #3490de
+
+// FRONT PAGE
+.post-featured .featured-issue.issue__bug-feature,
+.issue__bug-feature
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: linear-gradient(to bottom right, #fff, #6fe7dd)
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    line-height: 3rem
+    margin-bottom: 0.6rem
+    a
+      color: $seven-secondary
+      &:hover
+        color: $seven-contrast
+  p
+    color: $seven-primary
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $seven-contrast)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $seven-secondary)
+
+// ISSUE PAGE
+
+body[class*="issues2018-september"],
+body.page-issue-bug-feature
+  background: linear-gradient(to bottom right, #fff, #6fe7dd)
+  background-attachment: fixed
+  color: $seven-primary
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 6rem 0 10rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $seven-secondary
+
+    h2
+      @include ubuntu(1.2)
+      color: $seven-primary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 5rem
+
+    .issue-piece-tease
+      @include crimson(2.6)
+      margin-bottom: 1.2rem
+
+    .issue-piece-meta
+      @include ubuntu(1.1)
+      color: $seven-primary
+
+    .issue-piece-genre a
+      @include ubuntu(0.9)
+      color: $seven-secondary
+      margin-left: 2rem
+      &:hover
+        color: $seven-primary
+
+    h1 a
+      display: block
+      color: $seven-contrast
+      +crimson(2)
+      &:hover
+        color: $seven-primary
+
+.issue-back.back-next-gen
+  a
+    @include pixel-link(18, 1.1, $seven-secondary)
+    &:hover
+      @include pixel-link(18, 1.1, $seven-contrast)
