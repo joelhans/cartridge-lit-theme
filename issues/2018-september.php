@@ -9,7 +9,7 @@ get_header(); ?>
 
   <section class="issue-header">
     <h1>The <em>Bug/Feature</em> Temple Issue</h1>
-    <h2>September 27, 2018</h2>
+    <h2>October 1, 2018</h2>
   </section>
 
   <?php
