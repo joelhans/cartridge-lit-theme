@@ -7,7 +7,7 @@ get_header(); ?>
 
   <section class="page-full">
 
-    <article class="featured-issue issue__double-click">
+    <!-- <article class="featured-issue issue__double-click">
       <div class="issue-content">
         <h1>
           <a href="<?php echo esc_url( home_url( '/issue-double-click/' ) ); ?>">
@@ -19,7 +19,7 @@ get_header(); ?>
         <p>M. Shaw. Trace DePass. Dana Diehl. Matthew Vollmer.</p>
         <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-double-click/' ) ); ?>">Read</a>
       </div>
-    </article>
+    </article> -->
 
     <article class="featured-issue issue__bug-feature">
       <div class="issue-content">
