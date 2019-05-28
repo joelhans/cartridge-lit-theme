@@ -1,0 +1,96 @@
+/*
+ * MAY 2019
+ */
+
+$eight-background    : #48435C
+$eight-primary       : #E59286
+$eight-secondary     : #EFB2AB
+$eight-contrast      : #C6D0D7
+
+// FRONT PAGE
+.post-featured .featured-issue.issue__double-click,
+.issue__double-click
+  @include span(12 of 12)
+  height: 300px
+  margin-top: 3rem
+  background: $eight-background
+  text-align: center
+  .issue-content
+    position: relative
+    top: 50%
+    @include transform(translateY(-50%))
+  h1
+    @include crimson(3)
+    line-height: 3rem
+    margin-bottom: 0.6rem
+    a
+      color: $eight-secondary
+      &:hover
+        color: $eight-contrast
+  p
+    color: $eight-primary
+    margin-bottom: 0rem
+    &:last-of-type
+      margin-bottom: 1.2rem
+  a.issue-bottom
+    position: relative
+    @include pixel-link(14, 1, $eight-contrast)
+    display: inline-block
+    transition: opacity 0.3s ease-in-out
+    &:hover
+      @include pixel-link(14, 1, $eight-secondary)
+
+// ISSUE PAGE
+
+body[class*="issues2019-may"],
+body.page-issue-double-click
+  background: $eight-background
+  background-attachment: fixed
+  color: $eight-primary
+
+  .issue-header
+    @include span(12 of 12)
+    margin: 0rem 0 3rem 0
+    text-align: center
+
+    h1
+      @include crimson(3)
+      color: $eight-secondary
+
+    h2
+      @include ubuntu(1.2)
+      color: $eight-primary
+
+  article
+    position: relative
+    @include span(6 of 12)
+    @include push(3)
+    margin-bottom: 3rem
+
+    .issue-piece-tease
+      @include crimson(2.6)
+      margin-bottom: 1.2rem
+
+    .issue-piece-meta
+      @include ubuntu(1.1)
+      color: $eight-primary
+
+    .issue-piece-genre a
+      @include ubuntu(0.9)
+      color: $eight-secondary
+      margin-left: 2rem
+      &:hover
+        color: $eight-primary
+
+    h1 a
+      display: block
+      color: $eight-contrast
+      +crimson(2)
+      &:hover
+        color: $eight-primary
+
+.issue-back.back-next-gen
+  a
+    @include pixel-link(18, 1.1, $eight-secondary)
+    &:hover
+      @include pixel-link(18, 1.1, $eight-contrast)

@@ -15,7 +15,21 @@ get_header(); ?>
 
 <section class="post-featured">
 
-  <article class="featured-issue issue__bug-feature">
+  <article class="featured-issue issue__double-click">
+    <div class="issue-content">
+      <h1>
+        <a href="<?php echo esc_url( home_url( '/issue-double-click/' ) ); ?>">
+          The <em>Double Click</em> Temple Issue
+        </a>
+      </h1>
+      <p>Gordon Sun. Emrys Donaldson. Meg Eden.</p>
+      <p>Warren C. Longmire. Andy Winter. April Michelle Bratten.</p>
+      <p>M. Shaw. Trace DePass. Dana Diehl. Matthew Vollmer.</p>
+      <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-double-click/' ) ); ?>">Read</a>
+    </div>
+  </article>
+
+  <!-- <article class="featured-issue issue__bug-feature">
     <div class="issue-content">
       <h1>
         <a href="<?php echo esc_url( home_url( '/issue-bug-feature/' ) ); ?>">
@@ -27,7 +41,7 @@ get_header(); ?>
       <p>Terrence Abrahams. Kevin Stebner. Wheeler Light.</p>
       <a class="issue-bottom" href="<?php echo esc_url( home_url( '/issue-bug-feature/' ) ); ?>">Read</a>
     </div>
-  </article>
+  </article> -->
 
   <!-- <article class="featured-issue issue-feb2018">
     <div class="issue-content">

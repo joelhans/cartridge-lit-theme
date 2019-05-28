@@ -12,6 +12,8 @@ services:
     volumes:
       - .:/var/www/html/wp-content/themes/cl
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    depends_on:
+        - site-perms-helper
 
   mysql:
     image: mysql:5.7
@@ -19,9 +21,13 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
 
-  # phpmyadmin:
-  #   image: phpmyadmin/phpmyadmin:latest
-  #   ports:
-  #     - "4445:80"
-  #   depends_on:
-  #     - mysql
+  site-perms-helper:
+    container_name: site-perms-helper
+    image: alpine:3.8
+    restart: "no"
+    networks:
+      - default
+    volumes:
+      - .:/var/www/html/wp-content/themes/cl
+    # command: chown -Rf www-data:www-data /var/www/html/wp-content && chmod -R a=r,u+w,a+X /var/www/html/wp-content
+    # command: chown -Rf root:staff /usr/local/etc/php/conf.d/uploads.ini
