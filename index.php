@@ -115,8 +115,7 @@ get_header(); ?>
   <!-- both chapbook announcements -->
   <?php if ( $featured_query->current_post == 1 ): ?>
 
-  <article class="featured-chap-1">
-    <canvas id="fog"></canvas>
+  <article class="featured-chap-1"  style="background-image: url('<?php $chap_path = get_template_directory_uri(); echo $chap_path."/assets/images/chapbooks/everything-makes-a-noise/front_page_teaser.png"; ?>');">
     <div class="chap-top">
       <a href="<?php echo esc_url( home_url( '/everything-makes-a-noise-when-it-reveals-itself/' ) ); ?>">Read</a>
     </div>

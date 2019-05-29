@@ -218,7 +218,7 @@ const coverImg = (img, width, height) => {
     return { w, h }
 }
 
-const bgi = 'http://saijogeorge.com/test/assets/images/mybackground.png'
+const bgi = '/wp-content/themes/Cartridge-Lit/assets/images/static.jpg'
 // const bgi = 'https://d13yacurqjgara.cloudfront.net/users/207046/screenshots/1742752/attachments/281998/Landing_Page_Whole_Suite_2.png'
 
 new Fog({
@@ -227,6 +227,7 @@ new Fog({
     density: 80,
     bgi,
 })
+
 
 // new Eraser({
 //     bgCanvas: '#bg',
