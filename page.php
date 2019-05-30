@@ -86,7 +86,7 @@ get_header(); ?>
       <div class="masthead-bio">
         <p>
           <?php echo get_post_meta( $post->ID, 'phil-bio', true); ?>
-          <a class="masthead-twitter" href="https://twitter.com/queermicrobiome">@queermicrobiome</a>
+          <a class="masthead-twitter" href="https://twitter.com/biometrash">@biometrash</a>
         </p>
       </div>
     </div>

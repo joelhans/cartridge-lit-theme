@@ -39,7 +39,7 @@
 
   <div class="footer-rights">
     <p>&copy; Cartridge Lit, 2014-.</p>
-    <p>This airship is being co-piloted by William Hoffacker,A.A. Balaskovits, J. Bowers, and Phil Spotswood.</p>
+    <p>This airship is being co-piloted by William Hoffacker, A.A. Balaskovits, J. Bowers, and Phil Spotswood.</p>
     <img class="phoenix-down" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/phoenix_down_vert.png" />
   </div>
 

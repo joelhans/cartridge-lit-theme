@@ -1,0 +1,240 @@
+[18-Aug-2017 02:53:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[15-Sep-2017 07:01:19 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[18-Sep-2017 20:02:24 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[19-Sep-2017 04:11:40 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[21-Sep-2017 05:39:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[21-Sep-2017 17:01:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[23-Sep-2017 07:48:49 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[25-Sep-2017 01:13:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[25-Sep-2017 01:13:35 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[27-Sep-2017 01:47:08 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[28-Sep-2017 00:45:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[28-Sep-2017 01:56:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[30-Sep-2017 01:12:19 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[03-Oct-2017 15:20:06 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[10-Oct-2017 00:35:13 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[10-Oct-2017 09:14:30 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[10-Oct-2017 12:53:14 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[12-Oct-2017 02:25:25 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[12-Oct-2017 16:44:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[12-Oct-2017 16:44:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[13-Oct-2017 01:00:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[13-Oct-2017 11:35:36 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[13-Oct-2017 13:43:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[15-Oct-2017 21:01:36 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[16-Oct-2017 19:51:57 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[17-Oct-2017 12:21:18 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[18-Oct-2017 18:50:16 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[19-Oct-2017 05:37:15 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[19-Oct-2017 07:12:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[23-Oct-2017 23:27:57 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[24-Oct-2017 04:48:26 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/header.php on line 10
+[21-Nov-2017 18:11:04 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[07-Dec-2017 16:58:49 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[22-Dec-2017 01:53:26 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[07-Jan-2018 23:08:29 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[11-Jan-2018 00:55:54 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[04-Feb-2018 06:28:13 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/page.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/page.php on line 13
+[04-Feb-2018 06:28:14 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/page.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/page.php on line 13
+[04-Feb-2018 13:32:51 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[05-Mar-2018 22:22:54 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[09-Apr-2018 00:45:07 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[10-May-2018 00:28:21 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[11-Jun-2018 00:44:38 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[12-Jul-2018 00:27:11 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[01-Aug-2018 02:17:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[01-Aug-2018 02:17:36 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[13-Aug-2018 00:57:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[14-Sep-2018 01:20:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[15-Oct-2018 02:24:52 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[16-Nov-2018 00:36:06 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[01-Dec-2018 19:55:48 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[05-Dec-2018 03:25:02 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/404.php on line 8
+[05-Dec-2018 03:25:04 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/archive.php on line 10
+[17-Dec-2018 02:23:57 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[18-Jan-2019 04:06:13 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[20-Feb-2019 14:09:00 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[20-Feb-2019 22:55:52 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[12-Mar-2019 23:42:13 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[29-Mar-2019 20:54:58 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
+[08-May-2019 23:37:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/joelh221/site_cartridgelit/wp-content/themes/Cartridge-Lit/index.php on line 14
