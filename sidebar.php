@@ -16,11 +16,6 @@
     <a href="<?php echo esc_url( home_url( '/feed/' ) ); ?>">RSS</a>
   </section>
 
-  <section class="sidebar-cats">
-    <h1>Categories</h1>
-    <?php echo str_replace("<br />"," ", wp_list_categories('title_li=&style=none&echo=0')); ?>
-  </section>
-
   <section class="sidebar-tags">
     <h1>Tags</h1>
     <?php echo wp_tag_cloud('smallest=0.8&largest=1.2&unit=rem'); ?>

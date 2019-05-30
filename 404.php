@@ -9,7 +9,7 @@ get_header(); ?>
 
   <section class="error-404">
 
-    <h1>You seem to have taken the wrong turn.</h1> 
+    <h1>You seem to have taken the wrong turn...</h1> 
     <p>That seems to happen in dungeons, sometimes, doesn't it?</p>
     <p>Let's try to get you back on the right path.</p>
     <p>Try some of the navigation options to the right, the search form just below this, or one of the recent posts below that.</p>

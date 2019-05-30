@@ -43,8 +43,6 @@
     <img class="phoenix-down" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/phoenix_down_vert.png" />
   </div>
 
-
-
 </div>
 </footer><!-- #colophon -->
 
